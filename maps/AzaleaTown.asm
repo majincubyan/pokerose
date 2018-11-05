@@ -62,7 +62,7 @@ AzaleaTownRivalBattleScript:
 	setevent EVENT_RIVAL_AZALEA_TOWN
 	checkevent EVENT_GOT_TOTODILE_FROM_ELM
 	iftrue .Totodile
-	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
+	checkevent EVENT_GOT_ROWLET_FROM_ELM
 	iftrue .Chikorita
 	winlosstext AzaleaTownRivalWinText, AzaleaTownRivalLossText
 	setlasttalked AZALEATOWN_SILVER
@@ -75,7 +75,7 @@ AzaleaTownRivalBattleScript:
 .Totodile:
 	winlosstext AzaleaTownRivalWinText, AzaleaTownRivalLossText
 	setlasttalked AZALEATOWN_SILVER
-	loadtrainer RIVAL1, RIVAL1_2_CHIKORITA
+	loadtrainer RIVAL1, RIVAL1_2_ROWLET
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle

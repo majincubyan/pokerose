@@ -1,7 +1,7 @@
 ; Every Pokémon sorted in New Pokédex Order.
 
 NewPokedexOrder:
-	db CHIKORITA
+	db ROWLET
 	db BAYLEEF
 	db MEGANIUM
 	db CYNDAQUIL
@@ -225,6 +225,7 @@ NewPokedexOrder:
 	db KABUTO
 	db KABUTOPS
 	db AERODACTYL
+	db MUNCHLAX
 	db SNORLAX
 	db BULBASAUR
 	db IVYSAUR
@@ -252,3 +253,4 @@ NewPokedexOrder:
 	db MEWTWO
 	db MEW
 	db CELEBI
+	db CHANDELURE

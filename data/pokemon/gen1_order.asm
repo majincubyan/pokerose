@@ -190,7 +190,7 @@ Pokered_MonIndices:
 	db WEEPINBELL
 	db VICTREEBEL
 
-	db CHIKORITA
+	db ROWLET
 	db BAYLEEF
 	db MEGANIUM
 	db CYNDAQUIL

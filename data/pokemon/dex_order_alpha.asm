@@ -21,11 +21,11 @@ AlphabeticalPokedexOrder:
 	db BUTTERFREE
 	db CATERPIE
 	db CELEBI
+	db CHANDELURE
 	db CHANSEY
 	db CHARIZARD
 	db CHARMANDER
 	db CHARMELEON
-	db CHIKORITA
 	db CHINCHOU
 	db CLEFABLE
 	db CLEFAIRY
@@ -138,6 +138,7 @@ AlphabeticalPokedexOrder:
 	db MOLTRES
 	db MR__MIME
 	db MUK
+	db MUNCHLAX
 	db MURKROW
 	db NATU
 	db NIDOKING
@@ -186,6 +187,7 @@ AlphabeticalPokedexOrder:
 	db REMORAID
 	db RHYDON
 	db RHYHORN
+	db ROWLET
 	db SANDSHREW
 	db SANDSLASH
 	db SCIZOR

@@ -466,11 +466,8 @@ if !_CRYSTAL
 endc
 	db -1 ; end
 
-SnorlaxEggMoves:
+MunchlaxEggMoves:
 	db LICK
-if !_CRYSTAL
-	db CHARM
-endc
 	db -1 ; end
 
 DratiniEggMoves:

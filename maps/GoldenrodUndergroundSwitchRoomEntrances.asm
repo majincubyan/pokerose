@@ -168,7 +168,7 @@ UndergroundSilverBattleScript:
 	setevent EVENT_RIVAL_GOLDENROD_UNDERGROUND
 	checkevent EVENT_GOT_TOTODILE_FROM_ELM
 	iftrue .Totodile
-	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
+	checkevent EVENT_GOT_ROWLET_FROM_ELM
 	iftrue .Chikorita
 	winlosstext UndergroundSilverWinText, UndergroundSilverLossText
 	setlasttalked GOLDENRODUNDERGROUNDSWITCHROOMENTRANCES_SILVER
@@ -181,7 +181,7 @@ UndergroundSilverBattleScript:
 .Totodile:
 	winlosstext UndergroundSilverWinText, UndergroundSilverLossText
 	setlasttalked GOLDENRODUNDERGROUNDSWITCHROOMENTRANCES_SILVER
-	loadtrainer RIVAL1, RIVAL1_4_CHIKORITA
+	loadtrainer RIVAL1, RIVAL1_4_ROWLET
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle

@@ -3404,3 +3404,33 @@ CelebiEvosAttacks:
 	db 40, BATON_PASS
 	db 50, PERISH_SONG
 	db 0 ; no more level-up moves
+
+ChandelureEvosAttacks:
+	db 0 ; no more evolutions
+	db 1, HYPNOSIS
+	db 1, LICK
+	db 1, SPITE
+	db 8, SPITE
+	db 13, MEAN_LOOK
+	db 16, CURSE
+	db 21, NIGHT_SHADE
+	db 31, CONFUSE_RAY
+	db 39, DREAM_EATER
+	db 48, DESTINY_BOND
+	db 0 ; no more level-up moves
+
+MunchlaxEvosAttacks:
+	db EVOLVE_HAPPINESS, TR_ANYTIME, SNORLAX
+	db 0 ; no more evolutions
+	db 1, TACKLE
+	db 1, METRONOME
+	db 8, AMNESIA
+	db 15, DEFENSE_CURL
+	db 22, BELLY_DRUM
+	db 29, HEADBUTT
+	db 36, SCREECH
+	db 36, REST
+	db 43, BODY_SLAM
+	db 50, ROLLOUT
+	db 57, HYPER_BEAM
+	db 0 ; no more level-up moves

@@ -28,7 +28,7 @@ MountMoon_MapScripts:
 	closetext
 	checkevent EVENT_GOT_TOTODILE_FROM_ELM
 	iftrue .Totodile
-	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
+	checkevent EVENT_GOT_ROWLET_FROM_ELM
 	iftrue .Chikorita
 	winlosstext MountMoonSilverTextWin, MountMoonSilverTextLoss
 	setlasttalked MOUNTMOON_SILVER
@@ -41,7 +41,7 @@ MountMoon_MapScripts:
 .Totodile:
 	winlosstext MountMoonSilverTextWin, MountMoonSilverTextLoss
 	setlasttalked MOUNTMOON_SILVER
-	loadtrainer RIVAL2, RIVAL2_1_CHIKORITA
+	loadtrainer RIVAL2, RIVAL2_1_ROWLET
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle

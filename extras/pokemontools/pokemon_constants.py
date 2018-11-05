@@ -152,7 +152,7 @@ pokemon_constants = {
 149: "DRAGONITE",
 150: "MEWTWO",
 151: "MEW",
-152: "CHIKORITA",
+152: "ROWLET",
 153: "BAYLEEF",
 154: "MEGANIUM",
 155: "CYNDAQUIL",
