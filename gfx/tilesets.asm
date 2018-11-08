@@ -246,9 +246,6 @@ INCLUDE "data/tilesets/traditional_house_collision.asm"
 
 SECTION "Tileset Data 6", ROMX
 
-TilesetForestGFX:
-INCBIN "gfx/tilesets/forest.2bpp.lz"
-
 TilesetChampionsRoomGFX:
 INCBIN "gfx/tilesets/champions_room.2bpp.lz"
 
@@ -335,3 +332,7 @@ INCBIN "data/tilesets/omanyte_word_room_metatiles.bin"
 
 TilesetAerodactylWordRoomMeta:
 INCBIN "data/tilesets/aerodactyl_word_room_metatiles.bin"
+
+TilesetForestGFX:
+INCBIN "gfx/tilesets/forest.2bpp.lz"
+
