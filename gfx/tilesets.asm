@@ -336,3 +336,12 @@ INCBIN "data/tilesets/aerodactyl_word_room_metatiles.bin"
 TilesetForestGFX:
 INCBIN "gfx/tilesets/forest.2bpp.lz"
 
+TilesetMuseumGFX:
+INCBIN "gfx/tilesets/museum.2bpp.lz"
+
+TilesetMuseumMeta:
+INCBIN "data/tilesets/museum_metatiles.bin"
+
+TilesetMuseumColl:
+INCLUDE "data/tilesets/museum_collision.asm"
+
