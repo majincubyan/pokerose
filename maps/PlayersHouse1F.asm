@@ -36,11 +36,12 @@ MeetMomScript:
 	opentext
 	writetext ElmsLookingForYouText
 	buttonsound
-	stringtotext GearName, MEM_BUFFER_1
-	scall PlayersHouse1FReceiveItemStd
-	setflag ENGINE_POKEGEAR
-	setflag ENGINE_PHONE_CARD
-	addcellnum PHONE_MOM
+	waitsfx
+	giveitem TOWN_MAP
+	playsound SFX_KEY_ITEM
+	writetext GotTownMap
+	waitsfx
+	itemnotify
 	setscene SCENE_FINISHED
 	setevent EVENT_PLAYERS_HOUSE_MOM_1
 	clearevent EVENT_PLAYERS_HOUSE_MOM_2
@@ -103,12 +104,11 @@ MeetMomTalkedScript:
 	playmusic MUSIC_MOM
 	jump MeetMomScript
 
-GearName:
-	db "#GEAR@"
 
-PlayersHouse1FReceiveItemStd:
-	jumpstd receiveitem
-	end
+GotTownMap:
+	text "<PLAYER> received"
+	line "Town Map!"
+	prompt
 
 MomScript:
 	faceplayer
@@ -211,38 +211,42 @@ MomWalksBackMovement:
 	step_end
 
 ElmsLookingForYouText:
-	text "Oh, <PLAYER>…! Our"
-	line "neighbor, PROF."
+	text "Oh, <PLAYER>…! Have"
+	line "you gotten all"
+	cont "settled in?"
 
-	para "ELM, was looking"
-	line "for you."
+	para "I know you miss"
+	line "Kalos but change"
+	cont "is a good thing!"
 
-	para "He said he wanted"
-	line "you to do some-"
-	cont "thing for him."
+	para "Your grandfater"
+	line "and I are so happy"
+	cont "to have you here."
 
-	para "Oh! I almost for-"
-	line "got! Your #MON"
-
-	para "GEAR is back from"
-	line "the repair shop."
+	para "I know you want"
+	line "to go explore but"
+	cont "take this town map"
+	cont "along with you."
+	
+	para "Wouldn't want you"
+	line "to get lost!"
 
 	para "Here you go!"
 	done
 
 MomGivesPokegearText:
-	text "#MON GEAR, or"
-	line "just #GEAR."
+	text "We just got the"
+	line "clock set moments"
+	cont "ago."
+	
+	para "Took longer than"
+	line "we'd like though…"
+	
+	para "Oh, we forgot day" 
+	line "of the week!"
 
-	para "It's essential if"
-	line "you want to be a"
-	cont "good trainer."
-
-	para "Oh, the day of the"
-	line "week isn't set."
-
-	para "You mustn't forget"
-	line "that!"
+	para "Could you help me"
+	line "get it set?"
 	done
 
 IsItDSTText:
@@ -252,63 +256,61 @@ IsItDSTText:
 
 ComeHomeForDSTText:
 	text "Come home to"
-	line "adjust your clock"
+	line "adjust the clock"
 
 	para "for Daylight"
 	line "Saving Time."
-
-	para "By the way, do you"
-	line "know how to use"
-	cont "the PHONE?"
+	
+	para "Oh, I see you got"
+	line "your running"
+	cont "shoes on!"
+	
+	para "Do you know how"
+	line "they work?"
 	done
 
 KnowTheInstructionsText:
-	text "Don't you just"
-	line "turn the #GEAR"
-
-	para "on and select the"
-	line "PHONE icon?"
+	text "Pretty simple to"
+	line "use, isn't it?"
 	done
 
 DontKnowTheInstructionsText:
 	text "I'll read the"
 	line "instructions."
 
-	para "Turn the #GEAR"
-	line "on and select the"
-	cont "PHONE icon."
+	para "Simply hold down"
+	line "the B button and"
+	cont "off you go!"
 	done
 
 InstructionsNextText:
-	text "Phone numbers are"
-	line "stored in memory."
-
-	para "Just choose a name"
-	line "you want to call."
-
-	para "Gee, isn't that"
-	line "convenient?"
+	text "Okay, honey, go"
+	line "have fun!"
 	done
 
 HurryUpElmIsWaitingText:
-	text "PROF.ELM is wait-"
-	line "ing for you."
-
-	para "Hurry up, baby!"
+	text "Why don't you head"
+	line "out and explore?"
+	
+	para "We will be right"
+	line "here waiting."
 	done
 
+
 SoWhatWasProfElmsErrandText:
-	text "So, what was PROF."
-	line "ELM's errand?"
-
-	para "…"
-
-	para "That does sound"
-	line "challenging."
-
-	para "But, you should be"
-	line "proud that people"
-	cont "rely on you."
+	text "Oh my! You got a"
+	line "#mon!?"
+	
+	para "… … …"
+	
+	para "So Prof. Maple"
+	line "gave you a #mon"
+	cont "and sent you on"
+	cont "an errand?"
+	
+	para "Wow, just like"
+	line "your parents, so"
+	cont "responsible!"
 	done
 
 ImBehindYouText:
@@ -322,19 +324,22 @@ NeighborMornIntroText:
 	text "Good morning,"
 	line "<PLAY_G>!"
 
-	para "I'm visiting!"
+	para "I just love"
+	line "breakfast!"
 	done
 
 NeighborDayIntroText:
 	text "Hello, <PLAY_G>!"
-	line "I'm visiting!"
+	line "What a beautiful"
+	cont "day!"
 	done
 
 NeighborNiteIntroText:
 	text "Good evening,"
 	line "<PLAY_G>!"
 
-	para "I'm visiting!"
+	para "Nothing like a"
+	line "reading the paper!"
 	done
 
 NeighborText:
@@ -352,16 +357,16 @@ NeighborText:
 	done
 
 StoveText:
-	text "Mom's specialty!"
+	text "YUM!"
 
 	para "CINNABAR VOLCANO"
-	line "BURGER!"
+	line "BURGERS!"
 	done
 
 SinkText:
 	text "The sink is spot-"
-	line "less. Mom likes it"
-	cont "clean."
+	line "less. Grandma"
+	cont "likes it clean."
 	done
 
 FridgeText:
