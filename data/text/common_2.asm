@@ -1492,49 +1492,48 @@ UnknownText_0x1c1cf3::
 	done
 
 _OakText1::
-	text "Hello! Sorry to"
-	line "keep you waiting!"
+	text "Welcome to the"
+	line "Tsuji New Citzen"
+	cont "Register."
 
-	para "Welcome to the"
-	line "world of #MON!"
-
-	para "My name is OAK."
-
-	para "People call me the"
-	line "#MON PROF."
+	para "All new residents"
+	line "are required to"
+	cont "to complete this"
+	cont "registration form."
 	prompt
 
 _OakText2::
 	text "This world is in-"
 	line "habited by crea-"
 	cont "tures that we call"
-	cont "#MON.@@"
+	cont "#mon.@@"
 
 _OakText3::
 	text_waitbutton
 	db "@@"
 
 _OakText4::
-	text "People and #MON"
-	line "live together by"
+	text "Tsuji is known"
+	line "as the crossroads"
 
-	para "supporting each"
-	line "other."
+	para "of the world."
 
-	para "Some people play"
-	line "with #MON, some"
-	cont "battle with them."
+	para "#mon from all"
+	line "regions migrate to"
+	cont "Tsuji."
 	prompt
 
 _OakText5::
-	text "But we don't know"
-	line "everything about"
-	cont "#MON yet."
+	text "There are also"
+	line "numberous ruins"
+	
+	para "scattered across"
+	line "Tsuji."
 
-	para "There are still"
-	line "many mysteries to"
-	cont "solve."
-
-	para "That's why I study"
-	line "#MON every day."
+	para "Prof. Maple"
+	line "studies #mon"
+	cont "migration and"
+	
+	para "their relationship"
+	line "to the ruins."
 	prompt

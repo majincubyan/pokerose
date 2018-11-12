@@ -28,16 +28,16 @@ PrintDayOfWeek:
 	ret
 
 .Days:
-	db "SUN@"
-	db "MON@"
-	db "TUES@"
-	db "WEDNES@"
-	db "THURS@"
-	db "FRI@"
-	db "SATUR@"
+	db "Sun@"
+	db "Mon@"
+	db "Tues@"
+	db "Wednes@"
+	db "Thurs@"
+	db "Fri@"
+	db "Satur@"
 
 .Day:
-	db "DAY@"
+	db "Day@"
 
 NewGame_ClearTileMapEtc:
 	xor a
@@ -529,10 +529,10 @@ Continue_LoadMenuHeader:
 .MenuData_Dex:
 	db 0 ; flags
 	db 4 ; items
-	db "PLAYER@"
-	db "BADGES@"
-	db "#DEX@"
-	db "TIME@"
+	db "Player@"
+	db "Badges@"
+	db "#dex@"
+	db "Time@"
 
 .MenuHeader_NoDex:
 	db MENU_BACKUP_TILES ; flags
@@ -543,10 +543,10 @@ Continue_LoadMenuHeader:
 .MenuData_NoDex:
 	db 0 ; flags
 	db 4 ; items
-	db "PLAYER <PLAYER>@"
-	db "BADGES@"
+	db "Player <PLAYER>@"
+	db "Badge@"
 	db " @"
-	db "TIME@"
+	db "Time@"
 
 Continue_DisplayBadgesDexPlayerName:
 	call MenuBoxCoord2Tile
@@ -632,13 +632,6 @@ OakSpeech:
 	ld de, MUSIC_ROUTE_30
 	call PlayMusic
 
-	call RotateFourPalettesRight
-	call RotateThreePalettesRight
-	xor a
-	ld [wCurPartySpecies], a
-	ld a, POKEMON_PROF
-	ld [wTrainerClass], a
-	call Intro_PrepTrainerPic
 
 	ld b, SCGB_TRAINER_OR_MON_FRONTPIC_PALS
 	call GetSGBLayout
@@ -649,7 +642,7 @@ OakSpeech:
 	call RotateThreePalettesRight
 	call ClearTileMap
 
-	ld a, WOOPER
+	ld a, ROWLET
 	ld [wCurSpecies], a
 	ld [wCurPartySpecies], a
 	call GetBaseData
@@ -709,7 +702,7 @@ OakText1:
 OakText2:
 	text_jump _OakText2
 	start_asm
-	ld a, WOOPER
+	ld a, ROWLET
 	call PlayMonCry
 	call WaitSFX
 	ld hl, OakText3

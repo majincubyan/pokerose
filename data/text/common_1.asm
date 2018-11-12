@@ -150,54 +150,52 @@ UnknownText_0x1bc272::
 UnknownText_0x1bc288::
 	text "CARD FOLDER open.@@"
 
-UnknownText_0x1bc29c::
-	text "<……><……><……><……><……><……>"
-	line "<……><……><……><……><……><……>"
+Timeset_Intializing::
+	text "<……><……><……><……><……><……>…"
+	line "…Intializing…"
 
-	para "Zzz… Hm? Wha…?"
-	line "You woke me up!"
-
-	para "Will you check the"
-	line "clock for me?"
+	para "Will you please"
+	line "set the time?"
 	prompt
 
-UnknownText_0x1bc2eb::
+Timeset_WhatIsTime::
 	text "What time is it?"
 	done
 
-UnknownText_0x1bc2fd::
-	text "What?@@"
+Timeset_Reading::
+	text "…Reading…@@"
 
-UnknownText_0x1bc305::
+Timeset_QuestionMark::
 	text "?"
 	done
 
-UnknownText_0x1bc308::
+Timeset_Minutes::
 	text "How many minutes?"
 	done
 
-UnknownText_0x1bc31b::
+FreeText_01::
 	text "Whoa!@@"
 
 UnknownText_0x1bc323::
-	text "?"
+	text "Boo"
 	done
 
-UnknownText_0x1bc326::
-	text "!"
-	line "I overslept!"
+Timeset_Morning::
+	text "."
+	line "Thank you and"
+	cont "good morning."
 	done
 
-UnknownText_0x1bc336::
-	text "!"
-	line "Yikes! I over-"
-	cont "slept!"
+Timeset_Day::
+	text "."
+	line "Thank you and"
+	cont "good afternoon."
 	done
 
-UnknownText_0x1bc34f::
-	text "!"
-	line "No wonder it's so"
-	cont "dark!"
+Timeset_Night::
+	text "."
+	line "Thank you and"
+	cont "good evening."
 	done
 
 UnknownText_0x1bc369::

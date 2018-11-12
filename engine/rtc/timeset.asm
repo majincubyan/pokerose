@@ -290,21 +290,21 @@ PrintTwoDigitNumberRightAlign:
 	ret
 
 Text_WokeUpOak:
-	; Zzz… Hm? Wha…? You woke me up! Will you check the clock for me?
-	text_jump UnknownText_0x1bc29c
+	; <……><……><……><……><……><……> …Intializing… Will you please set the time?
+	text_jump Timeset_Intializing
 	db "@"
 
 Text_WhatTimeIsIt:
 	; What time is it?
-	text_jump UnknownText_0x1bc2eb
+	text_jump Timeset_WhatIsTime
 	db "@"
 
 String_oclock:
 	db "o'clock@"
 
 Text_WhatHrs:
-	; What?@ @
-	text_jump UnknownText_0x1bc2fd
+	; …Reading…
+	text_jump Timeset_Reading
 	start_asm
 	hlcoord 1, 16
 	call DisplayHourOClock
@@ -313,29 +313,29 @@ Text_WhatHrs:
 
 .QuestionMark:
 	; ?
-	text_jump UnknownText_0x1bc305
+	text_jump Timeset_QuestionMark
 	db "@"
 
 Text_HowManyMinutes:
 	; How many minutes?
-	text_jump UnknownText_0x1bc308
+	text_jump Timeset_Minutes
 	db "@"
 
 String_min:
 	db "min.@"
 
 Text_WhoaMins:
-	; Whoa!@ @
-	text_jump UnknownText_0x1bc31b
+	; …Reading…
+	text_jump Timeset_Reading
 	start_asm
-	hlcoord 7, 14
+	hlcoord 1, 16
 	call DisplayMinutesWithMinString
 	ld hl, .QuestionMark
 	ret
 
 .QuestionMark:
 	; ?
-	text_jump UnknownText_0x1bc323
+	text_jump Timeset_QuestionMark
 	db "@"
 
 OakText_ResponseToSetTime:
@@ -369,18 +369,18 @@ OakText_ResponseToSetTime:
 	ret
 
 .overslept
-	; ! I overslept!
-	text_jump UnknownText_0x1bc326
+	; Thank you and good morning.
+	text_jump Timeset_Morning
 	db "@"
 
 .yikes
-	; ! Yikes! I over- slept!
-	text_jump UnknownText_0x1bc336
+	; Thank you and good afternoon.
+	text_jump Timeset_Day
 	db "@"
 
 .sodark
-	; ! No wonder it's so dark!
-	text_jump UnknownText_0x1bc34f
+	; Thank you and good evening.
+	text_jump Timeset_Night
 	db "@"
 
 TimeSetBackgroundGFX:
