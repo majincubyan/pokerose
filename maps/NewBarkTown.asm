@@ -1,7 +1,8 @@
 	const_def 2 ; object constants
-	const NEWBARKTOWN_TEACHER
-	const NEWBARKTOWN_FISHER
-	const NEWBARKTOWN_SILVER
+	const MINUTTOWN_TEACHER
+	const MINUTTOWN_FISHER
+	const MINUTTOWN_RIVAL
+
 
 NewBarkTown_MapScripts:
 	db 2 ; scene scripts
@@ -22,54 +23,33 @@ NewBarkTown_MapScripts:
 	clearevent EVENT_FIRST_TIME_BANKING_WITH_MOM
 	return
 
-NewBarkTown_TeacherStopsYouScene1:
+MINUTTOWN_TeacherStopsYouScene1:
 	playmusic MUSIC_MOM
-	turnobject NEWBARKTOWN_TEACHER, LEFT
+	showemote EMOTE_SHOCK, MINUTTOWN_RIVAL, 15
 	opentext
 	writetext Text_WaitPlayer
 	waitbutton
 	closetext
-	turnobject PLAYER, RIGHT
-	applymovement NEWBARKTOWN_TEACHER, Movement_TeacherRunsToYou1_NBT
+	applymovement MINUTTOWN_RIVAL, Movement_TeacherRunsToYou1_NBT
 	opentext
 	writetext Text_WhatDoYouThinkYoureDoing
 	waitbutton
 	closetext
-	follow NEWBARKTOWN_TEACHER, PLAYER
-	applymovement NEWBARKTOWN_TEACHER, Movement_TeacherBringsYouBack1_NBT
-	stopfollow
+	showemote EMOTE_SHOCK, MINUTTOWN_RIVAL, 15
 	opentext
-	writetext Text_ItsDangerousToGoAlone
+	writetext Text_MeetMaple
 	waitbutton
 	closetext
+	turnobject MINUTTOWN_RIVAL, DOWN
+	applymovement MINUTTOWN_RIVAL, Movement_TeacherBringsYouBack2_NBT
+	disappear MINUTTOWN_RIVAL
+	setevent EVENT_NEL_MINUT_TOWN
 	special RestartMapMusic
+	setscene SCENE_FINISHED
 	end
 
-NewBarkTown_TeacherStopsYouScene2:
-	playmusic MUSIC_MOM
-	turnobject NEWBARKTOWN_TEACHER, LEFT
-	opentext
-	writetext Text_WaitPlayer
-	waitbutton
-	closetext
-	turnobject PLAYER, RIGHT
-	applymovement NEWBARKTOWN_TEACHER, Movement_TeacherRunsToYou2_NBT
-	turnobject PLAYER, UP
-	opentext
-	writetext Text_WhatDoYouThinkYoureDoing
-	waitbutton
-	closetext
-	follow NEWBARKTOWN_TEACHER, PLAYER
-	applymovement NEWBARKTOWN_TEACHER, Movement_TeacherBringsYouBack2_NBT
-	stopfollow
-	opentext
-	writetext Text_ItsDangerousToGoAlone
-	waitbutton
-	closetext
-	special RestartMapMusic
-	end
 
-NewBarkTownTeacherScript:
+MINUTTOWNTeacherScript:
 	faceplayer
 	opentext
 	checkevent EVENT_TALKED_TO_MOM_AFTER_MYSTERY_EGG_QUEST
@@ -101,119 +81,87 @@ NewBarkTownTeacherScript:
 	closetext
 	end
 
-NewBarkTownFisherScript:
+MINUTTOWNFisherScript:
 	jumptextfaceplayer Text_ElmDiscoveredNewMon
 
-NewBarkTownSilverScript:
-	opentext
-	writetext NewBarkTownRivalText1
-	waitbutton
-	closetext
-	turnobject NEWBARKTOWN_SILVER, LEFT
-	opentext
-	writetext NewBarkTownRivalText2
-	waitbutton
-	closetext
-	follow PLAYER, NEWBARKTOWN_SILVER
-	applymovement PLAYER, Movement_SilverPushesYouAway_NBT
-	stopfollow
-	pause 5
-	turnobject NEWBARKTOWN_SILVER, DOWN
-	pause 5
-	playsound SFX_TACKLE
-	applymovement PLAYER, Movement_SilverShovesYouOut_NBT
-	applymovement NEWBARKTOWN_SILVER, Movement_SilverReturnsToTheShadows_NBT
+MINUTTOWNSilverScript:
 	end
+	
+MineGuardScript:
+	jumptextfaceplayer MineGuardText
 
-NewBarkTownSign:
-	jumptext NewBarkTownSignText
+MINUTTOWNSign:
+	jumptext MINUTTOWNSignText
 
-NewBarkTownPlayersHouseSign:
-	jumptext NewBarkTownPlayersHouseSignText
+MINUTTOWNPlayersHouseSign:
+	jumptext MINUTTOWNPlayersHouseSignText
 
-NewBarkTownElmsLabSign:
-	jumptext NewBarkTownElmsLabSignText
-
-NewBarkTownElmsHouseSign:
-	jumptext NewBarkTownElmsHouseSignText
+MINUTTOWNElmsHouseSign:
+	jumptext MINUTTOWNElmsHouseSignText
 
 Movement_TeacherRunsToYou1_NBT:
-	step LEFT
-	step LEFT
-	step LEFT
-	step LEFT
-	step_end
-
-Movement_TeacherRunsToYou2_NBT:
-	step LEFT
-	step LEFT
-	step LEFT
-	step LEFT
-	step LEFT
-	turn_head DOWN
-	step_end
-
-Movement_TeacherBringsYouBack1_NBT:
-	step RIGHT
-	step RIGHT
-	step RIGHT
-	step RIGHT
-	turn_head LEFT
+	step UP
+	step UP
+	step UP
 	step_end
 
 Movement_TeacherBringsYouBack2_NBT:
-	step RIGHT
-	step RIGHT
-	step RIGHT
-	step RIGHT
-	step RIGHT
-	turn_head LEFT
-	step_end
-
-Movement_SilverPushesYouAway_NBT:
-	turn_head UP
+	step DOWN
+	step DOWN
+	step DOWN
 	step DOWN
 	step_end
 
-Movement_SilverShovesYouOut_NBT:
-	turn_head UP
-	fix_facing
-	jump_step DOWN
-	remove_fixed_facing
-	step_end
-
-Movement_SilverReturnsToTheShadows_NBT:
-	step RIGHT
-	step_end
-
 Text_GearIsImpressive:
-	text "Wow, your #GEAR"
-	line "is impressive!"
-
-	para "Did your mom get"
-	line "it for you?"
+	text "Hello, welcome to"
+	para "Tsuji!"
 	done
 
 Text_WaitPlayer:
-	text "Wait, <PLAY_G>!"
+	text "???: HEY!"
 	done
 
 Text_WhatDoYouThinkYoureDoing:
-	text "What do you think"
-	line "you're doing?"
+	text "???: You must be"
+	line "the new neighbor!"
+	
+	para "My name is Nel!"
+	line "Nice to meetcha!"
+	
+	para "Nel: I hear you"
+	line "moved here from"
+	cont "Kalos right?"
+	
+	para "Nel: I know its"
+	line "quieter here but"
+	cont "don't let that fool"
+	cont "you!"
+
+	para "Theres so much to"
+	line "explore and tons"
+	cont "of #mon to meet" 
+	cont "in Tsuji!"
+	
 	done
 
-Text_ItsDangerousToGoAlone:
-	text "It's dangerous to"
-	line "go out without a"
-	cont "#MON!"
-
-	para "Wild #MON"
-	line "jump out of the"
-
-	para "grass on the way"
-	line "to the next town."
+	
+Text_MeetMaple:
+	text "Nel: Oh, I know!"
+	
+	para "My brother and I"
+	line "are getting our"
+	cont "first #mon!"
+	
+	para "You should visit"
+	line "Prof. Maple too!"
+	
+	para "Her lab is just"
+	line "southeast of town."
+	
+	para "I'll meet you"
+	line "there! See ya!"
 	done
+
 
 Text_YourMonIsAdorable:
 	text "Oh! Your #MON"
@@ -231,52 +179,40 @@ Text_TellMomIfLeaving:
 	done
 
 Text_CallMomOnGear:
-	text "Call your mom on"
-	line "your #GEAR to"
+	text "Make sure you come"
+	line "home sometimes."
 
-	para "let her know how"
-	line "you're doing."
+	para "Sure your grandma"
+	line "will worry."
 	done
 
 Text_ElmDiscoveredNewMon:
-	text "Yo, <PLAYER>!"
-
-	para "I hear PROF.ELM"
-	line "discovered some"
-	cont "new #MON."
+	text "I used to work"
+	line "in the mine but I"
+	cont "injured my back."
+	done
+	
+MineGuardText:
+	text "Sorry, but the"
+	line "mine is offlimits"
+	cont "to children."
 	done
 
-NewBarkTownRivalText1:
-	text "<……>"
-
-	para "So this is the"
-	line "famous ELM #MON"
-	cont "LAB…"
-	done
-
-NewBarkTownRivalText2:
-	text "…What are you"
-	line "staring at?"
-	done
-
-NewBarkTownSignText:
-	text "NEW BARK TOWN"
+MINUTTOWNSignText:
+	text "Minut Town"
 
 	para "The Town Where the"
-	line "Winds of a New"
-	cont "Beginning Blow"
+	line "Minutes of "
+	cont "Adventure Begin"
 	done
 
-NewBarkTownPlayersHouseSignText:
+MINUTTOWNPlayersHouseSignText:
 	text "<PLAYER>'s House"
 	done
 
-NewBarkTownElmsLabSignText:
-	text "ELM #MON LAB"
-	done
-
-NewBarkTownElmsHouseSignText:
-	text "ELM'S HOUSE"
+MINUTTOWNElmsHouseSignText:
+	text "Nel and <RIVAL>'s"
+	line "House"
 	done
 
 NewBarkTown_MapEvents:
@@ -288,17 +224,17 @@ NewBarkTown_MapEvents:
 	warp_event  3, 11, PLAYERS_NEIGHBORS_HOUSE, 1
 	warp_event 11, 13, ELMS_HOUSE, 1
 
-	db 2 ; coord events
-	coord_event  1,  8, SCENE_DEFAULT, NewBarkTown_TeacherStopsYouScene1
-	coord_event  1,  9, SCENE_DEFAULT, NewBarkTown_TeacherStopsYouScene2
+	db 1 ; coord events
+	coord_event  13,  6, SCENE_DEFAULT, MINUTTOWN_TeacherStopsYouScene1
 
-	db 4 ; bg events
-	bg_event  8,  8, BGEVENT_READ, NewBarkTownSign
-	bg_event 11,  5, BGEVENT_READ, NewBarkTownPlayersHouseSign
-	bg_event  3,  3, BGEVENT_READ, NewBarkTownElmsLabSign
-	bg_event  9, 13, BGEVENT_READ, NewBarkTownElmsHouseSign
+	db 3 ; bg events
+	bg_event 11, 11, BGEVENT_READ, MINUTTOWNSign
+	bg_event 14,  6, BGEVENT_READ, MINUTTOWNPlayersHouseSign
+	bg_event  9, 13, BGEVENT_READ, MINUTTOWNElmsHouseSign
 
-	db 3 ; object events
-	object_event  6,  8, SPRITE_TEACHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NewBarkTownTeacherScript, -1
-	object_event 12,  9, SPRITE_FISHER, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, NewBarkTownFisherScript, -1
-	object_event  3,  2, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NewBarkTownSilverScript, EVENT_RIVAL_NEW_BARK_TOWN
+	db 4 ; object events
+	object_event  10,  8, SPRITE_TEACHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MINUTTOWNTeacherScript, -1
+	object_event   8, 12, SPRITE_FISHER, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, MINUTTOWNFisherScript, -1
+	object_event  13, 10, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MINUTTOWNSilverScript, EVENT_NEL_MINUT_TOWN
+	object_event   6,  4, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_DOWN, 0, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, MineGuardScript, -1
+	

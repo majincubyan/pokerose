@@ -219,7 +219,7 @@ ElmsLookingForYouText:
 	line "Kalos but change"
 	cont "is a good thing!"
 
-	para "Your grandfater"
+	para "Your grandfather"
 	line "and I are so happy"
 	cont "to have you here."
 
@@ -343,17 +343,19 @@ NeighborNiteIntroText:
 	done
 
 NeighborText:
-	text "<PLAY_G>, have you"
-	line "heard?"
+	text "I understand you"
+	line "miss your parents,"
+	cont "<PLAYER>."
 
-	para "My daughter is"
-	line "adamant about"
+	para "But their work as"
+	line "#mon Rangers is"
+	cont "important."
 
-	para "becoming PROF."
-	line "ELM's assistant."
+	para "Who knows, you"
+	line "might run into"
+	cont "them someday!"
 
-	para "She really loves"
-	line "#MON!"
+	para "Ho, ho, ho!"
 	done
 
 StoveText:
@@ -378,37 +380,36 @@ FridgeText:
 	done
 
 TVText:
-	text "There's a movie on"
-	line "TV: Stars dot the"
+	text "A documentary is "
+	line "on TV: Seems to"
+	cont "be about Tsuji"
+	cont "ruins…"
 
-	para "sky as two boys"
-	line "ride on a train…"
-
-	para "I'd better get"
-	line "rolling too!"
+	para "I'd love to see"
+	line "the ruins myself!"
 	done
 
 PlayersHouse1F_MapEvents:
 	db 0, 0 ; filler
 
 	db 3 ; warp events
-	warp_event  6,  7, NEW_BARK_TOWN, 2
-	warp_event  7,  7, NEW_BARK_TOWN, 2
-	warp_event  9,  0, PLAYERS_HOUSE_2F, 1
+	warp_event  10, 7, NEW_BARK_TOWN, 2
+	warp_event  11, 7, NEW_BARK_TOWN, 2
+	warp_event  13, 0, PLAYERS_HOUSE_2F, 1
 
 	db 2 ; coord events
-	coord_event  8,  4, SCENE_DEFAULT, MeetMomLeftScript
-	coord_event  9,  4, SCENE_DEFAULT, MeetMomRightScript
+	coord_event  12, 4, SCENE_DEFAULT, MeetMomLeftScript
+	coord_event  13, 4, SCENE_DEFAULT, MeetMomRightScript
 
 	db 4 ; bg events
-	bg_event  0,  1, BGEVENT_READ, StoveScript
-	bg_event  1,  1, BGEVENT_READ, SinkScript
-	bg_event  2,  1, BGEVENT_READ, FridgeScript
-	bg_event  4,  1, BGEVENT_READ, TVScript
+	bg_event  4,  1, BGEVENT_READ, StoveScript
+	bg_event  5,  1, BGEVENT_READ, SinkScript
+	bg_event  6,  1, BGEVENT_READ, FridgeScript
+	bg_event  8,  1, BGEVENT_READ, TVScript
 
 	db 5 ; object events
-	object_event  7,  4, SPRITE_MOM, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MomScript, EVENT_PLAYERS_HOUSE_MOM_1
-	object_event  2,  2, SPRITE_MOM, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, MORN, 0, OBJECTTYPE_SCRIPT, 0, MomScript, EVENT_PLAYERS_HOUSE_MOM_2
-	object_event  7,  4, SPRITE_MOM, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, DAY, 0, OBJECTTYPE_SCRIPT, 0, MomScript, EVENT_PLAYERS_HOUSE_MOM_2
-	object_event  0,  2, SPRITE_MOM, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, NITE, 0, OBJECTTYPE_SCRIPT, 0, MomScript, EVENT_PLAYERS_HOUSE_MOM_2
-	object_event  4,  4, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, NeighborScript, EVENT_PLAYERS_HOUSE_1F_NEIGHBOR
+	object_event  11, 4, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, MomScript, EVENT_PLAYERS_HOUSE_MOM_1
+	object_event  6,  2, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, MORN, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, MomScript, EVENT_PLAYERS_HOUSE_MOM_2
+	object_event  11, 4, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, DAY, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, MomScript, EVENT_PLAYERS_HOUSE_MOM_2
+	object_event  4,  2, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, NITE, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, MomScript, EVENT_PLAYERS_HOUSE_MOM_2
+	object_event  8,  4, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, NeighborScript, -1

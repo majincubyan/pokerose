@@ -153,6 +153,10 @@ UnknownText_0x1bc288::
 Timeset_Intializing::
 	text "<……><……><……><……><……><……>…"
 	line "…Intializing…"
+	
+	para "Welcome to the"
+	line "Tsuji New Citzen"
+	cont "Register."
 
 	para "Will you please"
 	line "set the time?"

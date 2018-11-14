@@ -15,9 +15,6 @@ INCBIN "data/tilesets/kanto_metatiles.bin"
 TilesetKantoColl:
 INCLUDE "data/tilesets/kanto_collision.asm"
 
-Tileset0GFX:
-TilesetJohtoGFX:
-INCBIN "gfx/tilesets/johto.2bpp.lz"
 
 Tileset0Meta:
 TilesetJohtoMeta:
@@ -345,3 +342,6 @@ INCBIN "data/tilesets/museum_metatiles.bin"
 TilesetMuseumColl:
 INCLUDE "data/tilesets/museum_collision.asm"
 
+Tileset0GFX:
+TilesetJohtoGFX:
+INCBIN "gfx/tilesets/johto.2bpp.lz"

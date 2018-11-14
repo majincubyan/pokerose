@@ -21,55 +21,81 @@ connection: MACRO
 ;\1: direction
 ;\2: map name
 ;\3: map id
-;\4: x offset for east/west, y offset for north/south
-;\5: distance offset?
-;\6: strip length
+;\4: x offset for east/west, y offset for north/south, of the target map
+;    relative to the current map.
+
+; Figure out target and source offsets
+; Target meaning the offset where the tiles will be placed
+; Source meaning the offset where the tiles are fetched from
+_s = 0
+_t = (\4) + 3
+if _t < 0
+_s = -_t
+_t = 0
+endc
+
+; Figure out whether we're using the width or the height as maximum size
+_st = 0
+_ss = 0
+if ("\1" == "north") || ("\1" == "south")
+_st = \3_WIDTH
+_ss = CURRENT_MAP_WIDTH
+elif ("\1" == "west") || ("\1" == "east")
+_st = \3_HEIGHT
+_ss = CURRENT_MAP_HEIGHT
+endc
+
+; Figure out the length of the strip to connect
+if ((\4) + _st) > (_ss + 3)
+_l = _ss + 3 - (\4) - _s
+else
+_l = _st - _s
+endc
+
 if "\1" == "north"
 	map_id \3
-	dw \2_Blocks + \3_WIDTH * (\3_HEIGHT - 3) + \5
-	dw wOverworldMapBlocks + \4 + 3
-	db \6
+	dw \2_Blocks + \3_WIDTH * (\3_HEIGHT + -3) + _s
+	dw wOverworldMapBlocks + _t
+	db _l
 	db \3_WIDTH
 	db \3_HEIGHT * 2 - 1
-	db (\4 - \5) * -2
-	dw wOverworldMapBlocks + \3_HEIGHT * (\3_WIDTH + 6) + 1
+	db (\4) * -2
+	dw wOverworldMapBlocks + (\3_WIDTH + 6) * \3_HEIGHT + 1
 elif "\1" == "south"
 	map_id \3
-	dw \2_Blocks + \5
-	dw wOverworldMapBlocks + (CURRENT_MAP_HEIGHT + 3) * (CURRENT_MAP_WIDTH + 6) + \4 + 3
-	db \6
+	dw \2_Blocks + _s
+	dw wOverworldMapBlocks + (CURRENT_MAP_WIDTH + 6) * (CURRENT_MAP_HEIGHT + 3) + _t
+	db _l
 	db \3_WIDTH
 	db 0
-	db (\4 - \5) * -2
+	db (\4) * -2
 	dw wOverworldMapBlocks + \3_WIDTH + 7
 elif "\1" == "west"
 	map_id \3
-	dw \2_Blocks + (\3_WIDTH * \5) + \3_WIDTH - 3
-	dw wOverworldMapBlocks + (CURRENT_MAP_WIDTH + 6) * (\4 + 3)
-	db \6
+	dw \2_Blocks + (\3_WIDTH * _s) + \3_WIDTH + -3
+	dw wOverworldMapBlocks + (CURRENT_MAP_WIDTH + 6) * _t
+	db _l
 	db \3_WIDTH
-	db (\4 - \5) * -2
+	db (\4) * -2
 	db \3_WIDTH * 2 - 1
-	dw wOverworldMapBlocks + \3_WIDTH * 2 + 6
+	dw wOverworldMapBlocks + (\3_WIDTH + 6) * 2 + -6
 elif "\1" == "east"
 	map_id \3
-	dw \2_Blocks + (\3_WIDTH * \5)
-	dw wOverworldMapBlocks + (CURRENT_MAP_WIDTH + 6) * (\4 + 3 + 1) - 3
-	db \6
+	dw \2_Blocks + (\3_WIDTH * _s)
+	dw wOverworldMapBlocks + (CURRENT_MAP_WIDTH + 6) * _t + CURRENT_MAP_WIDTH + 3
+	db _l
 	db \3_WIDTH
-	db (\4 - \5) * -2
+	db (\4) * -2
 	db 0
 	dw wOverworldMapBlocks + \3_WIDTH + 7
 endc
 ENDM
 
-	map_attributes NewBarkTown, NEW_BARK_TOWN, $71, WEST | EAST
-	connection west, Route29, ROUTE_29, 0, 0, 9
-	connection east, Route27, ROUTE_27, 0, 0, 9
+	map_attributes NewBarkTown, NEW_BARK_TOWN, $71, SOUTH
+	connection south, Route29, ROUTE_29, 0
 
 	map_attributes CherrygroveCity, CHERRYGROVE_CITY, $35, NORTH | EAST
 	connection north, Route30, ROUTE_30, 5, 0, 10
-	connection east, Route29, ROUTE_29, 0, 0, 9
 
 	map_attributes VioletCity, VIOLET_CITY, $05, SOUTH | WEST | EAST
 	connection south, Route32, ROUTE_32, 0, 0, 10
@@ -114,17 +140,14 @@ ENDM
 	map_attributes Route26, ROUTE_26, $05, WEST
 	connection west, Route27, ROUTE_27, 45, 0, 9
 
-	map_attributes Route27, ROUTE_27, $35, WEST | EAST
-	connection west, NewBarkTown, NEW_BARK_TOWN, 0, 0, 9
+	map_attributes Route27, ROUTE_27, $35, EAST
 	connection east, Route26, ROUTE_26, -3, 42, 12
 
 	map_attributes Route28, ROUTE_28, $2c, WEST
 	connection west, SilverCaveOutside, SILVER_CAVE_OUTSIDE, -3, 6, 12
 
-	map_attributes Route29, ROUTE_29, $05, NORTH | WEST | EAST
-	connection north, Route46, ROUTE_46, 10, 0, 10
-	connection west, CherrygroveCity, CHERRYGROVE_CITY, 0, 0, 9
-	connection east, NewBarkTown, NEW_BARK_TOWN, 0, 0, 9
+	map_attributes Route29, ROUTE_29, $05, NORTH
+	connection north, NewBarkTown, NEW_BARK_TOWN, 0
 
 	map_attributes Route30, ROUTE_30, $05, NORTH | SOUTH
 	connection north, Route31, ROUTE_31, -3, 7, 13
@@ -192,7 +215,6 @@ ENDM
 	connection west, Route46, ROUTE_46, 36, 0, 12
 
 	map_attributes Route46, ROUTE_46, $05, SOUTH | EAST
-	connection south, Route29, ROUTE_29, -3, 7, 16
 	connection east, Route45, ROUTE_45, -3, 33, 12
 
 	map_attributes PewterCity, PEWTER_CITY, $0f, SOUTH | EAST
