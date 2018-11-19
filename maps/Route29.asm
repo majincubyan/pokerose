@@ -2,9 +2,7 @@
 	const ROUTE29_POKE_BALL
 
 Route29_MapScripts:
-	db 2 ; scene scripts
-	scene_script .DummyScene0 ; SCENE_ROUTE29_NOTHING
-	scene_script .DummyScene1 ; SCENE_ROUTE29_CATCH_TUTORIAL
+	db 0 ; scene scripts
 
 	db 0 ; callbacks
 
