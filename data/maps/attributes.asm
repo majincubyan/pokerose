@@ -96,6 +96,9 @@ ENDM
 
 	map_attributes CherrygroveCity, CHERRYGROVE_CITY, $35, NORTH | EAST
 	connection north, Route30, ROUTE_30, 5, 0, 10
+	
+	map_attributes MapleLab, MAPLE_LAB, $05, WEST
+	connection west, Route29, ROUTE_29, -3
 
 	map_attributes VioletCity, VIOLET_CITY, $05, SOUTH | WEST | EAST
 	connection south, Route32, ROUTE_32, 0, 0, 10
@@ -146,8 +149,9 @@ ENDM
 	map_attributes Route28, ROUTE_28, $2c, WEST
 	connection west, SilverCaveOutside, SILVER_CAVE_OUTSIDE, -3, 6, 12
 
-	map_attributes Route29, ROUTE_29, $05, NORTH
+	map_attributes Route29, ROUTE_29, $05, NORTH | EAST
 	connection north, NewBarkTown, NEW_BARK_TOWN, 0
+	connection east, MapleLab, MAPLE_LAB, 3
 
 	map_attributes Route30, ROUTE_30, $05, NORTH | SOUTH
 	connection north, Route31, ROUTE_31, -3, 7, 13

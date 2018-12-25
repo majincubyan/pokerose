@@ -24,7 +24,7 @@ NewBarkTown_MapScripts:
 	return
 
 MINUTTOWN_TeacherStopsYouScene1:
-	playmusic MUSIC_MOM
+	playmusic MUSIC_MOBILE_ADAPTER_MENU
 	showemote EMOTE_SHOCK, MINUTTOWN_RIVAL, 15
 	opentext
 	writetext Text_WaitPlayer
@@ -132,7 +132,7 @@ Text_WhatDoYouThinkYoureDoing:
 	line "moved here from"
 	cont "Kalos right?"
 	
-	para "Nel: I know its"
+	para "I know its"
 	line "quieter here but"
 	cont "don't let that fool"
 	cont "you!"

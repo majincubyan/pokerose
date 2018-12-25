@@ -459,7 +459,7 @@ ENDM
 	map_const DAY_OF_WEEK_SIBLINGS_HOUSE,                   4,  4 ; 11
 	map_const ROUTE_27_SANDSTORM_HOUSE,                     4,  4 ; 12
 	map_const ROUTE_29_ROUTE_46_GATE,                       5,  4 ; 13
-	;map_const MAPLE_LAB, 10, 9
+	map_const MAPLE_LAB, 10, 9
 
 	newgroup                                                      ; 25
 

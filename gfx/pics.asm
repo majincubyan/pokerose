@@ -76,7 +76,6 @@ DewgongFrontpic:     INCBIN "gfx/pokemon/dewgong/front.animated.2bpp.lz"
 VictreebelFrontpic:  INCBIN "gfx/pokemon/victreebel/front.animated.2bpp.lz"
 RaichuFrontpic:      INCBIN "gfx/pokemon/raichu/front.animated.2bpp.lz"
 PrimeapeFrontpic:    INCBIN "gfx/pokemon/primeape/front.animated.2bpp.lz"
-OmastarBackpic:      INCBIN "gfx/pokemon/omastar/back.2bpp.lz"
 
 
 SECTION "Pics 4", ROMX
@@ -571,16 +570,6 @@ SkiploomBackpic:     INCBIN "gfx/pokemon/skiploom/back.2bpp.lz"
 SpinarakFrontpic:    INCBIN "gfx/pokemon/spinarak/front.animated.2bpp.lz"
 Rival2Pic:           INCBIN "gfx/trainers/rival2.2bpp.lz"
 UnownWFrontpic:      INCBIN "gfx/pokemon/unown_w/front.animated.2bpp.lz"
-CharmanderBackpic:   INCBIN "gfx/pokemon/charmander/back.2bpp.lz"
-RhyhornBackpic:      INCBIN "gfx/pokemon/rhyhorn/back.2bpp.lz"
-UnownCFrontpic:      INCBIN "gfx/pokemon/unown_c/front.animated.2bpp.lz"
-MistyPic:            INCBIN "gfx/trainers/misty.2bpp.lz"
-BlainePic:           INCBIN "gfx/trainers/blaine.2bpp.lz"
-UnownZFrontpic:      INCBIN "gfx/pokemon/unown_z/front.animated.2bpp.lz"
-SwinubFrontpic:      INCBIN "gfx/pokemon/swinub/front.animated.2bpp.lz"
-LarvitarBackpic:     INCBIN "gfx/pokemon/larvitar/back.2bpp.lz"
-PorygonBackpic:      INCBIN "gfx/pokemon/porygon/back.2bpp.lz"
-UnownHBackpic:       INCBIN "gfx/pokemon/unown_h/back.2bpp.lz"
 
 
 SECTION "Pics 17", ROMX
@@ -718,6 +707,19 @@ ChandelureBackPic:   INCBIN "gfx/pokemon/chandelure/back.2bpp.lz"
 MunchlaxFrontPic:    INCBIN "gfx/pokemon/munchlax/front.2bpp.lz"
 MunchlaxBackPic:     INCBIN "gfx/pokemon/munchlax/back.2bpp.lz"
 BulbasaurBackpic:    INCBIN "gfx/pokemon/bulbasaur/back.2bpp.lz"
+CharmanderBackpic:   INCBIN "gfx/pokemon/charmander/back.2bpp.lz"
+RhyhornBackpic:      INCBIN "gfx/pokemon/rhyhorn/back.2bpp.lz"
+UnownCFrontpic:      INCBIN "gfx/pokemon/unown_c/front.animated.2bpp.lz"
+MistyPic:            INCBIN "gfx/trainers/misty.2bpp.lz"
+BlainePic:           INCBIN "gfx/trainers/blaine.2bpp.lz"
+UnownZFrontpic:      INCBIN "gfx/pokemon/unown_z/front.animated.2bpp.lz"
+SwinubFrontpic:      INCBIN "gfx/pokemon/swinub/front.animated.2bpp.lz"
+LarvitarBackpic:     INCBIN "gfx/pokemon/larvitar/back.2bpp.lz"
+PorygonBackpic:      INCBIN "gfx/pokemon/porygon/back.2bpp.lz"
+UnownHBackpic:       INCBIN "gfx/pokemon/unown_h/back.2bpp.lz"
+BossPic: 			 INCBIN "gfx/trainers/boss.2bpp.lz"
+OmastarBackpic:      INCBIN "gfx/pokemon/omastar/back.2bpp.lz"
+
 
 
 ; Sections "Pics 20" to "Pics 24" are not used for any graphics,

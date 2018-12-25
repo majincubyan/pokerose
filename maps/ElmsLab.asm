@@ -1371,8 +1371,8 @@ ElmsLab_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event  4, 11, NEW_BARK_TOWN, 1
-	warp_event  5, 11, NEW_BARK_TOWN, 1
+	warp_event  4, 11, MAPLE_LAB, 1
+	warp_event  5, 11, MAPLE_LAB, 1
 
 	db 8 ; coord events
 	coord_event  4,  6, SCENE_ELMSLAB_CANT_LEAVE, LabTryToLeaveScript

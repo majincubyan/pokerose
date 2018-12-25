@@ -183,8 +183,8 @@ AnimatePokegearModeIndicatorArrow:
 
 .XCoords:
 	db $00 ; POKEGEARCARD_CLOCK
-	db $10 ; POKEGEARCARD_MAP
-	db $20 ; POKEGEARCARD_PHONE
+	db $20 ; POKEGEARCARD_MAP
+	db $10 ; POKEGEARCARD_PHONE
 	db $30 ; POKEGEARCARD_RADIO
 
 TownMap_GetCurrentLandmark:
