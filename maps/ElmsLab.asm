@@ -4,7 +4,7 @@
 	const ELMSLAB_POKE_BALL1
 	const ELMSLAB_POKE_BALL2
 	const ELMSLAB_POKE_BALL3
-	const ELMSLAB_OFFICER
+	const ELMSLAB_NEL
 
 ElmsLab_MapScripts:
 	db 6 ; scene scripts
@@ -40,47 +40,56 @@ ElmsLab_MapScripts:
 .MoveElmCallback:
 	checkscene
 	iftrue .Skip ; not SCENE_DEFAULT
-	moveobject ELMSLAB_ELM, 3, 4
+	moveobject ELMSLAB_ELM, 5, 3
 .Skip:
 	return
 
 .WalkUpToElm:
+	turnobject ELMSLAB_NEL, UP
 	applymovement PLAYER, ElmsLab_WalkUpToElmMovement
-	showemote EMOTE_SHOCK, ELMSLAB_ELM, 15
-	turnobject ELMSLAB_ELM, RIGHT
+	showemote EMOTE_SHOCK, ELMSLAB_NEL, 15
+	turnobject ELMSLAB_NEL, LEFT
 	opentext
-	writetext ElmText_Intro
+	writetext NelText_Intro
+	waitbutton
+	closetext
+	applymovement ELMSLAB_ELM, MapleToPlayer1Movement
+	turnobject PLAYER, UP
+	opentext
+	writetext MapleText_Hello
+	waitbutton
+	writetext NelText_BrotherAndI
+	waitbutton
+	writetext MapleText_AskPlayer
 .MustSayYes:
 	yesorno
 	iftrue .ElmGetsEmail
-	writetext ElmText_Refused
+	writetext MapleText_Refused
 	jump .MustSayYes
 
 .ElmGetsEmail:
-	writetext ElmText_Accepted
+	writetext MapleText_Accepted
 	buttonsound
-	writetext ElmText_ResearchAmbitions
+	writetext MapleText_ResearchAmbitions
 	waitbutton
 	closetext
 	playsound SFX_GLASS_TING
 	pause 30
 	showemote EMOTE_SHOCK, ELMSLAB_ELM, 10
-	turnobject ELMSLAB_ELM, DOWN
+	applymovement ELMSLAB_ELM, MapleToPCMovement
 	opentext
-	writetext ElmText_GotAnEmail
+	writetext MapleText_GotAnEmail
+	waitbutton
+	closetext
+	applymovement ELMSLAB_ELM, MapleToDeskMovement
+	pause 30
+	applymovement ELMSLAB_ELM, MapleToPlayer2Movement
+	opentext
+	writetext MapleText_Husband
 	waitbutton
 	closetext
 	opentext
-	turnobject ELMSLAB_ELM, RIGHT
-	writetext ElmText_MissionFromMrPokemon
-	waitbutton
-	closetext
-	applymovement ELMSLAB_ELM, ElmsLab_ElmToDefaultPositionMovement1
-	turnobject PLAYER, UP
-	applymovement ELMSLAB_ELM, ElmsLab_ElmToDefaultPositionMovement2
-	turnobject PLAYER, RIGHT
-	opentext
-	writetext ElmText_ChooseAPokemon
+	writetext MapleText_ChooseAPokemon
 	waitbutton
 	setscene SCENE_ELMSLAB_CANT_LEAVE
 	closetext
@@ -141,13 +150,13 @@ ElmCheckGotEggAgain:
 	iftrue ElmAfterTheftScript
 	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
 	iftrue ElmDescribesMrPokemonScript
-	writetext ElmText_LetYourMonBattleIt
+	writetext MapleText_LetYourMonBattleIt
 	waitbutton
 	closetext
 	end
 
 LabTryToLeaveScript:
-	turnobject ELMSLAB_ELM, DOWN
+	turnobject ELMSLAB_NEL, DOWN
 	opentext
 	writetext LabWhereGoingText
 	waitbutton
@@ -253,13 +262,6 @@ ElmDirectionsScript:
 	writetext ElmDirectionsText1
 	waitbutton
 	closetext
-	addcellnum PHONE_ELM
-	opentext
-	writetext GotElmsNumberText
-	playsound SFX_REGISTER_PHONE_NUMBER
-	waitsfx
-	waitbutton
-	closetext
 	turnobject ELMSLAB_ELM, LEFT
 	opentext
 	writetext ElmDirectionsText2
@@ -271,9 +273,9 @@ ElmDirectionsScript:
 	waitbutton
 	closetext
 	setevent EVENT_GOT_A_POKEMON_FROM_ELM
-	setevent EVENT_RIVAL_CHERRYGROVE_CITY
+	setevent EVENT_NEL_LAB_OUTSIDE
 	setscene SCENE_ELMSLAB_AIDE_GIVES_POTION
-	setmapscene NEW_BARK_TOWN, SCENE_FINISHED
+	setmapscene MAPLE_LAB, SCENE_LAB_OUTSIDE_BATTLE
 	end
 
 ElmDescribesMrPokemonScript:
@@ -329,10 +331,8 @@ ElmAfterTheftScript:
 	writetext ElmAfterTheftText2
 	waitbutton
 	takeitem MYSTERY_EGG
-	scall ElmJumpBackScript1
 	writetext ElmAfterTheftText3
 	waitbutton
-	scall ElmJumpBackScript2
 	writetext ElmAfterTheftText4
 	buttonsound
 	writetext ElmAfterTheftText5
@@ -416,43 +416,6 @@ ElmGiveTicketScript:
 	closetext
 	end
 
-ElmJumpBackScript1:
-	closetext
-	checkcode VAR_FACING
-	ifequal DOWN, ElmJumpDownScript
-	ifequal UP, ElmJumpUpScript
-	ifequal LEFT, ElmJumpLeftScript
-	ifequal RIGHT, ElmJumpRightScript
-	end
-
-ElmJumpBackScript2:
-	closetext
-	checkcode VAR_FACING
-	ifequal DOWN, ElmJumpUpScript
-	ifequal UP, ElmJumpDownScript
-	ifequal LEFT, ElmJumpRightScript
-	ifequal RIGHT, ElmJumpLeftScript
-	end
-
-ElmJumpUpScript:
-	applymovement ELMSLAB_ELM, ElmJumpUpMovement
-	opentext
-	end
-
-ElmJumpDownScript:
-	applymovement ELMSLAB_ELM, ElmJumpDownMovement
-	opentext
-	end
-
-ElmJumpLeftScript:
-	applymovement ELMSLAB_ELM, ElmJumpLeftMovement
-	opentext
-	end
-
-ElmJumpRightScript:
-	applymovement ELMSLAB_ELM, ElmJumpRightMovement
-	opentext
-	end
 
 AideScript_WalkPotion1:
 	applymovement ELMSLAB_ELMS_AIDE, AideWalksRight1
@@ -543,23 +506,21 @@ AideScript_AfterTheft:
 	closetext
 	end
 
-MeetCopScript2:
-	applymovement PLAYER, MeetCopScript2_StepLeft
 
-MeetCopScript:
-	applymovement PLAYER, MeetCopScript_WalkUp
-CopScript:
-	turnobject ELMSLAB_OFFICER, LEFT
+NelScript:
+	faceplayer
 	opentext
-	writetext ElmsLabOfficerText1
-	buttonsound
-	special NameRival
-	writetext ElmsLabOfficerText2
+	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
+	iftrue NelChooseScript
+	writetext NelText1
 	waitbutton
 	closetext
-	applymovement ELMSLAB_OFFICER, OfficerLeavesMovement
-	disappear ELMSLAB_OFFICER
-	setscene SCENE_ELMSLAB_NOTHING
+	end
+
+NelChooseScript:
+	writetext NelText2
+	waitbutton
+	closetext
 	end
 
 ElmsLabWindow:
@@ -600,6 +561,9 @@ ElmsLabTrashcan:
 ElmsLabPC:
 	jumptext ElmsLabPCText
 
+StrangeStones:
+	jumptext StrangeStonesText
+	
 ElmsLabTrashcan2:
 ; unused
 	jumpstd trashcan
@@ -615,30 +579,13 @@ ElmsLab_WalkUpToElmMovement:
 	step UP
 	step UP
 	step UP
-	turn_head LEFT
+	turn_head RIGHT
 	step_end
 
 ElmsLab_CantLeaveMovement:
 	step UP
 	step_end
 
-MeetCopScript2_StepLeft:
-	step LEFT
-	step_end
-
-MeetCopScript_WalkUp:
-	step UP
-	step UP
-	turn_head RIGHT
-	step_end
-
-OfficerLeavesMovement:
-	step DOWN
-	step DOWN
-	step DOWN
-	step DOWN
-	step DOWN
-	step_end
 
 AideWalksRight1:
 	step RIGHT
@@ -666,114 +613,125 @@ AideWalksLeft2:
 	turn_head DOWN
 	step_end
 
-ElmJumpUpMovement:
-	fix_facing
-	big_step UP
-	remove_fixed_facing
-	step_end
-
-ElmJumpDownMovement:
-	fix_facing
-	big_step DOWN
-	remove_fixed_facing
-	step_end
-
-ElmJumpLeftMovement:
-	fix_facing
-	big_step LEFT
-	remove_fixed_facing
-	step_end
-
-ElmJumpRightMovement:
-	fix_facing
-	big_step RIGHT
-	remove_fixed_facing
-	step_end
-
-ElmsLab_ElmToDefaultPositionMovement1:
-	step UP
-	step_end
-
-ElmsLab_ElmToDefaultPositionMovement2:
-	step RIGHT
-	step RIGHT
-	step UP
-	turn_head DOWN
-	step_end
-
 AfterCyndaquilMovement:
+	step DOWN
+	step LEFT
 	step LEFT
 	step UP
 	turn_head UP
 	step_end
 
 AfterTotodileMovement:
+	step DOWN
+	step LEFT
 	step LEFT
 	step LEFT
 	step UP
 	turn_head UP
 	step_end
-
+	
 AfterChikoritaMovement:
+	step DOWN
+	step LEFT
 	step LEFT
 	step LEFT
 	step LEFT
 	step UP
 	turn_head UP
 	step_end
+	
+MapleToPlayer1Movement:
+	step LEFT
+	turn_head DOWN
+	step_end
+	
+MapleToPCMovement:
+	step LEFT
+	step DOWN
+	step_end
+	
+MapleToDeskMovement:
+	step UP
+	step UP
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	turn_head UP
+	step_end
+	
+MapleToPlayer2Movement:
+	step LEFT
+	step LEFT
+	step DOWN
+	step_end
 
-ElmText_Intro:
-	text "ELM: <PLAY_G>!"
+NelText_Intro:
+	text "Nel: <PLAY_G>!"
 	line "There you are!"
 
-	para "I needed to ask"
-	line "you a favor."
+	para "This is Professor"
+	line "Maple."
+	done
 
-	para "I'm conducting new"
-	line "#MON research"
+MapleText_Hello:
+	text "Maple: Hello,"
+	line "<PLAY_G>!"
 
-	para "right now. I was"
-	line "wondering if you"
+	para "I'm Maple, I study"
+	line "the Tsuji ruins"
 
-	para "could help me with"
-	line "it, <PLAY_G>."
-
-	para "You see…"
-
-	para "I'm writing a"
-	line "paper that I want"
-
-	para "to present at a"
-	line "conference."
+	para "and their link to"
+	line "#mon migration."
 
 	para "But there are some"
 	line "things I don't"
 
 	para "quite understand"
 	line "yet."
+	done
 
-	para "So!"
-
+NelText_BrotherAndI:
+	text "Nel: Yep! So she"
+	line "asked my brother"
+	cont "and I to help!"
+	done
+	
+MapleText_AskPlayer:
+	text "Maple: As I"
+	line "understand, you"
+	
+	para "just arrived in"
+	line "Tsuji."
+	
+	para "New places can be"
+	line "both exciting and"
+	cont "scary at times."
+	
+	para "Sooo…"
+	
 	para "I'd like you to"
 	line "raise a #MON"
 
 	para "that I recently"
-	line "caught."
+	line "caught also!"
 	done
 
-ElmText_Accepted:
-	text "Thanks, <PLAY_G>!"
+MapleText_Accepted:
+	text "Great, <PLAY_G>!"
 
-	para "You're a great"
-	line "help!"
+	para "You'll be helping"
+	line "my research and"
+	
+	para "can learn about"
+	line "your new home."
 	done
 
-ElmText_Refused:
-	text "But… Please, I"
-	line "need your help!"
+MapleText_Refused:
+	text "Come now, no need"
+	line "to be shy!"
 	done
 
-ElmText_ResearchAmbitions:
+MapleText_ResearchAmbitions:
 	text "When I announce my"
 	line "findings, I'm sure"
 
@@ -787,40 +745,37 @@ ElmText_ResearchAmbitions:
 	line "it!"
 	done
 
-ElmText_GotAnEmail:
+MapleText_GotAnEmail:
 	text "Oh, hey! I got an"
 	line "e-mail!"
 
 	para "<……><……><……>"
 	line "Hm… Uh-huh…"
 
-	para "Okay…"
+	para "Oh no…"
 	done
 
-ElmText_MissionFromMrPokemon:
+MapleText_Husband:
 	text "Hey, listen."
 
-	para "I have an acquain-"
-	line "tance called MR."
-	cont "#MON."
+	para "My husband helps"
+	line "with my research"
+	
+	para "by studying"
+	line "on-site."
+	
+	para "But he forgot this"
+	line "stone tablet and"
 
-	para "He keeps finding"
-	line "weird things and"
+	para "its critcal for"
+	line "his translations."
 
-	para "raving about his"
-	line "discoveries."
+	para "I want to bring it"
+	line "to him, but we're"
+	cont "just so busy"
 
-	para "Anyway, I just got"
-	line "an e-mail from him"
-
-	para "saying that this"
-	line "time it's real."
-
-	para "It is intriguing,"
-	line "but we're busy"
-
-	para "with our #MON"
-	line "research…"
+	para "with our #mon"
+	line "research here…"
 
 	para "Wait!"
 
@@ -830,61 +785,61 @@ ElmText_MissionFromMrPokemon:
 	line "go in our place?"
 	done
 
-ElmText_ChooseAPokemon:
+MapleText_ChooseAPokemon:
 	text "I want you to"
 	line "raise one of the"
 
-	para "#MON contained"
-	line "in these BALLS."
+	para "#mon contained"
+	line "in these balls."
 
 	para "You'll be that"
-	line "#MON's first"
+	line "#mon's first"
 	cont "partner, <PLAY_G>!"
 
 	para "Go on. Pick one!"
 	done
 
-ElmText_LetYourMonBattleIt:
-	text "If a wild #MON"
+MapleText_LetYourMonBattleIt:
+	text "If a wild #mon"
 	line "appears, let your"
-	cont "#MON battle it!"
+	cont "#mon battle it!"
 	done
 
 LabWhereGoingText:
-	text "ELM: Wait! Where"
+	text "Nel: Wait! Where"
 	line "are you going?"
 	done
 
 TakeCyndaquilText:
-	text "ELM: You'll take"
-	line "CYNDAQUIL, the"
-	cont "fire #MON?"
+	text "Maple: You'll take"
+	line "Chimchar, the"
+	cont "fire #mon?"
 	done
 
 TakeTotodileText:
-	text "ELM: Do you want"
-	line "TOTODILE, the"
-	cont "water #MON?"
+	text "Maple: Do you want"
+	line "Oshawott, the"
+	cont "water #mon?"
 	done
 
 TakeChikoritaText:
-	text "ELM: So, you like"
-	line "ROWLET, the"
-	cont "grass #MON?"
+	text "Maple: So, you"
+	line "like Rowlet, the"
+	cont "grass #mon?"
 	done
 
 DidntChooseStarterText:
-	text "ELM: Think it over"
-	line "carefully."
+	text "Maple: Think it"
+	line "over carefully."
 
 	para "Your partner is"
 	line "important."
 	done
 
 ChoseStarterText:
-	text "ELM: I think"
+	text "Maple: I think"
 	line "that's a great"
-	cont "#MON too!"
+	cont "#mon too!"
 	done
 
 ReceivedStarterText:
@@ -895,11 +850,11 @@ ReceivedStarterText:
 	done
 
 ElmDirectionsText1:
-	text "MR.#MON lives a"
-	line "little bit beyond"
+	text "My husband is at"
+	line "the ruins in the"
 
-	para "CHERRYGROVE, the"
-	line "next city over."
+	para "Secunda Forest,"
+	line "south on 101."
 
 	para "It's almost a"
 	line "direct route"
@@ -907,11 +862,8 @@ ElmDirectionsText1:
 	para "there, so you"
 	line "can't miss it."
 
-	para "But just in case,"
-	line "here's my phone"
-
-	para "number. Call me if"
-	line "anything comes up!"
+	para "Please be careful"
+	line "with this, <PLAY_G>."
 	done
 
 ElmDirectionsText2:
@@ -1268,33 +1220,15 @@ AideText_ExplainBalls:
 	cont "to get them."
 	done
 
-ElmsLabOfficerText1:
-	text "I heard a #MON"
-	line "was stolen here…"
-
-	para "I was just getting"
-	line "some information"
-	cont "from PROF.ELM."
-
-	para "Apparently, it was"
-	line "a young male with"
-	cont "long, red hair…"
-
-	para "What?"
-
-	para "You battled a"
-	line "trainer like that?"
-
-	para "Did you happen to"
-	line "get his name?"
+NelText1:
+	text "Nel: <PLAY_G>,"
+	line "you can go ahead"
+	cont "and pick first!"
 	done
 
-ElmsLabOfficerText2:
-	text "OK! So <RIVAL>"
-	line "was his name."
-
-	para "Thanks for helping"
-	line "my investigation!"
+NelText2:
+	text "Nel: Oh man, not"
+	line "sure who to pick."
 	done
 
 ElmsLabWindowText1:
@@ -1366,6 +1300,14 @@ ElmsLabPCText:
 	para "…It says on the"
 	line "screen…"
 	done
+	
+StrangeStonesText:
+	text "Odd stones and"
+	line "artifacts are"
+	
+	para "scattered all"
+	line "over the desk."
+	done
 
 ElmsLab_MapEvents:
 	db 0, 0 ; filler
@@ -1374,20 +1316,16 @@ ElmsLab_MapEvents:
 	warp_event  4, 11, MAPLE_LAB, 1
 	warp_event  5, 11, MAPLE_LAB, 1
 
-	db 8 ; coord events
+	db 4 ; coord events
 	coord_event  4,  6, SCENE_ELMSLAB_CANT_LEAVE, LabTryToLeaveScript
 	coord_event  5,  6, SCENE_ELMSLAB_CANT_LEAVE, LabTryToLeaveScript
-	coord_event  4,  5, SCENE_ELMSLAB_MEET_OFFICER, MeetCopScript
-	coord_event  5,  5, SCENE_ELMSLAB_MEET_OFFICER, MeetCopScript2
 	coord_event  4,  8, SCENE_ELMSLAB_AIDE_GIVES_POTION, AideScript_WalkPotion1
 	coord_event  5,  8, SCENE_ELMSLAB_AIDE_GIVES_POTION, AideScript_WalkPotion2
-	coord_event  4,  8, SCENE_ELMSLAB_AIDE_GIVES_POKE_BALLS, AideScript_WalkBalls1
-	coord_event  5,  8, SCENE_ELMSLAB_AIDE_GIVES_POKE_BALLS, AideScript_WalkBalls2
 
 	db 16 ; bg events
 	bg_event  2,  1, BGEVENT_READ, ElmsLabHealingMachine
-	bg_event  6,  1, BGEVENT_READ, ElmsLabBookshelf
-	bg_event  7,  1, BGEVENT_READ, ElmsLabBookshelf
+	bg_event  6,  1, BGEVENT_READ, StrangeStones
+	bg_event  7,  1, BGEVENT_READ, StrangeStones
 	bg_event  8,  1, BGEVENT_READ, ElmsLabBookshelf
 	bg_event  9,  1, BGEVENT_READ, ElmsLabBookshelf
 	bg_event  0,  7, BGEVENT_READ, ElmsLabTravelTip1
@@ -1403,9 +1341,9 @@ ElmsLab_MapEvents:
 	bg_event  3,  5, BGEVENT_DOWN, ElmsLabPC
 
 	db 6 ; object events
-	object_event  5,  2, SPRITE_ELM, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ProfElmScript, -1
+	object_event  5,  2, SPRITE_ELM, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ProfElmScript, -1
 	object_event  2,  9, SPRITE_SCIENTIST, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ElmsAideScript, EVENT_ELMS_AIDE_IN_LAB
 	object_event  6,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CyndaquilPokeBallScript, EVENT_CYNDAQUIL_POKEBALL_IN_ELMS_LAB
 	object_event  7,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TotodilePokeBallScript, EVENT_TOTODILE_POKEBALL_IN_ELMS_LAB
 	object_event  8,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ChikoritaPokeBallScript, EVENT_ROWLET_POKEBALL_IN_ELMS_LAB
-	object_event  5,  3, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CopScript, EVENT_COP_IN_ELMS_LAB
+	object_event  5,  4, SPRITE_SILVER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, NelScript, EVENT_NEL_IN_ELMS_LAB

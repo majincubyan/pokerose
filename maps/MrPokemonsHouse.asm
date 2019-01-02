@@ -127,7 +127,7 @@ MrPokemonsHouse_OakScript:
 	setmapscene CHERRYGROVE_CITY, SCENE_CHERRYGROVECITY_MEET_RIVAL
 	setmapscene ELMS_LAB, SCENE_ELMSLAB_MEET_OFFICER
 	specialphonecall SPECIALCALL_ROBBED
-	clearevent EVENT_COP_IN_ELMS_LAB
+	clearevent EVENT_NEL_IN_ELMS_LAB
 	checkevent EVENT_GOT_TOTODILE_FROM_ELM
 	iftrue .RivalTakesChikorita
 	checkevent EVENT_GOT_ROWLET_FROM_ELM

@@ -45,8 +45,8 @@ SCENE_FINISHED EQU 1
 
 ; wRoute29SceneID
 	const_def
-	const SCENE_ROUTE29_NOTHING        ; 0
-	const SCENE_ROUTE29_CATCH_TUTORIAL ; 1
+	const SCENE_ROUTE101_NOTHING        ; 0
+	const SCENE_ROUTE101_GUY ; 1
 
 ; wCherrygroveCitySceneID
 	const_def
@@ -155,3 +155,8 @@ SCENE_FINISHED EQU 1
 	const_def 1
 	const SCENE_FASTSHIP1F_ENTER_SHIP   ; 1
 	const SCENE_FASTSHIP1F_MEET_GRANDPA ; 2
+	
+; wMapleLabSceneID
+	const_def 1
+	const SCENE_LAB_OUTSIDE_NOTHING
+	const SCENE_LAB_OUTSIDE_BATTLE

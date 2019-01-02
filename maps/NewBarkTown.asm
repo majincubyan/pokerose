@@ -36,6 +36,7 @@ MINUTTOWN_TeacherStopsYouScene1:
 	waitbutton
 	closetext
 	showemote EMOTE_SHOCK, MINUTTOWN_RIVAL, 15
+	pause 10
 	opentext
 	writetext Text_MeetMaple
 	waitbutton
@@ -44,8 +45,10 @@ MINUTTOWN_TeacherStopsYouScene1:
 	applymovement MINUTTOWN_RIVAL, Movement_TeacherBringsYouBack2_NBT
 	disappear MINUTTOWN_RIVAL
 	setevent EVENT_NEL_MINUT_TOWN
+	clearevent EVENT_NEL_IN_ELMS_LAB
 	special RestartMapMusic
 	setscene SCENE_FINISHED
+	setmapscene ROUTE_29, SCENE_ROUTE101_GUY
 	end
 
 
