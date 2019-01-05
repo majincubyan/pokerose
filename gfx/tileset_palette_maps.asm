@@ -65,10 +65,14 @@ INCLUDE "gfx/tilesets/cave_palette_map.asm"
 TilesetParkPalMap:
 INCLUDE "gfx/tilesets/park_palette_map.asm"
 
+TilesetRuinsPalMap:
+INCLUDE "gfx/tilesets/ruins_palette_map.asm"
+
+TilesetGymArenaPalMap:
+INCLUDE "gfx/tilesets/gym_arena_palette_map.asm"
+
 TilesetRuinsOfAlphPalMap:
-TilesetBetaWordRoomPalMap:
 TilesetHoOhWordRoomPalMap:
-TilesetKabutoWordRoomPalMap:
 TilesetOmanyteWordRoomPalMap:
 TilesetAerodactylWordRoomPalMap:
 INCLUDE "gfx/tilesets/ruins_of_alph_palette_map.asm"

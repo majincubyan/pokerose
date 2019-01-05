@@ -278,6 +278,8 @@ Route16Gate_Blocks:
 Route7SaffronGate_Blocks:
 Route17Route18Gate_Blocks:
 Route31VioletGate_Blocks:
+SecundaForestGate1_Blocks:
+SecundaForestGate2_Blocks
 	INCBIN "maps/EastWestGate.blk"
 
 BetaAzaleaTown_Blocks:
@@ -731,8 +733,8 @@ KarensRoom_Blocks:
 AzaleaGym_Blocks:
 	INCBIN "maps/AzaleaGym.blk"
 
-VioletGym_Blocks:
-	INCBIN "maps/VioletGym.blk"
+SecundaGym_Blocks:
+	INCBIN "maps/SecundaGym.blk"
 
 GoldenrodGym_Blocks:
 	INCBIN "maps/GoldenrodGym.blk"
@@ -1048,3 +1050,15 @@ GoldenrodDeptStoreRoof_Blocks:
 
 MapleLab_Blocks:
 	INCBIN "maps/MapleLab.blk"
+
+SecundaForest101_Blocks:
+	INCBIN "maps/SecundaForest101.blk"
+
+SecundaForest_Blocks:
+	INCBIN "maps/SecundaForest.blk"
+
+SecundaRuins1F_Blocks:
+	INCBIN "maps/SecundaRuins1F.blk"
+
+SecundaCemetary_Blocks:
+	INCBIN "maps/SecundaCemetary.blk"

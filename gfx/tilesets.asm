@@ -285,26 +285,29 @@ INCBIN "data/tilesets/battle_tower_outside_metatiles.bin"
 TilesetBattleTowerOutsideColl:
 INCLUDE "data/tilesets/battle_tower_outside_collision.asm"
 
-TilesetBetaWordRoomMeta:
-INCBIN "data/tilesets/beta_word_room_metatiles.bin"
+TilesetRuinsMeta:
+INCBIN "data/tilesets/ruins_metatiles.bin"
 
-TilesetBetaWordRoomColl:
+TilesetRuinsColl:
 TilesetHoOhWordRoomColl:
-TilesetKabutoWordRoomColl:
 TilesetOmanyteWordRoomColl:
 TilesetAerodactylWordRoomColl:
-INCLUDE "data/tilesets/beta_word_room_collision.asm"
+INCLUDE "data/tilesets/ruins_collision.asm"
+
+TilesetGymArenaColl:
+INCLUDE "data/tilesets/gym_arena_collision.asm"
 
 
 SECTION "Tileset Data 7", ROMX
 
 TilesetRuinsOfAlphGFX:
-TilesetBetaWordRoomGFX:
 TilesetHoOhWordRoomGFX:
-TilesetKabutoWordRoomGFX:
 TilesetOmanyteWordRoomGFX:
 TilesetAerodactylWordRoomGFX:
 INCBIN "gfx/tilesets/ruins_of_alph.2bpp.lz"
+
+TilesetGymArenaGFX:
+INCBIN "gfx/tilesets/gym_arena.2bpp.lz"
 
 TilesetRuinsOfAlphMeta:
 INCBIN "data/tilesets/ruins_of_alph_metatiles.bin"
@@ -312,14 +315,17 @@ INCBIN "data/tilesets/ruins_of_alph_metatiles.bin"
 TilesetRuinsOfAlphColl:
 INCLUDE "data/tilesets/ruins_of_alph_collision.asm"
 
+TilesetRuinsGFX:
+INCBIN "gfx/tilesets/ruins.2bpp.lz"
+
 
 SECTION "Tileset Data 8", ROMX
 
 TilesetHoOhWordRoomMeta:
 INCBIN "data/tilesets/ho_oh_word_room_metatiles.bin"
 
-TilesetKabutoWordRoomMeta:
-INCBIN "data/tilesets/kabuto_word_room_metatiles.bin"
+TilesetGymArenaMeta:
+INCBIN "data/tilesets/gym_arena_metatiles.bin"
 
 TilesetOmanyteWordRoomMeta:
 INCBIN "data/tilesets/omanyte_word_room_metatiles.bin"

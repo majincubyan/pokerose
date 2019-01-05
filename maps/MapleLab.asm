@@ -1,5 +1,6 @@
 	const_def 2 ; object constants
 	const LAB_NEL
+	const LAB_FRUITTREE
 
 MapleLab_MapScripts:
 	db 2 ; scene scripts
@@ -25,6 +26,15 @@ NelApprochScript1:
 	turnobject PLAYER, RIGHT
 	applymovement LAB_NEL, NelApproch1
 	opentext
+	writetext NelMapleForgotText
+	waitbutton
+	buttonsound
+	itemtotext POKE_BALL, MEM_BUFFER_1
+	scall PlayerReceiveTheBalls
+	giveitem POKE_BALL, 5
+	writetext NelExplainBalls
+	buttonsound
+	itemnotify
 	writetext NelLetsBattleText
 	waitbutton
 	closetext
@@ -32,6 +42,7 @@ NelApprochScript1:
 	iftrue .Totodile
 	checkevent EVENT_GOT_ROWLET_FROM_ELM
 	iftrue .Chikorita
+	setevent EVENT_ROWLET_POKEBALL_IN_ELMS_LAB
 	winlosstext NelLabWinText, NelLabLossText
 	setlasttalked LAB_NEL
 	loadtrainer RIVAL1, RIVAL1_1_ROWLET
@@ -43,6 +54,7 @@ NelApprochScript1:
 	jump .AfterVictorious
 
 .Totodile:
+	setevent EVENT_CYNDAQUIL_POKEBALL_IN_ELMS_LAB
 	winlosstext NelLabWinText, NelLabLossText
 	setlasttalked LAB_NEL
 	loadtrainer RIVAL1, RIVAL1_1_CYNDAQUIL
@@ -54,6 +66,7 @@ NelApprochScript1:
 	jump .AfterVictorious
 
 .Chikorita:
+	setevent EVENT_TOTODILE_POKEBALL_IN_ELMS_LAB
 	winlosstext NelLabWinText, NelLabLossText
 	setlasttalked LAB_NEL
 	loadtrainer RIVAL1, RIVAL1_1_TOTODILE
@@ -84,14 +97,23 @@ NelApprochScript1:
 	applymovement LAB_NEL, NelLeaves
 	applymovement PLAYER, PlayerMovesBack
 	disappear LAB_NEL
+	setevent EVENT_NEL_IN_ELMS_LAB
 	setscene SCENE_LAB_OUTSIDE_NOTHING
 	setmapscene ROUTE_29, SCENE_ROUTE101_NOTHING
+	setmapscene CHERRYGROVE_CITY, SCENE_SECUNDACITY_MEET_RIVAL
 	special HealParty
 	playmapmusic
 	end
 	
 MapleLabSign:
 	jumptext MapleLabSignText
+	
+MapleLabFruitTree:
+	fruittree FRUITTREE_LAB
+	
+PlayerReceiveTheBalls:
+	jumpstd receiveitem
+	end
 
 NelApproch1:
 	step LEFT
@@ -133,9 +155,24 @@ NelCallsOutText:
 	text "Hey, wait up!"
 	done
 	
+NelMapleForgotText:
+	text "Nel: One sec!"
+	line "Prof. Maple forgot"
+	cont "to give you these."
+	done
+
+NelExplainBalls:
+	text "Have your #mon"
+	line "battle wild"
+	
+	para "#mon to weaken"
+	line "'em and then throw"
+	cont "your # Ball!"
+	done
+	
 NelLetsBattleText:
-	text "Nel: I decided on"
-	line "a #mon!"
+	text "Oh yeah, I decided"
+	line "on a #mon!"
 	
 	para "<PLAYER>, let's"
 	line "have a battle!"
@@ -188,6 +225,7 @@ NelLabText_YouWon:
 	
 	para "See ya!"
 	done
+	
 
 MapleLab_MapEvents:
 	db 0, 0 ; filler
@@ -202,5 +240,7 @@ MapleLab_MapEvents:
 	db 1 ; bg events
 	bg_event 12, 6, BGEVENT_READ, MapleLabSign
 
-	db 1 ; object events
-	object_event 10, 10, SPRITE_SILVER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_NEL_LAB_OUTSIDE
+	db 2 ; object events
+	object_event 10, 10, SPRITE_SILVER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_NEL_LAB_OUTSIDE
+	object_event 15, 10, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MapleLabFruitTree, -1
+	

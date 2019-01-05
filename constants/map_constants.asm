@@ -145,7 +145,9 @@ ENDM
 	map_const ROCK_TUNNEL_B1F,                             15, 18 ; 88
 	map_const SAFARI_ZONE_FUCHSIA_GATE_BETA,                5,  4 ; 89
 	map_const SAFARI_ZONE_BETA,                            10, 18 ; 90
-	map_const VICTORY_ROAD,                                10, 36 ; 91
+	map_const VICTORY_ROAD,                                10, 36 ; 9
+	map_const SECUNDA_FOREST, 10, 18
+	map_const SECUNDA_RUINS_1F, 20, 18
 
 	newgroup                                                      ;  4
 
@@ -230,7 +232,6 @@ ENDM
 	map_const ROUTE_37,                                    10,  9 ;  4
 	map_const VIOLET_CITY,                                 20, 18 ;  5
 	map_const VIOLET_MART,                                  6,  4 ;  6
-	map_const VIOLET_GYM,                                   5,  8 ;  7
 	map_const EARLS_POKEMON_ACADEMY,                        4,  8 ;  8
 	map_const VIOLET_NICKNAME_SPEECH_HOUSE,                 4,  4 ;  9
 	map_const VIOLET_POKECENTER_1F,                         5,  4 ; 10
@@ -460,6 +461,9 @@ ENDM
 	map_const ROUTE_27_SANDSTORM_HOUSE,                     4,  4 ; 12
 	map_const ROUTE_29_ROUTE_46_GATE,                       5,  4 ; 13
 	map_const MAPLE_LAB, 10, 9
+	map_const SECUNDA_FOREST_101, 10, 9
+	map_const SECUNDA_FOREST_GATE1, 5, 4
+	
 
 	newgroup                                                      ; 25
 
@@ -491,4 +495,6 @@ ENDM
 	map_const CHERRYGROVE_EVOLUTION_SPEECH_HOUSE,           4,  4 ;  8
 	map_const ROUTE_30_BERRY_HOUSE,                         4,  4 ;  9
 	map_const MR_POKEMONS_HOUSE,                            4,  4 ; 10
-	map_const ROUTE_31_VIOLET_GATE,                         5,  4 ; 11
+	map_const SECUNDA_FOREST_GATE2,                         5,  4 ; 11
+	map_const SECUNDA_CEMETARY, 10, 18
+	map_const SECUNDA_GYM,                                  5,  8 ;  7

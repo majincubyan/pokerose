@@ -427,3 +427,7 @@ TrainerHouse:
 	ld a, [sMysteryGiftTrainerHouseFlag]
 	ld [wScriptVar], a
 	jp CloseSRAM
+
+ClockResetter:
+	farcall RestartClock
+	ret

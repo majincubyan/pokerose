@@ -263,9 +263,9 @@ TilesetBattleTowerAnim:
 TilesetRuinsOfAlphAnim:
 TilesetRadioTowerAnim:
 TilesetUndergroundAnim:
-TilesetBetaWordRoomAnim:
+TilesetRuinsAnim:
 TilesetHoOhWordRoomAnim:
-TilesetKabutoWordRoomAnim:
+TilesetGymArenaAnim:
 TilesetOmanyteWordRoomAnim:
 TilesetAerodactylWordRoomAnim:
 TilesetMuseumAnim:

@@ -240,7 +240,7 @@ Route30Antidote:
 	itemball ANTIDOTE
 
 Route30FruitTree1:
-	fruittree FRUITTREE_ROUTE_30_1
+	fruittree FRUITTREE_LAB
 
 Route30FruitTree2:
 	fruittree FRUITTREE_ROUTE_30_2

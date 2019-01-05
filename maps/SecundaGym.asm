@@ -4,7 +4,7 @@
 	const VIOLETGYM_YOUNGSTER2
 	const VIOLETGYM_GYM_GUY
 
-VioletGym_MapScripts:
+SecundaGym_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
@@ -279,12 +279,12 @@ VioletGymGuyWinText:
 	line "time at all!"
 	done
 
-VioletGym_MapEvents:
+SecundaGym_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event  4, 15, VIOLET_CITY, 2
-	warp_event  5, 15, VIOLET_CITY, 2
+	warp_event  4, 15, CHERRYGROVE_CITY, 5
+	warp_event  5, 15, CHERRYGROVE_CITY, 5
 
 	db 0 ; coord events
 

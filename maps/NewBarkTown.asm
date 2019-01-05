@@ -26,10 +26,6 @@ NewBarkTown_MapScripts:
 MINUTTOWN_TeacherStopsYouScene1:
 	playmusic MUSIC_MOBILE_ADAPTER_MENU
 	showemote EMOTE_SHOCK, MINUTTOWN_RIVAL, 15
-	opentext
-	writetext Text_WaitPlayer
-	waitbutton
-	closetext
 	applymovement MINUTTOWN_RIVAL, Movement_TeacherRunsToYou1_NBT
 	opentext
 	writetext Text_WhatDoYouThinkYoureDoing
@@ -117,11 +113,7 @@ Movement_TeacherBringsYouBack2_NBT:
 
 Text_GearIsImpressive:
 	text "Hello, welcome to"
-	para "Tsuji!"
-	done
-
-Text_WaitPlayer:
-	text "???: HEY!"
+	line "Tsuji!"
 	done
 
 Text_WhatDoYouThinkYoureDoing:
@@ -149,7 +141,7 @@ Text_WhatDoYouThinkYoureDoing:
 
 	
 Text_MeetMaple:
-	text "Nel: Oh, I know!"
+	text "Oh, I know!"
 	
 	para "My brother and I"
 	line "are getting our"

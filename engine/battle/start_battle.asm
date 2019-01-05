@@ -118,10 +118,13 @@ PlayBattleMusic:
 	farcall IsGymLeader
 	jr c, .done
 
-	ld de, MUSIC_RIVAL_BATTLE
+	ld de, MUSIC_NEL_BATTLE
 	ld a, [wOtherTrainerClass]
 	cp RIVAL1
 	jr z, .done
+	
+	ld de, MUSIC_RIVAL_BATTLE
+	ld a, [wOtherTrainerClass]
 	cp RIVAL2
 	jr nz, .othertrainer
 

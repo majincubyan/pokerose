@@ -52,6 +52,7 @@ StdScripts::
 	dba PCScript
 	dba GameCornerCoinVendorScript
 	dba HappinessCheckScript
+	dba ClockResetterScript
 
 PokecenterNurseScript:
 ; EVENT_WELCOMED_TO_POKECOM_CENTER is never set
@@ -1885,6 +1886,29 @@ HappinessCheckScript:
 	waitbutton
 	closetext
 	end
+	
+ClockResetterScript:
+	opentext
+	writetext ClockText
+	yesorno
+	iftrue .ChangeTime
+	closetext
+	end
+	
+.ChangeTime:
+	special ClockResetter
+	reloadmap
+	closetext
+	end
+	
+ClockText:
+	text "There is a clock "
+	line "hanging on the"
+	cont "wall."
+	
+	para "Do you want to"
+	line "change the time?"
+	done
 
 Movement_ContestResults_WalkAfterWarp:
 	step RIGHT

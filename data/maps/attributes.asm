@@ -90,12 +90,17 @@ elif "\1" == "east"
 	dw wOverworldMapBlocks + \3_WIDTH + 7
 endc
 ENDM
+	map_attributes SecundaForest101, SECUNDA_FOREST_101, $05, NORTH
+	connection north, Route29, ROUTE_29, 0
 
 	map_attributes NewBarkTown, NEW_BARK_TOWN, $71, SOUTH
 	connection south, Route29, ROUTE_29, 0
 
-	map_attributes CherrygroveCity, CHERRYGROVE_CITY, $35, NORTH | EAST
-	connection north, Route30, ROUTE_30, 5, 0, 10
+	map_attributes CherrygroveCity, CHERRYGROVE_CITY, $8B, NORTH
+	connection north, SecundaCemetary, SECUNDA_CEMETARY, 4
+	
+	map_attributes SecundaCemetary, SECUNDA_CEMETARY, $8B, SOUTH
+	connection south, CherrygroveCity, CHERRYGROVE_CITY, -4
 	
 	map_attributes MapleLab, MAPLE_LAB, $05, WEST
 	connection west, Route29, ROUTE_29, -3
@@ -149,13 +154,13 @@ ENDM
 	map_attributes Route28, ROUTE_28, $2c, WEST
 	connection west, SilverCaveOutside, SILVER_CAVE_OUTSIDE, -3, 6, 12
 
-	map_attributes Route29, ROUTE_29, $05, NORTH | EAST
+	map_attributes Route29, ROUTE_29, $05, NORTH | SOUTH | EAST
 	connection north, NewBarkTown, NEW_BARK_TOWN, 0
+	connection south, SecundaForest101, SECUNDA_FOREST_101, 0
 	connection east, MapleLab, MAPLE_LAB, 3
 
-	map_attributes Route30, ROUTE_30, $05, NORTH | SOUTH
+	map_attributes Route30, ROUTE_30, $05, NORTH
 	connection north, Route31, ROUTE_31, -3, 7, 13
-	connection south, CherrygroveCity, CHERRYGROVE_CITY, -3, 2, 16
 
 	map_attributes Route31, ROUTE_31, $05, SOUTH | WEST
 	connection south, Route30, ROUTE_30, 10, 0, 10
@@ -514,7 +519,7 @@ ENDM
 	map_attributes Route43MahoganyGate, ROUTE_43_MAHOGANY_GATE, $00, 0
 	map_attributes Route43Gate, ROUTE_43_GATE, $00, 0
 	map_attributes VioletMart, VIOLET_MART, $00, 0
-	map_attributes VioletGym, VIOLET_GYM, $00, 0
+	map_attributes SecundaGym, SECUNDA_GYM, $00, 0
 	map_attributes EarlsPokemonAcademy, EARLS_POKEMON_ACADEMY, $00, 0
 	map_attributes VioletNicknameSpeechHouse, VIOLET_NICKNAME_SPEECH_HOUSE, $00, 0
 	map_attributes VioletPokecenter1F, VIOLET_POKECENTER_1F, $00, 0
@@ -686,4 +691,7 @@ ENDM
 	map_attributes CherrygroveEvolutionSpeechHouse, CHERRYGROVE_EVOLUTION_SPEECH_HOUSE, $00, 0
 	map_attributes Route30BerryHouse, ROUTE_30_BERRY_HOUSE, $00, 0
 	map_attributes MrPokemonsHouse, MR_POKEMONS_HOUSE, $00, 0
-	map_attributes Route31VioletGate, ROUTE_31_VIOLET_GATE, $00, 0
+	map_attributes SecundaForestGate2, SECUNDA_FOREST_GATE2, $00, 0
+	map_attributes SecundaForestGate1, SECUNDA_FOREST_GATE1, $00, 0
+	map_attributes SecundaForest, SECUNDA_FOREST, $00, 0
+	map_attributes SecundaRuins1F, SECUNDA_RUINS_1F, $00, 0

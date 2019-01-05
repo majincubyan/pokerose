@@ -93,6 +93,7 @@ PlayersHousePCScript:
 	warp NONE, 0, 0
 	end
 
+
 PlayersRadioText1:
 	text "PROF.OAK'S #MON"
 	line "TALK! Please tune"

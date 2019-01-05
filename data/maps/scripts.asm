@@ -73,7 +73,7 @@ SECTION "Map Scripts 5", ROMX
 
 INCLUDE "maps/Route11.asm"
 INCLUDE "maps/VioletMart.asm"
-INCLUDE "maps/VioletGym.asm"
+INCLUDE "maps/SecundaGym.asm"
 INCLUDE "maps/EarlsPokemonAcademy.asm"
 INCLUDE "maps/VioletNicknameSpeechHouse.asm"
 INCLUDE "maps/VioletPokecenter1F.asm"
@@ -373,7 +373,6 @@ INCLUDE "maps/GuideGentsHouse.asm"
 INCLUDE "maps/CherrygroveEvolutionSpeechHouse.asm"
 INCLUDE "maps/Route30BerryHouse.asm"
 INCLUDE "maps/MrPokemonsHouse.asm"
-INCLUDE "maps/Route31VioletGate.asm"
 
 
 SECTION "Map Scripts 19", ROMX
@@ -485,3 +484,9 @@ SECTION "Map Scripts 25", ROMX
 INCLUDE "maps/SilverCaveOutside.asm"
 INCLUDE "maps/Route10North.asm"
 INCLUDE "maps/MapleLab.asm"
+INCLUDE "maps/SecundaForest101.asm"
+INCLUDE "maps/SecundaForestGate1.asm"
+INCLUDE "maps/SecundaForest.asm"
+INCLUDE "maps/SecundaRuins1F.asm"
+INCLUDE "maps/SecundaForestGate2.asm"
+INCLUDE "maps/SecundaCemetary.asm"

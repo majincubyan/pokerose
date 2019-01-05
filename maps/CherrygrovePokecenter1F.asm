@@ -4,6 +4,7 @@
 	const CHERRYGROVEPOKECENTER1F_GENTLEMAN
 	const CHERRYGROVEPOKECENTER1F_TEACHER
 
+
 CherrygrovePokecenter1F_MapScripts:
 	db 0 ; scene scripts
 
@@ -33,6 +34,9 @@ CherrygrovePokecenter1FTeacherScript:
 	waitbutton
 	closetext
 	end
+	
+ClockScript:
+	jumpstd clockreset
 
 CherrygrovePokecenter1FFisherText:
 	text "It's great. I can"
@@ -69,14 +73,14 @@ CherrygrovePokecenter1FTeacherText_CommCenterOpen:
 CherrygrovePokecenter1F_MapEvents:
 	db 0, 0 ; filler
 
-	db 3 ; warp events
-	warp_event  3,  7, CHERRYGROVE_CITY, 2
+	db 2 ; warp events
 	warp_event  4,  7, CHERRYGROVE_CITY, 2
-	warp_event  0,  7, POKECENTER_2F, 1
+	warp_event  5,  7, CHERRYGROVE_CITY, 2
 
 	db 0 ; coord events
 
-	db 0 ; bg events
+	db 1 ; bg events
+	bg_event 7, 0, BGEVENT_UP, ClockScript
 
 	db 4 ; object events
 	object_event  3,  1, SPRITE_NURSE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CherrygrovePokecenter1FNurseScript, -1

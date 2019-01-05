@@ -9,6 +9,7 @@ Landmarks:
 	dbbw       0,   0, SpecialMapName
 	landmark 140, 100, NewBarkTownName
 	landmark 128, 100, Route29Name
+	landmark 120, 100, SecundaForestName
 	landmark 100, 100, CherrygroveCityName
 	landmark 100,  80, Route30Name
 	landmark  96,  60, Route31Name
@@ -103,7 +104,7 @@ Landmarks:
 	landmark  20,  68, Route28Name
 	landmark 140, 116, FastShipName
 
-NewBarkTownName:     db "NEW BARK¯TOWN@"
+NewBarkTownName:     db "Minut¯Town@"
 CherrygroveCityName: db "CHERRYGROVE¯CITY@"
 VioletCityName:      db "VIOLET CITY@"
 AzaleaTownName:      db "AZALEA TOWN@"
@@ -177,7 +178,7 @@ Route25Name:         db "ROUTE 25@"
 Route26Name:         db "ROUTE 26@"
 Route27Name:         db "ROUTE 27@"
 Route28Name:         db "ROUTE 28@"
-Route29Name:         db "ROUTE 101@"
+Route29Name:         db "Route 101@"
 Route30Name:         db "ROUTE 30@"
 Route31Name:         db "ROUTE 31@"
 Route32Name:         db "ROUTE 32@"
@@ -205,3 +206,4 @@ TohjoFallsName:      db "TOHJO FALLS@"
 UndergroundName:     db "UNDERGROUND@"
 BattleTowerName:     db "BATTLE¯TOWER@"
 SpecialMapName:      db "SPECIAL@"
+SecundaForestName:	 db "Secunda¯Forest@"

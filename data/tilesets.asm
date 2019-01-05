@@ -44,9 +44,9 @@ Tilesets::
 	tileset TilesetIcePath
 	tileset TilesetDarkCave
 	tileset TilesetForest
-	tileset TilesetBetaWordRoom
+	tileset TilesetRuins
 	tileset TilesetHoOhWordRoom
-	tileset TilesetKabutoWordRoom
+	tileset TilesetGymArena
 	tileset TilesetOmanyteWordRoom
 	tileset TilesetAerodactylWordRoom
 	tileset TilesetMuseum
