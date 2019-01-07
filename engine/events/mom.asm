@@ -40,6 +40,7 @@ BankOfMom:
 	dw .StopOrStartSavingMoney
 	dw .AskDST
 	dw .JustDoWhatYouCan
+	dw .DirectDepositOff
 
 .CheckIfBankInitialized:
 	ld a, [wMomSavingMoney]
@@ -87,8 +88,8 @@ BankOfMom:
 	jr .done_2
 
 .nope
-	call DSTChecks
 	ld a, $7
+	jr .done_2
 
 .done_2
 	ld [wJumptableIndex], a
@@ -174,7 +175,7 @@ BankOfMom:
 	ld de, SFX_TRANSACTION
 	call PlaySFX
 	call WaitSFX
-	ld hl, UnknownText_0x1668a
+	ld hl, CompletedTransaction
 	call PrintText
 	ld a, $8
 	jr .done_4
@@ -240,7 +241,7 @@ BankOfMom:
 	ld de, SFX_TRANSACTION
 	call PlaySFX
 	call WaitSFX
-	ld hl, UnknownText_0x1668f
+	ld hl, CompletedTransaction
 	call PrintText
 	ld a, $8
 	jr .done_5
@@ -278,7 +279,7 @@ BankOfMom:
 .StopSavingMoney:
 	ld a, 1 << MOM_ACTIVE_F
 	ld [wMomSavingMoney], a
-	ld a, $7
+	ld a, $9
 	ld [wJumptableIndex], a
 	ret
 
@@ -290,6 +291,16 @@ BankOfMom:
 	ld hl, wJumptableIndex
 	set 7, [hl]
 	ret
+	
+.DirectDepositOff:
+	ld hl, UnknownText_0x1668a
+	call PrintText
+
+.done_6:
+	ld a, $8
+	ld [wJumptableIndex], a
+	ret
+	
 
 DSTChecks:
 ; check the time; avoid changing DST if doing so would change the current day
@@ -660,14 +671,14 @@ UnknownText_0x1668a:
 	text_jump UnknownText_0x1bda5b
 	db "@"
 
-UnknownText_0x1668f:
+CompletedTransaction:
 	; , don't give up!
-	text_jump UnknownText_0x1bda7e
+	text_jump TransactionComplete_Text
 	db "@"
 
 UnknownText_0x16694:
-	; Just do what you can.
-	text_jump UnknownText_0x1bda90
+	; Just do what you can. Rubysan
+	text_jump TransactionCanceled_Text
 	db "@"
 
 Mom_SavedString:

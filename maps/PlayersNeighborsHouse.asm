@@ -45,33 +45,34 @@ PlayersNeighborsHouseRadioScript:
 	end
 
 PlayersNeighborsDaughterText:
-	text "PIKACHU is an"
-	line "evolved #MON."
+	text "Pikachu aren't"
+	line "from Tsuji. They"
+	cont "migrated here!"
 
 	para "I was amazed by"
-	line "PROF.ELM's find-"
-	cont "ings."
+	line "Prof. Maple's "
+	cont "findings."
 
-	para "He's so famous for"
-	line "his research on"
-	cont "#MON evolution."
+	para "She's so famous for"
+	line "her research on"
+	cont "#mon migration."
 
 	para "…sigh…"
 
 	para "I wish I could be"
 	line "a researcher like"
-	cont "him…"
+	cont "her…"
 	done
 
 PlayersNeighborText:
 	text "My daughter is"
 	line "adamant about"
 
-	para "becoming PROF."
-	line "ELM's assistant."
+	para "becoming Prof."
+	line "Maple's assistant."
 
 	para "She really loves"
-	line "#MON!"
+	line "#mon!"
 
 	para "But then, so do I!"
 	done
@@ -100,8 +101,8 @@ PlayersNeighborsHouse_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event  2,  7, NEW_BARK_TOWN, 3
-	warp_event  3,  7, NEW_BARK_TOWN, 3
+	warp_event  2,  7, NEW_BARK_TOWN, 2
+	warp_event  3,  7, NEW_BARK_TOWN, 2
 
 	db 0 ; coord events
 
@@ -112,4 +113,4 @@ PlayersNeighborsHouse_MapEvents:
 
 	db 2 ; object events
 	object_event  2,  3, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, PlayersNeighborsDaughterScript, -1
-	object_event  5,  3, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, PlayersNeighborScript, EVENT_PLAYERS_NEIGHBORS_HOUSE_NEIGHBOR
+	object_event  5,  3, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, PlayersNeighborScript, -1

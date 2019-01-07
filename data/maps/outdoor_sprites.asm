@@ -133,7 +133,7 @@ CherrygroveGroupSprites:
 	db SPRITE_SILVER
 	db SPRITE_TEACHER
 	db SPRITE_FISHER
-	db SPRITE_COOLTRAINER_M
+	db SPRITE_SHANNON
 	db SPRITE_YOUNGSTER
 	db SPRITE_MONSTER
 	db SPRITE_GRAMPS
@@ -143,6 +143,8 @@ CherrygroveGroupSprites:
 	db SPRITE_POKE_BALL
 	db SPRITE_FRUIT_TREE
 	db SPRITE_BLACK_BELT
+	db SPRITE_COOLTRAINER_M
+	db SPRITE_SHUPPET
 	db 0 ; end
 
 ; Route37 and EcruteakCity are connected

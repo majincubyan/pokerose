@@ -24,7 +24,7 @@ ItemDescriptions:
 	dw FireStoneDesc
 	dw ThunderStoneDesc
 	dw WaterStoneDesc
-	dw TeruSama2Desc
+	dw ATMCardDesc
 	dw HPUpDesc
 	dw ProteinDesc
 	dw IronDesc
@@ -352,8 +352,9 @@ WaterStoneDesc:
 	db   "Evolves certain"
 	next "kinds of #MON.@"
 
-TeruSama2Desc:
-	db   "?@"
+ATMCardDesc:
+	db   "Needed to use"
+	next "the ATMs.@"
 
 HPUpDesc:
 	db   "Raises the HP of"
@@ -526,7 +527,7 @@ SSTicketDesc:
 
 MysteryEggDesc:
 	db   "A stone tablet"
-	next "with symbols.@"
+	next "with odd symbols.@"
 
 ClearBellDesc:
 	db   "Makes a gentle"

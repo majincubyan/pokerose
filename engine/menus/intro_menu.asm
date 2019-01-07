@@ -37,7 +37,7 @@ PrintDayOfWeek:
 	db "Satur@"
 
 .Day:
-	db "Day@"
+	db "day@"
 
 NewGame_ClearTileMapEtc:
 	xor a
@@ -255,7 +255,7 @@ SetDefaultBoxNames:
 	ret
 
 .Box:
-	db "BOX@"
+	db "Box@"
 
 InitializeMagikarpHouse:
 	ld hl, wBestMagikarpLengthFeet

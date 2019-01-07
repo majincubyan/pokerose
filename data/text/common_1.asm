@@ -1507,60 +1507,44 @@ UnknownText_0x1bd745::
 	done
 
 UnknownText_0x1bd77f::
-	text "Wow, that's a cute"
-	line "#MON."
+	text "<PLAYER> inserted"
+	line "ATM Card."
 
-	para "Where did you get"
-	line "it?"
+	para "Thank you for"
+	line "banking with Tsuji"
+	cont "National."
 
-	para "…"
-
-	para "So, you're leaving"
-	line "on an adventure…"
-
-	para "OK!"
-	line "I'll help too."
-
-	para "But what can I do"
-	line "for you?"
-
-	para "I know! I'll save"
-	line "money for you."
-
-	para "On a long journey,"
-	line "money's important."
-
-	para "Do you want me to"
-	line "save your money?"
+	para "Do you want to"
+	line "activate direct"
+	cont "deposit?"
 	done
 
 UnknownText_0x1bd868::
-	text "OK, I'll take care"
-	line "of your money."
-
-	para "<……><……><……>"
+	text "<……><……><……>"
+	
+	para "Direct deposit"
+	line "is active."
 	prompt
 
 UnknownText_0x1bd88e::
-	text "Be careful."
-
-	para "#MON are your"
-	line "friends. You need"
-	cont "to work as a team."
-
-	para "Now, go on!"
+	text "Now ending user"
+	line "session."
+	
+	para "ATM Card was"
+	line "ejected."
 	done
 
 UnknownText_0x1bd8da::
-	text "Hi! Welcome home!"
-	line "You're trying very"
-	cont "hard, I see."
+	text "<PLAYER> inserted"
+	line "ATM Card."
 
-	para "I've kept your"
-	line "room tidy."
-
-	para "Or is this about"
-	line "your money?"
+	para "Thank you for"
+	line "banking with Tsuji"
+	cont "National."
+	
+	para "Would like to"
+	line "manage your"
+	cont "account?"
 	done
 
 UnknownText_0x1bd942::
@@ -1604,26 +1588,48 @@ UnknownText_0x1bda0b::
 	prompt
 
 UnknownText_0x1bda25::
-	text "OK, I'll save your"
-	line "money. Trust me!"
-
-	para "<PLAYER>, stick"
-	line "with it!"
+	text "Direct deposit"
+	line "is active."
+	
+	para "Now ending user"
+	line "session."
+	
+	para "ATM Card was"
+	line "ejected."
 	done
 
 UnknownText_0x1bda5b::
-	text "Your money's safe"
-	line "here! Get going!"
+	text "Direct deposit"
+	line "is no longer"
+	cont "active."
+	
+	para "Now ending user"
+	line "session."
+	
+	para "ATM Card was"
+	line "ejected."
 	done
 
-UnknownText_0x1bda7e::
-	text "<PLAYER>, don't"
-	line "give up!"
+TransactionComplete_Text::
+	text "Transaction"
+	line "complete."
+	
+	para "Now ending user"
+	line "session."
+	
+	para "ATM Card was"
+	line "ejected."
 	done
 
-UnknownText_0x1bda90::
-	text "Just do what"
-	line "you can."
+TransactionCanceled_Text::
+	text "Transaction"
+	line "canceled."
+	
+	para "Now ending user"
+	line "session."
+	
+	para "ATM Card was"
+	line "ejected."
 	done
 
 UnknownText_0x1bdaa7::

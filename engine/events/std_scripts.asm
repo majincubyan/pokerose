@@ -53,6 +53,7 @@ StdScripts::
 	dba GameCornerCoinVendorScript
 	dba HappinessCheckScript
 	dba ClockResetterScript
+	dba MartATMScript
 
 PokecenterNurseScript:
 ; EVENT_WELCOMED_TO_POKECOM_CENTER is never set
@@ -1897,7 +1898,7 @@ ClockResetterScript:
 	
 .ChangeTime:
 	special ClockResetter
-	reloadmap
+	special DSTChecks
 	closetext
 	end
 	
@@ -1908,6 +1909,44 @@ ClockText:
 	
 	para "Do you want to"
 	line "change the time?"
+	done
+	
+
+MartATMScript:
+	checkevent EVENT_TALKED_TO_ATM_FIRST_TIME
+	iftrue .Bank
+	opentext
+	writetext OpenAnAccountText
+	yesorno
+	iffalse .Done
+	buttonsound
+	waitsfx
+	giveitem ATM_CARD
+	writetext GotATMCardText
+	playsound SFX_KEY_ITEM
+	waitsfx
+	itemnotify
+	setevent EVENT_TALKED_TO_ATM_FIRST_TIME	
+.Bank
+	opentext
+	special BankOfMom
+	waitbutton
+.Done:
+	closetext
+	end
+
+OpenAnAccountText:
+	text "Welcome to the"
+	line "Tsuji National"
+	cont "Bank ATM."
+	
+	para "Would you like to"
+	line "open an account?"
+	done
+	
+GotATMCardText:
+	text "<PLAYER> received"
+	line "ATM Card!"
 	done
 
 Movement_ContestResults_WalkAfterWarp:

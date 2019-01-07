@@ -68,6 +68,9 @@ CherrygroveMartYoungsterText:
 	para "You should keep an"
 	line "ANTIDOTE with you."
 	done
+	
+ATMScript:
+	jumpstd martatm
 
 CherrygroveMart_MapEvents:
 	db 0, 0 ; filler
@@ -78,8 +81,9 @@ CherrygroveMart_MapEvents:
 
 	db 0 ; coord events
 
-	db 0 ; bg events
-
+	db 1 ; bg events
+	bg_event 3, 1, BGEVENT_READ, ATMScript
+	
 	db 3 ; object events
 	object_event  1,  3, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CherrygroveMartClerkScript, -1
 	object_event  7,  6, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CherrygroveMartCooltrainerMScript, -1

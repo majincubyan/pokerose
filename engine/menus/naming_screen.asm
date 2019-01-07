@@ -116,7 +116,7 @@ NamingScreen:
 
 .NicknameStrings:
 	db "'S@"
-	db "NICKNAME?@"
+	db "Nickname?@"
 
 .Player:
 	farcall GetPlayerIcon
@@ -128,11 +128,11 @@ NamingScreen:
 	ret
 
 .PlayerNameString:
-	db "YOUR NAME?@"
+	db "Your name?@"
 
 .Rival:
-	ld de, SilverSpriteGFX
-	ld b, BANK(SilverSpriteGFX)
+	ld de, ShannonSpriteGFX
+	ld b, BANK(ShannonSpriteGFX)
 	call .LoadSprite
 	hlcoord 5, 2
 	ld de, .RivalNameString
@@ -141,7 +141,7 @@ NamingScreen:
 	ret
 
 .RivalNameString:
-	db "RIVAL'S NAME?@"
+	db "Rival's name?@"
 
 .Mom:
 	ld de, MomSpriteGFX
@@ -178,7 +178,7 @@ NamingScreen:
 	ret
 
 .BoxNameString:
-	db "BOX NAME?@"
+	db "Box name?@"
 
 .Tomodachi:
 	hlcoord 3, 2

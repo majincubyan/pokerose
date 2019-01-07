@@ -5,7 +5,7 @@ UnusedPhoneScript:
 ; Mom
 
 MomPhoneScript:
-	checkevent EVENT_TALKED_TO_MOM_AFTER_MYSTERY_EGG_QUEST
+	checkevent EVENT_TALKED_TO_ATM_FIRST_TIME
 	iftrue .bcec5
 	checkevent EVENT_DUDE_TALKED_TO_YOU
 	iftrue MomPhoneLectureScript
@@ -139,7 +139,7 @@ MomPhoneNoGymQuestScript:
 	end
 
 MomPhoneLectureScript:
-	setevent EVENT_TALKED_TO_MOM_AFTER_MYSTERY_EGG_QUEST
+	setevent EVENT_TALKED_TO_ATM_FIRST_TIME
 	setflag ENGINE_MOM_ACTIVE
 	specialphonecall SPECIALCALL_NONE
 	farwritetext MomPhoneLectureText

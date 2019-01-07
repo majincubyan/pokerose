@@ -54,3 +54,4 @@
 	enum gamecornercoinvendor
 	enum happinesschecknpc
 	enum clockreset
+	enum martatm

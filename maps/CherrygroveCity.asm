@@ -113,7 +113,7 @@ SecundaRivalBattle2:
 	moveobject SECUNDA_SHANNON, 10, 14
 	appear SECUNDA_SHANNON
 	special FadeOutMusic
-	pause 15
+	pause 30
 	showemote EMOTE_SHOCK, SECUNDA_SHANNON, 15
 	playmusic MUSIC_RIVAL_ENCOUNTER
 	turnobject SECUNDA_SHANNON, RIGHT
@@ -189,6 +189,12 @@ SecundaRivalBattle2:
 	special HealParty
 	playmapmusic
 	end
+	
+SecundaCityPokecenterSign:
+	jumpstd pokecentersign
+
+SecundaCityMartSign:
+	jumpstd martsign
 
 
 ;==========MOVEMENT====================
@@ -248,8 +254,8 @@ RivalMyNameIsText:
 RivalNameText:
 	text "<RIVAL>."
 	
-	para "So let's how good"
-	line "you are."
+	para "So let's see how"
+	line "good you are."
 	done
 	
 RivalLossText:
@@ -258,8 +264,7 @@ RivalLossText:
 	done
 	
 RivalWinText:
-	text "You look pretty"
-	line "pleased…"
+	text "Impressive…"
 	done
 	
 RivalText_YouWon:
@@ -310,9 +315,10 @@ CherrygroveCity_MapEvents:
 	coord_event 14, 14, SCENE_SECUNDACITY_MEET_RIVAL, SecundaRivalBattle2
 	coord_event 14, 15, SCENE_SECUNDACITY_MEET_RIVAL, SecundaRivalBattle3
 
-	db 1 ; bg events
+	db 3 ; bg events
 	bg_event 21,  9, BGEVENT_READ, SecundaCitySign
-
+	bg_event 24,  9, BGEVENT_READ, SecundaCityMartSign
+	bg_event 28,  9, BGEVENT_READ, SecundaCityPokecenterSign
 	
 	db 1 ; object events
 	object_event 10, 11, SPRITE_SHANNON, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SecundaRivalScript, EVENT_NEL_LAB_OUTSIDE

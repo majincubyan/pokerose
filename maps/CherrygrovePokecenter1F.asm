@@ -35,7 +35,7 @@ CherrygrovePokecenter1FTeacherScript:
 	closetext
 	end
 	
-ClockScript:
+SecundaClockScript:
 	jumpstd clockreset
 
 CherrygrovePokecenter1FFisherText:
@@ -80,7 +80,7 @@ CherrygrovePokecenter1F_MapEvents:
 	db 0 ; coord events
 
 	db 1 ; bg events
-	bg_event 7, 0, BGEVENT_UP, ClockScript
+	bg_event 7, 0, BGEVENT_UP, SecundaClockScript
 
 	db 4 ; object events
 	object_event  3,  1, SPRITE_NURSE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CherrygrovePokecenter1FNurseScript, -1

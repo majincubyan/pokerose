@@ -1465,7 +1465,7 @@ UnknownText_0x1c6000::
 	done
 
 UnknownText_0x1c6030::
-	text "I set the clock"
+	text "You set the clock"
 	line "forward by one"
 	cont "hour."
 	prompt
@@ -1476,22 +1476,22 @@ UnknownText_0x1c6056::
 	done
 
 UnknownText_0x1c6075::
-	text "I put the clock"
+	text "You put the clock"
 	line "back one hour."
 	prompt
 
 UnknownText_0x1c6095::
 	text "Do you want to"
-	line "adjust your clock"
+	line "adjust the clock"
 
 	para "for Daylight"
 	line "Saving Time?"
 	done
 
 UnknownText_0x1c60d1::
-	text "I lost the in-"
-	line "struction booklet"
-	cont "for the #GEAR."
+	text "You can't seem to"
+	line "adjust the clock"
+	cont "for DST."
 
 	para "Come back again in"
 	line "a while."

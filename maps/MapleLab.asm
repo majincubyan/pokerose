@@ -109,7 +109,7 @@ MapleLabSign:
 	jumptext MapleLabSignText
 	
 MapleLabFruitTree:
-	fruittree FRUITTREE_LAB
+	fruittree FRUITTREE_ROUTE_29
 	
 PlayerReceiveTheBalls:
 	jumpstd receiveitem
@@ -230,8 +230,9 @@ NelLabText_YouWon:
 MapleLab_MapEvents:
 	db 0, 0 ; filler
 
-	db 1 ; warp events
+	db 2 ; warp events
 	warp_event 10, 5, ELMS_LAB, 1
+	warp_event 13, 9, ELMS_HOUSE, 1
 
 	db 2 ; coord events
 	coord_event 4, 10, SCENE_LAB_OUTSIDE_BATTLE, NelApprochScript1

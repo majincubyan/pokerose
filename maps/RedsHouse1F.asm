@@ -35,49 +35,39 @@ RedsHouse1FBookshelf:
 RedsMomText1:
 	text "Hi!"
 
-	para "RED's been away"
-	line "for a long time."
-
-	para "He hasn't called"
-	line "either, so I have"
-
-	para "no idea where he"
-	line "is or what he's"
-	cont "been doing."
-
-	para "They say that no"
-	line "word is proof that"
-
-	para "he's doing fine,"
-	line "but I do worry"
-	cont "about him."
+	para "My sons get their"
+	line "first #mon"
+	cont "today."
+	
+	para "I couldn't be more"
+	line "proud."
 	done
 
 RedsMomText2:
-	text "I worry about RED"
-	line "getting hurt or"
-
-	para "sick, but he's a"
-	line "boy. I'm proud"
-
-	para "that he is doing"
-	line "what he wants to"
-
-	para "do."
+	text "I know it means"
+	line "they will leave"
+	cont "home."
+	
+	para "But all kids have"
+	line "to travel with"
+	cont "their #mon."
+	
+	para "And I'll always"
+	line "have open arms"
+	cont "for them."
 	done
 
 RedsHouse1FTVText:
-	text "They have programs"
-	line "that aren't shown"
-	cont "in JOHTO…"
+	text "There's a soap"
+	line "opera on TV."
 	done
 
 RedsHouse1F_MapEvents:
 	db 0, 0 ; filler
 
 	db 3 ; warp events
-	warp_event  2,  7, PALLET_TOWN, 1
-	warp_event  3,  7, PALLET_TOWN, 1
+	warp_event  2,  7, NEW_BARK_TOWN, 3
+	warp_event  3,  7, NEW_BARK_TOWN, 3
 	warp_event  7,  0, REDS_HOUSE_2F, 1
 
 	db 0 ; coord events

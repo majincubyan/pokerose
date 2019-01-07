@@ -7,10 +7,28 @@ ElmsHouse_MapScripts:
 
 	db 0 ; callbacks
 
-ElmsWife:
-	jumptextfaceplayer ElmsWifeText
-
-ElmsSon:
+MapleDaughter:
+	faceplayer
+	opentext
+	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
+	iffalse .ParentsWorking
+	checkevent EVENT_GOT_BERRY_FROM_MAPLE_HOUSE
+	iftrue .ParentsWorking
+	writetext YouGotAPokemonText
+	buttonsound
+	verbosegiveitem BERRY
+	iffalse .NoRoom
+	writetext BerriesHealText
+	waitbutton
+	setevent EVENT_GOT_BERRY_FROM_MAPLE_HOUSE
+.ParentsWorking:
+	writetext ParentsWorkingText
+	waitbutton
+.NoRoom:
+	closetext
+	end
+	
+MapleSon:
 	jumptextfaceplayer ElmsSonText
 
 ElmsHousePC:
@@ -19,74 +37,73 @@ ElmsHousePC:
 ElmsHouseBookshelf:
 	jumpstd difficultbookshelf
 
-ElmsWifeText:
-	text "Hi, <PLAY_G>! My"
-	line "husband's always"
-
-	para "so busy--I hope"
-	line "he's OK."
-
-	para "When he's caught"
-	line "up in his #MON"
-
-	para "research, he even"
-	line "forgets to eat."
+YouGotAPokemonText:
+	text "Oh, you got a"
+	line "#mon from my"
+	cont "mother?"
+	
+	para "Why don't you have"
+	line "this then?"
 	done
 
+BerriesHealText:
+	text "#mon can heal"
+	line "themselves by"
+	cont "eating berries."
+	
+	para "You can get them"
+	line "from fruit trees"
+
+	para "like the one just"
+	line "outside!"
+	done
+	
+ParentsWorkingText:
+	text "Our parents are"
+	line "always working,"
+	
+	para "so its usually"
+	line "just us."
+	done
+	
 ElmsSonText:
 	text "When I grow up,"
 	line "I'm going to help"
-	cont "my dad!"
+	cont "my mom!"
 
 	para "I'm going to be a"
 	line "great #MON"
 	cont "professor!"
 	done
 
-ElmsHouseLabFoodText:
-; unused
-	text "There's some food"
-	line "here. It must be"
-	cont "for the LAB."
-	done
-
-ElmsHousePokemonFoodText:
-; unused
-	text "There's some food"
-	line "here. This must be"
-	cont "for #MON."
-	done
-
 ElmsHousePCText:
-	text "#MON. Where do"
-	line "they come from? "
+	text "#mon. Why do"
+	line "they migrate to"
+	cont "Tsuji? "
 
-	para "Where are they"
-	line "going?"
-
-	para "Why has no one"
-	line "ever witnessed a"
-	cont "#MON's birth?"
+	para "Is there a"
+	line "relation to the"
+	cont "ruins?"
 
 	para "I want to know! I"
 	line "will dedicate my"
 
 	para "life to the study"
-	line "of #MON!"
+	line "of #mon!"
 
 	para "…"
 
 	para "It's a part of"
-	line "PROF.ELM's re-"
-	cont "search papers."
+	line "Prof. Maple's "
+	cont "research papers."
 	done
 
 ElmsHouse_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event  2,  7, NEW_BARK_TOWN, 4
-	warp_event  3,  7, NEW_BARK_TOWN, 4
+	warp_event  2,  7, MAPLE_LAB, 2
+	warp_event  3,  7, MAPLE_LAB, 2
 
 	db 0 ; coord events
 
@@ -96,5 +113,5 @@ ElmsHouse_MapEvents:
 	bg_event  7,  1, BGEVENT_READ, ElmsHouseBookshelf
 
 	db 2 ; object events
-	object_event  1,  5, SPRITE_TEACHER, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ElmsWife, -1
-	object_event  5,  4, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ElmsSon, -1
+	object_event  1,  5, SPRITE_LASS, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, MapleDaughter, -1
+	object_event  5,  4, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MapleSon, -1

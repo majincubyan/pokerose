@@ -32,20 +32,20 @@
 	tilecoll WALL, WALL, PC, RADIO ; 1f
 	tilecoll WALL, WALL, WALL, WALL ; 20
 	tilecoll WALL, WALL, TV, BOOKSHELF ; 21
-	tilecoll WALL, FLOOR, WALL, FLOOR ; 22
+	tilecoll WALL, WALL, WALL, FLOOR ; 22
 	tilecoll STAIRCASE, WALL, FLOOR, FLOOR ; 23
 	tilecoll STAIRCASE, WALL, FLOOR, FLOOR ; 24
 	tilecoll FLOOR, FLOOR, WALL, WALL ; 25
 	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 26
 	tilecoll WALL, WALL, FLOOR, FLOOR ; 27
 	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 28
-	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 29
-	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 2a
-	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 2b
-	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 2c
-	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 2d
-	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 2e
-	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 2f
+	tilecoll WALL, WALL, FLOOR, WALL ; 29
+	tilecoll WALL, WALL, WALL, WALL ; 2a
+	tilecoll FLOOR, WALL, FLOOR, WALL ; 2b
+	tilecoll WALL, WALL, WALL, WALL ; 2c
+	tilecoll WALL, FLOOR, FLOOR, FLOOR ; 2d
+	tilecoll WALL, WALL, FLOOR, FLOOR ; 2e
+	tilecoll WALL, WALL, FLOOR, WALL ; 2f
 	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 30
 	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 31
 	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 32

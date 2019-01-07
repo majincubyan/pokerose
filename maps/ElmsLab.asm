@@ -208,7 +208,6 @@ ElmDirectionsScript:
 	turnobject PLAYER, UP
 	opentext
 	writetext ElmDirectionsText1
-	waitbutton
 	buttonsound
 	waitsfx
 	giveitem MYSTERY_EGG

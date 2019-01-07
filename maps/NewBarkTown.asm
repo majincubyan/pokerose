@@ -51,7 +51,7 @@ MINUTTOWN_TeacherStopsYouScene1:
 MINUTTOWNTeacherScript:
 	faceplayer
 	opentext
-	checkevent EVENT_TALKED_TO_MOM_AFTER_MYSTERY_EGG_QUEST
+	checkevent EVENT_TALKED_TO_ATM_FIRST_TIME
 	iftrue .CallMom
 	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
 	iftrue .TellMomYoureLeaving
@@ -213,11 +213,10 @@ MINUTTOWNElmsHouseSignText:
 NewBarkTown_MapEvents:
 	db 0, 0 ; filler
 
-	db 4 ; warp events
-	warp_event  6,  3, ELMS_LAB, 1
+	db 3 ; warp events
 	warp_event 13,  5, PLAYERS_HOUSE_1F, 1
-	warp_event  3, 11, PLAYERS_NEIGHBORS_HOUSE, 1
-	warp_event 11, 13, ELMS_HOUSE, 1
+	warp_event 15, 11, PLAYERS_NEIGHBORS_HOUSE, 1
+	warp_event 	3,  9, REDS_HOUSE_1F, 1
 
 	db 1 ; coord events
 	coord_event  13,  6, SCENE_DEFAULT, MINUTTOWN_TeacherStopsYouScene1

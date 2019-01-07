@@ -37,9 +37,9 @@ MeetMomScript:
 	writetext ElmsLookingForYouText
 	buttonsound
 	waitsfx
-	playsound SFX_KEY_ITEM
 	giveitem TOWN_MAP
 	writetext GotTownMap
+	playsound SFX_KEY_ITEM
 	waitsfx
 	itemnotify
 	setscene SCENE_FINISHED
@@ -116,12 +116,6 @@ MomScript:
 	checkscene
 	iffalse MeetMomTalkedScript ; SCENE_DEFAULT
 	opentext
-	checkevent EVENT_FIRST_TIME_BANKING_WITH_MOM
-	iftrue .FirstTimeBanking
-	checkevent EVENT_TALKED_TO_MOM_AFTER_MYSTERY_EGG_QUEST
-	iftrue .BankOfMom
-	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
-	iftrue .GaveMysteryEgg
 	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
 	iftrue .GotAPokemon
 	writetext HurryUpElmIsWaitingText
@@ -135,20 +129,6 @@ MomScript:
 	closetext
 	end
 
-.FirstTimeBanking:
-	writetext ImBehindYouText
-	waitbutton
-	closetext
-	end
-
-.GaveMysteryEgg:
-	setevent EVENT_FIRST_TIME_BANKING_WITH_MOM
-.BankOfMom:
-	setevent EVENT_TALKED_TO_MOM_AFTER_MYSTERY_EGG_QUEST
-	special BankOfMom
-	waitbutton
-	closetext
-	end
 
 NeighborScript:
 	faceplayer
@@ -255,8 +235,8 @@ IsItDSTText:
 	done
 
 ComeHomeForDSTText:
-	text "Come home to"
-	line "adjust the clock"
+	text "You can adjust"
+	line "any clock"
 
 	para "for Daylight"
 	line "Saving Time."
@@ -393,8 +373,8 @@ PlayersHouse1F_MapEvents:
 	db 0, 0 ; filler
 
 	db 3 ; warp events
-	warp_event  10, 7, NEW_BARK_TOWN, 2
-	warp_event  11, 7, NEW_BARK_TOWN, 2
+	warp_event  10, 7, NEW_BARK_TOWN, 1
+	warp_event  11, 7, NEW_BARK_TOWN, 1
 	warp_event  13, 0, PLAYERS_HOUSE_2F, 1
 
 	db 2 ; coord events
