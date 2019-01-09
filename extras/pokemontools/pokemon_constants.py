@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 pokemon_constants = {
-1: "BULBASAUR",
+1: "BELDUM",
 2: "IVYSAUR",
 3: "VENUSAUR",
 4: "CHARMANDER",

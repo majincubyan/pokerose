@@ -7,7 +7,7 @@ AsleepTreeMonsNite:
 	db WEEDLE
 	db KAKUNA
 	db BEEDRILL
-	db SPEAROW
+	db JOLTIK
 	db EKANS
 	db EXEGGCUTE
 	db LEDYBA
@@ -15,7 +15,7 @@ AsleepTreeMonsNite:
 	db -1 ; end
 
 AsleepTreeMonsDay:
-	db VENONAT
+	db SPOINK
 	db HOOTHOOT
 	db NOCTOWL
 	db SPINARAK
@@ -23,7 +23,7 @@ AsleepTreeMonsDay:
 	db -1 ; end
 
 AsleepTreeMonsMorn:
-	db VENONAT
+	db SPOINK
 	db HOOTHOOT
 	db NOCTOWL
 	db SPINARAK

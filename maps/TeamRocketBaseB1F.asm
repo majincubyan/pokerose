@@ -447,11 +447,11 @@ ExplodingTrap22:
 
 VoltorbExplodingTrap:
 	special FadeOutPalettes
-	cry VOLTORB
+	cry TOGEKISS
 	special FadeInPalettes
 	setlasttalked -1
 	writecode VAR_BATTLETYPE, BATTLETYPE_TRAP
-	loadwildmon VOLTORB, 23
+	loadwildmon TOGEKISS, 23
 	startbattle
 	end
 

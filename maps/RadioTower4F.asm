@@ -48,7 +48,7 @@ RadioTower4FDJMaryScript:
 RadioTowerMeowth:
 	opentext
 	writetext RadioTowerMeowthText
-	cry MEOWTH
+	cry PANPOUR
 	waitbutton
 	closetext
 	end

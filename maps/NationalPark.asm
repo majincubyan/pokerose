@@ -55,7 +55,7 @@ NationalParkPersian:
 	faceplayer
 	opentext
 	writetext NationalParkPersianText
-	cry PERSIAN
+	cry SIMIPOUR
 	waitbutton
 	closetext
 	end

@@ -15,7 +15,7 @@ CeladonMansionManager:
 CeladonMansion1FMeowth:
 	opentext
 	writetext CeladonMansion1FMeowthText
-	cry MEOWTH
+	cry PANPOUR
 	waitbutton
 	closetext
 	end
@@ -23,7 +23,7 @@ CeladonMansion1FMeowth:
 CeladonMansion1FClefairy:
 	opentext
 	writetext CeladonMansion1FClefairyText
-	cry CLEFAIRY
+	cry NOIBAT
 	waitbutton
 	closetext
 	end

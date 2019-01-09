@@ -187,7 +187,7 @@ class TestCram(unittest.TestCase):
 
     def test_get_pokemon_constant_by_id(self):
         x = get_pokemon_constant_by_id
-        self.assertEqual(x(1), "BULBASAUR")
+        self.assertEqual(x(1), "BELDUM")
         self.assertEqual(x(151), "MEW")
         self.assertEqual(x(250), "HO_OH")
 

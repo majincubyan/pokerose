@@ -24,17 +24,17 @@ FishGroups:
 .Shore_Old:
 	db  70 percent + 1, MAGIKARP,   10
 	db  85 percent + 1, MAGIKARP,   10
-	db 100 percent,     KRABBY,     10
+	db 100 percent,     RHYPERIOR,     10
 .Shore_Good:
 	db  35 percent,     MAGIKARP,   20
-	db  70 percent,     KRABBY,     20
-	db  90 percent + 1, KRABBY,     20
+	db  70 percent,     RHYPERIOR,     20
+	db  90 percent + 1, RHYPERIOR,     20
 	db 100 percent,     time_group 0
 .Shore_Super:
-	db  40 percent,     KRABBY,     40
+	db  40 percent,     RHYPERIOR,     40
 	db  70 percent,     time_group 1
-	db  90 percent + 1, KRABBY,     40
-	db 100 percent,     KINGLER,    40
+	db  90 percent + 1, RHYPERIOR,     40
+	db 100 percent,     MISMAGIUS,    40
 
 .Ocean_Old:
 	db  70 percent + 1, MAGIKARP,   10
@@ -159,16 +159,16 @@ FishGroups:
 .WhirlIslands_Old:
 	db  70 percent + 1, MAGIKARP,   10
 	db  85 percent + 1, MAGIKARP,   10
-	db 100 percent,     KRABBY,     10
+	db 100 percent,     RHYPERIOR,     10
 .WhirlIslands_Good:
 	db  35 percent,     MAGIKARP,   20
-	db  70 percent,     KRABBY,     20
-	db  90 percent + 1, KRABBY,     20
+	db  70 percent,     RHYPERIOR,     20
+	db  90 percent + 1, RHYPERIOR,     20
 	db 100 percent,     time_group 18
 .WhirlIslands_Super:
-	db  40 percent,     KRABBY,     40
+	db  40 percent,     RHYPERIOR,     40
 	db  70 percent,     time_group 19
-	db  90 percent + 1, KINGLER,    40
+	db  90 percent + 1, MISMAGIUS,    40
 	db 100 percent,     SEADRA,     40
 
 .Qwilfish_NoSwarm_Old:
@@ -208,8 +208,8 @@ TimeFishGroups:
 	;  day              nite
 	db CORSOLA,    20,  STARYU,     20 ; 0
 	db CORSOLA,    40,  STARYU,     40 ; 1
-	db SHELLDER,   20,  SHELLDER,   20 ; 2
-	db SHELLDER,   40,  SHELLDER,   40 ; 3
+	db FEEBAS,     20,  FEEBAS,     20 ; 2
+	db FEEBAS,     40,  FEEBAS,     40 ; 3
 	db GOLDEEN,    20,  GOLDEEN,    20 ; 4
 	db GOLDEEN,    40,  GOLDEEN,    40 ; 5
 	db POLIWAG,    20,  POLIWAG,    20 ; 6

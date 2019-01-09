@@ -40,9 +40,9 @@ JohtoWaterWildMons:
 
 	map_id ILEX_FOREST
 	db 2 percent ; encounter rate
-	db 15, PSYDUCK
-	db 10, PSYDUCK
-	db 15, GOLDUCK
+	db 15, PANSAGE
+	db 10, PANSAGE
+	db 15, SIMISAGE
 
 	map_id MOUNT_MORTAR_1F_OUTSIDE
 	db 4 percent ; encounter rate
@@ -83,7 +83,7 @@ JohtoWaterWildMons:
 	map_id SILVER_CAVE_ROOM_2
 	db 2 percent ; encounter rate
 	db 35, SEAKING
-	db 35, GOLDUCK
+	db 35, SIMISAGE
 	db 35, GOLDEEN
 
 	map_id DARK_CAVE_VIOLET_ENTRANCE
@@ -136,9 +136,9 @@ JohtoWaterWildMons:
 
 	map_id ROUTE_35
 	db 4 percent ; encounter rate
-	db 20, PSYDUCK
-	db 15, PSYDUCK
-	db 20, GOLDUCK
+	db 20, PANSAGE
+	db 15, PANSAGE
+	db 20, SIMISAGE
 
 	map_id ROUTE_40
 	db 6 percent ; encounter rate

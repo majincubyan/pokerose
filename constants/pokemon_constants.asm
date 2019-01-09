@@ -17,30 +17,29 @@
 ; - AnimationIdlePointers (see gfx/pokemon/idle_pointers.asm)
 ; - BitmasksPointers (see gfx/pokemon/bitmask_pointers.asm)
 ; - FramesPointers (see gfx/pokemon/frame_pointers.asm)
-; - Footprints (see gfx/footprints.asm)
 	const_def 1
-	const BULBASAUR  ; 01
-	const IVYSAUR    ; 02
-	const VENUSAUR   ; 03
-	const CHARMANDER ; 04
-	const CHARMELEON ; 05
-	const CHARIZARD  ; 06
-	const SQUIRTLE   ; 07
-	const WARTORTLE  ; 08
-	const BLASTOISE  ; 09
+	const BELDUM     ; 01
+	const METANG     ; 02
+	const METAGROSS  ; 03
+	const BAGON      ; 04
+	const SHELLGON   ; 05
+	const SALAMENCE  ; 06
+	const TRAPINCH   ; 07
+	const VIBRAVA    ; 08
+	const FLYGON     ; 09
 	const CATERPIE   ; 0a
 	const METAPOD    ; 0b
 	const BUTTERFREE ; 0c
 	const WEEDLE     ; 0d
 	const KAKUNA     ; 0e
 	const BEEDRILL   ; 0f
-	const PIDGEY     ; 10
-	const PIDGEOTTO  ; 11
-	const PIDGEOT    ; 12
-	const RATTATA    ; 13
-	const RATICATE   ; 14
-	const SPEAROW    ; 15
-	const FEAROW     ; 16
+	const STARLY     ; 10
+	const STARAVIA   ; 11
+	const STARAPTOR  ; 12
+	const ZIGZAGOON  ; 13
+	const LINOONE    ; 14
+	const JOLTIK     ; 15
+	const GALVANTULA ; 16
 	const EKANS      ; 17
 	const ARBOK      ; 18
 	const PIKACHU    ; 19
@@ -53,29 +52,29 @@
 	const NIDORAN_M  ; 20
 	const NIDORINO   ; 21
 	const NIDOKING   ; 22
-	const CLEFAIRY   ; 23
-	const CLEFABLE   ; 24
+	const NOIBAT     ; 23
+	const NOIVERN    ; 24
 	const VULPIX     ; 25
 	const NINETALES  ; 26
 	const JIGGLYPUFF ; 27
 	const WIGGLYTUFF ; 28
-	const ZUBAT      ; 29
-	const GOLBAT     ; 2a
+	const POOCHYENA  ; 29
+	const MIGHTYENA  ; 2a
 	const ODDISH     ; 2b
 	const GLOOM      ; 2c
 	const VILEPLUME  ; 2d
-	const PARAS      ; 2e
-	const PARASECT   ; 2f
-	const VENONAT    ; 30
-	const VENOMOTH   ; 31
+	const MEDITITE   ; 2e
+	const MEDICHAM   ; 2f
+	const SPOINK     ; 30
+	const GRUMPIG    ; 31
 	const DIGLETT    ; 32
 	const DUGTRIO    ; 33
-	const MEOWTH     ; 34
-	const PERSIAN    ; 35
-	const PSYDUCK    ; 36
-	const GOLDUCK    ; 37
-	const MANKEY     ; 38
-	const PRIMEAPE   ; 39
+	const PANPOUR    ; 34
+	const SIMIPOUR   ; 35
+	const PANSAGE    ; 36
+	const SIMISAGE   ; 37
+	const PANSEAR    ; 38
+	const SIMISEAR   ; 39
 	const GROWLITHE  ; 3a
 	const ARCANINE   ; 3b
 	const POLIWAG    ; 3c
@@ -84,12 +83,12 @@
 	const ABRA       ; 3f
 	const KADABRA    ; 40
 	const ALAKAZAM   ; 41
-	const MACHOP     ; 42
-	const MACHOKE    ; 43
-	const MACHAMP    ; 44
-	const BELLSPROUT ; 45
-	const WEEPINBELL ; 46
-	const VICTREEBEL ; 47
+	const GOOMY      ; 42
+	const SLIGGOO    ; 43
+	const GOODRA     ; 44
+	const SHINX      ; 45
+	const LUXIO      ; 46
+	const LUXRAY     ; 47
 	const TENTACOOL  ; 48
 	const TENTACRUEL ; 49
 	const GEODUDE    ; 4a
@@ -102,24 +101,24 @@
 	const MAGNEMITE  ; 51
 	const MAGNETON   ; 52
 	const FARFETCH_D ; 53
-	const DODUO      ; 54
-	const DODRIO     ; 55
+	const SEVIPER    ; 54
+	const ZANGOOSE   ; 55
 	const SEEL       ; 56
 	const DEWGONG    ; 57
 	const GRIMER     ; 58
 	const MUK        ; 59
-	const SHELLDER   ; 5a
-	const CLOYSTER   ; 5b
+	const FEEBAS     ; 5a
+	const MILOTIC    ; 5b
 	const GASTLY     ; 5c
 	const HAUNTER    ; 5d
 	const GENGAR     ; 5e
-	const ONIX       ; 5f
-	const DROWZEE    ; 60
-	const HYPNO      ; 61
-	const KRABBY     ; 62
-	const KINGLER    ; 63
-	const VOLTORB    ; 64
-	const ELECTRODE  ; 65
+	const HAWLUCHA   ; 5f
+	const MAGMORTOR  ; 60
+	const ELECTRIVE  ; 61
+	const RHYPERIOR  ; 62
+	const MISMAGIUS  ; 63
+	const TOGEKISS   ; 64
+	const ABSOL      ; 65
 	const EXEGGCUTE  ; 66
 	const EXEGGUTOR  ; 67
 	const CUBONE     ; 68

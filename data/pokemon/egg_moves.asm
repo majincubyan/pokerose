@@ -13,18 +13,7 @@ SECTION "Egg Moves", ROMX
 
 INCLUDE "data/pokemon/egg_move_pointers.asm"
 
-BulbasaurEggMoves:
-	db LIGHT_SCREEN
-	db SKULL_BASH
-	db SAFEGUARD
-if !_CRYSTAL
-	db CHARM
-endc
-	db RAZOR_WIND
-	db PETAL_DANCE
-	db -1 ; end
-
-CharmanderEggMoves:
+BagonEggMoves:
 	db BELLY_DRUM
 	db ANCIENTPOWER
 	db ROCK_SLIDE
@@ -33,7 +22,7 @@ CharmanderEggMoves:
 	db BEAT_UP
 	db -1 ; end
 
-SquirtleEggMoves:
+TrapinchEggMoves:
 	db MIRROR_COAT
 	db HAZE
 	db MIST
@@ -42,7 +31,7 @@ SquirtleEggMoves:
 	db FLAIL
 	db -1 ; end
 
-PidgeyEggMoves:
+StarlyEggMoves:
 	db PURSUIT
 	db FAINT_ATTACK
 	db FORESIGHT
@@ -51,7 +40,7 @@ if !_CRYSTAL
 endc
 	db -1 ; end
 
-RattataEggMoves:
+ZigzagoonEggMoves:
 	db SCREECH
 	db FLAME_WHEEL
 	db FURY_SWIPES
@@ -60,7 +49,7 @@ RattataEggMoves:
 	db REVERSAL
 	db -1 ; end
 
-SpearowEggMoves:
+JoltikEggMoves:
 	db FAINT_ATTACK
 	db FALSE_SWIPE
 	db SCARY_FACE
@@ -116,7 +105,7 @@ VulpixEggMoves:
 	db DISABLE
 	db -1 ; end
 
-ZubatEggMoves:
+PoochyenaEggMoves:
 	db QUICK_ATTACK
 	db PURSUIT
 	db FAINT_ATTACK
@@ -134,7 +123,7 @@ if !_CRYSTAL
 endc
 	db -1 ; end
 
-ParasEggMoves:
+MedititeEggMoves:
 	db FALSE_SWIPE
 	db SCREECH
 	db COUNTER
@@ -147,7 +136,7 @@ endc
 	db PURSUIT
 	db -1 ; end
 
-VenonatEggMoves:
+SpoinkEggMoves:
 	db BATON_PASS
 	db SCREECH
 	db GIGA_DRAIN
@@ -161,14 +150,14 @@ DiglettEggMoves:
 	db BEAT_UP
 	db -1 ; end
 
-MeowthEggMoves:
+PanpourEggMoves:
 	db SPITE
 	db CHARM
 	db HYPNOSIS
 	db AMNESIA
 	db -1 ; end
 
-PsyduckEggMoves:
+PansageEggMoves:
 	db ICE_BEAM
 	db HYPNOSIS
 	db PSYBEAM
@@ -181,7 +170,7 @@ if _CRYSTAL
 endc
 	db -1 ; end
 
-MankeyEggMoves:
+PansearEggMoves:
 	db ROCK_SLIDE
 	db FORESIGHT
 	db MEDITATE
@@ -212,14 +201,14 @@ AbraEggMoves:
 	db BARRIER
 	db -1 ; end
 
-MachopEggMoves:
+GoomyEggMoves:
 	db LIGHT_SCREEN
 	db MEDITATE
 	db ROLLING_KICK
 	db ENCORE
 	db -1 ; end
 
-BellsproutEggMoves:
+ShinxEggMoves:
 	db SWORDS_DANCE
 	db ENCORE
 	db REFLECT
@@ -267,7 +256,15 @@ endc
 	db FLAIL
 	db -1 ; end
 
-DoduoEggMoves:
+SeviperEggMoves:
+	db QUICK_ATTACK
+	db SUPERSONIC
+	db HAZE
+	db FAINT_ATTACK
+	db FLAIL
+	db -1 ; end
+	
+ZangooseEggMoves:
 	db QUICK_ATTACK
 	db SUPERSONIC
 	db HAZE
@@ -290,7 +287,7 @@ GrimerEggMoves:
 	db LICK
 	db -1 ; end
 
-ShellderEggMoves:
+FeebasEggMoves:
 	db BUBBLEBEAM
 	db TAKE_DOWN
 	db BARRIER
@@ -304,22 +301,9 @@ GastlyEggMoves:
 	db HAZE
 	db -1 ; end
 
-OnixEggMoves:
+HawluchaEggMoves:
 	db ROCK_SLIDE
 	db FLAIL
-	db -1 ; end
-
-DrowzeeEggMoves:
-	db LIGHT_SCREEN
-	db BARRIER
-	db -1 ; end
-
-KrabbyEggMoves:
-	db DIG
-	db HAZE
-	db AMNESIA
-	db FLAIL
-	db SLAM
 	db -1 ; end
 
 ExeggcuteEggMoves:

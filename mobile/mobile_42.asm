@@ -1694,11 +1694,11 @@ DebugMobileTrade:
 	ret
 
 .DebugTradeData:
-	db VENUSAUR
+	db METAGROSS
 	db "ゲーフり@@"
 	dw $0123
 	db "かびーん@@"
-	db CHARIZARD
+	db SALAMENCE
 	db "クりーチャ@"
 	dw $0456
 	db "マツミヤ@@"

@@ -26,7 +26,7 @@ CeruleanTradeSpeechHouseRhydonScript:
 CeruleanTradeSpeechHouseZubatScript:
 	opentext
 	writetext CeruleanTradeSpeechHouseZubatText
-	cry ZUBAT
+	cry POOCHYENA
 	waitbutton
 	closetext
 	end

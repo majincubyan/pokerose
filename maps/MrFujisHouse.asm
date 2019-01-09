@@ -3,7 +3,7 @@
 	const MRFUJISHOUSE_LASS
 	const MRFUJISHOUSE_PSYDUCK
 	const MRFUJISHOUSE_NIDORINO
-	const MRFUJISHOUSE_PIDGEY
+	const MRFUJISHOUSE_STARLY
 
 MrFujisHouse_MapScripts:
 	db 0 ; scene scripts
@@ -19,7 +19,7 @@ MrFujisHouseLassScript:
 MrFujisPsyduck:
 	opentext
 	writetext MrFujisPsyduckText
-	cry PSYDUCK
+	cry PANSAGE
 	waitbutton
 	closetext
 	end
@@ -35,7 +35,7 @@ MrFujisNidorino:
 MrFujisPidgey:
 	opentext
 	writetext MrFujisPidgeyText
-	cry PIDGEY
+	cry STARLY
 	waitbutton
 	closetext
 	end
@@ -74,7 +74,7 @@ MrFujisNidorinoText:
 	done
 
 MrFujisPidgeyText:
-	text "PIDGEY: Pijji!"
+	text "STARLY: Pijji!"
 	done
 
 MrFujisHouse_MapEvents:

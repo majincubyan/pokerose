@@ -56,7 +56,7 @@ GoldenrodDeptStoreB1FBlackBelt3Script:
 GoldenrodDeptStoreB1FMachopScript:
 	opentext
 	writetext GoldenrodDeptStoreB1FMachokeText
-	cry MACHOKE
+	cry SLIGGOO
 	waitbutton
 	closetext
 	end
