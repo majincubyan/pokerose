@@ -3940,11 +3940,11 @@ BattleTower_UbersCheck:
 .loop
 	push af
 	ld a, [de]
-	cp MEWTWO
+	cp RAYQUAZA
 	jr z, .uber
-	cp MEW
+	cp GROUDON
 	jr z, .uber
-	cp LUGIA
+	cp KYOGRE
 	jr c, .next
 	cp NUM_POKEMON + 1
 	jr nc, .next

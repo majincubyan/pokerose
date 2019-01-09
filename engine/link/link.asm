@@ -1888,14 +1888,14 @@ LinkTrade:
 	ld b, $1
 	pop af
 	ld c, a
-	cp MEW
+	cp GROUDON
 	jr z, .loop
 	ld a, [wCurPartySpecies]
-	cp MEW
+	cp KYOGRE
 	jr z, .loop
 	ld b, $2
 	ld a, c
-	cp CELEBI
+	cp RAYQUAZA
 	jr z, .loop
 	ld a, [wCurPartySpecies]
 	cp CELEBI

@@ -148,7 +148,6 @@ UnusedWoosterScript:
 	faceplayer
 	opentext
 	writetext WoosterText
-	cry QUAGSIRE
 	waitbutton
 	closetext
 	end

@@ -43,28 +43,28 @@ FishGroups:
 .Ocean_Good:
 	db  35 percent,     MAGIKARP,   20
 	db  70 percent,     TENTACOOL,  20
-	db  90 percent + 1, CHINCHOU,   20
+	db  90 percent + 1, ROSELIA,   20
 	db 100 percent,     time_group 2
 .Ocean_Super:
-	db  40 percent,     CHINCHOU,   40
+	db  40 percent,     ROSELIA,   40
 	db  70 percent,     time_group 3
 	db  90 percent + 1, TENTACRUEL, 40
-	db 100 percent,     LANTURN,    40
+	db 100 percent,     ROSERADE,    40
 
 .Lake_Old:
 	db  70 percent + 1, MAGIKARP,   10
 	db  85 percent + 1, MAGIKARP,   10
-	db 100 percent,     GOLDEEN,    10
+	db 100 percent,     NUMEL,    10
 .Lake_Good:
 	db  35 percent,     MAGIKARP,   20
-	db  70 percent,     GOLDEEN,    20
-	db  90 percent + 1, GOLDEEN,    20
+	db  70 percent,     NUMEL,    20
+	db  90 percent + 1, NUMEL,    20
 	db 100 percent,     time_group 4
 .Lake_Super:
-	db  40 percent,     GOLDEEN,    40
+	db  40 percent,     NUMEL,    40
 	db  70 percent,     time_group 5
 	db  90 percent + 1, MAGIKARP,   40
-	db 100 percent,     SEAKING,    40
+	db 100 percent,     CAMERUPT,    40
 
 .Pond_Old:
 	db  70 percent + 1, MAGIKARP,   10
@@ -169,7 +169,7 @@ FishGroups:
 	db  40 percent,     RHYPERIOR,     40
 	db  70 percent,     time_group 19
 	db  90 percent + 1, MISMAGIUS,    40
-	db 100 percent,     SEADRA,     40
+	db 100 percent,     WAILORD,     40
 
 .Qwilfish_NoSwarm_Old:
 .Qwilfish_Old:
@@ -210,8 +210,8 @@ TimeFishGroups:
 	db CORSOLA,    40,  STARYU,     40 ; 1
 	db FEEBAS,     20,  FEEBAS,     20 ; 2
 	db FEEBAS,     40,  FEEBAS,     40 ; 3
-	db GOLDEEN,    20,  GOLDEEN,    20 ; 4
-	db GOLDEEN,    40,  GOLDEEN,    40 ; 5
+	db NUMEL,    20,  NUMEL,    20 ; 4
+	db NUMEL,    40,  NUMEL,    40 ; 5
 	db POLIWAG,    20,  POLIWAG,    20 ; 6
 	db POLIWAG,    40,  POLIWAG,    40 ; 7
 	db DRATINI,    20,  DRATINI,    20 ; 8
@@ -224,7 +224,7 @@ TimeFishGroups:
 	db GYARADOS,   40,  GYARADOS,   40 ; 15
 	db DRATINI,    10,  DRATINI,    10 ; 16
 	db DRATINI,    10,  DRATINI,    10 ; 17
-	db HORSEA,     20,  HORSEA,     20 ; 18
-	db HORSEA,     40,  HORSEA,     40 ; 19
+	db WAILMER,     20,  WAILMER,     20 ; 18
+	db WAILMER,     40,  WAILMER,     40 ; 19
 	db TENTACOOL,  20,  TENTACOOL,  20 ; 20
 	db TENTACOOL,  40,  TENTACOOL,  40 ; 21

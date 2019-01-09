@@ -9,23 +9,23 @@ AsleepTreeMonsNite:
 	db BEEDRILL
 	db JOLTIK
 	db EKANS
-	db EXEGGCUTE
-	db LEDYBA
-	db AIPOM
+	db MAGNEZONE
+	db DRILBUR
+	db LUCARIO
 	db -1 ; end
 
 AsleepTreeMonsDay:
 	db SPOINK
-	db HOOTHOOT
-	db NOCTOWL
-	db SPINARAK
+	db PHANTUMP
+	db TREVENANT
+	db AMAURA
 	db HERACROSS
 	db -1 ; end
 
 AsleepTreeMonsMorn:
 	db SPOINK
-	db HOOTHOOT
-	db NOCTOWL
-	db SPINARAK
+	db PHANTUMP
+	db TREVENANT
+	db AMAURA
 	db HERACROSS
 	db -1 ; end

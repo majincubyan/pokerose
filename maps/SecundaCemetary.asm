@@ -25,8 +25,8 @@ SecundaCemetary_MapScripts:
 
 ShuppetScript:
 	faceplayer
-	cry WOOPER
-	loadwildmon WOOPER, 20
+	cry SHUPPET
+	loadwildmon SHUPPET, 20
 	startbattle
 	disappear CEMETARY_SHUPPET
 	setflag ENGINE_UNION_CAVE_LAPRAS

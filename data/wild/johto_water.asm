@@ -4,26 +4,26 @@ JohtoWaterWildMons:
 
 	map_id RUINS_OF_ALPH_OUTSIDE
 	db 2 percent ; encounter rate
-	db 15, WOOPER
-	db 20, QUAGSIRE
-	db 15, QUAGSIRE
+	db 15, SHUPPET
+	db 20, BANETTE
+	db 15, BANETTE
 
 	map_id UNION_CAVE_1F
 	db 2 percent ; encounter rate
-	db 15, WOOPER
-	db 20, QUAGSIRE
-	db 15, QUAGSIRE
+	db 15, SHUPPET
+	db 20, BANETTE
+	db 15, BANETTE
 
 	map_id UNION_CAVE_B1F
 	db 2 percent ; encounter rate
-	db 15, WOOPER
-	db 20, QUAGSIRE
-	db 15, QUAGSIRE
+	db 15, SHUPPET
+	db 20, BANETTE
+	db 15, BANETTE
 
 	map_id UNION_CAVE_B2F
 	db 4 percent ; encounter rate
 	db 15, TENTACOOL
-	db 20, QUAGSIRE
+	db 20, BANETTE
 	db 20, TENTACRUEL
 
 	map_id SLOWPOKE_WELL_B1F
@@ -46,45 +46,45 @@ JohtoWaterWildMons:
 
 	map_id MOUNT_MORTAR_1F_OUTSIDE
 	db 4 percent ; encounter rate
-	db 15, GOLDEEN
+	db 15, NUMEL
 	db 20, MARILL
-	db 20, SEAKING
+	db 20, CAMERUPT
 
 	map_id MOUNT_MORTAR_2F_INSIDE
 	db 2 percent ; encounter rate
-	db 20, GOLDEEN
+	db 20, NUMEL
 	db 25, MARILL
-	db 25, SEAKING
+	db 25, CAMERUPT
 
 	map_id MOUNT_MORTAR_B1F
 	db 2 percent ; encounter rate
-	db 15, GOLDEEN
+	db 15, NUMEL
 	db 20, MARILL
-	db 20, SEAKING
+	db 20, CAMERUPT
 
 	map_id WHIRL_ISLAND_SW
 	db 4 percent ; encounter rate
 	db 20, TENTACOOL
-	db 15, HORSEA
+	db 15, WAILMER
 	db 20, TENTACRUEL
 
 	map_id WHIRL_ISLAND_B2F
 	db 4 percent ; encounter rate
-	db 15, HORSEA
-	db 20, HORSEA
+	db 15, WAILMER
+	db 20, WAILMER
 	db 20, TENTACRUEL
 
 	map_id WHIRL_ISLAND_LUGIA_CHAMBER
 	db 4 percent ; encounter rate
-	db 20, HORSEA
+	db 20, WAILMER
 	db 20, TENTACRUEL
-	db 20, SEADRA
+	db 20, WAILORD
 
 	map_id SILVER_CAVE_ROOM_2
 	db 2 percent ; encounter rate
-	db 35, SEAKING
+	db 35, CAMERUPT
 	db 35, SIMISAGE
-	db 35, GOLDEEN
+	db 35, NUMEL
 
 	map_id DARK_CAVE_VIOLET_ENTRANCE
 	db 2 percent ; encounter rate
@@ -125,7 +125,7 @@ JohtoWaterWildMons:
 	map_id ROUTE_32
 	db 6 percent ; encounter rate
 	db 15, TENTACOOL
-	db 20, QUAGSIRE
+	db 20, BANETTE
 	db 20, TENTACRUEL
 
 	map_id ROUTE_34
@@ -154,9 +154,9 @@ JohtoWaterWildMons:
 
 	map_id ROUTE_42
 	db 4 percent ; encounter rate
-	db 20, GOLDEEN
-	db 15, GOLDEEN
-	db 20, SEAKING
+	db 20, NUMEL
+	db 15, NUMEL
+	db 20, CAMERUPT
 
 	map_id ROUTE_43
 	db 2 percent ; encounter rate

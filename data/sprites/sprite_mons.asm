@@ -30,9 +30,9 @@ SpriteMons:
 	db TOGEKISS
 	db LAPRAS
 	db RHYDON
-	db MOLTRES
+	db RAYQUAZA
 	db SNORLAX
 	db GYARADOS
 	db LUGIA
 	db HO_OH
-	db WOOPER
+	db SHUPPET

@@ -331,7 +331,7 @@ JohtoGrassWildMons:
 	; morn
 	db 12, NIDORAN_M
 	db 12, NIDORAN_F
-	db 14, LEDYBA
+	db 14, DRILBUR
 	db 13, STARLY
 	db 10, CATERPIE
 	db 10, WEEDLE
@@ -339,16 +339,16 @@ JohtoGrassWildMons:
 	; day
 	db 12, NIDORAN_F
 	db 12, NIDORAN_M
-	db 14, SUNKERN
+	db 14, LOTAD
 	db 13, STARLY
 	db 10, CATERPIE
 	db 10, WEEDLE
 	db 10, WEEDLE
 	; nite
 	db 12, PANSAGE
-	db 13, HOOTHOOT
-	db 14, SPINARAK
-	db 15, HOOTHOOT
+	db 13, PHANTUMP
+	db 14, AMAURA
+	db 15, PHANTUMP
 	db 10, SPOINK
 	db 12, SPOINK
 	db 12, SPOINK
@@ -356,29 +356,29 @@ JohtoGrassWildMons:
 	map_id RUINS_OF_ALPH_OUTSIDE
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
-	db 20, NATU
-	db 22, NATU
-	db 18, NATU
-	db 24, NATU
+	db 20, SWABLU
+	db 22, SWABLU
+	db 18, SWABLU
+	db 24, SWABLU
 	db 20, SMEARGLE
 	db 22, SMEARGLE
 	db 22, SMEARGLE
 	; day
-	db 20, NATU
-	db 22, NATU
-	db 18, NATU
-	db 24, NATU
+	db 20, SWABLU
+	db 22, SWABLU
+	db 18, SWABLU
+	db 24, SWABLU
 	db 20, SMEARGLE
 	db 22, SMEARGLE
 	db 22, SMEARGLE
 	; nite
-	db 20, NATU
-	db 22, NATU
-	db 18, NATU
-	db 24, NATU
-	db 22, WOOPER
-	db 22, QUAGSIRE
-	db 22, QUAGSIRE
+	db 20, SWABLU
+	db 22, SWABLU
+	db 18, SWABLU
+	db 24, SWABLU
+	db 22, SHUPPET
+	db 22, BANETTE
+	db 22, BANETTE
 
 	map_id RUINS_OF_ALPH_INNER_CHAMBER
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
@@ -428,7 +428,7 @@ JohtoGrassWildMons:
 	; nite
 	db 6, GEODUDE
 	db 6, ZIGZAGOON
-	db 5, WOOPER
+	db 5, SHUPPET
 	db 4, ZIGZAGOON
 	db 7, POOCHYENA
 	db 6, HAWLUCHA
@@ -455,7 +455,7 @@ JohtoGrassWildMons:
 	; nite
 	db 8, GEODUDE
 	db 6, POOCHYENA
-	db 8, WOOPER
+	db 8, SHUPPET
 	db 8, HAWLUCHA
 	db 6, ZIGZAGOON
 	db 8, ZIGZAGOON
@@ -482,7 +482,7 @@ JohtoGrassWildMons:
 	; nite
 	db 22, POOCHYENA
 	db 22, MIGHTYENA
-	db 22, QUAGSIRE
+	db 22, BANETTE
 	db 21, LINOONE
 	db 20, GEODUDE
 	db 23, HAWLUCHA
@@ -565,7 +565,7 @@ JohtoGrassWildMons:
 	db 5, SPOINK
 	db 7, ODDISH
 	db 7, PANSAGE
-	db 7, HOOTHOOT
+	db 7, PHANTUMP
 	db 6, MEDITITE
 	db 6, MEDITITE
 
@@ -1185,8 +1185,8 @@ JohtoGrassWildMons:
 	db 23, GEODUDE
 	db 23, POOCHYENA
 	db 25, GRAVELER
-	db 20, WOBBUFFET
-	db 25, WOBBUFFET
+	db 20, HELIOPTILE
+	db 25, HELIOPTILE
 	db 23, MIGHTYENA
 	db 23, MIGHTYENA
 
@@ -1194,20 +1194,20 @@ JohtoGrassWildMons:
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 2, STARLY
-	db 2, SENTRET
+	db 2, YAMASK
 	db 3, STARLY
-	db 3, SENTRET
+	db 3, YAMASK
 	db 2, ZIGZAGOON
-	db 3, HOPPIP
-	db 3, HOPPIP
+	db 3, MAKUHITA
+	db 3, MAKUHITA
 	; day
 	db 2, STARLY
-	db 2, SENTRET
+	db 2, YAMASK
 	db 3, STARLY
-	db 3, SENTRET
+	db 3, YAMASK
 	db 2, ZIGZAGOON
-	db 3, HOPPIP
-	db 3, HOPPIP
+	db 3, MAKUHITA
+	db 3, MAKUHITA
 	; nite
 	db 2, BELDUM
 	db 2, ZIGZAGOON
@@ -1220,53 +1220,53 @@ JohtoGrassWildMons:
 	map_id ROUTE_30
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 3, LEDYBA
+	db 3, DRILBUR
 	db 3, CATERPIE
 	db 4, CATERPIE
 	db 4, STARLY
 	db 3, WEEDLE
-	db 4, HOPPIP
-	db 4, HOPPIP
+	db 4, MAKUHITA
+	db 4, MAKUHITA
 	; day
 	db 3, STARLY
 	db 3, CATERPIE
 	db 4, CATERPIE
 	db 4, STARLY
 	db 3, WEEDLE
-	db 4, HOPPIP
-	db 4, HOPPIP
+	db 4, MAKUHITA
+	db 4, MAKUHITA
 	; nite
-	db 3, SPINARAK
-	db 3, HOOTHOOT
+	db 3, AMAURA
+	db 3, PHANTUMP
 	db 4, POLIWAG
-	db 4, HOOTHOOT
+	db 4, PHANTUMP
 	db 3, POOCHYENA
-	db 4, HOOTHOOT
-	db 4, HOOTHOOT
+	db 4, PHANTUMP
+	db 4, PHANTUMP
 
 	map_id ROUTE_31
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 4, LEDYBA
+	db 4, DRILBUR
 	db 4, CATERPIE
 	db 5, SHINX
 	db 5, STARLY
 	db 4, WEEDLE
-	db 5, HOPPIP
-	db 5, HOPPIP
+	db 5, MAKUHITA
+	db 5, MAKUHITA
 	; day
 	db 4, STARLY
 	db 4, CATERPIE
 	db 5, SHINX
 	db 5, STARLY
 	db 4, WEEDLE
-	db 5, HOPPIP
-	db 5, HOPPIP
+	db 5, MAKUHITA
+	db 5, MAKUHITA
 	; nite
-	db 4, SPINARAK
+	db 4, AMAURA
 	db 4, POLIWAG
 	db 5, SHINX
-	db 5, HOOTHOOT
+	db 5, PHANTUMP
 	db 4, POOCHYENA
 	db 5, GASTLY
 	db 5, GASTLY
@@ -1277,24 +1277,24 @@ JohtoGrassWildMons:
 	db 4, EKANS
 	db 5, ZIGZAGOON
 	db 7, SHINX
-	db 6, HOPPIP
+	db 6, MAKUHITA
 	db 7, STARLY
-	db 7, HOPPIP
-	db 7, HOPPIP
+	db 7, MAKUHITA
+	db 7, MAKUHITA
 	; day
 	db 4, EKANS
 	db 5, ZIGZAGOON
 	db 7, SHINX
-	db 6, HOPPIP
+	db 6, MAKUHITA
 	db 7, STARLY
-	db 7, HOPPIP
-	db 7, HOPPIP
+	db 7, MAKUHITA
+	db 7, MAKUHITA
 	; nite
-	db 4, WOOPER
+	db 4, SHUPPET
 	db 5, ZIGZAGOON
 	db 7, SHINX
 	db 6, POOCHYENA
-	db 7, HOOTHOOT
+	db 7, PHANTUMP
 	db 7, GASTLY
 	db 7, GASTLY
 
@@ -1304,18 +1304,18 @@ JohtoGrassWildMons:
 	db 6, ZIGZAGOON
 	db 6, JOLTIK
 	db 6, GEODUDE
-	db 6, HOPPIP
+	db 6, MAKUHITA
 	db 7, EKANS
-	db 7, HOPPIP
-	db 7, HOPPIP
+	db 7, MAKUHITA
+	db 7, MAKUHITA
 	; day
 	db 6, ZIGZAGOON
 	db 6, JOLTIK
 	db 6, GEODUDE
-	db 6, HOPPIP
+	db 6, MAKUHITA
 	db 7, EKANS
-	db 7, HOPPIP
-	db 7, HOPPIP
+	db 7, MAKUHITA
+	db 7, MAKUHITA
 	; nite
 	db 6, ZIGZAGOON
 	db 6, POOCHYENA
@@ -1346,7 +1346,7 @@ JohtoGrassWildMons:
 	; nite
 	db 12, MAGMORTOR
 	db 11, ZIGZAGOON
-	db 12, HOOTHOOT
+	db 12, PHANTUMP
 	db 10, ABRA
 	db 12, JIGGLYPUFF
 	db 10, DITTO
@@ -1361,7 +1361,7 @@ JohtoGrassWildMons:
 	db 10, ABRA
 	db 12, JIGGLYPUFF
 	db 10, DITTO
-	db 12, YANMA
+	db 12, LUDICOLO
 	; day
 	db 12, SNUBBULL
 	db 14, STARLY
@@ -1369,20 +1369,20 @@ JohtoGrassWildMons:
 	db 10, ABRA
 	db 12, JIGGLYPUFF
 	db 10, DITTO
-	db 12, YANMA
+	db 12, LUDICOLO
 	; nite
 	db 12, MAGMORTOR
-	db 14, HOOTHOOT
+	db 14, PHANTUMP
 	db 13, PANSAGE
 	db 10, ABRA
 	db 12, JIGGLYPUFF
 	db 10, DITTO
-	db 12, YANMA
+	db 12, LUDICOLO
 
 	map_id ROUTE_36
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 4, LEDYBA
+	db 4, DRILBUR
 	db 4, STARLY
 	db 5, SHINX
 	db 5, GROWLITHE
@@ -1398,24 +1398,24 @@ JohtoGrassWildMons:
 	db 6, STARLY
 	db 6, STARLY
 	; nite
-	db 4, SPINARAK
-	db 4, HOOTHOOT
+	db 4, AMAURA
+	db 4, PHANTUMP
 	db 5, SHINX
-	db 5, HOOTHOOT
-	db 5, HOOTHOOT
+	db 5, PHANTUMP
+	db 5, PHANTUMP
 	db 5, GASTLY
 	db 5, GASTLY
 
 	map_id ROUTE_37
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 13, LEDYBA
+	db 13, DRILBUR
 	db 14, GROWLITHE
 	db 15, STARLY
 	db 16, GROWLITHE
 	db 15, STARAVIA
-	db 15, LEDIAN
-	db 15, LEDIAN
+	db 15, EXCADRILL
+	db 15, EXCADRILL
 	; day
 	db 13, STARLY
 	db 14, GROWLITHE
@@ -1425,13 +1425,13 @@ JohtoGrassWildMons:
 	db 15, STARLY
 	db 15, STARLY
 	; nite
-	db 13, SPINARAK
+	db 13, AMAURA
 	db 14, STANTLER
-	db 15, HOOTHOOT
+	db 15, PHANTUMP
 	db 16, STANTLER
-	db 15, NOCTOWL
-	db 15, ARIADOS
-	db 15, ARIADOS
+	db 15, TREVENANT
+	db 15, AURORUS
+	db 15, AURORUS
 
 	map_id ROUTE_38
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
@@ -1455,7 +1455,7 @@ JohtoGrassWildMons:
 	db 16, PANPOUR
 	db 16, LINOONE
 	db 16, MAGNEMITE
-	db 16, NOCTOWL
+	db 16, TREVENANT
 	db 16, PANPOUR
 	db 16, PANPOUR
 	db 16, PANPOUR
@@ -1482,7 +1482,7 @@ JohtoGrassWildMons:
 	db 16, PANPOUR
 	db 16, LINOONE
 	db 16, MAGNEMITE
-	db 16, NOCTOWL
+	db 16, TREVENANT
 	db 18, PANPOUR
 	db 18, PANPOUR
 	db 18, PANPOUR
@@ -1517,24 +1517,24 @@ JohtoGrassWildMons:
 	map_id ROUTE_43
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 15, SENTRET
+	db 15, YAMASK
 	db 16, STARAVIA
 	db 16, FARFETCH_D
-	db 15, FURRET
+	db 15, COFAGRIGUS
 	db 17, LINOONE
-	db 17, FURRET
-	db 17, FURRET
+	db 17, COFAGRIGUS
+	db 17, COFAGRIGUS
 	; day
-	db 15, SENTRET
+	db 15, YAMASK
 	db 16, STARAVIA
 	db 16, FARFETCH_D
-	db 15, FURRET
+	db 15, COFAGRIGUS
 	db 17, LINOONE
-	db 17, FURRET
-	db 17, FURRET
+	db 17, COFAGRIGUS
+	db 17, COFAGRIGUS
 	; nite
 	db 15, SPOINK
-	db 16, NOCTOWL
+	db 16, TREVENANT
 	db 16, LINOONE
 	db 17, SPOINK
 	db 17, LINOONE
@@ -1544,23 +1544,23 @@ JohtoGrassWildMons:
 	map_id ROUTE_44
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 23, TANGELA
-	db 22, LICKITUNG
+	db 23, TROPIUS
+	db 22, AZURILL
 	db 22, SHINX
 	db 24, LUXIO
-	db 24, LICKITUNG
-	db 26, LICKITUNG
-	db 26, LICKITUNG
+	db 24, AZURILL
+	db 26, AZURILL
+	db 26, AZURILL
 	; day
-	db 23, TANGELA
-	db 22, LICKITUNG
+	db 23, TROPIUS
+	db 22, AZURILL
 	db 22, SHINX
 	db 24, LUXIO
-	db 24, LICKITUNG
-	db 26, LICKITUNG
-	db 26, LICKITUNG
+	db 24, AZURILL
+	db 26, AZURILL
+	db 26, AZURILL
 	; nite
-	db 23, TANGELA
+	db 23, TROPIUS
 	db 22, POLIWAG
 	db 22, SHINX
 	db 24, LUXIO
@@ -1625,7 +1625,7 @@ JohtoGrassWildMons:
 	map_id SILVER_CAVE_OUTSIDE
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 41, TANGELA
+	db 41, TROPIUS
 	db 42, PONYTA
 	db 42, ARBOK
 	db 44, RAPIDASH
@@ -1633,7 +1633,7 @@ JohtoGrassWildMons:
 	db 43, ZANGOOSE
 	db 43, ZANGOOSE
 	; day
-	db 41, TANGELA
+	db 41, TROPIUS
 	db 42, PONYTA
 	db 42, ARBOK
 	db 44, RAPIDASH
@@ -1641,7 +1641,7 @@ JohtoGrassWildMons:
 	db 43, ZANGOOSE
 	db 43, ZANGOOSE
 	; nite
-	db 41, TANGELA
+	db 41, TROPIUS
 	db 42, POLIWHIRL
 	db 42, MIGHTYENA
 	db 44, POLIWHIRL

@@ -107,7 +107,7 @@ PokemonFanClubClefairyDollScript:
 PokemonFanClubBayleefScript:
 	opentext
 	writetext FanClubBayleefText
-	cry BAYLEEF
+	cry DARTRIX
 	waitbutton
 	closetext
 	end

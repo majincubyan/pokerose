@@ -4,10 +4,10 @@ FleeMons:
 SometimesFleeMons:
 	db MAGNEMITE
 	db GRIMER
-	db TANGELA
-	db MR__MIME
+	db TROPIUS
+	db MIMIKYU
 	db EEVEE
-	db PORYGON
+	db MAWILE
 	db DRATINI
 	db DRAGONAIR
 	db TOGETIC
@@ -19,10 +19,7 @@ SometimesFleeMons:
 
 OftenFleeMons:
 	db CUBONE
-	db ARTICUNO
-	db ZAPDOS
-	db MOLTRES
-	db QUAGSIRE
+	db BANETTE
 	db DELIBIRD
 	db PHANPY
 	db TEDDIURSA

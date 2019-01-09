@@ -1219,7 +1219,7 @@ ArnieYanmaSwarm: ; start swarm
 	checkflag ENGINE_YANMA_SWARM
 	iftrue ArnieYanmaAlreadySwarming
 	setflag ENGINE_YANMA_SWARM
-	pokenamemem YANMA, MEM_BUFFER_1
+	pokenamemem LUDICOLO, MEM_BUFFER_1
 	swarm SWARM_YANMA, ROUTE_35
 	landmarktotext ROUTE_35, MEM_BUFFER_2
 	farjump UnknownScript_0xa05ce

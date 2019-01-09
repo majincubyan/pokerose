@@ -8,9 +8,6 @@ prob_total = 0
 ; Pichu
 	prob 8
 	prob 1
-; Cleffa
-	prob 16
-	prob 3
 ; Igglybuff
 	prob 16
 	prob 3
@@ -81,58 +78,6 @@ OddEgg1End:
 	bigdw 12 ; Spd
 	bigdw 9 ; SAtk
 	bigdw 9 ; SDef
-	db "EGG@@@@@@@@"
-
-	db CLEFFA
-	db NO_ITEM
-	db POUND, CHARM, DIZZY_PUNCH, 0
-	dw 04096 ; OT ID
-	dt 125 ; Exp
-	; Stat exp
-	bigdw 0
-	bigdw 0
-	bigdw 0
-	bigdw 0
-	bigdw 0
-	dn 0, 0, 0, 0 ; DVs
-	db 35, 20, 10, 0 ; PP
-	db 20 ; Happiness
-	db 0, 0, 0 ; Pokerus, Caught data
-	db 5 ; Level
-	db 0, 0 ; Status
-	bigdw 0 ; HP
-	bigdw 20 ; Max HP
-	bigdw 7 ; Atk
-	bigdw 7 ; Def
-	bigdw 6 ; Spd
-	bigdw 9 ; SAtk
-	bigdw 10 ; SDef
-	db "EGG@@@@@@@@"
-
-	db CLEFFA
-	db NO_ITEM
-	db POUND, CHARM, DIZZY_PUNCH, 0
-	dw 00768 ; OT ID
-	dt 125 ; Exp
-	; Stat exp
-	bigdw 0
-	bigdw 0
-	bigdw 0
-	bigdw 0
-	bigdw 0
-	dn 2, 10, 10, 10 ; DVs
-	db 35, 20, 10, 0 ; PP
-	db 20 ; Happiness
-	db 0, 0, 0 ; Pokerus, Caught data
-	db 5 ; Level
-	db 0, 0 ; Status
-	bigdw 0 ; HP
-	bigdw 20 ; Max HP
-	bigdw 7 ; Atk
-	bigdw 8 ; Def
-	bigdw 7 ; Spd
-	bigdw 10 ; SAtk
-	bigdw 11 ; SDef
 	db "EGG@@@@@@@@"
 
 	db IGGLYBUFF

@@ -4,9 +4,9 @@ KantoWaterWildMons:
 
 	map_id TOHJO_FALLS
 	db 4 percent ; encounter rate
-	db 20, GOLDEEN
+	db 20, NUMEL
 	db 20, SLOWPOKE
-	db 20, SEAKING
+	db 20, CAMERUPT
 
 	map_id VERMILION_PORT
 	db 2 percent ; encounter rate
@@ -16,9 +16,9 @@ KantoWaterWildMons:
 
 	map_id ROUTE_4
 	db 4 percent ; encounter rate
-	db 10, GOLDEEN
-	db 5, GOLDEEN
-	db 10, SEAKING
+	db 10, NUMEL
+	db 5, NUMEL
+	db 10, CAMERUPT
 
 	map_id ROUTE_6
 	db 2 percent ; encounter rate
@@ -28,26 +28,26 @@ KantoWaterWildMons:
 
 	map_id ROUTE_9
 	db 4 percent ; encounter rate
-	db 15, GOLDEEN
-	db 10, GOLDEEN
-	db 15, SEAKING
+	db 15, NUMEL
+	db 10, NUMEL
+	db 15, CAMERUPT
 
 	map_id ROUTE_10_NORTH
 	db 4 percent ; encounter rate
-	db 15, GOLDEEN
-	db 10, GOLDEEN
-	db 15, SEAKING
+	db 15, NUMEL
+	db 10, NUMEL
+	db 15, CAMERUPT
 
 	map_id ROUTE_12
 	db 6 percent ; encounter rate
 	db 25, TENTACOOL
-	db 25, QUAGSIRE
+	db 25, BANETTE
 	db 25, TENTACRUEL
 
 	map_id ROUTE_13
 	db 6 percent ; encounter rate
 	db 25, TENTACOOL
-	db 25, QUAGSIRE
+	db 25, BANETTE
 	db 25, TENTACRUEL
 
 	map_id ROUTE_19
@@ -76,15 +76,15 @@ KantoWaterWildMons:
 
 	map_id ROUTE_24
 	db 4 percent ; encounter rate
-	db 10, GOLDEEN
-	db 5, GOLDEEN
-	db 10, SEAKING
+	db 10, NUMEL
+	db 5, NUMEL
+	db 10, CAMERUPT
 
 	map_id ROUTE_25
 	db 4 percent ; encounter rate
-	db 10, GOLDEEN
-	db 5, GOLDEEN
-	db 10, SEAKING
+	db 10, NUMEL
+	db 5, NUMEL
+	db 10, CAMERUPT
 
 	map_id ROUTE_26
 	db 6 percent ; encounter rate
@@ -118,9 +118,9 @@ KantoWaterWildMons:
 
 	map_id CERULEAN_CITY
 	db 4 percent ; encounter rate
-	db 10, GOLDEEN
-	db 5, GOLDEEN
-	db 10, SEAKING
+	db 10, NUMEL
+	db 5, NUMEL
+	db 10, CAMERUPT
 
 	map_id VERMILION_CITY
 	db 6 percent ; encounter rate
