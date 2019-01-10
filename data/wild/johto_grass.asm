@@ -1194,28 +1194,28 @@ JohtoGrassWildMons:
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 2, STARLY
-	db 2, YAMASK
+	db 2, ZIGZAGOON
 	db 3, STARLY
-	db 3, YAMASK
-	db 2, ZIGZAGOON
-	db 3, MAKUHITA
-	db 3, MAKUHITA
-	; day
-	db 2, STARLY
-	db 2, YAMASK
-	db 3, STARLY
-	db 3, YAMASK
-	db 2, ZIGZAGOON
-	db 3, MAKUHITA
-	db 3, MAKUHITA
-	; nite
-	db 2, BELDUM
-	db 2, ZIGZAGOON
-	db 3, BELDUM
 	db 3, ZIGZAGOON
 	db 2, ZIGZAGOON
-	db 3, BELDUM
-	db 3, BELDUM
+	db 3, STARLY
+	db 3, POOCHYENA
+	; day
+	db 2, STARLY
+	db 2, ZIGZAGOON
+	db 3, STARLY
+	db 3, ZIGZAGOON
+	db 2, ZIGZAGOON
+	db 3, STARLY
+	db 3, POOCHYENA
+	; nite
+	db 2, STARLY
+	db 2, POOCHYENA
+	db 3, POOCHYENA
+	db 3, ZIGZAGOON
+	db 2, ZIGZAGOON
+	db 3, STARLY
+	db 3, ZIGZAGOON
 
 	map_id ROUTE_30
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
@@ -1648,5 +1648,59 @@ JohtoGrassWildMons:
 	db 40, MIGHTYENA
 	db 44, MIGHTYENA
 	db 44, MIGHTYENA
+	
+	map_id SECUNDA_FOREST
+	db 7 percent, 10 percent, 7 percent ; morn, day, nite
+	;morn
+	db 4, WEEDLE
+	db 5, WEEDLE
+	db 4, CATERPIE
+	db 5, CATERPIE
+	db 5, STARLY
+	db 6, METAPOD
+	db 6, KAKUNA
+	;day
+	db 4, WEEDLE
+	db 4, CATERPIE
+	db 6, METAPOD
+	db 6, KAKUNA
+	db 5, STARLY
+	db 3, EMOLGA
+	db 5, EMOLGA
+	;nite
+	db 4, WEEDLE
+	db 4, CATERPIE
+	db 6, METAPOD
+	db 6, KAKUNA
+	db 5, STARLY
+	db 5, YAMASK
+	db 3, EMOLGA
+	
+	map_id SECUNDA_FOREST_101
+	db 7 percent, 7 percent, 7 percent ; morn, day, nite
+	;morn
+	db 3, CATERPIE
+	db 3, ZIGZAGOON
+	db 4, ZIGZAGOON
+	db 4, STARLY
+	db 3, POOCHYENA
+	db 4, POOCHYENA
+	db 3, SHROOMISH
+	;day
+	db 3, CATERPIE
+	db 3, ZIGZAGOON
+	db 4, ZIGZAGOON
+	db 4, STARLY
+	db 3, POOCHYENA
+	db 4, POOCHYENA
+	db 3, SHROOMISH
+	;nite
+	db 3, CATERPIE
+	db 3, ZIGZAGOON
+	db 4, ZIGZAGOON
+	db 4, STARLY
+	db 3, POOCHYENA
+	db 4, POOCHYENA
+	db 3, SHROOMISH
 
 	db -1 ; end

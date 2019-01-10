@@ -1485,21 +1485,18 @@ UnknownText_0x1c1ce3::
 
 UnknownText_0x1c1cf3::
 	text "An item in your"
-	line "PACK may be"
+	line "Pack may be"
 
 	para "registered for use"
-	line "on SELECT Button."
+	line "on Select Button."
 	done
 
 _OakText1::
-	text "Welcome to the"
-	line "Tsuji New Citzen"
-	cont "Register."
-
-	para "All new residents"
-	line "are required to"
-	cont "to complete this"
-	cont "registration form."
+	text "Before continuing,"
+	line "a message from the"
+	
+	para "Tsuji Welcome"
+	line "Commitee."
 	prompt
 
 _OakText2::
@@ -1515,8 +1512,7 @@ _OakText3::
 _OakText4::
 	text "Tsuji is known"
 	line "as the crossroads"
-
-	para "of the world."
+	cont "of the world."
 
 	para "#mon from all"
 	line "regions migrate to"

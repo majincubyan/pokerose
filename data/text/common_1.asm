@@ -193,7 +193,7 @@ Timeset_Morning::
 Timeset_Day::
 	text "."
 	line "Thank you and"
-	cont "good afternoon."
+	cont "good day."
 	done
 
 Timeset_Night::

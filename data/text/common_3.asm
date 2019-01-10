@@ -10,11 +10,11 @@ _OakText7::
 
 	para "A land full of"
 	line "#mon and"
-	cont "ancient ruins."
+	cont "mystery."
 
-	para "A world of dreams"
+	para "Countless dreams"
 	line "and adventures"
-	cont "awaits you."
+	cont "await you."
 
 	para "Welcome again to"
 	line "your new home,"
