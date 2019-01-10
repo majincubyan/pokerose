@@ -276,7 +276,7 @@ KantoGrassWildMons:
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 13, STARLY
-	db 13, SNUBBULL
+	db 13, PANGORO
 	db 15, STARAVIA
 	db 12, ABRA
 	db 14, JIGGLYPUFF
@@ -284,7 +284,7 @@ KantoGrassWildMons:
 	db 14, ABRA
 	; day
 	db 13, STARLY
-	db 13, SNUBBULL
+	db 13, PANGORO
 	db 15, STARAVIA
 	db 12, ABRA
 	db 14, JIGGLYPUFF
@@ -303,20 +303,20 @@ KantoGrassWildMons:
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 13, ZIGZAGOON
-	db 13, SNUBBULL
+	db 13, PANGORO
 	db 14, MAGNEMITE
 	db 15, LINOONE
 	db 12, JIGGLYPUFF
-	db 15, GRANBULL
-	db 15, GRANBULL
+	db 15, SHROOMISH
+	db 15, SHROOMISH
 	; day
 	db 13, ZIGZAGOON
-	db 13, SNUBBULL
+	db 13, PANGORO
 	db 14, MAGNEMITE
 	db 15, LINOONE
 	db 12, JIGGLYPUFF
-	db 15, GRANBULL
-	db 15, GRANBULL
+	db 15, SHROOMISH
+	db 15, SHROOMISH
 	; nite
 	db 13, PANPOUR
 	db 13, MAGMORTOR
@@ -331,7 +331,7 @@ KantoGrassWildMons:
 	; morn
 	db 17, ZIGZAGOON
 	db 17, JOLTIK
-	db 18, SNUBBULL
+	db 18, PANGORO
 	db 18, LINOONE
 	db 18, JIGGLYPUFF
 	db 16, ABRA
@@ -339,7 +339,7 @@ KantoGrassWildMons:
 	; day
 	db 17, ZIGZAGOON
 	db 17, JOLTIK
-	db 18, SNUBBULL
+	db 18, PANGORO
 	db 18, LINOONE
 	db 18, JIGGLYPUFF
 	db 16, ABRA
@@ -356,7 +356,7 @@ KantoGrassWildMons:
 	map_id ROUTE_8
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 17, SNUBBULL
+	db 17, PANGORO
 	db 19, STARAVIA
 	db 16, ABRA
 	db 17, GROWLITHE
@@ -364,7 +364,7 @@ KantoGrassWildMons:
 	db 18, KADABRA
 	db 18, KADABRA
 	; day
-	db 17, SNUBBULL
+	db 17, PANGORO
 	db 19, STARAVIA
 	db 16, ABRA
 	db 17, GROWLITHE

@@ -206,43 +206,43 @@ EvosAttacksPointers::
 	dw HelioliskEvosAttacks
 	dw LitleoEvosAttacks
 	dw PyroarEvosAttacks
-	dw DunsparceEvosAttacks
-	dw GligarEvosAttacks
+	dw BronzorEvosAttacks
+	dw BronzongEvosAttacks
 	dw SteelixEvosAttacks
 	dw SnubbullEvosAttacks
 	dw GranbullEvosAttacks
 	dw QwilfishEvosAttacks
 	dw ScizorEvosAttacks
-	dw ShuckleEvosAttacks
+	dw ToucannonEvosAttacks
 	dw HeracrossEvosAttacks
-	dw SneaselEvosAttacks
+	dw HonedgeEvosAttacks
 	dw TeddiursaEvosAttacks
 	dw UrsaringEvosAttacks
 	dw SlugmaEvosAttacks
 	dw MagcargoEvosAttacks
-	dw SwinubEvosAttacks
-	dw PiloswineEvosAttacks
+	dw BaltoyEvosAttacks
+	dw ClaydolEvosAttacks
 	dw CorsolaEvosAttacks
-	dw RemoraidEvosAttacks
-	dw OctilleryEvosAttacks
+	dw SkittyEvosAttacks
+	dw DelcattyEvosAttacks
 	dw DelibirdEvosAttacks
-	dw MantineEvosAttacks
+	dw DoubladeEvosAttacks
 	dw SkarmoryEvosAttacks
 	dw HoundourEvosAttacks
 	dw HoundoomEvosAttacks
-	dw KingdraEvosAttacks
+	dw AegislashEvosAttacks
 	dw PhanpyEvosAttacks
 	dw DonphanEvosAttacks
-	dw Porygon2EvosAttacks
-	dw StantlerEvosAttacks
-	dw SmeargleEvosAttacks
+	dw SphealEvosAttacks
+	dw SealeoEvosAttacks
+	dw WalreinEvosAttacks
 	dw TyrogueEvosAttacks
 	dw HitmontopEvosAttacks
 	dw SmoochumEvosAttacks
 	dw ElekidEvosAttacks
 	dw MagbyEvosAttacks
 	dw MiltankEvosAttacks
-	dw BlisseyEvosAttacks
+	dw EmolgaEvosAttacks
 	dw RaikouEvosAttacks
 	dw EnteiEvosAttacks
 	dw SuicuneEvosAttacks

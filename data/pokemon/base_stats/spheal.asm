@@ -1,4 +1,4 @@
-	db PORYGON2 ; 233
+	db SPHEAL ; 233
 
 	db  85,  80,  90,  60, 105,  95
 	;   hp  atk  def  spd  sat  sdf
@@ -11,7 +11,7 @@
 	db 100 ; unknown 1
 	db 20 ; step cycles to hatch
 	db 5 ; unknown 2
-	INCBIN "gfx/pokemon/porygon2/front.dimensions"
+	INCBIN "gfx/pokemon/spheal/front.dimensions"
 	db 0, 0, 0, 0 ; padding
 	db GROWTH_MEDIUM_FAST ; growth rate
 	dn EGG_MINERAL, EGG_MINERAL ; egg groups

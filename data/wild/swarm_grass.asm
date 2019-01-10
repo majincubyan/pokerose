@@ -7,28 +7,28 @@ SwarmGrassWildMons:
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
 	db 3, GEODUDE
-	db 3, DUNSPARCE
+	db 3, BRONZOR
 	db 2, POOCHYENA
 	db 2, GEODUDE
-	db 2, DUNSPARCE
-	db 4, DUNSPARCE
-	db 4, DUNSPARCE
+	db 2, BRONZOR
+	db 4, BRONZOR
+	db 4, BRONZOR
 	; day
 	db 3, GEODUDE
-	db 3, DUNSPARCE
+	db 3, BRONZOR
 	db 2, POOCHYENA
 	db 2, GEODUDE
-	db 2, DUNSPARCE
-	db 4, DUNSPARCE
-	db 4, DUNSPARCE
+	db 2, BRONZOR
+	db 4, BRONZOR
+	db 4, BRONZOR
 	; nite
 	db 3, GEODUDE
-	db 3, DUNSPARCE
+	db 3, BRONZOR
 	db 2, POOCHYENA
 	db 2, GEODUDE
-	db 2, DUNSPARCE
-	db 4, DUNSPARCE
-	db 4, DUNSPARCE
+	db 2, BRONZOR
+	db 4, BRONZOR
+	db 4, BRONZOR
 
 ; Yanma swarm
 	map_id ROUTE_35

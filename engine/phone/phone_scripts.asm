@@ -826,7 +826,7 @@ Ralph_SetUpSwarm:
 	checkflag ENGINE_FISH_SWARM
 	iftrue .Generic
 	setflag ENGINE_FISH_SWARM
-	pokenamemem QWILFISH, MEM_BUFFER_1
+	pokenamemem BRELOOM, MEM_BUFFER_1
 	landmarktotext ROUTE_32, MEM_BUFFER_2
 	writebyte FISHSWARM_QWILFISH
 	special ActivateFishingSwarm
@@ -996,7 +996,7 @@ AnthonyTriesDunsparceSwarm:
 	checkflag ENGINE_DUNSPARCE_SWARM
 	iftrue .Generic
 	setflag ENGINE_DUNSPARCE_SWARM
-	pokenamemem DUNSPARCE, MEM_BUFFER_1
+	pokenamemem BRONZOR, MEM_BUFFER_1
 	swarm SWARM_DUNSPARCE, DARK_CAVE_VIOLET_ENTRANCE
 	landmarktotext DARK_CAVE, MEM_BUFFER_2
 	farjump UnknownScript_0xa05de

@@ -360,17 +360,17 @@ JohtoGrassWildMons:
 	db 22, SWABLU
 	db 18, SWABLU
 	db 24, SWABLU
-	db 20, SMEARGLE
-	db 22, SMEARGLE
-	db 22, SMEARGLE
+	db 20, WALREIN
+	db 22, WALREIN
+	db 22, WALREIN
 	; day
 	db 20, SWABLU
 	db 22, SWABLU
 	db 18, SWABLU
 	db 24, SWABLU
-	db 20, SMEARGLE
-	db 22, SMEARGLE
-	db 22, SMEARGLE
+	db 20, WALREIN
+	db 22, WALREIN
+	db 22, WALREIN
 	; nite
 	db 20, SWABLU
 	db 22, SWABLU
@@ -680,18 +680,18 @@ JohtoGrassWildMons:
 	map_id ICE_PATH_1F
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
 	; morn
-	db 21, SWINUB
+	db 21, BALTOY
 	db 22, POOCHYENA
 	db 22, MIGHTYENA
-	db 23, SWINUB
+	db 23, BALTOY
 	db 24, MIGHTYENA
 	db 22, MIGHTYENA
 	db 22, MIGHTYENA
 	; day
-	db 21, SWINUB
+	db 21, BALTOY
 	db 22, POOCHYENA
 	db 22, MIGHTYENA
-	db 23, SWINUB
+	db 23, BALTOY
 	db 24, MIGHTYENA
 	db 22, MIGHTYENA
 	db 22, MIGHTYENA
@@ -707,18 +707,18 @@ JohtoGrassWildMons:
 	map_id ICE_PATH_B1F
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
 	; morn
-	db 22, SWINUB
+	db 22, BALTOY
 	db 23, POOCHYENA
 	db 23, MIGHTYENA
-	db 24, SWINUB
+	db 24, BALTOY
 	db 25, MIGHTYENA
 	db 23, MIGHTYENA
 	db 22, JYNX
 	; day
-	db 22, SWINUB
+	db 22, BALTOY
 	db 23, POOCHYENA
 	db 23, MIGHTYENA
-	db 24, SWINUB
+	db 24, BALTOY
 	db 25, MIGHTYENA
 	db 23, MIGHTYENA
 	db 22, JYNX
@@ -729,23 +729,23 @@ JohtoGrassWildMons:
 	db 24, DELIBIRD
 	db 25, MIGHTYENA
 	db 23, MIGHTYENA
-	db 22, SNEASEL
+	db 22, HONEDGE
 
 	map_id ICE_PATH_B2F_MAHOGANY_SIDE
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
 	; morn
-	db 23, SWINUB
+	db 23, BALTOY
 	db 24, POOCHYENA
 	db 24, MIGHTYENA
-	db 25, SWINUB
+	db 25, BALTOY
 	db 26, MIGHTYENA
 	db 22, JYNX
 	db 24, JYNX
 	; day
-	db 23, SWINUB
+	db 23, BALTOY
 	db 24, POOCHYENA
 	db 24, MIGHTYENA
-	db 25, SWINUB
+	db 25, BALTOY
 	db 26, MIGHTYENA
 	db 22, JYNX
 	db 24, JYNX
@@ -755,24 +755,24 @@ JohtoGrassWildMons:
 	db 24, MIGHTYENA
 	db 25, DELIBIRD
 	db 26, MIGHTYENA
-	db 22, SNEASEL
-	db 24, SNEASEL
+	db 22, HONEDGE
+	db 24, HONEDGE
 
 	map_id ICE_PATH_B2F_BLACKTHORN_SIDE
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
 	; morn
-	db 23, SWINUB
+	db 23, BALTOY
 	db 24, POOCHYENA
 	db 24, MIGHTYENA
-	db 25, SWINUB
+	db 25, BALTOY
 	db 26, MIGHTYENA
 	db 22, JYNX
 	db 24, JYNX
 	; day
-	db 23, SWINUB
+	db 23, BALTOY
 	db 24, POOCHYENA
 	db 24, MIGHTYENA
-	db 25, SWINUB
+	db 25, BALTOY
 	db 26, MIGHTYENA
 	db 22, JYNX
 	db 24, JYNX
@@ -782,24 +782,24 @@ JohtoGrassWildMons:
 	db 24, MIGHTYENA
 	db 25, DELIBIRD
 	db 26, MIGHTYENA
-	db 22, SNEASEL
-	db 24, SNEASEL
+	db 22, HONEDGE
+	db 24, HONEDGE
 
 	map_id ICE_PATH_B3F
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
 	; morn
-	db 24, SWINUB
+	db 24, BALTOY
 	db 25, POOCHYENA
 	db 25, MIGHTYENA
-	db 26, SWINUB
+	db 26, BALTOY
 	db 22, JYNX
 	db 24, JYNX
 	db 26, JYNX
 	; day
-	db 24, SWINUB
+	db 24, BALTOY
 	db 25, POOCHYENA
 	db 25, MIGHTYENA
-	db 26, SWINUB
+	db 26, BALTOY
 	db 22, JYNX
 	db 24, JYNX
 	db 26, JYNX
@@ -808,9 +808,9 @@ JohtoGrassWildMons:
 	db 25, POOCHYENA
 	db 25, MIGHTYENA
 	db 26, DELIBIRD
-	db 22, SNEASEL
-	db 24, SNEASEL
-	db 26, SNEASEL
+	db 22, HONEDGE
+	db 24, HONEDGE
+	db 26, HONEDGE
 
 	map_id WHIRL_ISLAND_NW
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
@@ -1145,7 +1145,7 @@ JohtoGrassWildMons:
 	db 4, GEODUDE
 	db 2, TEDDIURSA
 	db 4, POOCHYENA
-	db 4, DUNSPARCE
+	db 4, BRONZOR
 	; day
 	db 3, GEODUDE
 	db 2, POOCHYENA
@@ -1153,7 +1153,7 @@ JohtoGrassWildMons:
 	db 4, GEODUDE
 	db 2, POOCHYENA
 	db 4, POOCHYENA
-	db 4, DUNSPARCE
+	db 4, BRONZOR
 	; nite
 	db 3, GEODUDE
 	db 2, POOCHYENA
@@ -1161,7 +1161,7 @@ JohtoGrassWildMons:
 	db 4, GEODUDE
 	db 2, POOCHYENA
 	db 4, POOCHYENA
-	db 4, DUNSPARCE
+	db 4, BRONZOR
 
 	map_id DARK_CAVE_BLACKTHORN_ENTRANCE
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
@@ -1328,7 +1328,7 @@ JohtoGrassWildMons:
 	map_id ROUTE_34
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 10, SNUBBULL
+	db 10, PANGORO
 	db 11, ZIGZAGOON
 	db 12, STARLY
 	db 10, ABRA
@@ -1336,7 +1336,7 @@ JohtoGrassWildMons:
 	db 10, DITTO
 	db 10, DITTO
 	; day
-	db 10, SNUBBULL
+	db 10, PANGORO
 	db 11, ZIGZAGOON
 	db 12, STARLY
 	db 10, ABRA
@@ -1355,7 +1355,7 @@ JohtoGrassWildMons:
 	map_id ROUTE_35
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 12, SNUBBULL
+	db 12, PANGORO
 	db 14, STARLY
 	db 13, GROWLITHE
 	db 10, ABRA
@@ -1363,7 +1363,7 @@ JohtoGrassWildMons:
 	db 10, DITTO
 	db 12, LUDICOLO
 	; day
-	db 12, SNUBBULL
+	db 12, PANGORO
 	db 14, STARLY
 	db 13, GROWLITHE
 	db 10, ABRA
@@ -1426,9 +1426,9 @@ JohtoGrassWildMons:
 	db 15, STARLY
 	; nite
 	db 13, AMAURA
-	db 14, STANTLER
+	db 14, SEALEO
 	db 15, PHANTUMP
-	db 16, STANTLER
+	db 16, SEALEO
 	db 15, TREVENANT
 	db 15, AURORUS
 	db 15, AURORUS
@@ -1573,7 +1573,7 @@ JohtoGrassWildMons:
 	; morn
 	db 23, GEODUDE
 	db 23, GRAVELER
-	db 24, GLIGAR
+	db 24, BRONZONG
 	db 25, DONPHAN
 	db 20, PHANPY
 	db 27, SKARMORY
@@ -1581,7 +1581,7 @@ JohtoGrassWildMons:
 	; day
 	db 23, GEODUDE
 	db 23, GRAVELER
-	db 24, GLIGAR
+	db 24, BRONZONG
 	db 25, DONPHAN
 	db 30, DONPHAN
 	db 27, SKARMORY
@@ -1589,7 +1589,7 @@ JohtoGrassWildMons:
 	; nite
 	db 23, GEODUDE
 	db 23, GRAVELER
-	db 24, GLIGAR
+	db 24, BRONZONG
 	db 25, GRAVELER
 	db 27, GRAVELER
 	db 27, GRAVELER

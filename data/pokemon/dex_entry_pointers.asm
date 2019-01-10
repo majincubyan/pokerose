@@ -205,43 +205,43 @@ PokedexDataPointerTable:
 	dw HelioliskPokedexEntry
 	dw LitleoPokedexEntry
 	dw PyroarPokedexEntry
-	dw DunsparcePokedexEntry
-	dw GligarPokedexEntry
+	dw BronzorPokedexEntry
+	dw BronzongPokedexEntry
 	dw SteelixPokedexEntry
 	dw SnubbullPokedexEntry
 	dw GranbullPokedexEntry
 	dw QwilfishPokedexEntry
 	dw ScizorPokedexEntry
-	dw ShucklePokedexEntry
+	dw ToucannonPokedexEntry
 	dw HeracrossPokedexEntry
-	dw SneaselPokedexEntry
+	dw HonedgePokedexEntry
 	dw TeddiursaPokedexEntry
 	dw UrsaringPokedexEntry
 	dw SlugmaPokedexEntry
 	dw MagcargoPokedexEntry
-	dw SwinubPokedexEntry
-	dw PiloswinePokedexEntry
+	dw BaltoyPokedexEntry
+	dw ClaydolPokedexEntry
 	dw CorsolaPokedexEntry
-	dw RemoraidPokedexEntry
-	dw OctilleryPokedexEntry
+	dw SkittyPokedexEntry
+	dw DelcattyPokedexEntry
 	dw DelibirdPokedexEntry
-	dw MantinePokedexEntry
+	dw DoubladePokedexEntry
 	dw SkarmoryPokedexEntry
 	dw HoundourPokedexEntry
 	dw HoundoomPokedexEntry
-	dw KingdraPokedexEntry
+	dw AegislashPokedexEntry
 	dw PhanpyPokedexEntry
 	dw DonphanPokedexEntry
-	dw Porygon2PokedexEntry
-	dw StantlerPokedexEntry
-	dw SmearglePokedexEntry
+	dw SphealPokedexEntry
+	dw SealeoPokedexEntry
+	dw WalreinPokedexEntry
 	dw TyroguePokedexEntry
 	dw HitmontopPokedexEntry
 	dw SmoochumPokedexEntry
 	dw ElekidPokedexEntry
 	dw MagbyPokedexEntry
 	dw MiltankPokedexEntry
-	dw BlisseyPokedexEntry
+	dw EmolgaPokedexEntry
 	dw RaikouPokedexEntry
 	dw EnteiPokedexEntry
 	dw SuicunePokedexEntry

@@ -10,13 +10,6 @@ CherrygroveMart_MapScripts:
 
 CherrygroveMartClerkScript:
 	opentext
-	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
-	iftrue .PokeBallsInStock
-	pokemart MARTTYPE_STANDARD, MART_CHERRYGROVE
-	closetext
-	end
-
-.PokeBallsInStock:
 	pokemart MARTTYPE_STANDARD, MART_CHERRYGROVE_DEX
 	closetext
 	end
@@ -24,15 +17,7 @@ CherrygroveMartClerkScript:
 CherrygroveMartCooltrainerMScript:
 	faceplayer
 	opentext
-	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
-	iftrue .PokeBallsInStock
-	writetext CherrygroveMartCooltrainerMText
-	waitbutton
-	closetext
-	end
-
-.PokeBallsInStock:
-	writetext CherrygroveMartCooltrainerMText_PokeBallsInStock
+	writetext AboutMartATM_Text
 	waitbutton
 	closetext
 	end
@@ -40,33 +25,30 @@ CherrygroveMartCooltrainerMScript:
 CherrygroveMartYoungsterScript:
 	jumptextfaceplayer CherrygroveMartYoungsterText
 
-CherrygroveMartCooltrainerMText:
-	text "They're fresh out"
-	line "of # BALLS!"
 
-	para "When will they get"
-	line "more of them?"
-	done
-
-CherrygroveMartCooltrainerMText_PokeBallsInStock:
-	text "# BALLS are in"
-	line "stock! Now I can"
-	cont "catch #MON!"
-	done
 
 CherrygroveMartYoungsterText:
 	text "When I was walking"
 	line "in the grass, a"
 
-	para "bug #MON poi-"
-	line "soned my #MON!"
+	para "bug #mon poi-"
+	line "soned my #mon!"
 
 	para "I just kept going,"
 	line "but then my"
-	cont "#MON fainted."
+	cont "#mon fainted."
 
 	para "You should keep an"
-	line "ANTIDOTE with you."
+	line "Antidote with you."
+	done
+	
+AboutMartATM_Text:
+	text "Every #mart has"
+	line "an ATM in it."
+	
+	para "You can open an"
+	line "account on the spot"
+	cont "start saving!"
 	done
 	
 ATMScript:

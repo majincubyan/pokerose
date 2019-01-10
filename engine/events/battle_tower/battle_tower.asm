@@ -401,7 +401,7 @@ endr
 	jr nz, .valid
 
 .invalid
-	ld a, SMEARGLE
+	ld a, CELEBI
 	ld [hl], a
 
 .valid

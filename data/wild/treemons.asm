@@ -125,5 +125,5 @@ TreeMonSet_Forest:
 
 TreeMonSet_Rock:
 	db 90, RHYPERIOR,     15
-	db 10, SHUCKLE,    15
+	db 10, TOUCANNON,    15
 	db -1

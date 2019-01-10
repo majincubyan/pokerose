@@ -17,7 +17,7 @@ AlphabeticalPokedexOrder:
 	db BEEDRILL
 	db BELDUM
 	db BELLOSSOM
-	db BLISSEY
+	db EMOLGA
 	db BUTTERFREE
 	db CATERPIE
 	db CELEBI
@@ -38,7 +38,7 @@ AlphabeticalPokedexOrder:
 	db DRAGONITE
 	db DRATINI
 	db DUGTRIO
-	db DUNSPARCE
+	db BRONZOR
 	db EEVEE
 	db EKANS
 	db ELECTABUZZ
@@ -61,13 +61,13 @@ AlphabeticalPokedexOrder:
 	db GENGAR
 	db GEODUDE
 	db HELIOLISK
-	db GLIGAR
+	db BRONZONG
 	db GLOOM
 	db NUMEL
 	db GOLEM
 	db GOODRA
 	db GOOMY
-	db GRANBULL
+	db SHROOMISH
 	db GRAVELER
 	db GRIMER
 	db GROWLITHE
@@ -96,7 +96,7 @@ AlphabeticalPokedexOrder:
 	db KADABRA
 	db KAKUNA
 	db KANGASKHAN
-	db KINGDRA
+	db AEGISLASH
 	db KOFFING
 	db ROSERADE
 	db LAPRAS
@@ -115,7 +115,7 @@ AlphabeticalPokedexOrder:
 	db MAGMORTOR
 	db MAGNEMITE
 	db MAGNETON
-	db MANTINE
+	db DOUBLADE
 	db MAREEP
 	db MARILL
 	db MAROWAK
@@ -148,7 +148,7 @@ AlphabeticalPokedexOrder:
 	db TREVENANT
 	db NOIBAT
 	db NOIVERN
-	db OCTILLERY
+	db DELCATTY
 	db ODDISH
 	db TYRUNT
 	db TYRANTRUM
@@ -158,7 +158,7 @@ AlphabeticalPokedexOrder:
 	db PHANPY
 	db PICHU
 	db PIKACHU
-	db PILOSWINE
+	db CLAYDOL
 	db LITLEO
 	db PINSIR
 	db POLITOED
@@ -168,15 +168,15 @@ AlphabeticalPokedexOrder:
 	db PONYTA
 	db POOCHYENA
 	db MAWILE
-	db PORYGON2
+	db SPHEAL
 	db PUPITAR
 	db BANETTE
 	db MONFERNO
-	db QWILFISH
+	db BRELOOM
 	db RAICHU
 	db RAIKOU
 	db RAPIDASH
-	db REMORAID
+	db SKITTY
 	db RHYDON
 	db RHYHORN
 	db RHYPERIOR
@@ -193,7 +193,7 @@ AlphabeticalPokedexOrder:
 	db SEVIPER
 	db SHELLGON
 	db SHINX
-	db SHUCKLE
+	db TOUCANNON
 	db SIMIPOUR
 	db SIMISAGE
 	db SIMISEAR
@@ -204,25 +204,25 @@ AlphabeticalPokedexOrder:
 	db SLOWKING
 	db SLOWPOKE
 	db SLUGMA
-	db SMEARGLE
+	db WALREIN
 	db SMOOCHUM
-	db SNEASEL
+	db HONEDGE
 	db SNORLAX
-	db SNUBBULL
+	db PANGORO
 	db AMAURA
 	db SPOINK
-	db STANTLER
+	db SEALEO
 	db STARAPTOR
 	db STARAVIA
 	db STARLY
 	db STARMIE
 	db STARYU
-	db STEELIX
+	db PANCHAM
 	db TRUMBEAK
 	db SUICUNE
 	db LOMBRE
 	db LOTAD
-	db SWINUB
+	db BALTOY
 	db TROPIUS
 	db TAUROS
 	db TEDDIURSA

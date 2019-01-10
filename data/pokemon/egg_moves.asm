@@ -642,7 +642,7 @@ LitleoEggMoves:
 	db SWIFT
 	db -1 ; end
 
-DunsparceEggMoves:
+BronzorEggMoves:
 	db BIDE
 	db ANCIENTPOWER
 	db ROCK_SLIDE
@@ -650,7 +650,7 @@ DunsparceEggMoves:
 	db RAGE
 	db -1 ; end
 
-GligarEggMoves:
+BronzongEggMoves:
 	db METAL_CLAW
 	db WING_ATTACK
 	db RAZOR_WIND
@@ -675,7 +675,7 @@ QwilfishEggMoves:
 	db SUPERSONIC
 	db -1 ; end
 
-ShuckleEggMoves:
+ToucannonEggMoves:
 	db SWEET_SCENT
 	db -1 ; end
 
@@ -685,7 +685,7 @@ HeracrossEggMoves:
 	db FLAIL
 	db -1 ; end
 
-SneaselEggMoves:
+HonedgeEggMoves:
 	db COUNTER
 	db SPITE
 	db FORESIGHT
@@ -708,7 +708,7 @@ SlugmaEggMoves:
 	db ACID_ARMOR
 	db -1 ; end
 
-SwinubEggMoves:
+BaltoyEggMoves:
 	db TAKE_DOWN
 	db BITE
 	db BODY_SLAM
@@ -724,7 +724,7 @@ CorsolaEggMoves:
 	db AMNESIA
 	db -1 ; end
 
-RemoraidEggMoves:
+SkittyEggMoves:
 	db AURORA_BEAM
 	db OCTAZOOKA
 	db SUPERSONIC
@@ -740,7 +740,7 @@ DelibirdEggMoves:
 	db RAPID_SPIN
 	db -1 ; end
 
-MantineEggMoves:
+DoubladeEggMoves:
 	db TWISTER
 	db HYDRO_PUMP
 	db HAZE
@@ -775,7 +775,7 @@ if _CRYSTAL
 endc
 	db -1 ; end
 
-StantlerEggMoves:
+SealeoEggMoves:
 	db REFLECT
 	db SPITE
 	db DISABLE

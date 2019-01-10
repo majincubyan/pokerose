@@ -224,43 +224,43 @@ JOHTO_POKEMON EQU const_value
 	const HELIOLISK  ; cb
 	const LITLEO     ; cc
 	const PYROAR ; cd
-	const DUNSPARCE  ; ce
-	const GLIGAR     ; cf
-	const STEELIX    ; d0
-	const SNUBBULL   ; d1
-	const GRANBULL   ; d2
-	const QWILFISH   ; d3
+	const BRONZOR  ; ce
+	const BRONZONG     ; cf
+	const PANCHAM    ; d0
+	const PANGORO   ; d1
+	const SHROOMISH   ; d2
+	const BRELOOM   ; d3
 	const SCIZOR     ; d4
-	const SHUCKLE    ; d5
+	const TOUCANNON    ; d5
 	const HERACROSS  ; d6
-	const SNEASEL    ; d7
+	const HONEDGE    ; d7
 	const TEDDIURSA  ; d8
 	const URSARING   ; d9
 	const SLUGMA     ; da
 	const MAGCARGO   ; db
-	const SWINUB     ; dc
-	const PILOSWINE  ; dd
+	const BALTOY     ; dc
+	const CLAYDOL  ; dd
 	const CORSOLA    ; de
-	const REMORAID   ; df
-	const OCTILLERY  ; e0
+	const SKITTY   ; df
+	const DELCATTY  ; e0
 	const DELIBIRD   ; e1
-	const MANTINE    ; e2
+	const DOUBLADE    ; e2
 	const SKARMORY   ; e3
 	const HOUNDOUR   ; e4
 	const HOUNDOOM   ; e5
-	const KINGDRA    ; e6
+	const AEGISLASH    ; e6
 	const PHANPY     ; e7
 	const DONPHAN    ; e8
-	const PORYGON2   ; e9
-	const STANTLER   ; ea
-	const SMEARGLE   ; eb
+	const SPHEAL   ; e9
+	const SEALEO   ; ea
+	const WALREIN   ; eb
 	const TYROGUE    ; ec
 	const HITMONTOP  ; ed
 	const SMOOCHUM   ; ee
 	const ELEKID     ; ef
 	const MAGBY      ; f0
 	const MILTANK    ; f1
-	const BLISSEY    ; f2
+	const EMOLGA    ; f2
 	const RAIKOU     ; f3
 	const ENTEI      ; f4
 	const SUICUNE    ; f5
