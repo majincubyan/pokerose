@@ -243,14 +243,14 @@ EvosAttacksPointers::
 	dw MagbyEvosAttacks
 	dw MiltankEvosAttacks
 	dw EmolgaEvosAttacks
-	dw RaikouEvosAttacks
-	dw EnteiEvosAttacks
-	dw SuicuneEvosAttacks
+	dw ArticunoEvosAttacks
+	dw ZapdosEvosAttacks
+	dw MoltresEvosAttacks
 	dw LarvitarEvosAttacks
 	dw PupitarEvosAttacks
 	dw TyranitarEvosAttacks
-	dw LugiaEvosAttacks
-	dw HoOhEvosAttacks
+	dw LitwickEvosAttacks
+	dw LampentEvosAttacks
 	dw CelebiEvosAttacks
 	dw ChandelureEvosAttacks
 	dw MunchlaxEvosAttacks

@@ -27,7 +27,7 @@ CeladonEusine:
 	opentext
 	writetext CeladonEusineText1
 	buttonsound
-	writebyte SUICUNE
+	writebyte MOLTRES
 	special MonCheck
 	iffalse .NoSuicune
 	special BeastsCheck

@@ -44,7 +44,7 @@ AlphabeticalPokedexOrder:
 	db ELECTABUZZ
 	db ELECTRIVE
 	db ELEKID
-	db ENTEI
+	db ZAPDOS
 	db ESPEON
 	db MAGNEZONE
 	db SABLEYE
@@ -79,7 +79,7 @@ AlphabeticalPokedexOrder:
 	db HITMONCHAN
 	db HITMONLEE
 	db HITMONTOP
-	db HO_OH
+	db LAMPENT
 	db PHANTUMP
 	db MAKUHITA
 	db WAILMER
@@ -107,7 +107,7 @@ AlphabeticalPokedexOrder:
 	db LUXIO
 	db LUXRAY
 	db LINOONE
-	db LUGIA
+	db LITWICK
 	db MAGBY
 	db MAGCARGO
 	db MAGIKARP
@@ -174,7 +174,7 @@ AlphabeticalPokedexOrder:
 	db MONFERNO
 	db BRELOOM
 	db RAICHU
-	db RAIKOU
+	db ARTICUNO
 	db RAPIDASH
 	db SKITTY
 	db RHYDON
@@ -219,7 +219,7 @@ AlphabeticalPokedexOrder:
 	db STARYU
 	db PANCHAM
 	db TRUMBEAK
-	db SUICUNE
+	db MOLTRES
 	db LOMBRE
 	db LOTAD
 	db BALTOY

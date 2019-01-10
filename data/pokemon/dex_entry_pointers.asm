@@ -242,14 +242,14 @@ PokedexDataPointerTable:
 	dw MagbyPokedexEntry
 	dw MiltankPokedexEntry
 	dw EmolgaPokedexEntry
-	dw RaikouPokedexEntry
-	dw EnteiPokedexEntry
-	dw SuicunePokedexEntry
+	dw ArticunoPokedexEntry
+	dw ZapdosPokedexEntry
+	dw MoltresPokedexEntry
 	dw LarvitarPokedexEntry
 	dw PupitarPokedexEntry
 	dw TyranitarPokedexEntry
-	dw LugiaPokedexEntry
-	dw HoOhPokedexEntry
+	dw LitwickPokedexEntry
+	dw LampentPokedexEntry
 	dw CelebiPokedexEntry
 	dw ChandelurePokedexEntry
 	dw MunchlaxPokedexEntry

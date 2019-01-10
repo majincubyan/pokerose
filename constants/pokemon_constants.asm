@@ -261,14 +261,14 @@ JOHTO_POKEMON EQU const_value
 	const MAGBY      ; f0
 	const MILTANK    ; f1
 	const EMOLGA    ; f2
-	const RAIKOU     ; f3
-	const ENTEI      ; f4
-	const SUICUNE    ; f5
+	const ARTICUNO     ; f3
+	const ZAPDOS      ; f4
+	const MOLTRES    ; f5
 	const LARVITAR   ; f6
 	const PUPITAR    ; f7
 	const TYRANITAR  ; f8
-	const LUGIA      ; f9
-	const HO_OH      ; fa
+	const LITWICK      ; f9
+	const LAMPENT      ; fa
 	const CELEBI     ; fb
 	const CHANDELURE ; fc
 	const MUNCHLAX   ; fd

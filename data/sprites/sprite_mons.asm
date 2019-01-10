@@ -33,6 +33,6 @@ SpriteMons:
 	db RAYQUAZA
 	db SNORLAX
 	db GYARADOS
-	db LUGIA
-	db HO_OH
+	db LITWICK
+	db LAMPENT
 	db SHUPPET

@@ -489,22 +489,22 @@ PokemonPicPointers::
 	dba_pic MiltankBackpic
 	dba_pic EmolgaFrontpic
 	dba_pic EmolgaBackpic
-	dba_pic RaikouFrontpic
-	dba_pic RaikouBackpic
-	dba_pic EnteiFrontpic
-	dba_pic EnteiBackpic
-	dba_pic SuicuneFrontpic
-	dba_pic SuicuneBackpic
+	dba_pic ArticunoFrontpic
+	dba_pic ArticunoBackpic
+	dba_pic ZapdosFrontpic
+	dba_pic ZapdosBackpic
+	dba_pic MoltresFrontpic
+	dba_pic MoltresBackpic
 	dba_pic LarvitarFrontpic
 	dba_pic LarvitarBackpic
 	dba_pic PupitarFrontpic
 	dba_pic PupitarBackpic
 	dba_pic TyranitarFrontpic
 	dba_pic TyranitarBackpic
-	dba_pic LugiaFrontpic
-	dba_pic LugiaBackpic
-	dba_pic HoOhFrontpic
-	dba_pic HoOhBackpic
+	dba_pic LitwickFrontpic
+	dba_pic LitwickBackpic
+	dba_pic LampentFrontpic
+	dba_pic LampentBackpic
 	dba_pic CelebiFrontpic
 	dba_pic CelebiBackpic
 	dba_pic ChandelureFrontPic

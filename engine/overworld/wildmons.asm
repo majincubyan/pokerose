@@ -494,9 +494,9 @@ InitRoamMons:
 ; initialize wRoamMon structs
 
 ; species
-	ld a, RAIKOU
+	ld a, ZAPDOS
 	ld [wRoamMon1Species], a
-	ld a, ENTEI
+	ld a, MOLTRES
 	ld [wRoamMon2Species], a
 
 ; level
