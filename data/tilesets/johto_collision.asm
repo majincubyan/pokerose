@@ -171,7 +171,7 @@
 	tilecoll WALL, FLOOR, WALL, FLOOR ; aa
 	tilecoll FLOOR, WALL, WALL, WALL ; ab
 	tilecoll HEADBUTT_TREE, HEADBUTT_TREE, WALL, WALL ; ac
-	tilecoll HEADBUTT_TREE, HEADBUTT_TREE, WALL, WALL ; ad
+	tilecoll PUDDLE, PUDDLE, PUDDLE, PUDDLE ; ad
 	tilecoll WALL, WALL, WALL, DOOR ; ae
 	tilecoll WALL, WALL, WALL, WALL ; af
 	tilecoll BUOY, BUOY, BUOY, WATER ; b0

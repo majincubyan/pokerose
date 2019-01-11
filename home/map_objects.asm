@@ -140,6 +140,10 @@ CheckSuperTallGrassTile::
 	ret z
 	cp COLL_LONG_GRASS_1C
 	ret
+	
+CheckPuddleTile::
+	cp COLL_PUDDLE
+	ret
 
 CheckCutTreeTile::
 	cp COLL_CUT_TREE
