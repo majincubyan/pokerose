@@ -54,7 +54,7 @@ UnknownText_0x1c4183::
 
 UnknownText_0x1c41b1::
 	text "If you trade that"
-	line "#MON, you won't"
+	line "#mon, you won't"
 	cont "be able to battle."
 	prompt
 
@@ -203,13 +203,13 @@ UnknownText_0x1c460d::
 
 UnknownText_0x1c462a::
 	text "When you change a"
-	line "#MON BOX, data"
+	line "#mon Box, data"
 	cont "will be saved. OK?"
 	done
 
 UnknownText_0x1c465f::
 	text "Each time you move"
-	line "a #MON, data"
+	line "a #mon, data"
 	cont "will be saved. OK?"
 	done
 
@@ -268,7 +268,7 @@ UnknownText_0x1c475f::
 	line "I know all…"
 
 	para "Certainly, I know"
-	line "of your #MON!"
+	line "of your #mon!"
 	done
 
 UnknownText_0x1c4797::
@@ -343,7 +343,7 @@ UnknownText_0x1c487f::
 UnknownText_0x1c491d::
 	text "Hey!"
 
-	para "That's an EGG!"
+	para "That's an egg!"
 
 	para "You can't say that"
 	line "you've met it yet…"
@@ -360,7 +360,7 @@ UnknownText_0x1c497a::
 	para "It would be wise"
 	line "to raise your"
 
-	para "#MON with a"
+	para "#mon with a"
 	line "little more care."
 	done
 
@@ -399,7 +399,7 @@ UnknownText_0x1c4a5b::
 	line "must have come"
 
 	para "through numerous"
-	line "#MON battles."
+	line "#mon battles."
 
 	para "It looks brimming"
 	line "with confidence."
@@ -414,7 +414,7 @@ UnknownText_0x1c4ae5::
 	para "It's been a long"
 	line "time since I've"
 
-	para "seen a #MON as"
+	para "seen a #mon as"
 	line "mighty as this"
 	cont "@"
 	text_from_ram wSeerNickname
@@ -486,7 +486,7 @@ UnknownText_0x1c4c28::
 	para "They're good, but"
 	line "a trifle bitter."
 
-	para "Your #MON may"
+	para "Your #mon may"
 	line "not like them."
 
 	para "Hehehehe…"
@@ -512,7 +512,7 @@ UnknownText_0x1c4cce::
 	done
 
 UnknownText_0x1c4cea::
-	text "Oh? Your PACK is"
+	text "Oh? Your Pack is"
 	line "full, dear."
 	done
 
@@ -550,7 +550,7 @@ UnknownText_0x1c4dcd::
 	done
 
 UnknownText_0x1c4dd6::
-	text "Uh-oh, your PACK"
+	text "Uh-oh, your Pack"
 	line "is chock-full."
 	done
 
@@ -1173,11 +1173,11 @@ UnknownText_0x1c5a5a::
 
 UnknownText_0x1c5a90::
 	text "You missed the"
-	line "#MON!"
+	line "#mon!"
 	prompt
 
 UnknownText_0x1c5aa6::
-	text "Oh no! The #MON"
+	text "Oh no! The #mon"
 	line "broke free!"
 	prompt
 
@@ -1211,14 +1211,14 @@ Text_Waitbutton_2::
 UnknownText_0x1c5b38::
 	text_from_ram wMonOrItemNameBuffer
 	text " was"
-	line "sent to BILL's PC."
+	line "sent to Bill's PC."
 	prompt
 
 UnknownText_0x1c5b53::
 	text_from_ram wEnemyMonNick
 	text "'s data"
 	line "was newly added to"
-	cont "the #DEX.@"
+	cont "the #dex.@"
 	sound_slot_machine_start
 	text_waitbutton
 	db "@@"
@@ -1240,18 +1240,18 @@ UnknownText_0x1c5b9a::
 
 UnknownText_0x1c5bac::
 	text "That can't be used"
-	line "on this #MON."
+	line "on this #mon."
 	prompt
 
 Text_RepelUsedEarlierIsStillInEffect::
-	text "The REPEL used"
+	text "The Repel used"
 	line "earlier is still"
 	cont "in effect."
 	prompt
 
 UnknownText_0x1c5bf9::
 	text "Played the #"
-	line "FLUTE."
+	line "Flute."
 
 	para "Now, that's a"
 	line "catchy tune!"
@@ -1259,12 +1259,12 @@ UnknownText_0x1c5bf9::
 
 UnknownText_0x1c5c28::
 	text "All sleeping"
-	line "#MON woke up."
+	line "#mon woke up."
 	prompt
 
 UnknownText_0x1c5c44::
 	text "<PLAYER> played the"
-	line "# FLUTE.@"
+	line "# Flute.@"
 	text_waitbutton
 	db "@@"
 
@@ -1325,11 +1325,14 @@ UnknownText_0x1c5d3e::
 
 UnknownText_0x1c5d50::
 	text "That can't be used"
-	line "on an EGG."
+	line "on an egg."
 	prompt
 
 UnknownText_0x1c5d6e::
-	text "OAK: <PLAYER>!"
+	text "You hear your dad's"
+	line "voice…"
+	
+	para "Dad: <PLAYER>!"
 	line "This isn't the"
 	cont "time to use that!"
 	prompt
@@ -1346,7 +1349,7 @@ UnknownText_0x1c5db6::
 
 UnknownText_0x1c5dd0::
 	text "The trainer"
-	line "blocked the BALL!"
+	line "blocked the Ball!"
 	prompt
 
 UnknownText_0x1c5def::
@@ -1366,7 +1369,7 @@ UnknownText_0x1c5e1d::
 	prompt
 
 UnknownText_0x1c5e3a::
-	text "The #MON BOX"
+	text "The #mon Box"
 	line "is full. That"
 	cont "can't be used now."
 	prompt
@@ -1402,7 +1405,7 @@ UnknownText_0x1c5ea8::
 	prompt
 
 UnknownText_0x1c5eba::
-	text "That #MON knows"
+	text "That #mon knows"
 	line "only one move."
 	done
 
@@ -1414,12 +1417,12 @@ UnknownText_0x1c5eda::
 	done
 
 UnknownText_0x1c5ef5::
-	text "Done! Your #MON"
+	text "Done! Your #mon"
 	line "forgot the move."
 	done
 
 UnknownText_0x1c5f17::
-	text "An EGG doesn't"
+	text "An egg doesn't"
 	line "know any moves!"
 	done
 
@@ -1435,17 +1438,17 @@ UnknownText_0x1c5f50::
 
 UnknownText_0x1c5f74::
 	text "Um… Oh, yes, I'm"
-	line "the MOVE DELETER."
+	line "the Move Deleter."
 
-	para "I can make #MON"
+	para "I can make #mon"
 	line "forget moves."
 
 	para "Shall I make a"
-	line "#MON forget?"
+	line "#mon forget?"
 	done
 
 UnknownText_0x1c5fd1::
-	text "Which #MON?"
+	text "Which #mon?"
 	prompt
 
 Text_DSTIsThatOK::

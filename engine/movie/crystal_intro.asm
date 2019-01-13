@@ -16,9 +16,6 @@ Copyright_GFPresents:
 	ld b, SCGB_GAMEFREAK_LOGO
 	call GetSGBLayout
 	call SetPalettes
-	ld c, 10
-	call DelayFrames
-	callfar Copyright
 	call WaitBGMap
 	ld c, 100
 	call DelayFrames

@@ -625,6 +625,7 @@ Continue_DisplayGameTime:
 	jp PrintNum
 
 OakSpeech:
+	farcall SetDayOfWeek
 	farcall InitClock
 	call RotateFourPalettesLeft
 	call ClearTileMap
@@ -1282,32 +1283,6 @@ Unreferenced_Function639b:
 	db 11 * 8 + 4, 17 * 8, 11 * 8 + 4, 15 * 8
 	db  0 * 8,      0 * 8, 11 * 8 + 4, 15 * 8
 	db  0 * 8,      0 * 8, 11 * 8 + 4, 11 * 8
-
-Copyright:
-	call ClearTileMap
-	call LoadFontsExtra
-	ld de, CopyrightGFX
-	ld hl, vTiles2 tile $60
-	lb bc, BANK(CopyrightGFX), 29
-	call Request2bpp
-	hlcoord 2, 7
-	ld de, CopyrightString
-	jp PlaceString
-
-CopyrightString:
-	; ©1995-2001 Nintendo
-	db   $60, $61, $62, $63, $64, $65, $66
-	db   $67, $68, $69, $6a, $6b, $6c
-
-	; ©1995-2001 Creatures inc.
-	next $60, $61, $62, $63, $64, $65, $66
-	db   $6d, $6e, $6f, $70, $71, $72, $7a, $7b, $7c
-
-	; ©1995-2001 GAME FREAK inc.
-	next $60, $61, $62, $63, $64, $65, $66
-	db   $73, $74, $75, $76, $77, $78, $79, $7a, $7b, $7c
-
-	db "@"
 
 GameInit::
 	farcall TryLoadSaveData

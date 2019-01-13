@@ -47,7 +47,6 @@ MeetMomScript:
 	clearevent EVENT_PLAYERS_HOUSE_MOM_2
 	writetext MomGivesPokegearText
 	buttonsound
-	special SetDayOfWeek
 .SetDayOfWeek:
 	writetext IsItDSTText
 	yesorno
@@ -103,8 +102,7 @@ MeetMomScript:
 MeetMomTalkedScript:
 	playmusic MUSIC_MOM
 	jump MeetMomScript
-
-
+	
 GotTownMap:
 	text "<PLAYER> received"
 	line "Town Map!"
@@ -222,11 +220,11 @@ MomGivesPokegearText:
 	para "Took longer than"
 	line "we'd like though…"
 	
-	para "Oh, we forgot day" 
-	line "of the week!"
+	para "Oh, we forgot set" 
+	line "it for DST!"
 
-	para "Could you help me"
-	line "get it set?"
+	para "Could you help me,"
+	line "<PLAYER>?"
 	done
 
 IsItDSTText:
@@ -259,7 +257,7 @@ DontKnowTheInstructionsText:
 	line "instructions."
 
 	para "Simply hold down"
-	line "the B button and"
+	line "the B Button and"
 	cont "off you go!"
 	done
 

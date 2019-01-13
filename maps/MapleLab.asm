@@ -101,6 +101,7 @@ NelApprochScript1:
 	setscene SCENE_LAB_OUTSIDE_NOTHING
 	setmapscene ROUTE_29, SCENE_ROUTE101_NOTHING
 	setmapscene CHERRYGROVE_CITY, SCENE_SECUNDACITY_MEET_RIVAL
+	setmapscene SECUNDA_FOREST, SCENE_FOREST_ETERNITY
 	special HealParty
 	playmapmusic
 	end
