@@ -109,4 +109,6 @@ OverworldSprites:
 	overworld_sprite RaikouSpriteGFX, 4, STILL_SPRITE, PAL_OW_RED
 	overworld_sprite StandingYoungsterSpriteGFX, 12, STANDING_SPRITE, PAL_OW_BLUE
 	overworld_sprite ShannonSpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
+	overworld_sprite EternalSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE
+	overworld_sprite ShinSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE
 	

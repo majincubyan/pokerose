@@ -113,7 +113,7 @@ SomeWeirdosTookOverText:
 	cont "about the ruins"
 	
 	para "belonging to Team"
-	line "Eternity!"
+	line "Eternal!"
 	done
 	
 YouGottaTakeCareOfText:
@@ -172,4 +172,4 @@ SecundaForest_MapEvents:
 
 	db 2 ; object events
 	object_event 17, 14, SPRITE_ROCKER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, MapleHusbandScript, -1
-	object_event 7, 12, SPRITE_NURSE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SomethingIsGoingOnScript, -1
+	object_event  7, 12, SPRITE_NURSE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SomethingIsGoingOnScript, -1

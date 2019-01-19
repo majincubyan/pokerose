@@ -34,7 +34,7 @@ GoldenrodUndergroundWarehouse_MapScripts:
 	return
 
 TrainerGruntM24:
-	trainer GRUNTM, GRUNTM_24, EVENT_BEAT_ROCKET_GRUNTM_24, GruntM24SeenText, GruntM24BeatenText, 0, .Script
+	trainer GRUNTM, PEONM_24, EVENT_BEAT_ETERNAL_PEONM_24, GruntM24SeenText, GruntM24BeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
@@ -45,7 +45,7 @@ TrainerGruntM24:
 	end
 
 TrainerGruntM14:
-	trainer GRUNTM, GRUNTM_14, EVENT_BEAT_ROCKET_GRUNTM_14, GruntM14SeenText, GruntM14BeatenText, 0, .Script
+	trainer GRUNTM, PEONM_14, EVENT_BEAT_ETERNAL_PEONM_14, GruntM14SeenText, GruntM14BeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
@@ -56,7 +56,7 @@ TrainerGruntM14:
 	end
 
 TrainerGruntM15:
-	trainer GRUNTM, GRUNTM_15, EVENT_BEAT_ROCKET_GRUNTM_15, GruntM15SeenText, GruntM15BeatenText, 0, .Script
+	trainer GRUNTM, PEONM_15, EVENT_BEAT_ETERNAL_PEONM_15, GruntM15SeenText, GruntM15BeatenText, 0, .Script
 
 .Script:
 	endifjustbattled

@@ -187,7 +187,7 @@ LanceHealsCommon:
 	end
 
 TrainerGruntM17:
-	trainer GRUNTM, GRUNTM_17, EVENT_BEAT_ROCKET_GRUNTM_17, GruntM17SeenText, GruntM17BeatenText, 0, .Script
+	trainer GRUNTM, PEONM_17, EVENT_BEAT_ETERNAL_PEONM_17, GruntM17SeenText, GruntM17BeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
@@ -198,7 +198,7 @@ TrainerGruntM17:
 	end
 
 TrainerGruntM18:
-	trainer GRUNTM, GRUNTM_18, EVENT_BEAT_ROCKET_GRUNTM_18, GruntM18SeenText, GruntM18BeatenText, 0, .Script
+	trainer GRUNTM, PEONM_18, EVENT_BEAT_ETERNAL_PEONM_18, GruntM18SeenText, GruntM18BeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
@@ -209,7 +209,7 @@ TrainerGruntM18:
 	end
 
 TrainerGruntM19:
-	trainer GRUNTM, GRUNTM_19, EVENT_BEAT_ROCKET_GRUNTM_19, GruntM19SeenText, GruntM19BeatenText, 0, .Script
+	trainer GRUNTM, PEONM_19, EVENT_BEAT_ETERNAL_PEONM_19, GruntM19SeenText, GruntM19BeatenText, 0, .Script
 
 .Script:
 	endifjustbattled

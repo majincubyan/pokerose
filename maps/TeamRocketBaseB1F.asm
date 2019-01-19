@@ -236,7 +236,7 @@ TrainerCameraGrunt1:
 	closetext
 	winlosstext CameraGrunt1BeatenText, 0
 	setlasttalked TEAMROCKETBASEB1F_ROCKET1
-	loadtrainer GRUNTM, GRUNTM_20
+	loadtrainer GRUNTM, PEONM_20
 	startbattle
 	disappear TEAMROCKETBASEB1F_ROCKET1
 	reloadmapafterbattle
@@ -249,7 +249,7 @@ TrainerCameraGrunt2:
 	closetext
 	winlosstext CameraGrunt2BeatenText, 0
 	setlasttalked TEAMROCKETBASEB1F_ROCKET1
-	loadtrainer GRUNTM, GRUNTM_21
+	loadtrainer GRUNTM, PEONM_21
 	startbattle
 	disappear TEAMROCKETBASEB1F_ROCKET1
 	reloadmapafterbattle
@@ -490,7 +490,7 @@ TrainerScientistJed:
 	end
 
 TrainerGruntM16:
-	trainer GRUNTM, GRUNTM_16, EVENT_BEAT_ROCKET_GRUNTM_16, GruntM16SeenText, GruntM16BeatenText, 0, .Script
+	trainer GRUNTM, PEONM_16, EVENT_BEAT_ETERNAL_PEONM_16, GruntM16SeenText, GruntM16BeatenText, 0, .Script
 
 .Script:
 	endifjustbattled

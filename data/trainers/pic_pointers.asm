@@ -70,3 +70,5 @@ TrainerPicPointers::
 	dba_pic GruntfPic
 	dba_pic MysticalmanPic
 	dba_pic BossPic
+	dba_pic CoachMPic
+	dba_pic CoachFPic

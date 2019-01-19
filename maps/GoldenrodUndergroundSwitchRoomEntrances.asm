@@ -205,7 +205,7 @@ UndergroundSilverBattleScript:
 	end
 
 TrainerGruntM11:
-	trainer GRUNTM, GRUNTM_11, EVENT_BEAT_ROCKET_GRUNTM_11, GruntM11SeenText, GruntM11BeatenText, 0, .Script
+	trainer GRUNTM, PEONM_11, EVENT_BEAT_ETERNAL_PEONM_11, GruntM11SeenText, GruntM11BeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
@@ -216,7 +216,7 @@ TrainerGruntM11:
 	end
 
 TrainerGruntM25:
-	trainer GRUNTM, GRUNTM_25, EVENT_BEAT_ROCKET_GRUNTM_25, GruntM25SeenText, GruntM25BeatenText, 0, .Script
+	trainer GRUNTM, PEONM_25, EVENT_BEAT_ETERNAL_PEONM_25, GruntM25SeenText, GruntM25BeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
@@ -249,7 +249,7 @@ TrainerBurglarEddie:
 	end
 
 TrainerGruntM13:
-	trainer GRUNTM, GRUNTM_13, EVENT_BEAT_ROCKET_GRUNTM_13, GruntM13SeenText, GruntM13BeatenText, 0, .Script
+	trainer GRUNTM, PEONM_13, EVENT_BEAT_ETERNAL_PEONM_13, GruntM13SeenText, GruntM13BeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
@@ -260,7 +260,7 @@ TrainerGruntM13:
 	end
 
 TrainerGruntF3:
-	trainer GRUNTF, GRUNTF_3, EVENT_BEAT_ROCKET_GRUNTF_3, GruntF3SeenText, GruntF3BeatenText, 0, .Script
+	trainer GRUNTF, PEONF_3, EVENT_BEAT_ETERNAL_PEONF_3, GruntF3SeenText, GruntF3BeatenText, 0, .Script
 
 .Script:
 	endifjustbattled

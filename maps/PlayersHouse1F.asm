@@ -37,9 +37,9 @@ MeetMomScript:
 	writetext ElmsLookingForYouText
 	buttonsound
 	waitsfx
+	playsound SFX_KEY_ITEM
 	giveitem TOWN_MAP
 	writetext GotTownMap
-	playsound SFX_KEY_ITEM
 	waitsfx
 	itemnotify
 	setscene SCENE_FINISHED

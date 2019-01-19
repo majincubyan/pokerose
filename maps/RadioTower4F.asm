@@ -54,7 +54,7 @@ RadioTowerMeowth:
 	end
 
 TrainerGruntM10:
-	trainer GRUNTM, GRUNTM_10, EVENT_BEAT_ROCKET_GRUNTM_10, GruntM10SeenText, GruntM10BeatenText, 0, .Script
+	trainer GRUNTM, PEONM_10, EVENT_BEAT_ETERNAL_PEONM_10, GruntM10SeenText, GruntM10BeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
@@ -76,7 +76,7 @@ TrainerExecutivem2:
 	end
 
 TrainerGruntF4:
-	trainer GRUNTF, GRUNTF_4, EVENT_BEAT_ROCKET_GRUNTF_4, GruntF4SeenText, GruntF4BeatenText, 0, .Script
+	trainer GRUNTF, PEONF_4, EVENT_BEAT_ETERNAL_PEONF_4, GruntF4SeenText, GruntF4BeatenText, 0, .Script
 
 .Script:
 	endifjustbattled

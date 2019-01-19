@@ -1898,6 +1898,7 @@ ClockResetterScript:
 	
 .ChangeTime:
 	special ClockResetter
+	waitbutton
 	special DSTChecks
 	closetext
 	end

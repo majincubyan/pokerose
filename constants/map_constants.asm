@@ -147,7 +147,7 @@ ENDM
 	map_const SAFARI_ZONE_BETA,                            10, 18 ; 90
 	map_const VICTORY_ROAD,                                10, 36 ; 9
 	map_const SECUNDA_FOREST, 10, 18
-	map_const SECUNDA_RUINS_1F, 20, 18
+	map_const SECUNDA_RUINS_1F, 15, 12
 	;map_const EEVEE_HOUSE_LANDING, 5, 5
 	;map_const EEVEE_HOUSE_GARDEN, 10, 9
 	;map_const EEVEE_HOUSE_HALL, 15, 11

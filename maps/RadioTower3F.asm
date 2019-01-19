@@ -81,7 +81,7 @@ RadioTower3FCooltrainerFScript:
 	end
 
 TrainerGruntM7:
-	trainer GRUNTM, GRUNTM_7, EVENT_BEAT_ROCKET_GRUNTM_7, GruntM7SeenText, GruntM7BeatenText, 0, .Script
+	trainer GRUNTM, PEONM_7, EVENT_BEAT_ETERNAL_PEONM_7, GruntM7SeenText, GruntM7BeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
@@ -92,7 +92,7 @@ TrainerGruntM7:
 	end
 
 TrainerGruntM8:
-	trainer GRUNTM, GRUNTM_8, EVENT_BEAT_ROCKET_GRUNTM_8, GruntM8SeenText, GruntM8BeatenText, 0, .Script
+	trainer GRUNTM, PEONM_8, EVENT_BEAT_ETERNAL_PEONM_8, GruntM8SeenText, GruntM8BeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
@@ -103,7 +103,7 @@ TrainerGruntM8:
 	end
 
 TrainerGruntM9:
-	trainer GRUNTM, GRUNTM_9, EVENT_BEAT_ROCKET_GRUNTM_9, GruntM9SeenText, GruntM9BeatenText, 0, .Script
+	trainer GRUNTM, PEONM_9, EVENT_BEAT_ETERNAL_PEONM_9, GruntM9SeenText, GruntM9BeatenText, 0, .Script
 
 .Script:
 	endifjustbattled

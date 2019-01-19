@@ -54,7 +54,7 @@ RadioTower2FBlackBelt2Script:
 	jumptextfaceplayer RadioTower2FBlackBelt2Text
 
 TrainerGruntM4:
-	trainer GRUNTM, GRUNTM_4, EVENT_BEAT_ROCKET_GRUNTM_4, GruntM4SeenText, GruntM4BeatenText, 0, .Script
+	trainer GRUNTM, PEONM_4, EVENT_BEAT_ETERNAL_PEONM_4, GruntM4SeenText, GruntM4BeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
@@ -65,7 +65,7 @@ TrainerGruntM4:
 	end
 
 TrainerGruntM5:
-	trainer GRUNTM, GRUNTM_5, EVENT_BEAT_ROCKET_GRUNTM_5, GruntM5SeenText, GruntM5BeatenText, 0, .Script
+	trainer GRUNTM, PEONM_5, EVENT_BEAT_ETERNAL_PEONM_5, GruntM5SeenText, GruntM5BeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
@@ -76,7 +76,7 @@ TrainerGruntM5:
 	end
 
 TrainerGruntM6:
-	trainer GRUNTM, GRUNTM_6, EVENT_BEAT_ROCKET_GRUNTM_6, GruntM6SeenText, GruntM6BeatenText, 0, .Script
+	trainer GRUNTM, PEONM_6, EVENT_BEAT_ETERNAL_PEONM_6, GruntM6SeenText, GruntM6BeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
@@ -87,7 +87,7 @@ TrainerGruntM6:
 	end
 
 TrainerGruntF2:
-	trainer GRUNTF, GRUNTF_2, EVENT_BEAT_ROCKET_GRUNTF_2, GruntF2SeenText, GruntF2BeatenText, 0, .Script
+	trainer GRUNTF, PEONF_2, EVENT_BEAT_ETERNAL_PEONF_2, GruntF2SeenText, GruntF2BeatenText, 0, .Script
 
 .Script:
 	endifjustbattled

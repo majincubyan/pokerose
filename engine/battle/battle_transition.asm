@@ -727,7 +727,16 @@ INCLUDE "gfx/overworld/trainer_battle_day.pal"
 INCLUDE "gfx/overworld/trainer_battle_nite.pal"
 
 .loadpokeballgfx
+	ld de, EternalTransition
 	ld a, [wOtherTrainerClass]
+	cp GRUNTM
+	ret z
+	cp GRUNTF
+	ret z
+	cp EXECUTIVEM
+	ret z
+	cp EXECUTIVEF
+	ret z
 	ld de, PokeBallTransition
 	ret
 
@@ -748,6 +757,27 @@ opt b.X ; . = 0, X = 1
 	bigdw %.XX...XXXX...XX.
 	bigdw %.XX..........XX.
 	bigdw %..XX........XX..
+	bigdw %..XXXX....XXXX..
+	bigdw %....XXXXXXXX....
+	bigdw %......XXXX......
+popo
+
+EternalTransition:
+pusho
+opt b.X ; . = 0, X = 1
+	bigdw %......XXXX......
+	bigdw %....XXXXXXXX....
+	bigdw %..XXXX....XXXX..
+	bigdw %..XX.XXXXXX.XX..
+	bigdw %.XX..XXXXXX..XX.
+	bigdw %.XX..XX......XX.
+	bigdw %XX...XX.......XX
+	bigdw %XX...XXXXX....XX
+	bigdw %XX...XXXXX....XX
+	bigdw %XX...XX.......XX
+	bigdw %.XX..XX......XX.
+	bigdw %.XX..XXXXXX..XX.
+	bigdw %..XX.XXXXXX.XX..
 	bigdw %..XXXX....XXXX..
 	bigdw %....XXXXXXXX....
 	bigdw %......XXXX......

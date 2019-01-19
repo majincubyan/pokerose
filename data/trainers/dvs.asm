@@ -69,3 +69,5 @@ TrainerClassDVs:
 	dn  7, 14, 10,  8 ; GRUNTF
 	dn  9,  8,  8,  8 ; MYSTICALMAN
 	dn 13,  8, 12,  8 ; BOSS
+	dn  9,  9,  8,  8 ; COACH_M
+	dn  8,  8,  9,  9 ; COACH_F

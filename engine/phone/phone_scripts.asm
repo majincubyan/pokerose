@@ -910,7 +910,7 @@ LizGossip:
 	jump LizGossipScript
 
 .Grunt:
-	trainerclassname GRUNTM, GRUNTM_1
+	trainerclassname GRUNTM, PEONM_1
 	jump LizGossipScript
 
 .Teacher:

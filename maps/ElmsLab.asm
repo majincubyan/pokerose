@@ -210,9 +210,9 @@ ElmDirectionsScript:
 	writetext ElmDirectionsText1
 	buttonsound
 	waitsfx
+	playsound SFX_KEY_ITEM
 	giveitem MYSTERY_EGG
 	writetext GotStoneTablet
-	playsound SFX_KEY_ITEM
 	waitsfx
 	itemnotify
 	closetext
@@ -504,7 +504,7 @@ MapleText_AskPlayer:
 	para "Sooo…"
 	
 	para "I'd like you to"
-	line "raise a #MON"
+	line "raise a #mon"
 
 	para "that I recently"
 	line "caught also!"
@@ -533,7 +533,7 @@ MapleText_ResearchAmbitions:
 	line "deeper into the"
 
 	para "many mysteries of"
-	line "#MON."
+	line "#mon."
 
 	para "You can count on"
 	line "it!"
@@ -559,7 +559,7 @@ MapleText_Husband:
 	line "on-site."
 	
 	para "But he forgot this"
-	line "stone tablet and"
+	line "Stone Tablet and"
 
 	para "its critcal for"
 	line "his translations."
@@ -661,7 +661,7 @@ ElmDirectionsText1:
 	done
 
 ElmDirectionsText2:
-	text "If your #MON is"
+	text "If your #mon is"
 	line "hurt, you should"
 
 	para "heal it with this"
@@ -691,8 +691,8 @@ ElmDescribesMrPokemonText:
 
 ElmPokeBallText:
 	text "It contains a"
-	line "#MON caught by"
-	cont "PROF.ELM."
+	line "#mon caught by"
+	cont "Prof. Maple."
 	done
 
 ElmsLabHealingMachineText1:
@@ -702,7 +702,7 @@ ElmsLabHealingMachineText1:
 
 ElmsLabHealingMachineText2:
 	text "Would you like to"
-	line "heal your #MON?"
+	line "heal your #mon?"
 	done
 
 AideText_GiveYouPotion:
@@ -743,7 +743,7 @@ ElmsLabTravelTip1Text:
 	para "Travel Tip 1:"
 
 	para "Press START to"
-	line "open the MENU."
+	line "open the Menu."
 	done
 
 ElmsLabTravelTip2Text:
@@ -753,7 +753,7 @@ ElmsLabTravelTip2Text:
 	para "Travel Tip 2:"
 
 	para "Record your trip"
-	line "with SAVE!"
+	line "with Save!"
 	done
 
 ElmsLabTravelTip3Text:
@@ -762,7 +762,7 @@ ElmsLabTravelTip3Text:
 
 	para "Travel Tip 3:"
 
-	para "Open your PACK and"
+	para "Open your Pack and"
 	line "press SELECT to"
 	cont "move items."
 	done
@@ -773,7 +773,7 @@ ElmsLabTravelTip4Text:
 
 	para "Travel Tip 4:"
 
-	para "Check your #MON"
+	para "Check your #mon"
 	line "moves. Press the"
 
 	para "A Button to switch"

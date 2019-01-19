@@ -70,3 +70,5 @@ TrainerGroups:
 	dw GruntFGroup
 	dw MysticalmanGroup
 	dw BossGroup
+	dw CoachMGroup
+	dw CoachFGroup

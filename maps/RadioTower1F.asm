@@ -184,7 +184,7 @@ RadioTower1FYoungsterScript:
 	jumptextfaceplayer RadioTower1FYoungsterText
 
 TrainerGruntM3:
-	trainer GRUNTM, GRUNTM_3, EVENT_BEAT_ROCKET_GRUNTM_3, GruntM3SeenText, GruntM3BeatenText, 0, .Script
+	trainer GRUNTM, PEONM_3, EVENT_BEAT_ETERNAL_PEONM_3, GruntM3SeenText, GruntM3BeatenText, 0, .Script
 
 .Script:
 	endifjustbattled

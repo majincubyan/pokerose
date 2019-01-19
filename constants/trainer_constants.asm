@@ -274,37 +274,37 @@ KRIS EQU __enum__
 	const MILLER
 
 	trainerclass GRUNTM ; 1f
-	const GRUNTM_1
-	const GRUNTM_2
-	const GRUNTM_3
-	const GRUNTM_4
-	const GRUNTM_5
-	const GRUNTM_6
-	const GRUNTM_7
-	const GRUNTM_8
-	const GRUNTM_9
-	const GRUNTM_10
-	const GRUNTM_11
-	const GRUNTM_12
-	const GRUNTM_13
-	const GRUNTM_14
-	const GRUNTM_15
-	const GRUNTM_16
-	const GRUNTM_17
-	const GRUNTM_18
-	const GRUNTM_19
-	const GRUNTM_20
-	const GRUNTM_21
-	const GRUNTM_22
-	const GRUNTM_23
-	const GRUNTM_24
-	const GRUNTM_25
-	const GRUNTM_26
-	const GRUNTM_27
-	const GRUNTM_28
-	const GRUNTM_29
-	const GRUNTM_30
-	const GRUNTM_31
+	const PEONM_1
+	const PEONM_2
+	const PEONM_3
+	const PEONM_4
+	const PEONM_5
+	const PEONM_6
+	const PEONM_7
+	const PEONM_8
+	const PEONM_9
+	const PEONM_10
+	const PEONM_11
+	const PEONM_12
+	const PEONM_13
+	const PEONM_14
+	const PEONM_15
+	const PEONM_16
+	const PEONM_17
+	const PEONM_18
+	const PEONM_19
+	const PEONM_20
+	const PEONM_21
+	const PEONM_22
+	const PEONM_23
+	const PEONM_24
+	const PEONM_25
+	const PEONM_26
+	const PEONM_27
+	const PEONM_28
+	const PEONM_29
+	const PEONM_30
+	const PEONM_31
 
 	trainerclass GENTLEMAN ; 20
 	const PRESTON
@@ -691,16 +691,22 @@ KRIS EQU __enum__
 	const DIRK
 
 	trainerclass GRUNTF ; 42
-	const GRUNTF_1
-	const GRUNTF_2
-	const GRUNTF_3
-	const GRUNTF_4
-	const GRUNTF_5
+	const PEONF_1
+	const PEONF_2
+	const PEONF_3
+	const PEONF_4
+	const PEONF_5
 
 	trainerclass MYSTICALMAN ; 43
 	const EUSINE
 	
 	trainerclass BOSS
 	const SHIN_1
+	
+	trainerclass COACHM
+	const LOUIS
+	
+	trainerclass COACHF
+	const JANET
 
 NUM_TRAINER_CLASSES EQU __enum__

@@ -86,4 +86,5 @@ MapScenes::
 	scene_var MOBILE_BATTLE_ROOM,                          wMobileBattleRoomSceneID
 	scene_var MAPLE_LAB,								   wMapleLabSceneID
 	scene_var SECUNDA_FOREST,							   wSecundaForestSceneID
+	scene_var SECUNDA_RUINS_1F,							   wSecundaRuins1FSceneID
 	db -1

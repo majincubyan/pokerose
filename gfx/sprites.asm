@@ -110,3 +110,5 @@ StandingYoungsterSpriteGFX::   INCBIN "gfx/sprites/standing_youngster.2bpp"
 SECTION "Sprites 3", ROMX
 
 ShannonSpriteGFX::			   INCBIN "gfx/sprites/shannon.2bpp"
+EternalSpriteGFX::			   INCBIN "gfx/sprites/peon.2bpp"
+ShinSpriteGFX::				   INCBIN "gfx/sprites/shin.2bpp"

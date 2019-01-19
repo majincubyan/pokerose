@@ -1,7 +1,6 @@
-	const_def 3 ; object constants
+	const_def 2 ; object constants
 	const ROUTE29_POKE_BALL
 	const ROUTE29_GUARD
-	const ROUTE29_SILVER
 
 Route29_MapScripts:
 	db 2 ; scene scripts
@@ -25,19 +24,7 @@ StandingGuy:
 	turnobject ROUTE29_GUARD, LEFT
 	end
 	
-SlowDown2:
-	showemote EMOTE_SHOCK, ROUTE29_GUARD, 15
-	turnobject PLAYER, RIGHT
-	applymovement ROUTE29_GUARD, StepToPlayer
-	opentext
-	writetext SlowDownKid_Text
-	waitbutton
-	closetext
-	applymovement ROUTE29_GUARD, StepBack
-	applymovement PLAYER, ToMaple
-	end
-
-SlowDown1:
+SlowDown:
 	showemote EMOTE_SHOCK, ROUTE29_GUARD, 15
 	turnobject PLAYER, RIGHT
 	opentext
@@ -49,15 +36,6 @@ SlowDown1:
 	
 Route29Potion:
 	itemball POTION
-	
-StepToPlayer:
-	step LEFT
-	step_end
-
-StepBack:
-	step RIGHT
-	turn_head LEFT
-	step_end
 	
 ToMaple:
 	step UP
@@ -93,8 +71,8 @@ Route29_MapEvents:
 	db 0 ; warp events
 
 	db 2 ; coord events
-	coord_event 12, 19, SCENE_ROUTE101_GUY, SlowDown2
-	coord_event 13, 19, SCENE_ROUTE101_GUY, SlowDown1
+	coord_event 12, 19, SCENE_ROUTE101_GUY, SlowDown
+	coord_event 13, 19, SCENE_ROUTE101_GUY, SlowDown
 	
 	db 0 ; bg events
 

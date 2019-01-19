@@ -1240,32 +1240,31 @@ PokemaniacGroup:
 
 GruntMGroup:
 	; GRUNTM (1)
-	db "GRUNT@", TRAINERTYPE_NORMAL
-	db 14, KOFFING
+	db "Peon@", TRAINERTYPE_NORMAL
+	db 4, POOCHYENA
 	db -1 ; end
 
 	; GRUNTM (2)
-	db "GRUNT@", TRAINERTYPE_NORMAL
-	db  7, ZIGZAGOON
-	db  9, POOCHYENA
-	db  9, POOCHYENA
+	db "Peon@", TRAINERTYPE_NORMAL
+	db  3, POOCHYENA
+	db  3, HOUNDOUR
 	db -1 ; end
 
 	; GRUNTM (3)
-	db "GRUNT@", TRAINERTYPE_NORMAL
+	db "Peon@", TRAINERTYPE_NORMAL
 	db 24, LINOONE
 	db 24, LINOONE
 	db -1 ; end
 
 	; GRUNTM (4)
-	db "GRUNT@", TRAINERTYPE_NORMAL
+	db "Peon@", TRAINERTYPE_NORMAL
 	db 23, GRIMER
 	db 23, GRIMER
 	db 25, MUK
 	db -1 ; end
 
 	; GRUNTM (5)
-	db "GRUNT@", TRAINERTYPE_NORMAL
+	db "Peon@", TRAINERTYPE_NORMAL
 	db 21, ZIGZAGOON
 	db 21, ZIGZAGOON
 	db 23, ZIGZAGOON
@@ -1274,13 +1273,13 @@ GruntMGroup:
 	db -1 ; end
 
 	; GRUNTM (6)
-	db "GRUNT@", TRAINERTYPE_NORMAL
+	db "Peon@", TRAINERTYPE_NORMAL
 	db 26, POOCHYENA
 	db 26, POOCHYENA
 	db -1 ; end
 
 	; GRUNTM (7)
-	db "GRUNT@", TRAINERTYPE_NORMAL
+	db "Peon@", TRAINERTYPE_NORMAL
 	db 23, KOFFING
 	db 23, GRIMER
 	db 23, POOCHYENA
@@ -1288,25 +1287,25 @@ GruntMGroup:
 	db -1 ; end
 
 	; GRUNTM (8)
-	db "GRUNT@", TRAINERTYPE_NORMAL
+	db "Peon@", TRAINERTYPE_NORMAL
 	db 26, WEEZING
 	db -1 ; end
 
 	; GRUNTM (9)
-	db "GRUNT@", TRAINERTYPE_NORMAL
+	db "Peon@", TRAINERTYPE_NORMAL
 	db 24, LINOONE
 	db 26, KOFFING
 	db -1 ; end
 
 	; GRUNTM (10)
-	db "GRUNT@", TRAINERTYPE_NORMAL
+	db "Peon@", TRAINERTYPE_NORMAL
 	db 22, POOCHYENA
 	db 24, MIGHTYENA
 	db 22, GRIMER
 	db -1 ; end
 
 	; GRUNTM (11)
-	db "GRUNT@", TRAINERTYPE_NORMAL
+	db "Peon@", TRAINERTYPE_NORMAL
 	db 23, MUK
 	db 23, KOFFING
 	db 25, ZIGZAGOON
@@ -1318,24 +1317,24 @@ GruntMGroup:
 	db -1 ; end
 
 	; GRUNTM (13)
-	db "GRUNT@", TRAINERTYPE_NORMAL
+	db "Peon@", TRAINERTYPE_NORMAL
 	db 27, ZIGZAGOON
 	db -1 ; end
 
 	; GRUNTM (14)
-	db "GRUNT@", TRAINERTYPE_NORMAL
+	db "Peon@", TRAINERTYPE_NORMAL
 	db 24, LINOONE
 	db 24, MIGHTYENA
 	db -1 ; end
 
 	; GRUNTM (15)
-	db "GRUNT@", TRAINERTYPE_NORMAL
+	db "Peon@", TRAINERTYPE_NORMAL
 	db 26, GRIMER
 	db 23, WEEZING
 	db -1 ; end
 
 	; GRUNTM (16)
-	db "GRUNT@", TRAINERTYPE_NORMAL
+	db "Peon@", TRAINERTYPE_NORMAL
 	db 16, ZIGZAGOON
 	db 16, ZIGZAGOON
 	db 16, ZIGZAGOON
@@ -1343,31 +1342,31 @@ GruntMGroup:
 	db -1 ; end
 
 	; GRUNTM (17)
-	db "GRUNT@", TRAINERTYPE_NORMAL
+	db "Peon@", TRAINERTYPE_NORMAL
 	db 18, MIGHTYENA
 	db -1 ; end
 
 	; GRUNTM (18)
-	db "GRUNT@", TRAINERTYPE_NORMAL
+	db "Peon@", TRAINERTYPE_NORMAL
 	db 17, ZIGZAGOON
 	db 17, POOCHYENA
 	db 17, ZIGZAGOON
 	db -1 ; end
 
 	; GRUNTM (19)
-	db "GRUNT@", TRAINERTYPE_NORMAL
+	db "Peon@", TRAINERTYPE_NORMAL
 	db 18, SPOINK
 	db 18, SPOINK
 	db -1 ; end
 
 	; GRUNTM (20)
-	db "GRUNT@", TRAINERTYPE_NORMAL
+	db "Peon@", TRAINERTYPE_NORMAL
 	db 17, MAGMORTOR
 	db 19, POOCHYENA
 	db -1 ; end
 
 	; GRUNTM (21)
-	db "GRUNT@", TRAINERTYPE_NORMAL
+	db "Peon@", TRAINERTYPE_NORMAL
 	db 16, POOCHYENA
 	db 17, GRIMER
 	db 18, ZIGZAGOON
@@ -1384,19 +1383,19 @@ GruntMGroup:
 	db -1 ; end
 
 	; GRUNTM (24)
-	db "GRUNT@", TRAINERTYPE_NORMAL
+	db "Peon@", TRAINERTYPE_NORMAL
 	db 25, KOFFING
 	db 25, KOFFING
 	db -1 ; end
 
 	; GRUNTM (25)
-	db "GRUNT@", TRAINERTYPE_NORMAL
+	db "Peon@", TRAINERTYPE_NORMAL
 	db 24, KOFFING
 	db 24, MUK
 	db -1 ; end
 
 	; GRUNTM (26)
-	db "GRUNT@", TRAINERTYPE_NORMAL
+	db "Peon@", TRAINERTYPE_NORMAL
 	db 15, ZIGZAGOON
 	db 15, ZIGZAGOON
 	db -1 ; end
@@ -1407,25 +1406,25 @@ GruntMGroup:
 	db -1 ; end
 
 	; GRUNTM (28)
-	db "GRUNT@", TRAINERTYPE_NORMAL
+	db "Peon@", TRAINERTYPE_NORMAL
 	db 19, LINOONE
 	db -1 ; end
 
 	; GRUNTM (29)
-	db "GRUNT@", TRAINERTYPE_NORMAL
+	db "Peon@", TRAINERTYPE_NORMAL
 	db  9, ZIGZAGOON
 	db  9, ZIGZAGOON
 	db -1 ; end
 
 	; GRUNTM (30)
-	db "GRUNT@", TRAINERTYPE_NORMAL
+	db "Peon@", TRAINERTYPE_NORMAL
 	db 25, MIGHTYENA
 	db 25, MIGHTYENA
 	db 30, ARBOK
 	db -1 ; end
 
 	; GRUNTM (31)
-	db "GRUNT@", TRAINERTYPE_NORMAL
+	db "Peon@", TRAINERTYPE_NORMAL
 	db 30, MIGHTYENA
 	db -1 ; end
 
@@ -3443,24 +3442,24 @@ OfficerGroup:
 
 GruntFGroup:
 	; GRUNTF (1)
-	db "GRUNT@", TRAINERTYPE_NORMAL
-	db  9, POOCHYENA
-	db 11, EKANS
+	db "Peon@", TRAINERTYPE_NORMAL
+	db  4, POOCHYENA
+	db  4, EKANS
 	db -1 ; end
 
 	; GRUNTF (2)
-	db "GRUNT@", TRAINERTYPE_NORMAL
+	db "Peon@", TRAINERTYPE_NORMAL
 	db 26, ARBOK
 	db -1 ; end
 
 	; GRUNTF (3)
-	db "GRUNT@", TRAINERTYPE_NORMAL
+	db "Peon@", TRAINERTYPE_NORMAL
 	db 25, GLOOM
 	db 25, GLOOM
 	db -1 ; end
 
 	; GRUNTF (4)
-	db "GRUNT@", TRAINERTYPE_NORMAL
+	db "Peon@", TRAINERTYPE_NORMAL
 	db 21, EKANS
 	db 23, ODDISH
 	db 21, EKANS
@@ -3468,7 +3467,7 @@ GruntFGroup:
 	db -1 ; end
 
 	; GRUNTF (5)
-	db "GRUNT@", TRAINERTYPE_MOVES
+	db "Peon@", TRAINERTYPE_MOVES
 	db 18, EKANS,      WRAP, LEER, POISON_STING, BITE
 	db 18, GLOOM,      ABSORB, SWEET_SCENT, STUN_SPORE, SLEEP_POWDER
 	db -1 ; end
@@ -3490,4 +3489,16 @@ BossGroup:
 	db 35, HAUNTER,    MEAN_LOOK, CURSE, SHADOW_BALL, CONFUSE_RAY
 	db 35, KADABRA,    DISABLE, PSYBEAM, RECOVER, FUTURE_SIGHT
 	db 38, SAMUROTT, RAGE, WATER_GUN, SCARY_FACE, SLASH
+	db -1 ; end
+	
+CoachMGroup:
+	db "Louis@", TRAINERTYPE_NORMAL
+	db  2, STARLY
+	db  4, ZIGZAGOON
+	db -1 ; end
+	
+CoachFGroup:
+	db "Janet@", TRAINERTYPE_NORMAL
+	db  2, STARLY
+	db  4, ZIGZAGOON
 	db -1 ; end

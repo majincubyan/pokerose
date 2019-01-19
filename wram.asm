@@ -2618,8 +2618,9 @@ wMobileTradeRoomSceneID::                         db ; d9bf
 wMobileBattleRoomSceneID::                        db ; d9c0
 wMapleLabSceneID::  							  db ; d9c1
 wSecundaForestSceneID::							  db ; d9c2
+wSecundaRuins1FSceneID::						  db ; d9c3
 
-	ds 47
+	ds 46
 
 ; fight counts
 wJackFightCount::    db ; d9f2

@@ -126,7 +126,7 @@ RocketBaseMurkrow:
 	end
 
 SlowpokeTailGrunt:
-	trainer GRUNTF, GRUNTF_5, EVENT_BEAT_ROCKET_GRUNTF_5, GruntF5SeenText, GruntF5BeatenText, 0, GruntF5Script
+	trainer GRUNTF, PEONF_5, EVENT_BEAT_ETERNAL_PEONF_5, GruntF5SeenText, GruntF5BeatenText, 0, GruntF5Script
 
 GruntF5Script:
 	endifjustbattled
@@ -138,7 +138,7 @@ GruntF5Script:
 	end
 
 RaticateTailGrunt:
-	trainer GRUNTM, GRUNTM_28, EVENT_BEAT_ROCKET_GRUNTM_28, GruntM28SeenText, GruntM28BeatenText, 0, GruntM28Script
+	trainer GRUNTM, PEONM_28, EVENT_BEAT_ETERNAL_PEONM_28, GruntM28SeenText, GruntM28BeatenText, 0, GruntM28Script
 
 GruntM28Script:
 	endifjustbattled
