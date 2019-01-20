@@ -111,4 +111,5 @@ OverworldSprites:
 	overworld_sprite ShannonSpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
 	overworld_sprite EternalSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE
 	overworld_sprite ShinSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE
+	overworld_sprite CelebiSpriteGFX, 4, STILL_SPRITE, PAL_OW_GREEN
 	

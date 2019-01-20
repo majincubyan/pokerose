@@ -20,6 +20,7 @@ PleaseHelpScript2:
 	applymovement FOREST_HUSBAND, ApprochPlayerMovement2
 	turnobject PLAYER, UP
 	setscene SCENE_FOREST_NOTHING
+	setmapscene SECUNDA_RUINS_1F, SCENE_RUINS_ETERNAL_TAKEOVER
 	opentext
 	writetext YouMustBeText
 	waitbutton
@@ -36,6 +37,7 @@ PleaseHelpScript1:
 	showemote EMOTE_SHOCK, PLAYER, 15
 	applymovement FOREST_HUSBAND, ApprochPlayerMovement
 	setscene SCENE_FOREST_NOTHING
+	setmapscene SECUNDA_RUINS_1F, SCENE_RUINS_ETERNAL_TAKEOVER
 	opentext
 	writetext YouMustBeText
 	waitbutton
@@ -54,6 +56,9 @@ MapleHusbandScript:
 	writetext ImCountingOnYouText
 	waitbutton
 	closetext
+	givepoke INFERNAPE, 40
+	setevent EVENT_RUINS_CELEBI_1
+	setevent EVENT_HUSBAND_OUTSIDE_RUINS
 	end
 
 SomethingIsGoingOnScript:
@@ -171,5 +176,5 @@ SecundaForest_MapEvents:
 	db 0 ; bg events
 
 	db 2 ; object events
-	object_event 17, 14, SPRITE_ROCKER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, MapleHusbandScript, -1
-	object_event  7, 12, SPRITE_NURSE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SomethingIsGoingOnScript, -1
+	object_event 17, 14, SPRITE_ROCKER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, MapleHusbandScript, EVENT_BEAT_RUINS_ADMIN
+	object_event  7, 12, SPRITE_NURSE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SomethingIsGoingOnScript, EVENT_BEAT_RUINS_ADMIN

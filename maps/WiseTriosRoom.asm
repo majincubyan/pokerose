@@ -25,7 +25,7 @@ WiseTriosRoom_MapScripts:
 	iftrue .NoWiseTrio
 	checkevent EVENT_KOJI_ALLOWS_YOU_PASSAGE_TO_TIN_TOWER
 	iftrue .WiseTrio2
-	checkitem CLEAR_BELL
+	checkitem SQUARE_STONE
 	iftrue .WiseTrio2
 	clearevent EVENT_WISE_TRIOS_ROOM_WISE_TRIO_1
 	setevent EVENT_WISE_TRIOS_ROOM_WISE_TRIO_2

@@ -107,6 +107,7 @@
 	const SPRITE_SHANNON ; 67
 	const SPRITE_ETERNAL
 	const SPRITE_SHIN
+	const SPRITE_CELEBI
 
 ; SpriteMons indexes (see data/sprites/sprite_mons.asm)
 	const_def $80

@@ -105,7 +105,7 @@ Landmarks:
 	landmark 140, 116, FastShipName
 
 NewBarkTownName:     db "Minut¯Town@"
-CherrygroveCityName: db "CHERRYGROVE¯CITY@"
+CherrygroveCityName: db "Secunda¯City@"
 VioletCityName:      db "VIOLET CITY@"
 AzaleaTownName:      db "AZALEA TOWN@"
 GoldenrodCityName:   db "GOLDENROD¯CITY@"

@@ -69,7 +69,7 @@ ItemDescriptions:
 	dw SecretPotionDesc
 	dw SSTicketDesc
 	dw MysteryEggDesc
-	dw ClearBellDesc
+	dw SquareStoneDesc
 	dw SilverWingDesc
 	dw MoomooMilkDesc
 	dw QuickClawDesc
@@ -529,9 +529,9 @@ MysteryEggDesc:
 	db   "A stone tablet"
 	next "with odd symbols.@"
 
-ClearBellDesc:
-	db   "Makes a gentle"
-	next "ringing.@"
+SquareStoneDesc:
+	db   "Given to you by"
+	next "Celebi.@"
 
 SilverWingDesc:
 	db   "A strange, silver-"

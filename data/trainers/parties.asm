@@ -1252,8 +1252,7 @@ GruntMGroup:
 
 	; GRUNTM (3)
 	db "Peon@", TRAINERTYPE_NORMAL
-	db 24, LINOONE
-	db 24, LINOONE
+	db  6, HOUNDOUR
 	db -1 ; end
 
 	; GRUNTM (4)

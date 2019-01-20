@@ -3,6 +3,8 @@
 	const RUINS_PEON2
 	const RUINS_PEON3
 	const RUINS_HEADPEON
+	const RUINS_CELEBI
+	const RUINS_HUSBAND
 
 SecundaRuins1F_MapScripts:
 	db 2 ; scene scripts
@@ -61,6 +63,7 @@ PlayerWalksScript2:
 	applymovement PLAYER, PlayerWalksLeft
 PlayerWalksScript1:
 	applymovement PLAYER, PlayerWalksUp
+	moveobject RUINS_HUSBAND, 5, 9
 	turnobject PLAYER, RIGHT
 	playmusic MUSIC_ROCKET_ENCOUNTER
 	showemote EMOTE_SHOCK, RUINS_HEADPEON, 15
@@ -75,18 +78,86 @@ PlayerWalksScript1:
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_RUINS_ADMIN
+	setscene SCENE_RUINS_NOTHING
 	opentext
 	writetext HeadPeonAfterText
 	waitbutton
 	closetext
 	special FadeBlackQuickly
+	special ReloadSpritesNoPalettes
+	disappear RUINS_HEADPEON
+	disappear RUINS_PEON1
+	disappear RUINS_PEON2
+	disappear RUINS_PEON3
 	pause 30
 	special FadeInQuickly
 	opentext
 	writetext TheAirIsHeavyText
 	waitbutton
 	closetext
+	waitsfx
+	playsound SFX_WARP_TO
+	appear RUINS_CELEBI
+	pause 30
+	showemote EMOTE_SHOCK, PLAYER, 20
+	turnobject PLAYER, UP
+	opentext
+	writetext CelebiPlacesInHandText
+	waitbutton
+	verbosegiveitem SQUARE_STONE
+	closetext
+	showemote EMOTE_SHOCK, PLAYER, 20
+	waitsfx
+	playsound SFX_WARP_FROM
+	disappear RUINS_CELEBI
+	pause 30
+	appear RUINS_HUSBAND
+	clearevent EVENT_HUSBAND_OUTSIDE_RUINS
+	applymovement RUINS_HUSBAND, WalkToPlayer
+	turnobject RUINS_HUSBAND, LEFT
+	turnobject PLAYER, RIGHT
+	opentext
+	writetext HusbandThanksText
+	waitbutton
+	takeitem MYSTERY_EGG
+	writetext HandedStoneTabletText
+	waitbutton
+	writetext HusbandGreatHelpText
+	waitbutton
+	showemote EMOTE_SHOCK, RUINS_HUSBAND, 20
+	writetext CelebiGaveThisText
+	waitbutton
+	closetext
+	applymovement RUINS_HUSBAND, StepUp
 HeadPeonScript:
+	end
+
+DistractedScript:
+	turnobject RUINS_HUSBAND, UP
+	opentext
+	writetext HusbandWorkingText
+	waitbutton
+	closetext
+	end
+	
+HoOhPuzzle:
+	checkevent EVENT_HOOH_PUZZLE_SECUNDA_OPEN
+	iffalse .PuzzleComplete
+	refreshscreen
+	writebyte UNOWNPUZZLE_HO_OH
+	special UnownPuzzle
+	closetext
+	iftrue .PuzzleComplete
+	end
+
+.PuzzleComplete:
+	end
+
+StrangeSymbols:
+	opentext
+	writetext NoIdeaText
+	waitbutton
+	closetext
 	end
 
 ; Movement
@@ -99,6 +170,18 @@ PlayerWalksUp:
 
 PlayerWalksLeft:
 	step LEFT
+	step_end
+
+WalkToPlayer:
+	step UP
+	step UP
+	step UP
+	step UP
+	step UP
+	step_end
+	
+StepUp:
+	step UP
 	step_end
 
 ; Text
@@ -186,7 +269,7 @@ HusbandThanksText:
 	text "<PLAYER>!"
 	line "You're amazing!"
 	
-	para "You chased out all"
+	para "You chased all"
 	line "those creeps out"
 	cont "alone."
 	
@@ -269,6 +352,14 @@ CelebiPlacesInHandText:
 	line "down from Celebi."
 	done
 
+NoIdeaText:
+	text "So many stange"
+	line "symbols…"
+	
+	para "No way to know"
+	line "what they mean."
+	done
+
 SecundaRuins1F_MapEvents:
 	db 0, 0 ; filler
 
@@ -276,13 +367,18 @@ SecundaRuins1F_MapEvents:
 	warp_event 26, 11, SECUNDA_FOREST, 3
 	warp_event 27, 11, SECUNDA_FOREST, 4
 	
-	db 0 ; coord events
+	db 2 ; coord events
+	coord_event 4, 7, SCENE_RUINS_ETERNAL_TAKEOVER, PlayerWalksScript1
+	coord_event 5, 7, SCENE_RUINS_ETERNAL_TAKEOVER, PlayerWalksScript2
 	
-	db 0 ; bg events
+	db 2 ; bg events
+	bg_event 4, 2, BGEVENT_UP, HoOhPuzzle
+	bg_event 4, 3, BGEVENT_UP, StrangeSymbols
 
-	db 4 ; object events
-	object_event 25,  6, SPRITE_ETERNAL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, RuinsEternalPeon1, EVENT_BEAT_RUINS_ADMIN
-	object_event 16, 15, SPRITE_ETERNAL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, RuinsEternalPeon2, EVENT_BEAT_RUINS_ADMIN
-	object_event  4, 16, SPRITE_ETERNAL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, RuinsEternalPeon3, EVENT_BEAT_RUINS_ADMIN
+	db 6 ; object events
+	object_event 25,  6, SPRITE_ETERNAL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, RuinsEternalPeon1, EVENT_BEAT_RUINS_ADMIN
+	object_event 16, 15, SPRITE_ETERNAL, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, RuinsEternalPeon2, EVENT_BEAT_RUINS_ADMIN
+	object_event  4, 16, SPRITE_ETERNAL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, RuinsEternalPeon3, EVENT_BEAT_RUINS_ADMIN
 	object_event  5,  4, SPRITE_ETERNAL, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, HeadPeonScript, EVENT_BEAT_RUINS_ADMIN
-	
+	object_event  4,  2, SPRITE_CELEBI, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, HeadPeonScript, EVENT_RUINS_CELEBI_1
+	object_event  5,  3, SPRITE_ROCKER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DistractedScript, EVENT_HUSBAND_OUTSIDE_RUINS

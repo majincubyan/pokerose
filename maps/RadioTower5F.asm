@@ -120,7 +120,7 @@ RadioTower5FRocketBossScene:
 	opentext
 	writetext RadioTower5FDirectorThankYouText
 	buttonsound
-	verbosegiveitem CLEAR_BELL
+	verbosegiveitem SQUARE_STONE
 	writetext RadioTower5FDirectorDescribeClearBellText
 	waitbutton
 	closetext
