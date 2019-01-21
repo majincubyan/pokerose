@@ -1,6 +1,7 @@
 	const_def 2 ; object constants
 	const ROUTE29_POKE_BALL
 	const ROUTE29_GUARD
+	const ROUTE29_CLERK
 
 Route29_MapScripts:
 	db 2 ; scene scripts
@@ -34,8 +35,31 @@ SlowDown:
 	applymovement PLAYER, ToMaple
 	end
 	
+IWorkAtThePokeMart:
+	checkevent EVENT_GOT_SAMPLE_ITEMS
+	iftrue .ComeVisitUs
+	faceplayer
+	opentext
+	writetext HereHaveASampleText
+	waitbutton
+	verbosegiveitem ANTIDOTE
+	verbosegiveitem POTION
+	setevent EVENT_GOT_SAMPLE_ITEMS
+	writetext ExplainHealingKitText
+	waitbutton
+	closetext
+	end
+	
+.ComeVisitUs:
+	faceplayer
+	opentext
+	writetext PleaseVisitText
+	waitbutton
+	closetext
+	end
+	
 Route29Potion:
-	itemball POTION
+	itemball TM_ENDURE
 	
 ToMaple:
 	step UP
@@ -64,6 +88,32 @@ WaitingForGF_Text:
 	line "awhile…"
 	done
 
+HereHaveASampleText:
+	text "Hey there! I"
+	line "work at the #"
+	
+	para "Mart in Secunda"
+	line "City."
+	
+	para "We're not too"
+	line "far from here,"
+	cont "so stop by!"
+	
+	para "In fact, here"
+	line "take these as a"
+	cont "free sample!"
+	done
+	
+ExplainHealingKitText:
+	text "We got plenty more"
+	line "of those, so make"
+	cont "sure you visit!"
+	done
+
+PleaseVisitText:
+	text "Please visit us"
+	line "sometime!"
+	done
 
 Route29_MapEvents:
 	db 0, 0 ; filler
@@ -76,7 +126,7 @@ Route29_MapEvents:
 	
 	db 0 ; bg events
 
-	db 2 ; object events
+	db 3 ; object events
 	object_event  6, 13, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route29Potion, EVENT_ROUTE_29_POTION
 	object_event 14, 19, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, StandingGuy, -1
-	
+	object_event  9, 44, SPRITE_CLERK, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, IWorkAtThePokeMart, -1

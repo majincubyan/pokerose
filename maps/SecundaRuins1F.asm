@@ -142,7 +142,7 @@ DistractedScript:
 	
 HoOhPuzzle:
 	checkevent EVENT_HOOH_PUZZLE_SECUNDA_OPEN
-	iffalse .PuzzleComplete
+	iffalse .TilesAreStuck
 	refreshscreen
 	writebyte UNOWNPUZZLE_HO_OH
 	special UnownPuzzle
@@ -150,6 +150,11 @@ HoOhPuzzle:
 	iftrue .PuzzleComplete
 	end
 
+.TilesAreStuck:
+	opentext
+	writetext TilesAreStuckText
+	waitbutton
+	closetext
 .PuzzleComplete:
 	end
 
@@ -358,6 +363,12 @@ NoIdeaText:
 	
 	para "No way to know"
 	line "what they mean."
+	done
+
+TilesAreStuckText:
+	text "The tiles appear"
+	line "to be stuck in"
+	cont "place."
 	done
 
 SecundaRuins1F_MapEvents:
