@@ -13,7 +13,7 @@
 	db 5 ; unknown 2
 	INCBIN "gfx/pokemon/altaria/front.dimensions"
 	db 0, 0, 0, 0 ; padding
-	db GROWTH_MEDIUM_FAST ; growth rate
+	db GROWTH_ERRATIC ; growth rate
 	dn EGG_FLYING, EGG_DRAGON ; egg groups
 
 	; tm/hm learnset

@@ -1,11 +1,11 @@
 	db DIGLETT ; 050
 
-	db  10,  55,  25,  95,  35,  45
+	db  10,  55,  30,  90,  35,  45
 	;   hp  atk  def  spd  sat  sdf
 
-	db GROUND, GROUND ; type
+	db GROUND, STEEL ; type
 	db 255 ; catch rate
-	db 81 ; base exp
+	db 53 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1

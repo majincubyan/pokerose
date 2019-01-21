@@ -5,7 +5,7 @@
 
 	db ELECTRIC, ELECTRIC ; type
 	db 45 ; catch rate
-	db 106 ; base exp
+	db 72 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F25 ; gender ratio
 	db 100 ; unknown 1

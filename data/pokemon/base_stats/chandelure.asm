@@ -1,11 +1,11 @@
 	db CHANDELURE ; 094
 
-	db  60,  65,  60, 110, 130,  75
+	db  60,  55,  90,  80, 145,  90
 	;   hp  atk  def  spd  sat  sdf
 
 	db GHOST, FIRE ; type
 	db 45 ; catch rate
-	db 190 ; base exp
+	db 234 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1

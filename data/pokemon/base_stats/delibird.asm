@@ -5,7 +5,7 @@
 
 	db ICE, FLYING ; type
 	db 45 ; catch rate
-	db 183 ; base exp
+	db 116 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1
