@@ -1,11 +1,11 @@
 	db HELIOLISK ; 203
 
-	db  70,  80,  65,  85,  90,  65
+	db  62,  55,  52, 109, 109,  94
 	;   hp  atk  def  spd  sat  sdf
 
-	db NORMAL, PSYCHIC ; type
-	db 60 ; catch rate
-	db 149 ; base exp
+	db ELECTRIC, NORMAL ; type
+	db 75 ; catch rate
+	db 168 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1
@@ -14,7 +14,7 @@
 	INCBIN "gfx/pokemon/heliolisk/front.dimensions"
 	db 0, 0, 0, 0 ; padding
 	db GROWTH_MEDIUM_FAST ; growth rate
-	dn EGG_GROUND, EGG_GROUND ; egg groups
+	dn EGG_MONSTER, EGG_DRAGON ; egg groups
 
 	; tm/hm learnset
 	tmhm HEADBUTT, CURSE, TOXIC, ZAP_CANNON, ROCK_SMASH, PSYCH_UP, HIDDEN_POWER, SUNNY_DAY, SNORE, PROTECT, ENDURE, FRUSTRATION, IRON_TAIL, THUNDER, EARTHQUAKE, RETURN, PSYCHIC_M, SHADOW_BALL, MUD_SLAP, DOUBLE_TEAM, SWAGGER, SLEEP_TALK, SWIFT, DREAM_EATER, REST, ATTRACT, THIEF, NIGHTMARE, STRENGTH, THUNDERBOLT

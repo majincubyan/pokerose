@@ -1,11 +1,11 @@
 	db LINOONE ; 020
 
-	db  55,  81,  60,  97,  50,  70
+	db  78,  70,  61, 100,  50,  61
 	;   hp  atk  def  spd  sat  sdf
 
 	db NORMAL, NORMAL ; type
 	db 90 ; catch rate
-	db 116 ; base exp
+	db 147 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1

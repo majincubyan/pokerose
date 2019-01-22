@@ -5,7 +5,7 @@
 
 	db POISON, POISON ; type
 	db 190 ; catch rate
-	db 114 ; base exp
+	db 68 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1

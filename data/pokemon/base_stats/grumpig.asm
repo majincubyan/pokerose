@@ -1,11 +1,11 @@
 	db GRUMPIG ; 049
 
-	db  70,  65,  60,  90,  90,  75
+	db  80,  45,  65,  80,  90, 110
 	;   hp  atk  def  spd  sat  sdf
 
-	db BUG, POISON ; type
-	db 75 ; catch rate
-	db 138 ; base exp
+	db PSYCHIC, PSYCHIC ; type
+	db 60 ; catch rate
+	db 165 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1
@@ -13,7 +13,7 @@
 	db 5 ; unknown 2
 	INCBIN "gfx/pokemon/grumpig/front.dimensions"
 	db 0, 0, 0, 0 ; padding
-	db GROWTH_MEDIUM_FAST ; growth rate
+	db GROWTH_FAST ; growth rate
 	dn EGG_BUG, EGG_BUG ; egg groups
 
 	; tm/hm learnset

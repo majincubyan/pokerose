@@ -1,13 +1,13 @@
 	db LUCARIO ; 190
 
-	db  55,  70,  55,  85,  40,  55
+	db  70, 110,  70,  90, 115,  70
 	;   hp  atk  def  spd  sat  sdf
 
-	db NORMAL, NORMAL ; type
+	db FIGHTING, STEEL ; type
 	db 45 ; catch rate
-	db 94 ; base exp
+	db 184 ; base exp
 	db NO_ITEM, NO_ITEM ; items
-	db GENDER_F50 ; gender ratio
+	db GENDER_F12_5 ; gender ratio
 	db 100 ; unknown 1
 	db 20 ; step cycles to hatch
 	db 5 ; unknown 2

@@ -1,20 +1,20 @@
 	db GOOMY ; 066
 
-	db  70,  80,  50,  35,  35,  35
+	db  45,  50,  35,  40,  55,  75
 	;   hp  atk  def  spd  sat  sdf
 
-	db FIGHTING, FIGHTING ; type
-	db 180 ; catch rate
-	db 88 ; base exp
+	db DRAGON, DRAGON ; type
+	db 45 ; catch rate
+	db 60 ; base exp
 	db NO_ITEM, NO_ITEM ; items
-	db GENDER_F25 ; gender ratio
+	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1
 	db 20 ; step cycles to hatch
 	db 5 ; unknown 2
 	INCBIN "gfx/pokemon/goomy/front.dimensions"
 	db 0, 0, 0, 0 ; padding
-	db GROWTH_MEDIUM_SLOW ; growth rate
-	dn EGG_HUMANSHAPE, EGG_HUMANSHAPE ; egg groups
+	db GROWTH_SLOW ; growth rate
+	dn EGG_DRAGON, EGG_DRAGON ; egg groups
 
 	; tm/hm learnset
 	tmhm DYNAMICPUNCH, HEADBUTT, CURSE, TOXIC, ROCK_SMASH, HIDDEN_POWER, SUNNY_DAY, SNORE, PROTECT, ENDURE, FRUSTRATION, EARTHQUAKE, RETURN, DIG, MUD_SLAP, DOUBLE_TEAM, ICE_PUNCH, SWAGGER, SLEEP_TALK, FIRE_BLAST, THUNDERPUNCH, DETECT, REST, ATTRACT, THIEF, FIRE_PUNCH, STRENGTH, FLAMETHROWER

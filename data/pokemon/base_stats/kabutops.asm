@@ -5,7 +5,7 @@
 
 	db ROCK, WATER ; type
 	db 45 ; catch rate
-	db 201 ; base exp
+	db 173 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F12_5 ; gender ratio
 	db 100 ; unknown 1

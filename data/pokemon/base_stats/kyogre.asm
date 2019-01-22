@@ -1,11 +1,11 @@
 	db KYOGRE ; 145
 
-	db  90,  90,  85, 100, 125,  90
+	db 100, 100,  90,  90, 150, 140
 	;   hp  atk  def  spd  sat  sdf
 
-	db ELECTRIC, FLYING ; type
+	db WATER, WATER ; type
 	db 3 ; catch rate
-	db 216 ; base exp
+	db 255 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_UNKNOWN ; gender ratio
 	db 100 ; unknown 1
