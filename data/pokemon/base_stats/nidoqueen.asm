@@ -5,7 +5,7 @@
 
 	db POISON, GROUND ; type
 	db 45 ; catch rate
-	db 194 ; base exp
+	db 227 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F100 ; gender ratio
 	db 100 ; unknown 1

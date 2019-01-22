@@ -1,11 +1,11 @@
 	db RHYPERIOR ; 098
 
-	db  30, 105,  90,  50,  25,  25
+	db 115, 140, 130,  40,  55,  55
 	;   hp  atk  def  spd  sat  sdf
 
-	db WATER, WATER ; type
-	db 225 ; catch rate
-	db 115 ; base exp
+	db GROUND, ROCK ; type
+	db 30 ; catch rate
+	db 241 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1
@@ -13,8 +13,8 @@
 	db 5 ; unknown 2
 	INCBIN "gfx/pokemon/rhyperior/front.dimensions"
 	db 0, 0, 0, 0 ; padding
-	db GROWTH_MEDIUM_FAST ; growth rate
-	dn EGG_WATER_3, EGG_WATER_3 ; egg groups
+	db GROWTH_SLOW ; growth rate
+	dn EGG_MONSTER, EGG_GROUND ; egg groups
 
 	; tm/hm learnset
 	tmhm CURSE, TOXIC, ROCK_SMASH, HIDDEN_POWER, SNORE, BLIZZARD, ICY_WIND, PROTECT, RAIN_DANCE, ENDURE, FRUSTRATION, RETURN, MUD_SLAP, DOUBLE_TEAM, SWAGGER, SLEEP_TALK, REST, ATTRACT, THIEF, FURY_CUTTER, CUT, SURF, STRENGTH, WHIRLPOOL, ICE_BEAM

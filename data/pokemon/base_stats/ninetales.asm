@@ -1,12 +1,12 @@
 	db NINETALES ; 038
 
-	db  73,  76,  75, 100,  81, 100
+	db  73,  67,  75, 109,  81, 100
 	;   hp  atk  def  spd  sat  sdf
 
-	db FIRE, FIRE ; type
+	db ICE, FAIRY ; type
 	db 75 ; catch rate
-	db 178 ; base exp
-	db BURNT_BERRY, BURNT_BERRY ; items
+	db 177 ; base exp
+	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F75 ; gender ratio
 	db 100 ; unknown 1
 	db 20 ; step cycles to hatch

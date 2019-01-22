@@ -1,11 +1,11 @@
 	db MISMAGIUS ; 099
 
-	db  55, 130, 115,  75,  50,  50
+	db  60,  60,  60, 105, 105, 105
 	;   hp  atk  def  spd  sat  sdf
 
-	db WATER, WATER ; type
-	db 60 ; catch rate
-	db 206 ; base exp
+	db GHOST, GHOST ; type
+	db 45 ; catch rate
+	db 173 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1
@@ -13,8 +13,8 @@
 	db 5 ; unknown 2
 	INCBIN "gfx/pokemon/mismagius/front.dimensions"
 	db 0, 0, 0, 0 ; padding
-	db GROWTH_MEDIUM_FAST ; growth rate
-	dn EGG_WATER_3, EGG_WATER_3 ; egg groups
+	db GROWTH_FAST ; growth rate
+	dn EGG_INDETERMINATE, EGG_INDETERMINATE ; egg groups
 
 	; tm/hm learnset
 	tmhm CURSE, TOXIC, ROCK_SMASH, HIDDEN_POWER, SNORE, BLIZZARD, HYPER_BEAM, ICY_WIND, PROTECT, RAIN_DANCE, ENDURE, FRUSTRATION, RETURN, MUD_SLAP, DOUBLE_TEAM, SWAGGER, SLEEP_TALK, REST, ATTRACT, THIEF, FURY_CUTTER, CUT, SURF, STRENGTH, WHIRLPOOL, ICE_BEAM

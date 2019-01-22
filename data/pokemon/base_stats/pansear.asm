@@ -1,13 +1,13 @@
 	db PANSEAR ; 056
 
-	db  40,  80,  35,  70,  35,  45
+	db  50,  53,  48,  64,  53,  48
 	;   hp  atk  def  spd  sat  sdf
 
-	db FIGHTING, FIGHTING ; type
+	db FIRE, FIRE ; type
 	db 190 ; catch rate
-	db 74 ; base exp
+	db 63 ; base exp
 	db NO_ITEM, NO_ITEM ; items
-	db GENDER_F50 ; gender ratio
+	db GENDER_F12_5 ; gender ratio
 	db 100 ; unknown 1
 	db 20 ; step cycles to hatch
 	db 5 ; unknown 2

@@ -1,11 +1,11 @@
 	db MAWILE ; 137
 
-	db  65,  60,  70,  40,  85,  75
+	db  50,  85,  85,  50,  55,  55
 	;   hp  atk  def  spd  sat  sdf
 
 	db NORMAL, NORMAL ; type
 	db 45 ; catch rate
-	db 130 ; base exp
+	db 133 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_UNKNOWN ; gender ratio
 	db 100 ; unknown 1

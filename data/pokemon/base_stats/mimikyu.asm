@@ -1,11 +1,11 @@
 	db MIMIKYU ; 122
 
-	db  40,  45,  65,  90, 100, 120
+	db  55,  90,  80,  96,  50, 105
 	;   hp  atk  def  spd  sat  sdf
 
-	db PSYCHIC, PSYCHIC ; type
+	db GHOST, FAIRY ; type
 	db 45 ; catch rate
-	db 136 ; base exp
+	db 167 ; base exp
 	db NO_ITEM, MYSTERYBERRY ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1
@@ -14,7 +14,7 @@
 	INCBIN "gfx/pokemon/mimikyu/front.dimensions"
 	db 0, 0, 0, 0 ; padding
 	db GROWTH_MEDIUM_FAST ; growth rate
-	dn EGG_HUMANSHAPE, EGG_HUMANSHAPE ; egg groups
+	dn EGG_INDETERMINATE, EGG_INDETERMINATE ; egg groups
 
 	; tm/hm learnset
 	tmhm DYNAMICPUNCH, HEADBUTT, CURSE, TOXIC, ZAP_CANNON, PSYCH_UP, HIDDEN_POWER, SUNNY_DAY, SNORE, HYPER_BEAM, PROTECT, ENDURE, FRUSTRATION, SOLARBEAM, THUNDER, RETURN, PSYCHIC_M, SHADOW_BALL, MUD_SLAP, DOUBLE_TEAM, ICE_PUNCH, SWAGGER, SLEEP_TALK, THUNDERPUNCH, DREAM_EATER, REST, ATTRACT, THIEF, FIRE_PUNCH, NIGHTMARE, FLASH, THUNDERBOLT

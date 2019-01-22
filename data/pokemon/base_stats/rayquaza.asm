@@ -1,11 +1,11 @@
 	db RAYQUAZA ; 146
 
-	db  90, 100,  90,  90, 125,  85
+	db 105, 150,  90,  95, 150,  90
 	;   hp  atk  def  spd  sat  sdf
 
-	db FIRE, FLYING ; type
-	db 3 ; catch rate
-	db 217 ; base exp
+	db DRAGON, FLYING ; type
+	db 45 ; catch rate
+	db 255 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_UNKNOWN ; gender ratio
 	db 100 ; unknown 1

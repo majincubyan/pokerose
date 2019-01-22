@@ -1,9 +1,9 @@
 	db MONFERNO ; 156
 
-	db  58,  64,  58,  80,  80,  65
+	db  64,  78,  52,  81,  78,  52
 	;   hp  atk  def  spd  sat  sdf
 
-	db FIRE, FIRE ; type
+	db FIRE, FIGHTING ; type
 	db 45 ; catch rate
 	db 142 ; base exp
 	db NO_ITEM, NO_ITEM ; items
@@ -14,7 +14,7 @@
 	INCBIN "gfx/pokemon/monferno/front.dimensions"
 	db 0, 0, 0, 0 ; padding
 	db GROWTH_MEDIUM_SLOW ; growth rate
-	dn EGG_GROUND, EGG_GROUND ; egg groups
+	dn EGG_GROUND, EGG_HUMANSHAPE ; egg groups
 
 	; tm/hm learnset
 	tmhm HEADBUTT, CURSE, ROLLOUT, ROAR, TOXIC, ROCK_SMASH, HIDDEN_POWER, SUNNY_DAY, SNORE, PROTECT, ENDURE, FRUSTRATION, IRON_TAIL, RETURN, DIG, MUD_SLAP, DOUBLE_TEAM, SWAGGER, SLEEP_TALK, FIRE_BLAST, SWIFT, DEFENSE_CURL, DETECT, REST, ATTRACT, FURY_CUTTER, CUT, STRENGTH, FLAMETHROWER

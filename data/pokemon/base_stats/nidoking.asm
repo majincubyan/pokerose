@@ -1,11 +1,11 @@
 	db NIDOKING ; 034
 
-	db  81,  92,  77,  85,  85,  75
+	db  81, 102,  77,  85,  85,  75
 	;   hp  atk  def  spd  sat  sdf
 
 	db POISON, GROUND ; type
 	db 45 ; catch rate
-	db 195 ; base exp
+	db 227 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F0 ; gender ratio
 	db 100 ; unknown 1
