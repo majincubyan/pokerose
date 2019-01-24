@@ -454,17 +454,22 @@ INCBIN "data/tilesets/ice_path_attributes.bin"
 TilesetForestAttr:
 INCBIN "data/tilesets/forest_attributes.bin"
 
-TilesetBetaWordRoomAttr:
-INCBIN "data/tilesets/beta_word_room_attributes.bin"
-
 TilesetHoOhWordRoomAttr:
 INCBIN "data/tilesets/ho_oh_word_room_attributes.bin"
-
-TilesetKabutoWordRoomAttr:
-INCBIN "data/tilesets/kabuto_word_room_attributes.bin"
 
 TilesetOmanyteWordRoomAttr:
 INCBIN "data/tilesets/omanyte_word_room_attributes.bin"
 
 TilesetAerodactylWordRoomAttr:
 INCBIN "data/tilesets/aerodactyl_word_room_attributes.bin"
+
+SECTION "Tileset Data 12", ROMX
+ 
+TilesetMuseumAttr:
+INCBIN "data/tilesets/museum_attributes.bin"
+
+TilesetGymArenaAttr:
+INCBIN "data/tilesets/gym_arena_attributes.bin"
+
+TilesetRuinsAttr:
+INCBIN "data/tilesets/ruins_attributes.bin"
