@@ -5,7 +5,7 @@ EvosAttacksPointers::
 	dw MetangEvosAttacks
 	dw MetagrossEvosAttacks
 	dw BagonEvosAttacks
-	dw ShellgonEvosAttacks
+	dw ShelgonEvosAttacks
 	dw SalamenceEvosAttacks
 	dw TrapinchEvosAttacks
 	dw VibravaEvosAttacks

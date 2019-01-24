@@ -1,11 +1,11 @@
 	db SANDSLASH ; 028
 
-	db  75, 100, 110,  65,  45,  55
+	db  75, 100, 120,  65,  25,  65
 	;   hp  atk  def  spd  sat  sdf
 
-	db GROUND, GROUND ; type
+	db ICE, STEEL ; type
 	db 90 ; catch rate
-	db 163 ; base exp
+	db 158 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1

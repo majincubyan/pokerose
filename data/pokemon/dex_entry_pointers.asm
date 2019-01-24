@@ -4,7 +4,7 @@ PokedexDataPointerTable:
 	dw MetangPokedexEntry
 	dw MetagrossPokedexEntry
 	dw BagonPokedexEntry
-	dw ShellgonPokedexEntry
+	dw ShelgonPokedexEntry
 	dw SalamencePokedexEntry
 	dw TrapinchPokedexEntry
 	dw VibravaPokedexEntry

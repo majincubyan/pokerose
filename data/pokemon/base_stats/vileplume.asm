@@ -1,11 +1,11 @@
 	db VILEPLUME ; 045
 
-	db  75,  80,  85,  50, 100,  90
+	db  75,  80,  85,  50, 110,  90
 	;   hp  atk  def  spd  sat  sdf
 
 	db GRASS, POISON ; type
 	db 45 ; catch rate
-	db 184 ; base exp
+	db 221 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1

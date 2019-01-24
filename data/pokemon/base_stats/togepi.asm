@@ -3,9 +3,9 @@
 	db  35,  20,  65,  20,  40,  65
 	;   hp  atk  def  spd  sat  sdf
 
-	db NORMAL, NORMAL ; type
+	db FAIRY, FAIRY ; type
 	db 190 ; catch rate
-	db 74 ; base exp
+	db 49 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F12_5 ; gender ratio
 	db 100 ; unknown 1

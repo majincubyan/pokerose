@@ -1,11 +1,11 @@
 	db STARAPTOR ; 018
 
-	db  83,  80,  75,  91,  70,  70
+	db  85, 120,  70, 100,  50,  60
 	;   hp  atk  def  spd  sat  sdf
 
 	db NORMAL, FLYING ; type
 	db 45 ; catch rate
-	db 172 ; base exp
+	db 218 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1

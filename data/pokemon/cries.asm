@@ -9,7 +9,7 @@ PokemonCries::
 	mon_cry CRY_BULBASAUR,   $020,  $100 ; METANG
 	mon_cry CRY_BULBASAUR,   $000,  $140 ; METAGROSS
 	mon_cry CRY_CHARMANDER,  $060,  $0c0 ; BAGON
-	mon_cry CRY_CHARMANDER,  $020,  $0c0 ; SHELLGON
+	mon_cry CRY_CHARMANDER,  $020,  $0c0 ; SHELGON
 	mon_cry CRY_CHARMANDER,  $000,  $100 ; SALAMENCE
 	mon_cry CRY_SQUIRTLE,    $060,  $0c0 ; TRAPINCH
 	mon_cry CRY_SQUIRTLE,    $020,  $0c0 ; VIBRAVA

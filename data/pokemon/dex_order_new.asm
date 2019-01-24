@@ -231,7 +231,7 @@ NewPokedexOrder:
 	db METANG
 	db METAGROSS
 	db BAGON
-	db SHELLGON
+	db SHELGON
 	db SALAMENCE
 	db TRAPINCH
 	db VIBRAVA

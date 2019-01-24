@@ -3,7 +3,7 @@ PokemonNames::
 	db "Metang@@@@"
 	db "Metagross@"
 	db "Bagon@@@@@"
-	db "Shellgon@@"
+	db "Shelgon@@@"
 	db "Salamence@"
 	db "Trapinch@@"
 	db "Vibrava@@@"

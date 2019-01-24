@@ -812,7 +812,7 @@ CooltrainerMGroup:
 	; COOLTRAINERM (2)
 	db "AARON@", TRAINERTYPE_NORMAL
 	db 24, METANG
-	db 24, SHELLGON
+	db 24, SHELGON
 	db 24, VIBRAVA
 	db -1 ; end
 
@@ -910,7 +910,7 @@ CooltrainerMGroup:
 	; COOLTRAINERM (17)
 	db "KEVIN@", TRAINERTYPE_NORMAL
 	db 38, RHYHORN
-	db 35, SHELLGON
+	db 35, SHELGON
 	db 35, VIBRAVA
 	db -1 ; end
 
@@ -923,7 +923,7 @@ CooltrainerMGroup:
 
 	; COOLTRAINERM (19)
 	db "ALLEN@", TRAINERTYPE_MOVES
-	db 27, SHELLGON, EMBER, SMOKESCREEN, RAGE, SCARY_FACE
+	db 27, SHELGON, EMBER, SMOKESCREEN, RAGE, SCARY_FACE
 	db -1 ; end
 
 	; COOLTRAINERM (20)
@@ -2432,7 +2432,7 @@ BikerGroup:
 	; BIKER (6)
 	db "CHARLES@", TRAINERTYPE_NORMAL
 	db 30, KOFFING
-	db 30, SHELLGON
+	db 30, SHELGON
 	db 30, WEEZING
 	db -1 ; end
 
@@ -2494,7 +2494,7 @@ FirebreatherGroup:
 
 	; FIREBREATHER (2)
 	db "DICK@", TRAINERTYPE_NORMAL
-	db 17, SHELLGON
+	db 17, SHELGON
 	db -1 ; end
 
 	; FIREBREATHER (3)

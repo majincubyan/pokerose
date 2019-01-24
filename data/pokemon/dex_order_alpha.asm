@@ -196,7 +196,7 @@ AlphabeticalPokedexOrder:
 	db SEALEO
 	db SEEL
 	db SEVIPER
-	db SHELLGON
+	db SHELGON
 	db SHINX
 	db SHROOMISH
 	db SHUPPET

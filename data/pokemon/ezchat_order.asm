@@ -87,7 +87,7 @@ EZChat_SortedPokemon:
 .yu:       db KADABRA, -1
 .yo:       db LARVITAR, TREVENANT, -1
 .ra:       db ARTICUNO, RAICHU, HONCHKROW, LINOONE, LAPRAS, VILEPLUME, ROSERADE, -1
-.ri:       db SHELLGON, SALAMENCE, URSARING, -1
+.ri:       db SHELGON, SALAMENCE, URSARING, -1
 .ru:       db JYNX, LITWICK, -1
 .re:       db MAGNETON, EXCADRILL, DRILBUR, -1
 .ro:       db VULPIX, -1

@@ -22,7 +22,7 @@
 	const METANG     ; 02
 	const METAGROSS  ; 03
 	const BAGON      ; 04
-	const SHELLGON   ; 05
+	const SHELGON   ; 05
 	const SALAMENCE  ; 06
 	const TRAPINCH   ; 07
 	const VIBRAVA    ; 08

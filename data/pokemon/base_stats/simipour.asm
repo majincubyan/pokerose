@@ -1,13 +1,13 @@
 	db SIMIPOUR ; 053
 
-	db  65,  70,  60, 115,  65,  65
+	db  75,  98,  63, 101,  98,  63
 	;   hp  atk  def  spd  sat  sdf
 
-	db NORMAL, NORMAL ; type
-	db 90 ; catch rate
-	db 148 ; base exp
+	db WATER, WATER ; type
+	db 75 ; catch rate
+	db 174 ; base exp
 	db NO_ITEM, NO_ITEM ; items
-	db GENDER_F50 ; gender ratio
+	db GENDER_F12_5 ; gender ratio
 	db 100 ; unknown 1
 	db 20 ; step cycles to hatch
 	db 5 ; unknown 2

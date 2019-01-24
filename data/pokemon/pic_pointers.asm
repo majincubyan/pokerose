@@ -10,8 +10,8 @@ PokemonPicPointers::
 	dba_pic MetagrossBackpic
 	dba_pic BagonFrontpic
 	dba_pic BagonBackpic
-	dba_pic ShellgonFrontpic
-	dba_pic ShellgonBackpic
+	dba_pic ShelgonFrontpic
+	dba_pic ShelgonBackpic
 	dba_pic SalamenceFrontpic
 	dba_pic SalamenceBackpic
 	dba_pic TrapinchFrontpic
