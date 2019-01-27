@@ -108,6 +108,8 @@
 	const SPRITE_ETERNAL
 	const SPRITE_SHIN
 	const SPRITE_CELEBI
+	const SPRITE_DELINQUENT
+	const SPRITE_OLD_MAN
 
 ; SpriteMons indexes (see data/sprites/sprite_mons.asm)
 	const_def $80
