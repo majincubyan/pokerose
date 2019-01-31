@@ -72,3 +72,5 @@ TrainerGroups:
 	dw BossGroup
 	dw CoachMGroup
 	dw CoachFGroup
+	dw CurmudgeonGroup
+	dw DelinquentGroup

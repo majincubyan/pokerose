@@ -671,6 +671,8 @@ NormalStep:
 	ld a, [hl]
 	call CheckSuperTallGrassTile
 	jr z, .shake_grass
+	call CheckPinkGrassTile
+	jr z, .shake_pink_grass
 	call CheckPuddleTile
 	jr z, .splash_puddle
 
@@ -679,6 +681,10 @@ NormalStep:
 
 .shake_grass
 	call ShakeGrass
+	jr .skip_grass
+	
+.shake_pink_grass
+	call ShakePinkGrass
 	jr .skip_grass
 	
 .splash_puddle

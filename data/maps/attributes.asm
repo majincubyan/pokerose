@@ -90,19 +90,19 @@ elif "\1" == "east"
 	dw wOverworldMapBlocks + \3_WIDTH + 7
 endc
 ENDM
-	map_attributes SecundaForest101, SECUNDA_FOREST_101, $05, NORTH
+	map_attributes SecundaForest101, SECUNDA_FOREST_101, $04, NORTH
 	connection north, Route29, ROUTE_29, 0
 
-	map_attributes NewBarkTown, NEW_BARK_TOWN, $71, SOUTH
+	map_attributes NewBarkTown, NEW_BARK_TOWN, $03, SOUTH
 	connection south, Route29, ROUTE_29, 0
 
-	map_attributes CherrygroveCity, CHERRYGROVE_CITY, $8B, NORTH
+	map_attributes CherrygroveCity, CHERRYGROVE_CITY, $04, NORTH
 	connection north, SecundaCemetary, SECUNDA_CEMETARY, 4
 	
-	map_attributes SecundaCemetary, SECUNDA_CEMETARY, $8B, SOUTH
+	map_attributes SecundaCemetary, SECUNDA_CEMETARY, $04, SOUTH
 	connection south, CherrygroveCity, CHERRYGROVE_CITY, -4
 	
-	map_attributes MapleLab, MAPLE_LAB, $05, WEST
+	map_attributes MapleLab, MAPLE_LAB, $04, WEST
 	connection west, Route29, ROUTE_29, -3
 
 	map_attributes VioletCity, VIOLET_CITY, $05, SOUTH | WEST | EAST

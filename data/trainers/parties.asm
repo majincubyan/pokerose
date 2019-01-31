@@ -3501,3 +3501,8 @@ CoachFGroup:
 	db  2, STARLY
 	db  4, ZIGZAGOON
 	db -1 ; end
+
+CurmudgeonGroup:
+
+DelinquentGroup:
+

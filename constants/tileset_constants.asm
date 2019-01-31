@@ -35,7 +35,7 @@
 	const TILESET_HO_OH_WORD_ROOM      ; 21
 	const TILESET_GYM_ARENA		       ; 22
 	const TILESET_OMANYTE_WORD_ROOM    ; 23
-	const TILESET_AERODACTYL_WORD_ROOM ; 24
+	const TILESET_TSUJI				   ; 24
 	const TILESET_MUSEUM
 
 ; bg palette values (see gfx/tilesets/*_palette_map.asm)

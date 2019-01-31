@@ -55,10 +55,8 @@ MapleHusbandScript:
 	opentext
 	writetext ImCountingOnYouText
 	waitbutton
-	closetext
 	givepoke INFERNAPE, 40
-	setevent EVENT_RUINS_CELEBI_1
-	setevent EVENT_HUSBAND_OUTSIDE_RUINS
+	closetext
 	end
 
 SomethingIsGoingOnScript:

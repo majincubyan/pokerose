@@ -13,7 +13,7 @@ COLL_03                EQU $03 ; garbage
 COLL_04                EQU $04 ; garbage
 COLL_WALL              EQU $07
 COLL_CUT_08            EQU $08 ; unused
-COLL_TALL_GRASS_10     EQU $10 ; unused
+COLL_PINK_GRASS        EQU $10 ; unused
 COLL_CUT_TREE          EQU $12
 COLL_LONG_GRASS        EQU $14
 COLL_HEADBUTT_TREE     EQU $15

@@ -125,9 +125,9 @@ IndigoGroupSprites:
 	; 0 of max 9 walking sprites
 	db 0 ; end
 
-; Route29 and CherrygroveCity are connected
+
 NewBarkGroupSprites:
-; Route30, Route31, CherrygroveCity
+; Route101, MapleLab, Secunda101, MinutTown
 	db SPRITE_SILVER
 	db SPRITE_TEACHER
 	db SPRITE_FISHER
@@ -143,16 +143,15 @@ NewBarkGroupSprites:
 	db SPRITE_BLACK_BELT
 	db SPRITE_SHUPPET
 	db 0 ; end
-; Route26, Route27, Route29, NewBarkTown
 CherrygroveGroupSprites:
-; Route30, Route31, CherrygroveCity
-	db SPRITE_SILVER
+; SecundaCity, SecundaCemetary
+	db SPRITE_OFFICER
 	db SPRITE_TEACHER
-	db SPRITE_FISHER
+	db SPRITE_DELINQUENT
 	db SPRITE_SHANNON
 	db SPRITE_YOUNGSTER
-	db SPRITE_MONSTER
 	db SPRITE_GRAMPS
+	db SPRITE_OLD_MAN
 	db SPRITE_BUG_CATCHER
 	db SPRITE_COOLTRAINER_F
 	; limit of 9 walking sprites

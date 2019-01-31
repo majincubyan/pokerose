@@ -2053,6 +2053,19 @@ ShakeGrass:
 .GrassObject
 	db $00, PAL_OW_TREE, SPRITEMOVEDATA_GRASS
 
+	
+ShakePinkGrass:
+	push bc
+	ld de, .PinkGrassObject
+	call CopyTempObjectData
+	call InitTempObject
+	pop bc
+	ret
+
+.PinkGrassObject
+	db $00, PAL_OW_RED, SPRITEMOVEDATA_GRASS
+
+
 SplashPuddle:
 	push bc
 	ld de, .PuddleObject

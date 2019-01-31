@@ -706,7 +706,6 @@ BaltoyFrontpic:      INCBIN "gfx/pokemon/baltoy/front.animated.2bpp.lz"
 LarvitarBackpic:     INCBIN "gfx/pokemon/larvitar/back.2bpp.lz"
 MawileBackpic:      INCBIN "gfx/pokemon/mawile/back.2bpp.lz"
 UnownHBackpic:       INCBIN "gfx/pokemon/unown_h/back.2bpp.lz"
-BossPic: 			 INCBIN "gfx/trainers/boss.2bpp.lz"
 TyrantrumBackpic:      INCBIN "gfx/pokemon/tyrantrum/back.2bpp.lz"
 RoseliaBackpic:     INCBIN "gfx/pokemon/roselia/back.2bpp.lz"
 HonchkrowBackpic:    INCBIN "gfx/pokemon/honchkrow/back.2bpp.lz"
@@ -720,8 +719,14 @@ MetapodBackpic:      INCBIN "gfx/pokemon/metapod/back.2bpp.lz"
 JigglypuffBackpic:   INCBIN "gfx/pokemon/jigglypuff/back.2bpp.lz"
 OddishBackpic:       INCBIN "gfx/pokemon/oddish/back.2bpp.lz"
 UnownDBackpic:       INCBIN "gfx/pokemon/unown_d/back.2bpp.lz"
+
+SECTION "New Trainers", ROMX
 CoachMPic:			 INCBIN "gfx/trainers/coach_m.2bpp.lz"
 CoachFPic:			 INCBIN "gfx/trainers/coach_f.2bpp.lz"
+BossPic: 			 INCBIN "gfx/trainers/boss.2bpp.lz"
+CurmudgeonPic:		 INCBIN "gfx/trainers/curmudgeon.2bpp.lz"
+DelinquentPic:		 INCBIN "gfx/trainers/delinquent.2bpp.lz"
+
 
 ; Sections "Pics 20" to "Pics 24" are not used for any graphics,
 ; but entries for their banks exist in FixPicBank (see engine/gfx/load_pics.asm).

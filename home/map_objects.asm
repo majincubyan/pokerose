@@ -144,6 +144,10 @@ CheckSuperTallGrassTile::
 CheckPuddleTile::
 	cp COLL_PUDDLE
 	ret
+	
+CheckPinkGrassTile::
+	cp COLL_PINK_GRASS
+	ret
 
 CheckCutTreeTile::
 	cp COLL_CUT_TREE

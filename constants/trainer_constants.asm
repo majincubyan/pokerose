@@ -708,5 +708,9 @@ KRIS EQU __enum__
 	
 	trainerclass COACHF
 	const JANET
+	
+	trainerclass CURMUDGEON
+	
+	trainerclass DELINQUENT
 
 NUM_TRAINER_CLASSES EQU __enum__

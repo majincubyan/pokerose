@@ -73,3 +73,5 @@ TrainerEncounterMusic::
 	db MUSIC_ROCKET_ENCOUNTER	   ; boss
 	db MUSIC_HIKER_ENCOUNTER 	   ; coach_m
 	db MUSIC_BEAUTY_ENCOUNTER	   ; coach_f
+	db MUSIC_POKEMANIAC_ENCOUNTER  ; curmudgeon
+	db MUSIC_HIKER_ENCOUNTER	   ; delinquent

@@ -195,6 +195,13 @@ SecundaCityPokecenterSign:
 
 SecundaCityMartSign:
 	jumpstd martsign
+	
+SecundaCityCemetarySign:
+	opentext
+	writetext ToCemetaryText
+	waitbutton
+	closetext
+	end
 
 
 ;==========MOVEMENT====================
@@ -235,6 +242,11 @@ SecundaCitySignText:
 	para "The timeless"
 	line "hamlet of the"
 	cont "forest."
+	done
+
+ToCemetaryText:
+	text "North to Secunda"
+	line "Cemetary"
 	done
 
 RivalMyNameIsText:
@@ -298,7 +310,8 @@ RivalText_YouLost:
 	
 	para "<PLAYER>, you"
 	line "should work harder"
-	cont "if you want to win."
+	cont "if you want to win"
+	cont "against me."
 	done
 
 CherrygroveCity_MapEvents:
@@ -316,9 +329,10 @@ CherrygroveCity_MapEvents:
 	coord_event 14, 15, SCENE_SECUNDACITY_MEET_RIVAL, SecundaRivalBattle3
 
 	db 3 ; bg events
-	bg_event 21,  9, BGEVENT_READ, SecundaCitySign
+	bg_event 18, 10, BGEVENT_READ, SecundaCitySign
 	bg_event 24,  9, BGEVENT_READ, SecundaCityMartSign
 	bg_event 28,  9, BGEVENT_READ, SecundaCityPokecenterSign
+	bg_event 21,  3, BGEVENT_READ, SecundaCityCemetarySign
 	
 	db 1 ; object events
 	object_event 10, 11, SPRITE_SHANNON, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SecundaRivalScript, EVENT_NEL_LAB_OUTSIDE

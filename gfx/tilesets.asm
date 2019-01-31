@@ -291,7 +291,6 @@ INCBIN "data/tilesets/ruins_metatiles.bin"
 TilesetRuinsColl:
 TilesetHoOhWordRoomColl:
 TilesetOmanyteWordRoomColl:
-TilesetAerodactylWordRoomColl:
 INCLUDE "data/tilesets/ruins_collision.asm"
 
 TilesetGymArenaColl:
@@ -303,7 +302,6 @@ SECTION "Tileset Data 7", ROMX
 TilesetRuinsOfAlphGFX:
 TilesetHoOhWordRoomGFX:
 TilesetOmanyteWordRoomGFX:
-TilesetAerodactylWordRoomGFX:
 INCBIN "gfx/tilesets/ruins_of_alph.2bpp.lz"
 
 TilesetGymArenaGFX:
@@ -329,9 +327,6 @@ INCBIN "data/tilesets/gym_arena_metatiles.bin"
 
 TilesetOmanyteWordRoomMeta:
 INCBIN "data/tilesets/omanyte_word_room_metatiles.bin"
-
-TilesetAerodactylWordRoomMeta:
-INCBIN "data/tilesets/aerodactyl_word_room_metatiles.bin"
 
 TilesetForestGFX:
 INCBIN "gfx/tilesets/forest.2bpp.lz"
@@ -460,9 +455,6 @@ INCBIN "data/tilesets/ho_oh_word_room_attributes.bin"
 TilesetOmanyteWordRoomAttr:
 INCBIN "data/tilesets/omanyte_word_room_attributes.bin"
 
-TilesetAerodactylWordRoomAttr:
-INCBIN "data/tilesets/aerodactyl_word_room_attributes.bin"
-
 SECTION "Tileset Data 12", ROMX
  
 TilesetMuseumAttr:
@@ -473,3 +465,17 @@ INCBIN "data/tilesets/gym_arena_attributes.bin"
 
 TilesetRuinsAttr:
 INCBIN "data/tilesets/ruins_attributes.bin"
+
+SECTION "Tileset Data 13", ROMX
+
+TilesetTsujiMeta:
+INCBIN "data/tilesets/tsuji_metatiles.bin"
+
+TilesetTsujiGFX:
+INCBIN "gfx/tilesets/tsuji.2bpp.lz"
+
+TilesetTsujiColl:
+INCLUDE "data/tilesets/tsuji_collision.asm"
+
+TilesetTsujiAttr:
+INCBIN "data/tilesets/tsuji_attributes.bin"

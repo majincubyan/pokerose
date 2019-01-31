@@ -46,5 +46,5 @@ Tilesets::
 	tileset TilesetHoOhWordRoom
 	tileset TilesetGymArena
 	tileset TilesetOmanyteWordRoom
-	tileset TilesetAerodactylWordRoom
+	tileset TilesetTsuji
 	tileset TilesetMuseum
