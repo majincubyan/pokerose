@@ -281,15 +281,26 @@ ContestResults_PartyFullText:
 GymStatue_CityGymText:
 	text_from_ram wStringBuffer3
 	text_start
-	line "#MON GYM"
+	line "#mon Gym"
 	done
 
 GymStatue_WinningTrainersText:
-	text "LEADER: @"
+	text "Leader: @"
 	text_from_ram wStringBuffer4
 	text_start
-	para "WINNING TRAINERS:"
-	line "<PLAYER>"
+	para "Winning Trainers:"
+	line "Nel"
+	cont "<RIVAL>"
+	done
+	
+GymStatue_WinningTrainersText2:
+	text "Leader: @"
+	text_from_ram wStringBuffer4
+	text_start
+	para "Winning Trainers:"
+	line "Nel"
+	cont "<RIVAL>"
+	cont "<PLAYER>"
 	done
 
 CoinVendor_WelcomeText:

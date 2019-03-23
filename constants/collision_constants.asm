@@ -13,7 +13,7 @@ COLL_03                EQU $03 ; garbage
 COLL_04                EQU $04 ; garbage
 COLL_WALL              EQU $07
 COLL_CUT_08            EQU $08 ; unused
-COLL_PINK_GRASS        EQU $10 ; unused
+COLL_PINK_GRASS        EQU $10
 COLL_CUT_TREE          EQU $12
 COLL_LONG_GRASS        EQU $14
 COLL_HEADBUTT_TREE     EQU $15
@@ -103,6 +103,8 @@ COLL_RIGHT_WALL        EQU $b0
 COLL_LEFT_WALL         EQU $b1
 COLL_UP_WALL           EQU $b2
 COLL_DOWN_WALL         EQU $b3 ; unused
+COLL_DIAGONAL_STAIRS_RIGHT EQU $d0
+COLL_DIAGONAL_STAIRS_LEFT  EQU $d1
 COLL_FF                EQU $ff ; garbage
 
 ; collision data type nybbles
@@ -116,3 +118,4 @@ HI_NYBBLE_WARPS      EQU $70
 HI_NYBBLE_LEDGES     EQU $a0
 HI_NYBBLE_SIDE_WALLS EQU $b0
 HI_NYBBLE_UNUSED_C0  EQU $c0
+HI_NYBBLE_DIAGONAL_STAIRS EQU $d0

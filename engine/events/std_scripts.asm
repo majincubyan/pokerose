@@ -1756,6 +1756,8 @@ GymStatue1Script:
 	mapnametotext MEM_BUFFER_0
 	opentext
 	farwritetext GymStatue_CityGymText
+	buttonsound
+	farwritetext GymStatue_WinningTrainersText
 	waitbutton
 	closetext
 	end
@@ -1765,7 +1767,7 @@ GymStatue2Script:
 	opentext
 	farwritetext GymStatue_CityGymText
 	buttonsound
-	farwritetext GymStatue_WinningTrainersText
+	farwritetext GymStatue_WinningTrainersText2
 	waitbutton
 	closetext
 	end

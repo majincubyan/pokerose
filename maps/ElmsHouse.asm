@@ -40,7 +40,7 @@ ElmsHouseBookshelf:
 YouGotAPokemonText:
 	text "Oh, you got a"
 	line "#mon from my"
-	cont "mother?"
+	cont "sister?"
 	
 	para "Why don't you have"
 	line "this then?"
@@ -59,11 +59,11 @@ BerriesHealText:
 	done
 	
 ParentsWorkingText:
-	text "Our parents are"
+	text "My sister is"
 	line "always working,"
 	
-	para "so its usually"
-	line "just us."
+	para "so I usually"
+	line "watch my nephew."
 	done
 	
 ElmsSonText:

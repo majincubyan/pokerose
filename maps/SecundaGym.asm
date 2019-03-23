@@ -10,10 +10,20 @@ SecundaGym_MapScripts:
 	db 0 ; callbacks
 
 VioletGymFalknerScript:
-	faceplayer
 	opentext
+	checkevent EVENT_GOT_ROUNDBADGE
+	iftrue .FightDone
 	checkevent EVENT_BEAT_FALKNER
 	iftrue .FightDone
+	writetext WhitneyDistractedText
+	waitbutton
+	faceplayer
+	writetext WhitneyAttentionText
+	waitbutton
+	writetext GaveRoseText
+	waitbutton
+	writetext WhitneyThanksText
+	waitbutton
 	writetext FalknerIntroText
 	waitbutton
 	closetext
@@ -22,20 +32,16 @@ VioletGymFalknerScript:
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_FALKNER
-	opentext
-	writetext ReceivedZephyrBadgeText
-	playsound SFX_GET_BADGE
-	waitsfx
-	setflag ENGINE_ZEPHYRBADGE
-	checkcode VAR_BADGES
-	scall VioletGymActivateRockets
+.WhitneyCrying:
+	writetext WhitneyKidsAreMeanText
+	waitbutton
+	closetext
+	end
 .FightDone:
 	checkevent EVENT_GOT_TM31_MUD_SLAP
 	iftrue .SpeechAfterTM
 	setevent EVENT_BEAT_BIRD_KEEPER_ROD
 	setevent EVENT_BEAT_BIRD_KEEPER_ABE
-	setmapscene ELMS_LAB, SCENE_ELMSLAB_NOTHING
-	specialphonecall SPECIALCALL_ASSISTANT
 	writetext FalknerZephyrBadgeText
 	buttonsound
 	verbosegiveitem TM_MUD_SLAP
@@ -52,17 +58,6 @@ VioletGymFalknerScript:
 .NoRoomForMudSlap:
 	closetext
 	end
-
-VioletGymActivateRockets:
-	ifequal 7, .RadioTowerRockets
-	ifequal 6, .GoldenrodRockets
-	end
-
-.GoldenrodRockets:
-	jumpstd goldenrodrockets
-
-.RadioTowerRockets:
-	jumpstd radiotowerrockets
 
 TrainerBirdKeeperRod:
 	trainer BIRD_KEEPER, ROD, EVENT_BEAT_BIRD_KEEPER_ROD, BirdKeeperRodSeenText, BirdKeeperRodBeatenText, 0, .Script
@@ -105,54 +100,109 @@ VioletGymGuyScript:
 VioletGymStatue:
 	checkflag ENGINE_ZEPHYRBADGE
 	iftrue .Beaten
+	trainertotext WHITNEY, WHITNEY1, MEM_BUFFER_1
 	jumpstd gymstatue1
 .Beaten:
-	trainertotext FALKNER, FALKNER1, MEM_BUFFER_1
+	trainertotext WHITNEY, WHITNEY1, MEM_BUFFER_1
 	jumpstd gymstatue2
 
+WhitneyDistractedText:
+	text "Ugh, it's just"
+	line "drab in here."
+	
+	para "Pink here! Oh and"
+	line "there too!"
+	
+	para "<……><……><……>"
+	
+	para "She doesn't seem"
+	line "to notice you."
+	done
+
+WhitneyAttentionText:
+	text "Oh my!"
+	line "That rose…"
+	
+	para "It's beautiful!"
+	line "May I have it?"
+	done
+	
+WhitneyThanksText:
+	text "So you got it"
+	line "from a woman in"
+	cont "town?"
+	
+	para "Thanks so much!"
+	
+	para "Anyways…"
+	done
+
 FalknerIntroText:
-	text "I'm FALKNER, the"
-	line "VIOLET #MON GYM"
-	cont "leader!"
+	text "Hiya!"
+	
+	para "I'm Whitney,"
+	line "Secunda #mon"
+	cont "Gym's new leader!"
 
-	para "People say you can"
-	line "clip flying-type"
+	para "I came here from"
+	line "Johto on vacation"
+	cont "and was asked to"
+	cont "fill this vacancy."
+	
+	para "So I said yes and"
+	line "moved here!"
 
-	para "#MON's wings"
-	line "with a jolt of"
-	cont "electricity…"
-
-	para "I won't allow such"
-	line "insults to bird"
-	cont "#MON!"
-
-	para "I'll show you the"
-	line "real power of the"
-
-	para "magnificent bird"
-	line "#MON!"
+	para "I can't wait to"
+	line "make this gym as"
+	cont "beautiful as me!"
+	
+	para "Oh, you want to"
+	line "challenge me?"
+	
+	para "I accept!"
+	
+	para "But I'm good, so"
+	line "don't cry when I"
+	cont "win!"
 	done
 
 FalknerWinLossText:
-	text "…Darn! My dad's"
-	line "cherished bird"
-	cont "#MON…"
-
-	para "All right."
-	line "Take this."
-
-	para "It's the official"
-	line "#MON LEAGUE"
-	cont "ZEPHYRBADGE."
+	text "I… Lost…?"
+	line "Sniff… I-I'm not…"
+	cont "gonna…"
+	
+	para "Waaaaaaaaah!"
 	done
 
+WhitneyKidsAreMeanText:
+	text "Why are kids here"
+	line "so mean!?"
+	
+	para "Waaaaaah!"
+	done
+	
+WhitneyWaitText:
+	text "Sniff… Hang on!"
+	line "Wait one sec!"
+	done
+	
+WhitneySorryText:
+	text "I'm sorry about"
+	line "that, I don't"
+	cont "take losses well."
+	
+	para "But you did give"
+	line "me that rose so"
+	cont "please take this!"
+	done
+	
 ReceivedZephyrBadgeText:
 	text "<PLAYER> received"
-	line "ZEPHYRBADGE."
+	line "ROUNDBADGE."
 	done
 
 FalknerZephyrBadgeText:
-	text "ZEPHYRBADGE"
+	text "ROUNDBADGE"
 	line "raises the attack"
 	cont "power of #MON."
 
@@ -162,22 +212,12 @@ FalknerZephyrBadgeText:
 	para "FLASH, if they"
 	line "have it, anytime."
 
-	para "Here--take this"
+	para "Oh, take this"
 	line "too."
 	done
 
 FalknerTMMudSlapText:
-	text "By using a TM, a"
-	line "#MON will"
-
-	para "instantly learn a"
-	line "new move."
-
-	para "Think before you"
-	line "act--a TM can be"
-	cont "used only once."
-
-	para "TM31 contains"
+	text "TM31 contains"
 	line "MUD-SLAP."
 
 	para "It reduces the"
@@ -192,62 +232,55 @@ FalknerTMMudSlapText:
 	done
 
 FalknerFightDoneText:
-	text "There are #MON"
-	line "GYMS in cities and"
-	cont "towns ahead."
-
-	para "You should test"
-	line "your skills at"
-	cont "these GYMS."
-
-	para "I'm going to train"
-	line "harder to become"
-
-	para "the greatest bird"
-	line "master!"
+	text "I'm not a little"
+	line "kid anymore, but"
+	cont "I still have some"
+	cont "growing up to do."
+	
+	para "<PLAYER>, you have"
+	line "what it takes to"
+	cont "go all the way!"
+	
+	para "Don't let anything"
+	line "slow you down!"
 	done
 
 BirdKeeperRodSeenText:
-	text "The keyword is"
-	line "guts!"
+	text "I hope I can be"
+	line "as cute as our"
+	cont "new leader!"
 
-	para "Those here are"
-	line "training night and"
-
-	para "day to become bird"
-	line "#MON masters."
-
-	para "Come on!"
 	done
 
 BirdKeeperRodBeatenText:
-	text "Gaaah!"
+	text "Oh no! Rude!"
 	done
 
 BirdKeeperRodAfterBattleText:
-	text "FALKNER's skills"
-	line "are for real!"
-
-	para "Don't get cocky"
-	line "just because you"
-	cont "beat me!"
+	text "I hope I can be"
+	line "as good a trainer"
+	cont "as her too!"
 	done
 
 BirdKeeperAbeSeenText:
-	text "Let me see if you"
-	line "are good enough to"
-	cont "face FALKNER!"
+	text "The new leader is"
+	line "pretty good."
+	
+	para "I'm not too sure"
+	line "about her decor"
+	cont "ideas though…"
 	done
 
 BirdKeeperAbeBeatenText:
-	text "This can't be"
-	line "true!"
+	text "I'm just not a fan"
+	line "pink…"
 	done
 
 BirdKeeperAbeAfterBattleText:
-	text "This is pathetic,"
-	line "losing to some"
-	cont "rookie trainer…"
+	text "I guess it doesn't"
+	line "matter in the end."
+	
+	para "Our leader is good!"
 	done
 
 VioletGymGuyText:
@@ -264,19 +297,27 @@ VioletGymGuyText:
 	para "You believe?"
 	line "Then listen."
 
-	para "The grass-type is"
-	line "weak against the"
-
-	para "flying-type. Keep"
-	line "this in mind."
+	para "Normal types have"
+	line "almost no weakness."
+	
+	para "That said, they have"
+	line "no type advantage."
+	
+	para "Either way, bring"
+	line "your best!"
 	done
 
 VioletGymGuyWinText:
 	text "Nice battle! Keep"
 	line "it up, and you'll"
 
-	para "be the CHAMP in no"
+	para "be the Champ in no"
 	line "time at all!"
+	done
+	
+GaveRoseText:
+	text "You gave Whitney"
+	line "the Pink Rose!"
 	done
 
 SecundaGym_MapEvents:

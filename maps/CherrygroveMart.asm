@@ -47,8 +47,9 @@ AboutMartATM_Text:
 	line "an ATM in it."
 	
 	para "You can open an"
-	line "account on the spot"
-	cont "start saving!"
+	line "account on the"
+	cont "spot and start" 
+	cont "saving!"
 	done
 	
 ATMScript:

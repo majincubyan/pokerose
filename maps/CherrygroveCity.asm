@@ -203,7 +203,12 @@ SecundaCityCemetarySign:
 	closetext
 	end
 
-
+SecundaCityGymSign:
+	opentext
+	writetext SecundaGymSignText
+	waitbutton
+	closetext
+	end
 ;==========MOVEMENT====================
 	
 RivalStep:
@@ -239,9 +244,9 @@ RivalApproch:
 SecundaCitySignText:
 	text "Secunda City"
 	
-	para "The timeless"
-	line "hamlet of the"
-	cont "forest."
+	para "The Timeless"
+	line "Hamlet of the"
+	cont "Forest"
 	done
 
 ToCemetaryText:
@@ -298,7 +303,7 @@ RivalText_YouWon:
 
 RivalText_YouLost:
 	text "My #mon and I"
-	line "trained hard."
+	line "have worked hard."
 
 	para "One win doesn't"
 	line "matter though."
@@ -310,8 +315,46 @@ RivalText_YouLost:
 	
 	para "<PLAYER>, you"
 	line "should work harder"
-	cont "if you want to win"
-	cont "against me."
+	cont "if you want any"
+	cont "hope to win."
+	done
+
+SecundaGymSignText:
+	text "Secunda City"
+	line "#mon Gym"
+	cont "Leader: Whitney"
+	
+	para "The Incredibly"
+	line "Beautiful Woman!"
+	done
+	
+OldManText:
+	text "The cemetary was"
+	line "built to honor the"
+	cont "lives of #mon"
+	cont "and trainers."
+	
+	para "The city was built"
+	line "years later as"
+	
+	para "more people wanted"
+	line "to stay close to"
+	
+	para "their loved ones."
+	done
+
+ICameToBattleText:
+	text "I heard there was"
+	line "new leader at the"
+	cont "gym from Johto."
+	
+	para "I went to battle"
+	line "her, but all she"
+	cont "wanted to do was"
+	cont "redecorate."
+	
+	para "Is she really a"
+	line "gym leader?"
 	done
 
 CherrygroveCity_MapEvents:
@@ -328,7 +371,7 @@ CherrygroveCity_MapEvents:
 	coord_event 14, 14, SCENE_SECUNDACITY_MEET_RIVAL, SecundaRivalBattle2
 	coord_event 14, 15, SCENE_SECUNDACITY_MEET_RIVAL, SecundaRivalBattle3
 
-	db 3 ; bg events
+	db 4 ; bg events
 	bg_event 18, 10, BGEVENT_READ, SecundaCitySign
 	bg_event 24,  9, BGEVENT_READ, SecundaCityMartSign
 	bg_event 28,  9, BGEVENT_READ, SecundaCityPokecenterSign
