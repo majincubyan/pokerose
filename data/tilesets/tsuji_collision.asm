@@ -197,4 +197,8 @@
 	tilecoll WALL, WATER, WALL, WALL ; c4
 	tilecoll WATER, WATER, WALL, WALL ; c5
 	tilecoll WATER, WALL, WALL, WALL ; c6
-	tilecoll WALL, WALL, WALL, WALL ; c7
+	tilecoll WALL, WALL, FLOOR, FLOOR ; c7
+	tilecoll FLOOR, WALL, FLOOR, WALL ; c8
+	tilecoll WALL, WALL, WALL, WALL ; c9
+	tilecoll WALL, WALL, WALL, WALL ; ca
+	tilecoll WALL, WALL, WALL, WALL ; cb

@@ -14,9 +14,16 @@ VioletGymFalknerScript:
 	checkevent EVENT_GOT_ROUNDBADGE
 	iftrue .FightDone
 	checkevent EVENT_BEAT_FALKNER
-	iftrue .FightDone
+	iftrue .WhitneyCrying
+	checkevent EVENT_GAVE_PINK_ROSE
+	iftrue .WhitneyBattle
+	checkevent EVENT_GOT_PINK_ROSE
+	iftrue .WhitneyAttention
 	writetext WhitneyDistractedText
 	waitbutton
+	closetext
+	end
+.WhitneyAttention:
 	faceplayer
 	writetext WhitneyAttentionText
 	waitbutton
@@ -24,6 +31,7 @@ VioletGymFalknerScript:
 	waitbutton
 	writetext WhitneyThanksText
 	waitbutton
+.WhitneyBattle:
 	writetext FalknerIntroText
 	waitbutton
 	closetext
@@ -32,6 +40,7 @@ VioletGymFalknerScript:
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_FALKNER
+	opentext
 .WhitneyCrying:
 	writetext WhitneyKidsAreMeanText
 	waitbutton
@@ -108,7 +117,7 @@ VioletGymStatue:
 
 WhitneyDistractedText:
 	text "Ugh, it's just"
-	line "drab in here."
+	line "so drab in here."
 	
 	para "Pink here! Oh and"
 	line "there too!"
@@ -334,7 +343,7 @@ SecundaGym_MapEvents:
 	bg_event  6, 13, BGEVENT_READ, VioletGymStatue
 
 	db 4 ; object events
-	object_event  5,  2, SPRITE_FALKNER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, VioletGymFalknerScript, -1
+	object_event  5,  2, SPRITE_WHITNEY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, VioletGymFalknerScript, -1
 	object_event  7,  5, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 2, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerBirdKeeperRod, -1
 	object_event  7,  9, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 2, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerBirdKeeperAbe, -1
 	object_event  7, 13, SPRITE_GYM_GUY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, VioletGymGuyScript, -1

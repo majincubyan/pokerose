@@ -160,6 +160,7 @@ CherrygroveGroupSprites:
 	db SPRITE_BLACK_BELT
 	db SPRITE_COOLTRAINER_M
 	db SPRITE_SHUPPET
+	db SPRITE_GRANNY
 	db 0 ; end
 
 ; Route37 and EcruteakCity are connected

@@ -312,7 +312,11 @@ CelebiGaveThisText:
 	text "WHAT!?"
 	
 	para "Y-you… You saw"
-	line "Celebi?!"
+	line "a #mon that"
+	cont "looks like the"
+	
+	para "one on the"
+	line "statues?!"
 	
 	para "That's incredible!"
 	
@@ -328,7 +332,7 @@ CelebiGaveThisText:
 	cont "by Celebi?"
 	
 	para "I can't say what"
-	line "what it for, but"
+	line "what it's for, but"
 	
 	para "you should keep"
 	line "it for now."
@@ -354,7 +358,8 @@ HusbandWorkingText:
 
 CelebiPlacesInHandText:
 	text "Something floats"
-	line "down from Celebi."
+	line "down from the"
+	cont "#mon."
 	done
 
 NoIdeaText:

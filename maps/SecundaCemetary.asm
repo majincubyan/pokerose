@@ -1,6 +1,7 @@
 	const_def 2 ; object constants
 	const CEMETARY_SHUPPET
 	const CEMETARY_CURMUDGEON1
+	const CEMETARY_FLOWERGRANDMA
 
 
 SecundaCemetary_MapScripts:
@@ -35,9 +36,27 @@ ShuppetScript:
 	reloadmapafterbattle
 	end
 	
-GrampsScript:
+LeslieScript:
 	end
 
+FlowerGrandmaScript:
+	faceplayer
+	opentext
+	writetext FlowerGrandmaText1
+	waitbutton
+	writetext FlowerGrandmaText2
+	waitbutton
+	verbosegiveitem PINK_ROSE
+	setevent EVENT_GOT_PINK_ROSE
+	writetext FlowerGrandmaText3
+	waitbutton
+	closetext
+	special FadeBlackQuickly
+	special ReloadSpritesNoPalettes
+	disappear CEMETARY_FLOWERGRANDMA
+	pause 30
+	special FadeInQuickly
+	end
 	
 ; Text
 
@@ -104,7 +123,7 @@ FlowerGrandmaText1:
 	done
 
 FlowerGrandmaText2:
-	text "It's a pink rose"
+	text "It's a pink rose,"
 	line "dear. I'm sure"
 	cont "there is someone"
 	
@@ -127,6 +146,7 @@ SecundaCemetary_MapEvents:
 	
 	db 0 ; bg events
 
-	db 2 ; object events
+	db 3 ; object events
 	object_event 4, 5, SPRITE_SHUPPET, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ShuppetScript, EVENT_UNION_CAVE_B2F_LAPRAS
-	object_event 8, 15, SPRITE_DELINQUENT, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, GrampsScript, -1
+	object_event 8, 15, SPRITE_OLD_MAN, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, LeslieScript, -1
+	object_event 11, 5, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, FlowerGrandmaScript, EVENT_GOT_PINK_ROSE

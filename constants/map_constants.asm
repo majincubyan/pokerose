@@ -151,7 +151,7 @@ ENDM
 	;map_const EEVEE_HOUSE_LANDING, 5, 5
 	;map_const EEVEE_HOUSE_GARDEN, 10, 9
 	;map_const EEVEE_HOUSE_HALL, 15, 11
-	;map_const EEVEE_HOUSE_ROOM. 5, 4
+	;map_const EEVEE_HOUSE_ROOM, 5, 4
 
 	newgroup                                                      ;  4
 

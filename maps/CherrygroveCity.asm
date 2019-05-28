@@ -26,10 +26,10 @@ SecundaRivalScript:
 	end
 
 SecundaRivalBattle3:
-	special FadeOutMusic
 	moveobject SECUNDA_SHANNON, 10, 14
 	appear SECUNDA_SHANNON
 	applymovement SECUNDA_SHANNON, RivalStep
+	special FadeOutMusic
 	pause 15
 	playmusic MUSIC_RIVAL_ENCOUNTER
 	showemote EMOTE_SHOCK, SECUNDA_SHANNON, 15
@@ -209,6 +209,8 @@ SecundaCityGymSign:
 	waitbutton
 	closetext
 	end
+	
+
 ;==========MOVEMENT====================
 	
 RivalStep:
@@ -271,7 +273,7 @@ RivalMyNameIsText:
 RivalNameText:
 	text "<RIVAL>."
 	
-	para "So let's see how"
+	para "So, let's see how"
 	line "good you are."
 	done
 	
@@ -355,6 +357,21 @@ ICameToBattleText:
 	
 	para "Is she really a"
 	line "gym leader?"
+	done
+	
+SlowDownText:
+	text "Whoa, whoa, whoa!"
+	
+	para "Slow down there, kid!"
+	line "You can't head that"
+	cont "way yet."
+	
+	para "Why?"
+	
+	para "<……><……><……>"
+	
+	para "Well, it doesn't go"
+	line "anywhere yet."
 	done
 
 CherrygroveCity_MapEvents:
