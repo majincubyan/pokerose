@@ -43,7 +43,7 @@ EngineFlags:
 	engine_flag wBikeFlags, BIKEFLAGS_ALWAYS_ON_BIKE_F
 	engine_flag wBikeFlags, BIKEFLAGS_DOWNHILL_F
 
-	engine_flag wJohtoBadges, ZEPHYRBADGE
+	engine_flag wJohtoBadges, FORESTBADGE
 	engine_flag wJohtoBadges, HIVEBADGE
 	engine_flag wJohtoBadges, PLAINBADGE
 	engine_flag wJohtoBadges, FOGBADGE

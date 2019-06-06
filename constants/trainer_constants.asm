@@ -111,7 +111,7 @@ KRIS EQU __enum__
 	const JOEY1
 	const MIKEY
 	const ALBERT
-	const GORDON
+	const KEN2
 	const SAMUEL
 	const IAN
 	const JOEY2
@@ -710,7 +710,10 @@ KRIS EQU __enum__
 	const JANET
 	
 	trainerclass CURMUDGEON
+	const LESLIE
+	const LIONEL
 	
 	trainerclass DELINQUENT
-
+	const SHINJI
+	
 NUM_TRAINER_CLASSES EQU __enum__

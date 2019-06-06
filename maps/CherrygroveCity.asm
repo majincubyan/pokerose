@@ -210,6 +210,21 @@ SecundaCityGymSign:
 	closetext
 	end
 	
+OldManScript:
+	faceplayer
+	opentext
+	writetext OldManText
+	waitbutton
+	closetext
+	end
+	
+SecundaTrainerScript:
+	faceplayer
+	opentext
+	writetext ICameToBattleText
+	waitbutton
+	closetext
+	end
 
 ;==========MOVEMENT====================
 	
@@ -358,21 +373,7 @@ ICameToBattleText:
 	para "Is she really a"
 	line "gym leader?"
 	done
-	
-SlowDownText:
-	text "Whoa, whoa, whoa!"
-	
-	para "Slow down there, kid!"
-	line "You can't head that"
-	cont "way yet."
-	
-	para "Why?"
-	
-	para "<……><……><……>"
-	
-	para "Well, it doesn't go"
-	line "anywhere yet."
-	done
+
 
 CherrygroveCity_MapEvents:
 	db 0, 0 ; filler
@@ -394,5 +395,8 @@ CherrygroveCity_MapEvents:
 	bg_event 28,  9, BGEVENT_READ, SecundaCityPokecenterSign
 	bg_event 21,  3, BGEVENT_READ, SecundaCityCemetarySign
 	
-	db 1 ; object events
+	db 3 ; object events
 	object_event 10, 11, SPRITE_SHANNON, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SecundaRivalScript, EVENT_NEL_LAB_OUTSIDE
+	object_event 24, 11, SPRITE_GRAMPS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, OldManScript, -1
+	object_event 12,  7, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, SecundaTrainerScript, -1
+	

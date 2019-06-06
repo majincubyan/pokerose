@@ -19,9 +19,9 @@ FalknerGroup:
 
 WhitneyGroup:
 	; WHITNEY (1)
-	db "WHITNEY@", TRAINERTYPE_MOVES
-	db 18, NOIBAT,   DOUBLESLAP, MIMIC, ENCORE, METRONOME
-	db 20, MILTANK,    ROLLOUT, ATTRACT, STOMP, MILK_DRINK
+	db "Whitney@", TRAINERTYPE_MOVES
+	db 10, EEVEE,   SAND_ATTACK, TACKLE, ATTRACT, DOUBLE_TEAM
+	db 14, MILTANK,    ROLLOUT, ATTRACT, STOMP, MILK_DRINK
 	db -1 ; end
 
 BugsyGroup:
@@ -337,8 +337,8 @@ ErikaGroup:
 
 YoungsterGroup:
 	; YOUNGSTER (1)
-	db "JOEY@", TRAINERTYPE_NORMAL
-	db  4, ZIGZAGOON
+	db "Joey@", TRAINERTYPE_NORMAL
+	db  6, ZIGZAGOON
 	db -1 ; end
 
 	; YOUNGSTER (2)
@@ -348,14 +348,14 @@ YoungsterGroup:
 	db -1 ; end
 
 	; YOUNGSTER (3)
-	db "ALBERT@", TRAINERTYPE_NORMAL
-	db  6, ZIGZAGOON
-	db  8, POOCHYENA
+	db "Albert@", TRAINERTYPE_NORMAL
+	db  7, ZIGZAGOON
 	db -1 ; end
 
 	; YOUNGSTER (4)
-	db "GORDON@", TRAINERTYPE_NORMAL
-	db 10, SHUPPET
+	db "Ken@", TRAINERTYPE_NORMAL
+	db 8, ZIGZAGOON
+	db 8, ZIGZAGOON
 	db -1 ; end
 
 	; YOUNGSTER (5)
@@ -718,10 +718,8 @@ LassGroup:
 	db -1 ; end
 
 	; LASS (6)
-	db "LINDA@", TRAINERTYPE_NORMAL
-	db 30, BELDUM
-	db 32, METANG
-	db 34, METAGROSS
+	db "Linda@", TRAINERTYPE_NORMAL
+	db 10, SWABLU
 	db -1 ; end
 
 	; LASS (7)
@@ -2193,17 +2191,20 @@ SuperNerdGroup:
 Rival2Group:
 	; RIVAL2 (1)
 	db "<RIVAL>@", TRAINERTYPE_NORMAL
-	db 5, ROWLET
+	db  9, EMOLGA
+	db 13, ROWLET
 	db -1 ; end
 
 	; RIVAL2 (2)
 	db "<RIVAL>@", TRAINERTYPE_NORMAL
-	db 5, CHIMCHAR
+	db  9, EMOLGA
+	db 13, CHIMCHAR
 	db -1 ; end
 
 	; RIVAL2 (3)
 	db "<RIVAL>@", TRAINERTYPE_NORMAL
-	db 5, OSHAWOTT
+	db  9, EMOLGA
+	db 13, OSHAWOTT
 	db -1 ; end
 
 	; RIVAL2 (4)
@@ -3503,6 +3504,16 @@ CoachFGroup:
 	db -1 ; end
 
 CurmudgeonGroup:
+	db "Leslie@", TRAINERTYPE_NORMAL
+	db  6, GASTLY
+	db  9, GASTLY
+	db -1 ; end
+	
+	db "Lionel@", TRAINERTYPE_NORMAL
+	db 11, SABLEYE
+	db -1 ; end
 
 DelinquentGroup:
-
+	db "Shinji@", TRAINERTYPE_NORMAL
+	db 11, PANCHAM
+	db -1 ; end

@@ -154,7 +154,7 @@ ENDM
 	map_attributes Route28, ROUTE_28, $2c, WEST
 	connection west, SilverCaveOutside, SILVER_CAVE_OUTSIDE, -3, 6, 12
 
-	map_attributes Route29, ROUTE_29, $05, NORTH | SOUTH | EAST
+	map_attributes Route29, ROUTE_29, $04, NORTH | SOUTH | EAST
 	connection north, NewBarkTown, NEW_BARK_TOWN, 0
 	connection south, SecundaForest101, SECUNDA_FOREST_101, 0
 	connection east, MapleLab, MAPLE_LAB, 3
@@ -695,3 +695,4 @@ ENDM
 	map_attributes SecundaForestGate1, SECUNDA_FOREST_GATE1, $00, 0
 	map_attributes SecundaForest, SECUNDA_FOREST, $00, 0
 	map_attributes SecundaRuins1F, SECUNDA_RUINS_1F, $00, 0
+	map_attributes FlowerHouse, FLOWER_HOUSE, $00, 0

@@ -214,7 +214,7 @@ Peon2SeenText:
 	line "secrets of the"
 	cont "ruins, our true"
 	
-	para "plans can truly"
+	para "plans can really"
 	line "begin."
 	done
 	
@@ -325,14 +325,14 @@ CelebiGaveThisText:
 	cont "Celebi, so it"
 	
 	para "makes sense but"
-	line "thats amazing!"
+	line "that's amazing!"
 	
 	para "And you say this"
 	line "was given to you"
 	cont "by Celebi?"
 	
 	para "I can't say what"
-	line "what it's for, but"
+	line "it's for, but"
 	
 	para "you should keep"
 	line "it for now."
@@ -392,9 +392,9 @@ SecundaRuins1F_MapEvents:
 	bg_event 4, 3, BGEVENT_UP, StrangeSymbols
 
 	db 6 ; object events
-	object_event 25,  6, SPRITE_ETERNAL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, RuinsEternalPeon1, EVENT_BEAT_RUINS_ADMIN
-	object_event 16, 15, SPRITE_ETERNAL, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, RuinsEternalPeon2, EVENT_BEAT_RUINS_ADMIN
-	object_event  4, 16, SPRITE_ETERNAL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, RuinsEternalPeon3, EVENT_BEAT_RUINS_ADMIN
+	object_event 25,  6, SPRITE_ETERNAL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, RuinsEternalPeon1, EVENT_BEAT_RUINS_ADMIN
+	object_event 16, 15, SPRITE_ETERNAL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, RuinsEternalPeon2, EVENT_BEAT_RUINS_ADMIN
+	object_event  4, 16, SPRITE_ETERNAL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, RuinsEternalPeon3, EVENT_BEAT_RUINS_ADMIN
 	object_event  5,  4, SPRITE_ETERNAL, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, HeadPeonScript, EVENT_BEAT_RUINS_ADMIN
 	object_event  4,  2, SPRITE_CELEBI, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, HeadPeonScript, EVENT_RUINS_CELEBI_1
 	object_event  5,  3, SPRITE_ROCKER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DistractedScript, EVENT_HUSBAND_OUTSIDE_RUINS

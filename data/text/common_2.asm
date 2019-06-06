@@ -547,15 +547,8 @@ UnknownText_0x1c0aa9::
 UnknownText_0x1c0acc::
 	text_from_ram wStringBuffer3
 	text_start
-	line "fainted!"
-	prompt
-
-UnknownText_0x1c0ada::
-	text "<PLAYER> is out of"
-	line "useable #mon!"
-
-	para "<PLAYER> whited"
-	line "out!"
+	line "survived the"
+	cont "poisoning!"
 	prompt
 
 UnknownText_0x1c0b03::

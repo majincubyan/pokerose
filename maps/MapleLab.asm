@@ -31,7 +31,7 @@ NelApprochScript1:
 	buttonsound
 	itemtotext POKE_BALL, MEM_BUFFER_1
 	scall PlayerReceiveTheBalls
-	giveitem POKE_BALL, 5
+	giveitem POKE_BALL, 10
 	writetext NelExplainBalls
 	buttonsound
 	itemnotify

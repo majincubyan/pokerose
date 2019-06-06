@@ -502,3 +502,6 @@ ENDM
 	map_const SECUNDA_FOREST_GATE2,                         5,  4 ; 11
 	map_const SECUNDA_CEMETARY, 10, 18
 	map_const SECUNDA_GYM,                                  5,  8 ;  7
+	map_const FLOWER_HOUSE, 4, 4
+	
+	;map_const LOST_ISLAND, 12, 9

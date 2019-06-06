@@ -979,6 +979,7 @@ CopycatsHouse1F_Blocks:
 CopycatsHouse2F_Blocks:
 	INCBIN "maps/CopycatsHouse2F.ablk"
 
+FlowerHouse_Blocks:
 GoldenrodFlowerShop_Blocks:
 	INCBIN "maps/GoldenrodFlowerShop.ablk"
 

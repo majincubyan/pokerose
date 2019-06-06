@@ -7,17 +7,9 @@
 	const GOLDENRODGYM_GYM_GUY
 
 GoldenrodGym_MapScripts:
-	db 2 ; scene scripts
-	scene_script .DummyScene0 ; SCENE_GOLDENRODGYM_NOTHING
-	scene_script .DummyScene1 ; SCENE_GOLDENRODGYM_WHITNEY_STOPS_CRYING
+	db 0 ; scene scrpts
 
 	db 0 ; callbacks
-
-.DummyScene0:
-	end
-
-.DummyScene1:
-	end
 
 GoldenrodGymWhitneyScript:
 	faceplayer
@@ -33,7 +25,6 @@ GoldenrodGymWhitneyScript:
 	reloadmapafterbattle
 	setevent EVENT_BEAT_WHITNEY
 	setevent EVENT_MADE_WHITNEY_CRY
-	setscene SCENE_GOLDENRODGYM_WHITNEY_STOPS_CRYING
 	setevent EVENT_BEAT_BEAUTY_VICTORIA
 	setevent EVENT_BEAT_BEAUTY_SAMANTHA
 	setevent EVENT_BEAT_LASS_CARRIE
@@ -67,7 +58,6 @@ GoldenrodGymWhitneyScript:
 	verbosegiveitem TM_ATTRACT
 	iffalse .NoRoomForAttract
 	setevent EVENT_GOT_TM45_ATTRACT
-	writetext WhitneyAttractText
 	waitbutton
 	closetext
 	end
@@ -110,7 +100,6 @@ WhitneyCriesScript:
 	waitbutton
 	closetext
 	applymovement GOLDENRODGYM_LASS2, BridgetWalksAwayMovement
-	setscene SCENE_GOLDENRODGYM_NOTHING
 	clearevent EVENT_MADE_WHITNEY_CRY
 	end
 
@@ -248,17 +237,6 @@ WhitneyPlainBadgeText:
 	line "this too!"
 	done
 
-WhitneyAttractText:
-	text "It's ATTRACT!"
-	line "It makes full use"
-
-	para "of a #MON's"
-	line "charm."
-
-	para "Isn't it just per-"
-	line "fect for a cutie"
-	cont "like me?"
-	done
 
 WhitneyGoodCryText:
 	text "Ah, that was a"
@@ -384,8 +362,7 @@ GoldenrodGym_MapEvents:
 	warp_event  2, 17, GOLDENROD_CITY, 1
 	warp_event  3, 17, GOLDENROD_CITY, 1
 
-	db 1 ; coord events
-	coord_event  8,  5, SCENE_GOLDENRODGYM_WHITNEY_STOPS_CRYING, WhitneyCriesScript
+	db 0 ; coord events
 
 	db 2 ; bg events
 	bg_event  1, 15, BGEVENT_READ, GoldenrodGymStatue

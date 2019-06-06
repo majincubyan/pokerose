@@ -21,6 +21,8 @@ MapleDaughter:
 	writetext BerriesHealText
 	waitbutton
 	setevent EVENT_GOT_BERRY_FROM_MAPLE_HOUSE
+	closetext
+	end
 .ParentsWorking:
 	writetext ParentsWorkingText
 	waitbutton

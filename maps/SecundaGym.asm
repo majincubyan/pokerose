@@ -1,17 +1,25 @@
 	const_def 2 ; object constants
-	const VIOLETGYM_FALKNER
+	const SECUNDAGYM_WHITNEY
 	const VIOLETGYM_YOUNGSTER1
 	const VIOLETGYM_YOUNGSTER2
 	const VIOLETGYM_GYM_GUY
 
 SecundaGym_MapScripts:
-	db 0 ; scene scripts
+	db 2 ; scene scripts
+	scene_script .DummyScene0 ; SCENE_GOLDENRODGYM_NOTHING
+	scene_script .DummyScene1 ; SCENE_GOLDENRODGYM_WHITNEY_STOPS_CRYING
 
 	db 0 ; callbacks
+	
+.DummyScene0:
+	end
+
+.DummyScene1:
+	end
 
 VioletGymFalknerScript:
 	opentext
-	checkevent EVENT_GOT_ROUNDBADGE
+	checkevent EVENT_GOT_FORESTBADGE
 	iftrue .FightDone
 	checkevent EVENT_BEAT_FALKNER
 	iftrue .WhitneyCrying
@@ -29,6 +37,8 @@ VioletGymFalknerScript:
 	waitbutton
 	writetext GaveRoseText
 	waitbutton
+	takeitem PINK_ROSE, 1
+	setevent EVENT_GAVE_PINK_ROSE
 	writetext WhitneyThanksText
 	waitbutton
 .WhitneyBattle:
@@ -36,40 +46,109 @@ VioletGymFalknerScript:
 	waitbutton
 	closetext
 	winlosstext FalknerWinLossText, 0
-	loadtrainer FALKNER, FALKNER1
+	loadtrainer WHITNEY, WHITNEY1
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_FALKNER
+	setscene SCENE_SECUNDA_GYM_WHITNEY_STOPS_CRYING
 	opentext
 .WhitneyCrying:
+	faceplayer
 	writetext WhitneyKidsAreMeanText
 	waitbutton
 	closetext
 	end
 .FightDone:
-	checkevent EVENT_GOT_TM31_MUD_SLAP
+	checkevent EVENT_GOT_TM45_ATTRACT
 	iftrue .SpeechAfterTM
-	setevent EVENT_BEAT_BIRD_KEEPER_ROD
-	setevent EVENT_BEAT_BIRD_KEEPER_ABE
-	writetext FalknerZephyrBadgeText
+	setevent EVENT_BEAT_LASS_LINDA
+	setevent EVENT_BEAT_YOUNGSTER_KEN
+	writetext WhitneyForestBadgeText
 	buttonsound
-	verbosegiveitem TM_MUD_SLAP
+	verbosegiveitem TM_ATTRACT
 	iffalse .NoRoomForMudSlap
-	setevent EVENT_GOT_TM31_MUD_SLAP
-	writetext FalknerTMMudSlapText
+	setevent EVENT_GOT_TM45_ATTRACT
+	writetext WhitneyAttractText
 	waitbutton
 	closetext
 	end
-
 .SpeechAfterTM:
+	faceplayer
 	writetext FalknerFightDoneText
 	waitbutton
 .NoRoomForMudSlap:
 	closetext
 	end
 
+WhitneyHoldOnScript1:
+	setscene SCENE_SECUNDA_GYM_NOTHING
+	faceplayer
+	showemote EMOTE_SHOCK, SECUNDAGYM_WHITNEY, 20
+	opentext
+	writetext WhitneyWaitText
+	waitbutton
+	closetext
+	turnobject PLAYER, UP
+	applymovement PLAYER, WhitneySteps1
+	faceplayer
+	opentext
+	writetext WhitneySorryText
+	waitbutton
+	buttonsound
+	waitsfx
+	writetext ReceivedForestBadgeText
+	playsound SFX_GET_BADGE
+	waitsfx
+	setflag ENGINE_FORESTBADGE
+	setevent EVENT_GOT_FORESTBADGE
+	setevent EVENT_BEAT_LASS_LINDA
+	setevent EVENT_BEAT_YOUNGSTER_KEN
+	writetext WhitneyForestBadgeText
+	buttonsound
+	verbosegiveitem TM_ATTRACT
+	iffalse .NoRoomForMudSlap
+	setevent EVENT_GOT_TM45_ATTRACT
+	writetext WhitneyAttractText
+	waitbutton
+.NoRoomForMudSlap:
+	closetext
+	end
+	
+WhitneyHoldOnScript2:
+	setscene SCENE_SECUNDA_GYM_NOTHING
+	faceplayer
+	showemote EMOTE_SHOCK, SECUNDAGYM_WHITNEY, 20
+	opentext
+	writetext WhitneyWaitText
+	waitbutton
+	closetext
+	turnobject PLAYER, UP
+	applymovement PLAYER, WhitneySteps2
+	opentext
+	writetext WhitneySorryText
+	waitbutton
+	buttonsound
+	waitsfx
+	writetext ReceivedForestBadgeText
+	playsound SFX_GET_BADGE
+	waitsfx
+	setflag ENGINE_FORESTBADGE
+	setevent EVENT_GOT_FORESTBADGE
+	setevent EVENT_BEAT_LASS_LINDA
+	setevent EVENT_BEAT_YOUNGSTER_KEN
+	writetext WhitneyForestBadgeText
+	buttonsound
+	verbosegiveitem TM_ATTRACT
+	iffalse .NoRoomForMudSlap
+	setevent EVENT_GOT_TM45_ATTRACT
+	writetext WhitneyAttractText
+	waitbutton
+.NoRoomForMudSlap:
+	closetext
+	end
+
 TrainerBirdKeeperRod:
-	trainer BIRD_KEEPER, ROD, EVENT_BEAT_BIRD_KEEPER_ROD, BirdKeeperRodSeenText, BirdKeeperRodBeatenText, 0, .Script
+	trainer LASS, LINDA, EVENT_BEAT_LASS_LINDA, BirdKeeperRodSeenText, BirdKeeperRodBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
@@ -80,7 +159,7 @@ TrainerBirdKeeperRod:
 	end
 
 TrainerBirdKeeperAbe:
-	trainer BIRD_KEEPER, ABE, EVENT_BEAT_BIRD_KEEPER_ABE, BirdKeeperAbeSeenText, BirdKeeperAbeBeatenText, 0, .Script
+	trainer YOUNGSTER, KEN2, EVENT_BEAT_YOUNGSTER_KEN, BirdKeeperAbeSeenText, BirdKeeperAbeBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
@@ -107,13 +186,24 @@ VioletGymGuyScript:
 	end
 
 VioletGymStatue:
-	checkflag ENGINE_ZEPHYRBADGE
+	checkflag ENGINE_FORESTBADGE
 	iftrue .Beaten
 	trainertotext WHITNEY, WHITNEY1, MEM_BUFFER_1
 	jumpstd gymstatue1
 .Beaten:
 	trainertotext WHITNEY, WHITNEY1, MEM_BUFFER_1
 	jumpstd gymstatue2
+	
+WhitneySteps1:
+	step UP
+	step UP
+	turn_head RIGHT
+	step_end
+	
+WhitneySteps2:
+	step UP
+	step_end
+
 
 WhitneyDistractedText:
 	text "Ugh, it's just"
@@ -200,44 +290,41 @@ WhitneySorryText:
 	line "that, I don't"
 	cont "take losses well."
 	
-	para "But you did give"
+	para "But, you did give"
 	line "me that rose so"
 	cont "please take this!"
 	done
 	
-ReceivedZephyrBadgeText:
+ReceivedForestBadgeText:
 	text "<PLAYER> received"
-	line "ROUNDBADGE."
+	line "ForestBadge."
 	done
 
-FalknerZephyrBadgeText:
-	text "ROUNDBADGE"
+WhitneyForestBadgeText:
+	text "ForestBadge"
 	line "raises the attack"
-	cont "power of #MON."
+	cont "power of #mon."
 
 	para "It also enables"
-	line "#MON to use"
+	line "#mon to use"
 
-	para "FLASH, if they"
+	para "Flash, if they"
 	line "have it, anytime."
 
 	para "Oh, take this"
 	line "too."
 	done
 
-FalknerTMMudSlapText:
-	text "TM31 contains"
-	line "MUD-SLAP."
+WhitneyAttractText:
+	text "It's ATTRACT!"
+	line "It makes full use"
 
-	para "It reduces the"
-	line "enemy's accuracy"
+	para "of a #MON's"
+	line "charm."
 
-	para "while it causes"
-	line "damage."
-
-	para "In other words, it"
-	line "is both defensive"
-	cont "and offensive."
+	para "Isn't it just"
+	line "perfect for a"
+	cont "cutie like me?"
 	done
 
 FalknerFightDoneText:
@@ -282,7 +369,7 @@ BirdKeeperAbeSeenText:
 
 BirdKeeperAbeBeatenText:
 	text "I'm just not a fan"
-	line "pink…"
+	line "of pink…"
 	done
 
 BirdKeeperAbeAfterBattleText:
@@ -293,8 +380,10 @@ BirdKeeperAbeAfterBattleText:
 	done
 
 VioletGymGuyText:
-	text "Hey! I'm no train-"
-	line "er but I can give"
+	text "Hey!" 
+	
+	para "I'm no trainer"
+	line "but I can give"
 	cont "some advice!"
 
 	para "Believe me!"
@@ -307,10 +396,12 @@ VioletGymGuyText:
 	line "Then listen."
 
 	para "Normal types have"
-	line "almost no weakness."
+	line "virtually no"
+	cont "weaknesses!"
 	
-	para "That said, they have"
-	line "no type advantage."
+	para "That said, they"
+	line "have no real type"
+	cont "advantage."
 	
 	para "Either way, bring"
 	line "your best!"
@@ -328,6 +419,7 @@ GaveRoseText:
 	text "You gave Whitney"
 	line "the Pink Rose!"
 	done
+	
 
 SecundaGym_MapEvents:
 	db 0, 0 ; filler
@@ -336,14 +428,16 @@ SecundaGym_MapEvents:
 	warp_event  4, 15, CHERRYGROVE_CITY, 5
 	warp_event  5, 15, CHERRYGROVE_CITY, 5
 
-	db 0 ; coord events
-
+	db 2 ; coord events
+	coord_event 4, 4, SCENE_SECUNDA_GYM_WHITNEY_STOPS_CRYING, WhitneyHoldOnScript1
+	coord_event 5, 4, SCENE_SECUNDA_GYM_WHITNEY_STOPS_CRYING, WhitneyHoldOnScript2
+	
 	db 2 ; bg events
 	bg_event  3, 13, BGEVENT_READ, VioletGymStatue
 	bg_event  6, 13, BGEVENT_READ, VioletGymStatue
 
 	db 4 ; object events
-	object_event  5,  2, SPRITE_WHITNEY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, VioletGymFalknerScript, -1
-	object_event  7,  5, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 2, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerBirdKeeperRod, -1
-	object_event  7,  9, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 2, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerBirdKeeperAbe, -1
+	object_event  5,  2, SPRITE_WHITNEY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, VioletGymFalknerScript, -1
+	object_event  7,  5, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 2, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerBirdKeeperRod, -1
+	object_event  7,  9, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 2, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerBirdKeeperAbe, -1
 	object_event  7, 13, SPRITE_GYM_GUY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, VioletGymGuyScript, -1

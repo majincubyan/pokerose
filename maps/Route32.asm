@@ -3,7 +3,6 @@
 	const ROUTE32_FISHER2
 	const ROUTE32_FISHER3
 	const ROUTE32_YOUNGSTER1
-	const ROUTE32_YOUNGSTER2
 	const ROUTE32_YOUNGSTER3
 	const ROUTE32_LASS1
 	const ROUTE32_COOLTRAINER_M
@@ -48,7 +47,7 @@ Route32CooltrainerMContinueScene:
 	opentext
 	checkevent EVENT_GOT_MIRACLE_SEED_IN_ROUTE_32
 	iftrue .GotMiracleSeed
-	checkflag ENGINE_ZEPHYRBADGE
+	checkflag ENGINE_FORESTBADGE
 	iffalse .DontHaveZephyrBadge
 	checkevent EVENT_GOT_TOGEPI_EGG_FROM_ELMS_AIDE
 	iftrue .GiveMiracleSeed
@@ -423,17 +422,6 @@ TrainerYoungsterAlbert:
 	endifjustbattled
 	opentext
 	writetext YoungsterAlbertAfterText
-	waitbutton
-	closetext
-	end
-
-TrainerYoungsterGordon:
-	trainer YOUNGSTER, GORDON, EVENT_BEAT_YOUNGSTER_GORDON, YoungsterGordonSeenText, YoungsterGordonBeatenText, 0, .Script
-
-.Script:
-	endifjustbattled
-	opentext
-	writetext YoungsterGordonAfterText
 	waitbutton
 	closetext
 	end
@@ -947,12 +935,11 @@ Route32_MapEvents:
 	bg_event 12, 67, BGEVENT_ITEM, Route32HiddenGreatBall
 	bg_event 11, 40, BGEVENT_ITEM, Route32HiddenSuperPotion
 
-	db 14 ; object events
+	db 13 ; object events
 	object_event  8, 49, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 1, TrainerFisherJustin, -1
 	object_event 12, 56, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerFisherRalph1, -1
 	object_event  6, 48, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 1, TrainerFisherHenry, -1
 	object_event 12, 22, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerYoungsterAlbert, -1
-	object_event  4, 63, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerYoungsterGordon, -1
 	object_event  3, 45, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerCamperRoland, -1
 	object_event 10, 30, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 1, TrainerPicnickerLiz1, -1
 	object_event 19,  8, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route32CooltrainerMScript, -1

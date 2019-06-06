@@ -70,5 +70,5 @@ TrainerClassNames::
 	db "Boss@"
 	db "<PKMN> Coach@"
 	db "<PKMN> Coach@"
-	db "Curmudgeon"
-	db "Delinquent"
+	db "Curmudgeon@"
+	db "Delinquent@"

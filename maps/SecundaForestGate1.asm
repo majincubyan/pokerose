@@ -16,16 +16,15 @@ GuardScript:
 	
 CoachScript:
 	faceplayer
+	opentext
 	checkevent EVENT_FOREST_COACH_BEAT
 	iftrue .ExplainSwift
 	checkevent EVENT_FOREST_COACH_TALKED
 	iftrue .LetsBattle
-	opentext
 	writetext ExplainCoachTrainerText
 	waitbutton
 	setevent EVENT_FOREST_COACH_TALKED
 .LetsBattle:
-	opentext
 	writetext SoLetsBattleText
 	yesorno
 	iffalse .Done
@@ -42,7 +41,6 @@ CoachScript:
 	closetext
 	verbosegiveitem TM_SWIFT
 .ExplainSwift:
-	opentext
 	writetext ItsSwiftText
 	waitbutton
 .Done:
@@ -52,6 +50,10 @@ CoachScript:
 ThisWayToText:
 	text "This way to"
 	line "Secunda Forest."
+	
+	para "Careful, lots of"
+	line "#mon call the"
+	cont "forest home."
 	done
 
 ExplainCoachTrainerText:

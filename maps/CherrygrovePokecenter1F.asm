@@ -53,12 +53,15 @@ CherrygrovePokecenter1FGentlemanText:
 	done
 
 CherrygrovePokecenter1FTeacherText:
-	text "The COMMUNICATION"
-	line "CENTER upstairs"
-	cont "was just built."
+	text "Every #mon"
+	line "Center has a"
+	cont "clock on the wall."
 
-	para "But they're still"
-	line "finishing it up."
+	para "You can adjust the"
+	line "date, time and DST"
+	
+	para "if things become"
+	line "outta sync!"
 	done
 
 CherrygrovePokecenter1FTeacherText_CommCenterOpen:

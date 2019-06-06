@@ -188,9 +188,11 @@ Text_ElmDiscoveredNewMon:
 	done
 	
 MineGuardText:
-	text "Sorry, but the"
-	line "mine is offlimits"
-	cont "to children."
+	text "Sorry, but no"
+	line "children are"
+	
+	para "allowed in the"
+	line "mine."
 	done
 
 MINUTTOWNSignText:

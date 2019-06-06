@@ -185,7 +185,7 @@ MOM_SAVING_MONEY_MASK EQU (1 << MOM_SAVING_SOME_MONEY_F) | (1 << MOM_SAVING_HALF
 
 ; wJohtoBadges:: ; d857
 	const_def
-	const ZEPHYRBADGE
+	const FORESTBADGE
 	const HIVEBADGE
 	const PLAINBADGE
 	const FOGBADGE

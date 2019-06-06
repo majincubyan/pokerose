@@ -76,6 +76,7 @@ ElmsLab_MapScripts:
 	pause 30
 	showemote EMOTE_SHOCK, ELMSLAB_ELM, 10
 	applymovement ELMSLAB_ELM, MapleToPCMovement
+	turnobject PLAYER, LEFT
 	opentext
 	writetext MapleText_GotAnEmail
 	waitbutton
@@ -83,6 +84,8 @@ ElmsLab_MapScripts:
 	applymovement ELMSLAB_ELM, MapleToDeskMovement
 	pause 30
 	applymovement ELMSLAB_ELM, MapleToPlayer2Movement
+	turnobject PLAYER, UP
+	turnobject ELMSLAB_NEL, UP
 	opentext
 	writetext MapleText_Husband
 	waitbutton
@@ -96,8 +99,16 @@ ElmsLab_MapScripts:
 
 ProfElmScript:
 	faceplayer
+	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
+	iffalse .GoAhead
 	opentext
 	writetext ElmDescribesMrPokemonText
+	waitbutton
+	closetext
+	end
+.GoAhead:
+	opentext
+	writetext MapleGoAheadText
 	waitbutton
 	closetext
 	end
@@ -832,6 +843,11 @@ MapleExplainsDexText:
 
 	para "It's a hi-tech"
 	line "encyclopedia!"
+	done
+
+MapleGoAheadText:
+	text "<PLAY_G>, go ahead"
+	line "and pick one!"
 	done
 
 ElmsLab_MapEvents:

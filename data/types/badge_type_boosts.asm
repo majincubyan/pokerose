@@ -1,8 +1,8 @@
 BadgeTypeBoosts:
 ; entries correspond to wJohtoBadges constants
-	db FLYING   ; ZEPHYRBADGE
+	db NORMAL   ; FORESTBADGE
 	db BUG      ; HIVEBADGE
-	db NORMAL   ; PLAINBADGE
+	db FLYING   ; PLAINBADGE
 	db GHOST    ; FOGBADGE
 	db STEEL    ; MINERALBADGE
 	db FIGHTING ; STORMBADGE

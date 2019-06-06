@@ -286,9 +286,9 @@ OWFlash:
 
 .CheckUseFlash:
 ; Flash
-	ld de, ENGINE_ZEPHYRBADGE
+	ld de, ENGINE_FORESTBADGE
 	farcall CheckBadge
-	jr c, .nozephyrbadge
+	jr c, .noforestbadge
 	push hl
 	farcall SpecialAerodactylChamber
 	pop hl
@@ -306,7 +306,7 @@ OWFlash:
 	ld a, $80
 	ret
 
-.nozephyrbadge
+.noforestbadge
 	ld a, $80
 	ret
 

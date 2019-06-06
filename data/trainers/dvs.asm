@@ -71,3 +71,5 @@ TrainerClassDVs:
 	dn 13,  8, 12,  8 ; BOSS
 	dn  9,  9,  8,  8 ; COACH_M
 	dn  8,  8,  9,  9 ; COACH_F
+	dn  8,  9,  8, 10 ; CURMUDGEON
+	dn 11,  8,  9,  8 ; DELINQUENT
