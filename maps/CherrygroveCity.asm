@@ -378,12 +378,14 @@ ICameToBattleText:
 CherrygroveCity_MapEvents:
 	db 0, 0 ; filler
 
-	db 5 ; warp events
+	db 7 ; warp events
 	warp_event 23,  9, CHERRYGROVE_MART, 2
 	warp_event 27,  9, CHERRYGROVE_POKECENTER_1F, 1
 	warp_event 31, 10, SECUNDA_FOREST_GATE2, 1
 	warp_event 31, 11, SECUNDA_FOREST_GATE2, 2
 	warp_event 10, 13, SECUNDA_GYM, 1
+	warp_event  9,  5, CHERRYGROVE_EVOLUTION_SPEECH_HOUSE, 1
+	warp_event 15,  7, CHERRYGROVE_GYM_SPEECH_HOUSE, 1  
 
 	db 2 ; coord events
 	coord_event 14, 14, SCENE_SECUNDACITY_MEET_RIVAL, SecundaRivalBattle2

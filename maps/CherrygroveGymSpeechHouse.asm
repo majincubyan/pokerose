@@ -20,22 +20,22 @@ CherrygroveGymSpeechHousePokefanMText:
 	text "You're trying to"
 	line "see how good you"
 
-	para "are as a #MON"
+	para "are as a #mon"
 	line "trainer?"
 
 	para "You better visit"
-	line "the #MON GYMS"
+	line "the #mon Gyms"
 
-	para "all over JOHTO and"
-	line "collect BADGES."
+	para "all over Tsuji and"
+	line "collect Badges."
 	done
 
 CherrygroveGymSpeechHouseBugCatcherText:
 	text "When I get older,"
 	line "I'm going to be a"
-	cont "GYM LEADER!"
+	cont "Gym Leader!"
 
-	para "I make my #MON"
+	para "I make my #mon"
 	line "battle with my"
 
 	para "friend's to make"
@@ -46,8 +46,8 @@ CherrygroveGymSpeechHouse_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event  2,  7, CHERRYGROVE_CITY, 3
-	warp_event  3,  7, CHERRYGROVE_CITY, 3
+	warp_event  2,  7, CHERRYGROVE_CITY, 7
+	warp_event  3,  7, CHERRYGROVE_CITY, 7
 
 	db 0 ; coord events
 

@@ -31,12 +31,14 @@ CherrygroveMartYoungsterText:
 	text "When I was walking"
 	line "in the grass, a"
 
-	para "bug #mon poi-"
-	line "soned my #mon!"
+	para "bug #mon"
+	line "poisoned mine!"
 
-	para "I just kept going,"
-	line "but then my"
-	cont "#mon fainted."
+	para "I just kept going"
+	line "and it barely"
+	
+	para "survived the"
+	line "the poisoning."
 
 	para "You should keep an"
 	line "Antidote with you."

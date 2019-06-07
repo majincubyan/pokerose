@@ -25,15 +25,15 @@ CherrygroveEvolutionSpeechHouseBookshelf:
 	jumpstd magazinebookshelf
 
 CherrygroveEvolutionSpeechHouseYoungsterText:
-	text "#MON gain expe-"
-	line "rience in battle"
+	text "#mon gain exp"
+	line "in battle and"
 
 	para "and change their"
 	line "form."
 	done
 
 CherrygroveEvolutionSpeechHouseLassText:
-	text "#MON change?"
+	text "#mon change?"
 
 	para "I would be shocked"
 	line "if one did that!"
@@ -43,8 +43,8 @@ CherrygroveEvolutionSpeechHouse_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event  2,  7, CHERRYGROVE_CITY, 5
-	warp_event  3,  7, CHERRYGROVE_CITY, 5
+	warp_event  2,  7, CHERRYGROVE_CITY, 6
+	warp_event  3,  7, CHERRYGROVE_CITY, 6
 
 	db 0 ; coord events
 
