@@ -225,6 +225,14 @@ SecundaTrainerScript:
 	waitbutton
 	closetext
 	end
+	
+ApologizeScript:
+	opentext
+	writetext NothingText
+	waitbutton
+	closetext
+	end
+
 
 ;==========MOVEMENT====================
 	
@@ -374,6 +382,17 @@ ICameToBattleText:
 	line "gym leader?"
 	done
 
+NothingText:
+	text "I'm sorry but"
+	line "there is nothing"
+	
+	para "beyond this gate"
+	line "at the moment."
+	
+	para "But I assure you"
+	line "that it's being"
+	cont "worked on."
+	done
 
 CherrygroveCity_MapEvents:
 	db 0, 0 ; filler
@@ -397,8 +416,10 @@ CherrygroveCity_MapEvents:
 	bg_event 28,  9, BGEVENT_READ, SecundaCityPokecenterSign
 	bg_event 21,  3, BGEVENT_READ, SecundaCityCemetarySign
 	
-	db 3 ; object events
+	db 5 ; object events
 	object_event 10, 11, SPRITE_SHANNON, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SecundaRivalScript, EVENT_NEL_LAB_OUTSIDE
 	object_event 24, 11, SPRITE_GRAMPS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, OldManScript, -1
 	object_event 12,  7, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, SecundaTrainerScript, -1
+	object_event  4,  8, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ApologizeScript, -1
+	object_event  4,  9, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ApologizeScript, -1
 	

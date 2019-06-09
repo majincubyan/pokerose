@@ -1702,5 +1702,32 @@ JohtoGrassWildMons:
 	db 3, POOCHYENA
 	db 4, POOCHYENA
 	db 3, SHROOMISH
+	
+	map_id SECUNDA_CEMETARY
+	db 7 percent, 10 percent, 7 percent ; morn, day, nite
+	;morn
+	db 6, ZIGZAGOON
+	db 6, CATERPIE
+	db 6, ZIGZAGOON
+	db 8, ZIGZAGOON
+	db 6, STARLY
+	db 6, EKANS
+	db 8, EKANS
+	;day
+	db 6, ZIGZAGOON
+	db 6, CATERPIE
+	db 6, ZIGZAGOON
+	db 8, ZIGZAGOON
+	db 6, STARLY
+	db 6, EKANS
+	db 8, EKANS
+	;nite
+	db 6, CATERPIE
+	db 8, EKANS
+	db 6, STARLY
+	db 8, ZIGZAGOON
+	db 10, GASTLY
+	db 6, GASTLY
+	db 8, GASTLY
 
 	db -1 ; end

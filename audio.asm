@@ -27,7 +27,6 @@ INCLUDE "audio/music/vermilioncity.asm"
 INCLUDE "audio/music/ruinsofalphinterior.asm"
 INCLUDE "audio/music/lookpokemaniac.asm"
 INCLUDE "audio/music/trainervictory.asm"
-INCLUDE "audio/music/titlescreen.asm"
 
 
 SECTION "Songs 2", ROMX
@@ -74,6 +73,7 @@ INCLUDE "audio/music/halloffame.asm"
 INCLUDE "audio/music/healpokemon.asm"
 INCLUDE "audio/music/evolution.asm"
 INCLUDE "audio/music/printer.asm"
+
 
 
 SECTION "Songs 4", ROMX
@@ -161,3 +161,4 @@ INCLUDE "audio/cries.asm"
 SECTION "New Songs", ROMX
 
 INCLUDE "audio/music/newsongs/nelbattle.asm"
+INCLUDE "audio/music/titlescreen.asm"

@@ -38,7 +38,6 @@ CoachScript:
 	opentext
 	writetext HereTakeThisText
 	waitbutton
-	closetext
 	verbosegiveitem TM_SWIFT
 .ExplainSwift:
 	writetext ItsSwiftText

@@ -55,7 +55,6 @@ MapleHusbandScript:
 	opentext
 	writetext ImCountingOnYouText
 	waitbutton
-	givepoke INFERNAPE, 40
 	closetext
 	end
 
