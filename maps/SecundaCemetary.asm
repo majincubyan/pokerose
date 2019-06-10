@@ -5,6 +5,8 @@
 	const CEMETARY_CURMUDGEON2
 	const CEMETARY_YOUNGSTER
 	const CEMETARY_DELINQUENT
+	const CEMETARY_CLEANSETAG
+	const CEMETARY_PROTECT
 
 
 SecundaCemetary_MapScripts:
@@ -102,6 +104,15 @@ FlowerGrandmaScript:
 	pause 30
 	special FadeInQuickly
 	end
+	
+CemetaryCleanseTag:
+	itemball CLEANSE_TAG, 1
+	
+CemetaryGreatBall:
+	hiddenitem GREAT_BALL, EVENT_GOT_CEMETARY_GREAT_BALL
+	
+CemetaryTMProtect:
+	itemball TM_PROTECT, 1
 	
 ; Text
 
@@ -214,13 +225,15 @@ SecundaCemetary_MapEvents:
 	
 	db 0 ; coord events
 	
-	db 0 ; bg events
+	db 1 ; bg events
+	bg_event 10, 3, BGEVENT_ITEM, CemetaryGreatBall
 
-	db 6 ; object events
+	db 8 ; object events
 	object_event 4, 5, SPRITE_SHUPPET, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ShuppetScript, EVENT_UNION_CAVE_B2F_LAPRAS
 	object_event 8, 15, SPRITE_OLD_MAN, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_TRAINER, 3, LeslieScript, -1
 	object_event 11, 5, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, FlowerGrandmaScript, EVENT_GOT_PINK_ROSE
-	object_event 4, 11, SPRITE_OLD_MAN, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_TRAINER, 1, LionelScript, -1
+	object_event 4, 11, SPRITE_OLD_MAN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_TRAINER, 1, LionelScript, -1
 	object_event 3, 24, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, AlbertScript, -1
 	object_event 10, 7, SPRITE_DELINQUENT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, ShinjiScript, -1
-	
+	object_event 3, 10, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, CemetaryCleanseTag, EVENT_GOT_CLEANSE_TAG
+	object_event 10, 28, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, CemetaryTMProtect, EVENT_GOT_CEMETARY_PROTECT

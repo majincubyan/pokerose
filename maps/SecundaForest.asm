@@ -1,6 +1,8 @@
 	const_def 2 ; object constants
 	const FOREST_HUSBAND
 	const FOREST_NURSE
+	const FOREST_NUGGET
+	const FOREST_AWAKENING
 
 SecundaForest_MapScripts:
 	db 2 ; scene scripts
@@ -75,6 +77,12 @@ SomethingIsGoingOnScript:
 .Done:
 	closetext
 	end
+
+SecundaForestNugget:
+	itemball NUGGET, 1
+	
+SecundaForestAwakening:
+	itemball AWAKENING, 1
 
 ApprochPlayerMovement:
 	step LEFT
@@ -171,7 +179,10 @@ SecundaForest_MapEvents:
 	coord_event 12, 15, SCENE_FOREST_ETERNITY, PleaseHelpScript2
 
 	db 0 ; bg events
-
-	db 2 ; object events
+	
+	db 4 ; object events
 	object_event 17, 14, SPRITE_ROCKER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, MapleHusbandScript, EVENT_BEAT_RUINS_ADMIN
 	object_event  7, 12, SPRITE_NURSE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SomethingIsGoingOnScript, EVENT_BEAT_RUINS_ADMIN
+	object_event 10,  7, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SecundaForestNugget, EVENT_GOT_FOREST_NUGGET
+	object_event  9, 28, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SecundaForestAwakening, EVENT_GOT_FOREST_AWAKENING
+	

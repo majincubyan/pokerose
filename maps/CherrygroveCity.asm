@@ -233,7 +233,9 @@ ApologizeScript:
 	closetext
 	end
 
-
+SecundaCityRareCandy:
+	hiddenitem RARE_CANDY, EVENT_GOT_SECUNDA_CITY_RARE_CANDY
+	
 ;==========MOVEMENT====================
 	
 RivalStep:
@@ -410,11 +412,12 @@ CherrygroveCity_MapEvents:
 	coord_event 14, 14, SCENE_SECUNDACITY_MEET_RIVAL, SecundaRivalBattle2
 	coord_event 14, 15, SCENE_SECUNDACITY_MEET_RIVAL, SecundaRivalBattle3
 
-	db 4 ; bg events
+	db 5 ; bg events
 	bg_event 18, 10, BGEVENT_READ, SecundaCitySign
 	bg_event 24,  9, BGEVENT_READ, SecundaCityMartSign
 	bg_event 28,  9, BGEVENT_READ, SecundaCityPokecenterSign
 	bg_event 21,  3, BGEVENT_READ, SecundaCityCemetarySign
+	bg_event  6, 12, BGEVENT_ITEM, SecundaCityRareCandy
 	
 	db 5 ; object events
 	object_event 10, 11, SPRITE_SHANNON, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SecundaRivalScript, EVENT_NEL_LAB_OUTSIDE
