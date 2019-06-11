@@ -7,10 +7,10 @@ ENDM
 Landmarks:
 ; entries correspond to constants/landmark_constants.asm
 	dbbw       0,   0, SpecialMapName
-	landmark 140, 100, NewBarkTownName
-	landmark 128, 100, Route29Name
-	landmark 120, 100, SecundaForestName
-	landmark 100, 100, CherrygroveCityName
+	landmark 140,  28, NewBarkTownName
+	landmark 140,  40, Route29Name
+	landmark 132,  44, SecundaForestName
+	landmark 124,  44, CherrygroveCityName
 	landmark 100,  80, Route30Name
 	landmark  96,  60, Route31Name
 	landmark  84,  60, VioletCityName
