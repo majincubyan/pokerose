@@ -588,7 +588,7 @@
 	const EVENT_23F
 	const EVENT_240
 ; More Itemballs
-	const EVENT_ROUTE_101_ANTIDOTES
+	const EVENT_ROUTE_101_REPEL
 	const EVENT_242
 	const EVENT_243
 	const EVENT_244
