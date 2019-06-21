@@ -161,3 +161,10 @@ hMobile:: db ; ffe9
 hSystemBooted:: db ; ffea
 hClockResetTrigger:: db ; ffeb
 hFFEC:: db ; ffec
+
+hCurBitStream EQU $ffb4
+hCurSampVal EQU $ffb5
+hDEDNR51Mask EQU $ffb6
+
+hDEDCryFlag EQU $fff7
+hDEDVBlankMode EQU $fff8

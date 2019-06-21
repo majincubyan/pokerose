@@ -2959,6 +2959,10 @@ wSurroundingTiles:: ds SURROUNDING_WIDTH * SURROUNDING_HEIGHT
 
 wSurroundingAttributes:: ds SURROUNDING_WIDTH * SURROUNDING_HEIGHT
 
+wDEDTempSamp:: ds 16
+
+wGetDEDByte:: ds $100
+
 SECTION "GBC Video", WRAMX
 
 ; eight 4-color palettes each

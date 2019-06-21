@@ -1925,7 +1925,7 @@ BattleCommand_LowerSub:
 	ret nz
 
 .charge_turn
-	call _CheckBattleScene
+	call CheckBattleScene
 	jr c, .mimic_anims
 
 	xor a
@@ -2076,7 +2076,7 @@ BattleCommand_RaiseSub:
 	bit SUBSTATUS_SUBSTITUTE, a
 	ret z
 
-	call _CheckBattleScene
+	call CheckBattleScene
 	jp c, BattleCommand_RaiseSubNoAnim
 
 	xor a
@@ -4257,7 +4257,7 @@ MinimizeDropSub:
 
 	ld a, $1
 	ld [bc], a
-	call _CheckBattleScene
+	call CheckBattleScene
 	ret nc
 
 	xor a
@@ -6813,15 +6813,4 @@ AppearUserLowerSub:
 
 AppearUserRaiseSub:
 	farcall _AppearUserRaiseSub
-	ret
-
-_CheckBattleScene:
-; Checks the options.  Returns carry if battle animations are disabled.
-	push hl
-	push de
-	push bc
-	farcall CheckBattleScene
-	pop bc
-	pop de
-	pop hl
 	ret

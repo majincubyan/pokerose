@@ -2248,7 +2248,7 @@ FaintYourPokemon:
 	ld a, $f0
 	ld [wCryTracks], a
 	ld a, [wBattleMonSpecies]
-	call PlayStereoCry
+	call PlayFaintingCry
 	call PlayerMonFaintedAnimation
 	hlcoord 9, 7
 	lb bc, 5, 11
@@ -2258,6 +2258,10 @@ FaintYourPokemon:
 
 FaintEnemyPokemon:
 	call WaitSFX
+	ld a, $f
+	ld [CryTracks], a
+	ld a, [EnemyMonSpecies]
+	call PlayFaintingCry
 	ld de, SFX_KINESIS
 	call PlaySFX
 	call EnemyMonFaintedAnimation
@@ -3560,7 +3564,7 @@ Function_SetEnemyMonAndSendOutAnimation:
 	ld bc, wTempMonSpecies
 	farcall CheckFaintedFrzSlp
 	jr c, .skip_cry
-	ld a, $f
+
 	ld [wCryTracks], a
 	ld a, [wTempEnemyMonSpecies]
 	call PlayStereoCry
@@ -8954,7 +8958,9 @@ InitBattleDisplay:
 	ldh [hWY], a
 	xor a
 	ldh [hSCX], a
-	ret
+	inc a
+	ld [hCGBPalUpdate], a
+	jp DelayFrame
 
 .BlankBGMap:
 	ldh a, [rSVBK]
@@ -9103,8 +9109,6 @@ BattleStartMessage:
 .not_shiny
 	farcall CheckSleepingTreeMon
 	jr c, .skip_cry
-
-	farcall CheckBattleScene
 
 	ld a, $f
 	ld [wCryTracks], a

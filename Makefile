@@ -35,7 +35,7 @@ crystal11_obj := $(crystal_obj:.o=11.o)
 .SUFFIXES:
 .PHONY: all crystal crystal11 clean compare tools tidy
 .SECONDEXPANSION:
-.PRECIOUS:
+.PRECIOUS: %.wav %.ded
 .SECONDARY:
 
 all: crystal
@@ -104,6 +104,8 @@ pokecrystal11.gbc: $(crystal11_obj) pokecrystal.link
 		cp $(filename) $@,\
 		tools/lzcomp -- $< $@)
 
+%.wav: ;
+%.ded: %.wav dedenc.py ; $(PYTHON) dedenc.py $< $@
 
 ### Pokemon pic animation rules
 

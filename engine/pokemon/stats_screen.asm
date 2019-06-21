@@ -115,15 +115,12 @@ StatsScreenPointerTable:
 StatsScreen_WaitAnim:
 	ld hl, wcf64
 	bit 6, [hl]
-	jr nz, .try_anim
-	bit 5, [hl]
+	res 6, [hl]
 	jr nz, .finish
-	call DelayFrame
+	bit 5, [hl]
+	jp z, DelayFrame
 	ret
 
-.try_anim
-	ld hl, wcf64
-	res 6, [hl]
 .finish
 	ld hl, wcf64
 	res 5, [hl]
@@ -842,8 +839,15 @@ StatsScreen_PlaceFrontpic:
 	call IsAPokemon
 	ret c
 	call StatsScreen_LoadTextBoxSpaceGFX
-	ld de, vTiles2 tile $00
-	predef GetAnimatedFrontpic
+	coord hl, 0, 0
+	call _PrepMonFrontpic
+	ld a, 1
+	ld [hCGBPalUpdate], a
+	ld [hBGMapMode], a
+	ld c, 3
+	call DelayFrames
+	ld a, [CurPartySpecies]
+	call PlayCry2
 	ld hl, wcf64
 	set 6, [hl]
 	ret

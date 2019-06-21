@@ -157,6 +157,10 @@ INCLUDE "data/pokemon/cries.asm"
 
 INCLUDE "audio/cries.asm"
 
+INCLUDE "audio/ded.asm"
+
+INCLUDE "audio/ded/files.asm"
+
 
 SECTION "New Songs", ROMX
 

@@ -31,19 +31,61 @@ PlayMonCry2::
 	call _PlayMonCry
 	ret
 
+PlayFaintingCry::
+	call PlayFaintingCry2
+	jp WaitSFX
+	
+PlayFaintingCry2::
+	push hl
+	push de
+	push bc
+	
+	call LoadCry
+	jr c, .ded
+	ld hl, CryPitch
+	ld a, 90 percent
+	call .Multiply
+	ld a, [hProduct + 2]
+	ld [hli], a
+	ld a, [hProduct + 1]
+	ld [hli], a
+
+	ld a, 11 percent
+	call .Multiply
+	ld a, [hProduct + 2]
+	add [hl]
+	ld [hli], a
+	ld a, [hProduct + 1]
+	adc [hl]
+	ld [hl], a
+
+	farcall _PlayCryHeader
+	jr PlayCry_PopBCDEHLOff
+
+.ded
+	ld e, 1
+	call PlayDEDCry
+	jr PlayCry_PopBCDEHLOff
+
+.Multiply
+	ld [hMultiplier], a
+	ld a, [hli]
+	ld [hMultiplicand + 2], a
+	ld a, [hld]
+	ld [hMultiplicand + 1], a
+	xor a
+	ld [hMultiplicand], a
+	ld [hProduct], a
+	jp Multiply
+
 _PlayMonCry::
 	push hl
 	push de
 	push bc
 
 	call GetCryIndex
-	jr c, .done
-
-	ld e, c
-	ld d, b
-	call PlayCry
-
-.done
+	call nc, PlayCry
+PlayCry_PopBCDEHLOff:
 	pop bc
 	pop de
 	pop hl
@@ -60,15 +102,12 @@ LoadCry::
 	ld a, BANK(PokemonCries)
 	rst Bankswitch
 
-	ld hl, PokemonCries
-rept 6 ; sizeof(mon_cry)
-	add hl, bc
-endr
-
-	ld e, [hl]
-	inc hl
-	ld d, [hl]
-	inc hl
+	ld a, [hli]
+	cp $ff
+	jr z, .ded
+	
+	ld d, 0
+	ld e, a
 
 	ld a, [hli]
 	ld [wCryPitch], a
@@ -84,8 +123,17 @@ endr
 	and a
 	ret
 
+.ded
+	call LoadDEDCryHeader
+	pop af
+	rst Bankswitch
+	scf
+	ret
+
 GetCryIndex::
 	and a
+	jr z, .no
+	cp EGG
 	jr z, .no
 	cp NUM_POKEMON + 1
 	jr nc, .no
@@ -93,6 +141,9 @@ GetCryIndex::
 	dec a
 	ld c, a
 	ld b, 0
+	ld hl, PokemonCries
+	ld a, 5
+	call AddNTimes
 	and a
 	ret
 

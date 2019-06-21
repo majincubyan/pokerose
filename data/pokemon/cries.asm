@@ -1,7 +1,13 @@
 mon_cry: MACRO
-; index, pitch, length
-	dw \1, \2, \3
-ENDM
+IF _NARG == 3
+	db \1
+	dw \2, \3
+ELSE
+	db $ff
+	dba \2 ; bank/address
+	db \1 - 1 ; species (padding)
+ENDC
+	ENDM
 
 PokemonCries::
 ; entries correspond to constants/pokemon_constants.asm

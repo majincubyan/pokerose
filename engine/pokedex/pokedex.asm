@@ -343,6 +343,9 @@ Pokedex_InitDexEntryScreen:
 	ld [wCurPartySpecies], a
 	ld a, SCGB_POKEDEX
 	call Pokedex_GetSGBLayout
+	ld a, 1
+	ld [hCGBPalUpdate], a
+	call DelayFrame
 	ld a, [wCurPartySpecies]
 	call PlayMonCry
 	call Pokedex_IncrementDexPointer
@@ -466,10 +469,7 @@ DexEntryScreen_MenuActionJumptable:
 .Cry:
 	call Pokedex_GetSelectedMon
 	ld a, [wTempSpecies]
-	call GetCryIndex
-	ld e, c
-	ld d, b
-	call PlayCry
+	call _PlayCry
 	ret
 
 .Print:
@@ -2490,6 +2490,7 @@ _NewPokedexEntry:
 	predef GetMonFrontpic
 	ld a, SCGB_POKEDEX
 	call Pokedex_GetSGBLayout
+	call DelayFrame
 	ld a, [wCurPartySpecies]
 	call PlayMonCry
 	ret

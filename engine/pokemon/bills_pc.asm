@@ -1885,12 +1885,7 @@ ReleasePKMN_ByePKMN:
 
 	call WaitBGMap
 	ld a, [wCurPartySpecies]
-	call GetCryIndex
-	jr c, .skip_cry
-	ld e, c
-	ld d, b
-	call PlayCry
-.skip_cry
+	call _PlayCry
 
 	ld a, [wCurPartySpecies]
 	ld [wTempSpecies], a

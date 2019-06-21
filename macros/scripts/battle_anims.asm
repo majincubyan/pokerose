@@ -246,9 +246,9 @@ anim_0xf6: MACRO
 	db anim_0xf6_command
 ENDM
 
-	enum anim_0xf7_command ; $f7
-anim_0xf7: MACRO
-	db anim_0xf7_command
+	enum anim_clearfirstbgeffect_command ; f7
+anim_clearfirstbgeffect: macro
+	db anim_clearfirstbgeffect_command
 ENDM
 
 	enum anim_if_param_equal_command ; $f8

@@ -381,6 +381,7 @@ INCLUDE "engine/battle_anims/helpers.asm"
 INCLUDE "data/battle_anims/framesets.asm"
 INCLUDE "data/battle_anims/oam.asm"
 INCLUDE "data/battle_anims/object_gfx.asm"
+INCLUDE "engine/battle/growl_roar_ded_vblank_hook.asm"
 
 
 SECTION "Font Inversed", ROMX

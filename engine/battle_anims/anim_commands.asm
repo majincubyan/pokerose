@@ -16,13 +16,13 @@ PlayBattleAnim:
 _PlayBattleAnim:
 	ld c, 6
 .wait
-	call BattleAnimDelayFrame
+	call DelayFrame
 	dec c
 	jr nz, .wait
 
 	call BattleAnimAssignPals
 	call BattleAnimRequestPals
-	call BattleAnimDelayFrame
+	call DelayFrame
 
 	ld c, 1
 	ldh a, [rKEY1]
@@ -44,18 +44,32 @@ _PlayBattleAnim:
 	ld a, $1
 	ldh [hBGMapMode], a
 
-	call BattleAnimDelayFrame
-	call BattleAnimDelayFrame
-	call BattleAnimDelayFrame
+	call DelayFrame
+	call DelayFrame
+	call DelayFrame
 	call WaitSFX
 	ret
 
 BattleAnimRunScript:
 	ld a, [wFXAnimID + 1]
 	and a
-	jr nz, .hi_byte
+	jr z, .moveAnim
+	call CheckBattleScene
+	jr nc, .hi_byte
+	ld a, [FXAnimIDLo]
+	cp ANIM_IN_SANDSTORM & $ff
+	jr z, .done
+	cp ANIM_IN_HAIL & $ff
+	jr z, .done
+	cp ANIM_CONFUSED & $ff
+	jr z, .done
+	cp ANIM_SLP & $ff
+	jr z, .done
+	jr .hi_byte
+.moveAnim
+	
 
-	farcall CheckBattleScene
+	call CheckBattleScene
 	jr c, .disabled
 
 	call BattleAnimClearHud
@@ -67,7 +81,7 @@ BattleAnimRunScript:
 	xor a
 	ldh [hSCX], a
 	ldh [hSCY], a
-	call BattleAnimDelayFrame
+	call DelayFrame
 	call BattleAnimRestoreHuds
 
 .disabled
@@ -102,10 +116,14 @@ RunBattleAnimScript:
 	call BattleAnim_UpdateOAM_All
 	call PushLYOverrides
 	call BattleAnimRequestPals
+	
+	ld a, [hDEDCryFlag]
+	and a
+	jr nz, .playDED
 
 ; Speed up Rollout's animation.
 	ld a, [wFXAnimID + 1]
-	or a
+	and a
 	jr nz, .not_rollout
 
 	ld a, [wFXAnimID]
@@ -124,7 +142,7 @@ RunBattleAnimScript:
 	jr nz, .find
 
 .not_rollout
-	call BattleAnimDelayFrame
+	call DelayFrame
 
 .done
 	ld a, [wBattleAnimFlags]
@@ -133,21 +151,63 @@ RunBattleAnimScript:
 
 	call BattleAnim_ClearCGB_OAMFlags
 	ret
+	
+.playDED
+	ld [hBuffer], a
+	ld a, $1
+	ld [hDEDVBlankMode], a
+	ld a, [FXAnimIDLo]
+	cp ROAR
+	jr nz, .playCry
+	ld a, [hBattleTurn]
+	and a
+	coord de, 12, 0
+	ld bc, VBGMap0 + 12
+	jr z, .gotRoarCoords
+	coord de, 0, 5
+	ld bc, VBGMap0 + 5 * BG_MAP_WIDTH
+.gotRoarCoords
+	ld hl, wPokeAnimCoord
+	ld a, e
+	ld [hli], a
+	ld [hl], d
+	ld hl, wPokeAnimDestination
+	ld a, c
+	ld [hli], a
+	ld [hl], b
+.playCry
+	ld a, [hBuffer]
+	call _PlayCry
+	xor a
+	ld [hDEDVBlankMode], a
+	jr .done
+
+RunOneFrameOfGrowlOrRoarAnim::
+	call RunBattleAnimCommand
+	call _ExecuteBGEffects
+	call BattleAnim_UpdateOAM_All
+	call BattleAnimRequestPals
+	ld a, [BattleAnimFlags]
+	bit 0, a
+	ret z
+	xor a
+	ld [hDEDVBlankMode], a
+	jp BattleAnim_ClearCGB_OAMFlags
 
 BattleAnimClearHud:
-	call BattleAnimDelayFrame
+	call DelayFrame
 	call WaitTop
 	call ClearActorHud
 	ld a, $1
 	ldh [hBGMapMode], a
-	call BattleAnimDelayFrame
-	call BattleAnimDelayFrame
-	call BattleAnimDelayFrame
+	call DelayFrame
+	call DelayFrame
+	call DelayFrame
 	call WaitTop
 	ret
 
 BattleAnimRestoreHuds:
-	call BattleAnimDelayFrame
+	call DelayFrame
 	call WaitTop
 
 	ldh a, [rSVBK]
@@ -164,9 +224,9 @@ BattleAnimRestoreHuds:
 
 	ld a, $1
 	ldh [hBGMapMode], a
-	call BattleAnimDelayFrame
-	call BattleAnimDelayFrame
-	call BattleAnimDelayFrame
+	call DelayFrame
+	call DelayFrame
+	call DelayFrame
 	call WaitTop
 	ret
 
@@ -188,16 +248,6 @@ BattleAnimRequestPals:
 	call nz, BattleAnim_SetOBPals
 	ret
 
-BattleAnimDelayFrame:
-; Like DelayFrame but wastes battery life.
-
-	ld a, 1
-	ld [wVBlankOccurred], a
-.wait
-	ld a, [wVBlankOccurred]
-	and a
-	jr nz, .wait
-	ret
 
 ClearActorHud:
 	ldh a, [hBattleTurn]
@@ -229,7 +279,7 @@ Unreferenced_Functioncc220:
 	ldh [hBGMapAddress], a
 	ld a, HIGH(vBGMap0)
 	ldh [hBGMapAddress + 1], a
-	call BattleAnimDelayFrame
+	call DelayFrame
 	ret
 
 BattleAnim_ClearCGB_OAMFlags:
@@ -263,22 +313,7 @@ endr
 RunBattleAnimCommand:
 	call .CheckTimer
 	ret nc
-	call .RunScript
-	ret
 
-.CheckTimer:
-	ld a, [wBattleAnimDuration]
-	and a
-	jr z, .done
-
-	dec a
-	ld [wBattleAnimDuration], a
-	and a
-	ret
-
-.done
-	scf
-	ret
 
 .RunScript:
 .loop
@@ -305,7 +340,24 @@ RunBattleAnimCommand:
 .do_anim
 	call .DoCommand
 
-	jr .loop
+	ld a, [hDEDCryFlag}
+	and a
+	jr z, .loop
+	ret
+
+.CheckTimer:
+	ld a, [wBattleAnimDuration]
+	and a
+	jr z, .done
+
+	dec a
+	ld [wBattleAnimDuration], a
+	and a
+	ret
+
+.done
+	scf
+	ret
 
 .DoCommand:
 ; Execute battle animation command in [wBattleAnimByte].
@@ -364,7 +416,7 @@ BattleAnimCommands::
 	dw BattleAnimCmd_ClearSprites
 	dw BattleAnimCmd_F5
 	dw BattleAnimCmd_F6
-	dw BattleAnimCmd_F7
+	dw BattleAnimCmd_ClearFirstBGEffect
 	dw BattleAnimCmd_IfParamEqual
 	dw BattleAnimCmd_SetVar
 	dw BattleAnimCmd_IncVar
@@ -1208,14 +1260,8 @@ BattleAnimCmd_Sound:
 
 BattleAnimCmd_Cry:
 	call GetBattleAnimByte
-	maskbits NUM_NOISE_CHANS
-	ld e, a
-	ld d, 0
-	ld hl, .CryData
-rept 4
-	add hl, de
-endr
-
+	ld c, a
+	
 	ldh a, [rSVBK]
 	push af
 	ld a, BANK(wEnemyMon) ; wBattleMon is in WRAM0, but EnemyMon is in WRAMX
@@ -1236,41 +1282,23 @@ endr
 	ld a, [wEnemyMonSpecies]
 
 .done_cry_tracks
-	push hl
-	call LoadCry
-	pop hl
-	jr c, .done
-
-	ld a, [hli]
-	ld c, a
-	ld a, [hli]
 	ld b, a
+	push bc
+	call LoadCryHeader
+	pop bc
+	jr c, .ded
+	ld hl, CryLength
+	dec c
+	ld a, $c0
+	jr nz, .gotLengthOffset
+	ld a, $40
+.gotLengthOffset
+	add [hl]
+	ld [hli], a
+	jr nc, .noCarry
+	inc [hl]
+.noCarry
 
-	push hl
-	ld hl, wCryPitch
-	ld a, [hli]
-	ld h, [hl]
-	ld l, a
-	add hl, bc
-	ld a, l
-	ld [wCryPitch], a
-	ld a, h
-	ld [wCryPitch + 1], a
-	pop hl
-
-	ld a, [hli]
-	ld c, a
-	ld b, [hl]
-	ld hl, wCryLength ; CryLength
-	ld a, [hli]
-	ld h, [hl]
-	ld l, a
-	add hl, bc
-
-	ld a, l
-	ld [wCryLength], a ; CryLength
-	ld a, h
-	ld [wCryLength + 1], a
 	ld a, 1
 	ld [wStereoPanningMask], a
 
@@ -1281,12 +1309,10 @@ endr
 	ldh [rSVBK], a
 	ret
 
-.CryData:
-; +pitch, +length
-	dw $0000, $00c0
-	dw $0000, $0040
-	dw $0000, $0000
-	dw $0000, $0000
+.ded
+	ld a, b
+	ld [hDEDCryFlag], a
+	jr .done
 
 PlayHitSound:
 	ld a, [wNumHits]
@@ -1361,7 +1387,7 @@ ClearBattleAnims:
 	add hl, de
 	call GetBattleAnimPointer
 	call BattleAnimAssignPals
-	call BattleAnimDelayFrame
+	call DelayFrame
 	ret
 
 BattleAnim_RevertPals:
@@ -1376,7 +1402,7 @@ BattleAnim_RevertPals:
 	xor a
 	ldh [hSCX], a
 	ldh [hSCY], a
-	call BattleAnimDelayFrame
+	call DelayFrame
 	ld a, $1
 	ldh [hBGMapMode], a
 	ret
@@ -1465,4 +1491,9 @@ BattleAnim_UpdateOAM_All:
 	jr .loop2
 
 .done
+	ret
+
+BattleAnimCmd_ClearFirstBGEffect:
+	xor a
+	ld [ActiveBGEffects], a
 	ret

@@ -8,6 +8,8 @@ SECTION "lcd", ROM0
 
 SECTION "timer", ROM0
 	jp Timer
+	scf
+	reti
 
 SECTION "serial", ROM0
 	jp Serial
