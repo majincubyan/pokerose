@@ -108,6 +108,7 @@
 	const MUSIC_BATTLE_TOWER_LOBBY           ; 65
 	const MUSIC_MOBILE_CENTER                ; 66
 	const MUSIC_NEL_BATTLE
+	const MUSIC_ANVILLE_TOWN
 
 
 ; GetMapMusic picks music for this value (see home/map.asm)

@@ -91,24 +91,23 @@ elif "\1" == "east"
 endc
 ENDM
 	map_attributes SecundaForest101, SECUNDA_FOREST_101, $04, NORTH
-	connection north, Route29, ROUTE_29, 0
+	connection north, Route101, ROUTE_101, 0
 
 	map_attributes NewBarkTown, NEW_BARK_TOWN, $03, SOUTH
-	connection south, Route29, ROUTE_29, 0
+	connection south, Route101, ROUTE_101, 0
 
-	map_attributes CherrygroveCity, CHERRYGROVE_CITY, $04, NORTH
+	map_attributes SecundaCity, SECUNDA_CITY, $04, NORTH
 	connection north, SecundaCemetary, SECUNDA_CEMETARY, 4
 	
 	map_attributes SecundaCemetary, SECUNDA_CEMETARY, $04, SOUTH
-	connection south, CherrygroveCity, CHERRYGROVE_CITY, -4
+	connection south, SecundaCity, SECUNDA_CITY, -4
 	
 	map_attributes MapleLab, MAPLE_LAB, $04, WEST
-	connection west, Route29, ROUTE_29, -3
+	connection west, Route101, ROUTE_101, -3
 
-	map_attributes VioletCity, VIOLET_CITY, $05, SOUTH | WEST | EAST
+	map_attributes VioletCity, VIOLET_CITY, $05, SOUTH | WEST
 	connection south, Route32, ROUTE_32, 0, 0, 10
 	connection west, Route36, ROUTE_36, 0, 0, 9
-	connection east, Route31, ROUTE_31, 9, 0, 9
 
 	map_attributes AzaleaTown, AZALEA_TOWN, $05, WEST | EAST
 	connection west, Route34, ROUTE_34, -3, 15, 12
@@ -154,17 +153,10 @@ ENDM
 	map_attributes Route28, ROUTE_28, $2c, WEST
 	connection west, SilverCaveOutside, SILVER_CAVE_OUTSIDE, -3, 6, 12
 
-	map_attributes Route29, ROUTE_29, $04, NORTH | SOUTH | EAST
+	map_attributes Route101, ROUTE_101, $04, NORTH | SOUTH | EAST
 	connection north, NewBarkTown, NEW_BARK_TOWN, 0
 	connection south, SecundaForest101, SECUNDA_FOREST_101, 0
 	connection east, MapleLab, MAPLE_LAB, 3
-
-	map_attributes Route30, ROUTE_30, $05, NORTH
-	connection north, Route31, ROUTE_31, -3, 7, 13
-
-	map_attributes Route31, ROUTE_31, $05, SOUTH | WEST
-	connection south, Route30, ROUTE_30, 10, 0, 10
-	connection west, VioletCity, VIOLET_CITY, -3, 6, 12
 
 	map_attributes Route32, ROUTE_32, $05, NORTH | SOUTH
 	connection north, VioletCity, VIOLET_CITY, 0, 0, 13
@@ -371,6 +363,30 @@ ENDM
 	map_attributes Route10South, ROUTE_10_SOUTH, $2c, NORTH | SOUTH
 	connection north, Route10North, ROUTE_10_NORTH, 0, 0, 10
 	connection south, LavenderTown, LAVENDER_TOWN, 0, 0, 10
+	
+	map_attributes Route102, ROUTE_102, $03, NORTH | WEST
+	connection north, Route102FishingLake, ROUTE_102_FISHING_LAKE, 9
+	connection west, UreCity, URE_CITY, 1
+	
+	map_attributes UreCity, URE_CITY, $03, EAST
+	connection east, Route102, ROUTE_102, -1
+	
+	map_attributes Route102FishingLake, ROUTE_102_FISHING_LAKE, $09, SOUTH
+	connection south, Route102, ROUTE_102, -9
+
+	map_attributes Route103, ROUTE_103, $31, SOUTH
+	connection south, MonithTown, MONITH_TOWN, -2
+	
+	map_attributes MonithTown, MONITH_TOWN, $31, NORTH | WEST
+	connection north, Route103, ROUTE_103, 2
+	connection west, Route104, ROUTE_104, 0
+	
+	map_attributes Route104, ROUTE_104, $31, WEST | EAST
+	connection west, Route104Landing, ROUTE_104_LANDING, 0
+	connection east, MonithTown, MONITH_TOWN, 0
+	
+	map_attributes Route104Landing, ROUTE_104_LANDING, $31, EAST
+	connection east, Route104, ROUTE_104, 0
 
 	map_attributes Route23, ROUTE_23, $0f, 0
 	map_attributes SproutTower1F, SPROUT_TOWER_1F, $00, 0
@@ -687,12 +703,13 @@ ENDM
 	map_attributes CherrygroveMart, CHERRYGROVE_MART, $00, 0
 	map_attributes CherrygrovePokecenter1F, CHERRYGROVE_POKECENTER_1F, $00, 0
 	map_attributes CherrygroveGymSpeechHouse, CHERRYGROVE_GYM_SPEECH_HOUSE, $00, 0
-	map_attributes GuideGentsHouse, GUIDE_GENTS_HOUSE, $00, 0
 	map_attributes CherrygroveEvolutionSpeechHouse, CHERRYGROVE_EVOLUTION_SPEECH_HOUSE, $00, 0
-	map_attributes Route30BerryHouse, ROUTE_30_BERRY_HOUSE, $00, 0
-	map_attributes MrPokemonsHouse, MR_POKEMONS_HOUSE, $00, 0
 	map_attributes SecundaForestGate2, SECUNDA_FOREST_GATE2, $00, 0
 	map_attributes SecundaForestGate1, SECUNDA_FOREST_GATE1, $00, 0
 	map_attributes SecundaForest, SECUNDA_FOREST, $00, 0
 	map_attributes SecundaRuins1F, SECUNDA_RUINS_1F, $00, 0
 	map_attributes FlowerHouse, FLOWER_HOUSE, $00, 0
+	map_attributes FishingLakeInterior, FISHING_LAKE_INTERIOR, $00, 0
+	map_attributes EeveeHouseLanding, EEVEE_HOUSE_LANDING, $00, 0
+	map_attributes EeveeHouseGarden, EEVEE_HOUSE_GARDEN, $00, 0
+	map_attributes EeveeHouseHall, EEVEE_HOUSE_HALL, $00, 0

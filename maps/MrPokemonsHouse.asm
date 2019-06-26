@@ -34,7 +34,7 @@ MrPokemonsHouse_MapScripts:
 	waitsfx
 	itemnotify
 	setevent EVENT_GOT_MYSTERY_EGG_FROM_MR_POKEMON
-	blackoutmod CHERRYGROVE_CITY
+	blackoutmod SECUNDA_CITY
 	writetext MrPokemonIntroText3
 	buttonsound
 	turnobject MRPOKEMONSHOUSE_GENTLEMAN, RIGHT

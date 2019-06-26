@@ -369,10 +369,8 @@ INCLUDE "maps/Route15FuchsiaGate.asm"
 INCLUDE "maps/CherrygroveMart.asm"
 INCLUDE "maps/CherrygrovePokecenter1F.asm"
 INCLUDE "maps/CherrygroveGymSpeechHouse.asm"
-INCLUDE "maps/GuideGentsHouse.asm"
 INCLUDE "maps/CherrygroveEvolutionSpeechHouse.asm"
-INCLUDE "maps/Route30BerryHouse.asm"
-INCLUDE "maps/MrPokemonsHouse.asm"
+
 
 
 SECTION "Map Scripts 19", ROMX
@@ -396,21 +394,28 @@ INCLUDE "maps/OaksLab.asm"
 
 SECTION "Map Scripts 20", ROMX
 
-INCLUDE "maps/CherrygroveCity.asm"
+INCLUDE "maps/SecundaCity.asm"
 INCLUDE "maps/Route35.asm"
 INCLUDE "maps/Route43.asm"
 INCLUDE "maps/Route44.asm"
 INCLUDE "maps/Route45.asm"
 INCLUDE "maps/Route19.asm"
 INCLUDE "maps/Route25.asm"
+INCLUDE "maps/UreCity.asm"
+INCLUDE "maps/Route102FishingLake.asm"
+INCLUDE "maps/FishingLakeInterior.asm"
+INCLUDE "maps/EeveeHouseLanding.asm"
+INCLUDE "maps/EeveeHouseGarden.asm"
+INCLUDE "maps/EeveeHouseHall.asm"
+INCLUDE "maps/Route103.asm"
+INCLUDE "maps/Route104.asm"
 
 
 SECTION "Map Scripts 21", ROMX
 
 INCLUDE "maps/CianwoodCity.asm"
 INCLUDE "maps/Route27.asm"
-INCLUDE "maps/Route29.asm"
-INCLUDE "maps/Route30.asm"
+INCLUDE "maps/Route101.asm"
 INCLUDE "maps/Route38.asm"
 INCLUDE "maps/Route13.asm"
 INCLUDE "maps/PewterNidoranSpeechHouse.asm"
@@ -427,11 +432,13 @@ INCLUDE "maps/EcruteakCity.asm"
 INCLUDE "maps/BlackthornCity.asm"
 INCLUDE "maps/Route26.asm"
 INCLUDE "maps/Route28.asm"
-INCLUDE "maps/Route31.asm"
 INCLUDE "maps/Route39.asm"
 INCLUDE "maps/Route40.asm"
 INCLUDE "maps/Route41.asm"
 INCLUDE "maps/Route12.asm"
+INCLUDE "maps/Route102.asm"
+INCLUDE "maps/MonithTown.asm"
+INCLUDE "maps/Route104Landing.asm"
 
 
 SECTION "Map Scripts 23", ROMX

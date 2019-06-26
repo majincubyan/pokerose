@@ -1190,7 +1190,7 @@ JohtoGrassWildMons:
 	db 23, MIGHTYENA
 	db 23, MIGHTYENA
 
-	map_id ROUTE_29
+	map_id ROUTE_101
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 2, STARLY
@@ -1216,60 +1216,6 @@ JohtoGrassWildMons:
 	db 2, ZIGZAGOON
 	db 3, STARLY
 	db 3, ZIGZAGOON
-
-	map_id ROUTE_30
-	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
-	; morn
-	db 3, DRILBUR
-	db 3, CATERPIE
-	db 4, CATERPIE
-	db 4, STARLY
-	db 3, WEEDLE
-	db 4, MAKUHITA
-	db 4, MAKUHITA
-	; day
-	db 3, STARLY
-	db 3, CATERPIE
-	db 4, CATERPIE
-	db 4, STARLY
-	db 3, WEEDLE
-	db 4, MAKUHITA
-	db 4, MAKUHITA
-	; nite
-	db 3, AMAURA
-	db 3, PHANTUMP
-	db 4, POLIWAG
-	db 4, PHANTUMP
-	db 3, POOCHYENA
-	db 4, PHANTUMP
-	db 4, PHANTUMP
-
-	map_id ROUTE_31
-	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
-	; morn
-	db 4, DRILBUR
-	db 4, CATERPIE
-	db 5, SHINX
-	db 5, STARLY
-	db 4, WEEDLE
-	db 5, MAKUHITA
-	db 5, MAKUHITA
-	; day
-	db 4, STARLY
-	db 4, CATERPIE
-	db 5, SHINX
-	db 5, STARLY
-	db 4, WEEDLE
-	db 5, MAKUHITA
-	db 5, MAKUHITA
-	; nite
-	db 4, AMAURA
-	db 4, POLIWAG
-	db 5, SHINX
-	db 5, PHANTUMP
-	db 4, POOCHYENA
-	db 5, GASTLY
-	db 5, GASTLY
 
 	map_id ROUTE_32
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
@@ -1650,10 +1596,10 @@ JohtoGrassWildMons:
 	db 44, MIGHTYENA
 	
 	map_id SECUNDA_FOREST
-	db 7 percent, 10 percent, 7 percent ; morn, day, nite
+	db 4 percent, 4 percent, 4 percent ; morn, day, nite
 	;morn
 	db 4, WEEDLE
-	db 5, WEEDLE
+	db 5, CATERPIE
 	db 4, CATERPIE
 	db 5, CATERPIE
 	db 5, STARLY

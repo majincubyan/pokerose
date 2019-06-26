@@ -219,7 +219,6 @@ TilesetGateColl:
 INCLUDE "data/tilesets/gate_collision.asm"
 
 TilesetJohtoModernGFX:
-TilesetBattleTowerOutsideGFX:
 INCBIN "gfx/tilesets/johto_modern.2bpp.lz"
 
 TilesetJohtoModernMeta:
@@ -278,9 +277,6 @@ INCBIN "data/tilesets/facility_metatiles.bin"
 
 TilesetFacilityColl:
 INCLUDE "data/tilesets/facility_collision.asm"
-
-TilesetBattleTowerOutsideMeta:
-INCBIN "data/tilesets/battle_tower_outside_metatiles.bin"
 
 TilesetBattleTowerOutsideColl:
 INCLUDE "data/tilesets/battle_tower_outside_collision.asm"
@@ -360,9 +356,6 @@ INCBIN "data/tilesets/johto_modern_attributes.bin"
 
 TilesetKantoAttr:
 INCBIN "data/tilesets/kanto_attributes.bin"
-
-TilesetBattleTowerOutsideAttr:
-INCBIN "data/tilesets/battle_tower_outside_attributes.bin"
 
 TilesetHouseAttr:
 INCBIN "data/tilesets/house_attributes.bin"
@@ -466,6 +459,9 @@ INCBIN "data/tilesets/gym_arena_attributes.bin"
 TilesetRuinsAttr:
 INCBIN "data/tilesets/ruins_attributes.bin"
 
+TilesetBattleTowerOutsideGFX:
+INCBIN "gfx/tilesets/battle_tower_outside.2bpp.lz"
+
 SECTION "Tileset Data 13", ROMX
 
 TilesetTsujiMeta:
@@ -479,3 +475,12 @@ INCLUDE "data/tilesets/tsuji_collision.asm"
 
 TilesetTsujiAttr:
 INCBIN "data/tilesets/tsuji_attributes.bin"
+
+TilesetBattleTowerOutsideMeta:
+INCBIN "data/tilesets/battle_tower_outside_metatiles.bin"
+
+SECTION "Tileset Data 14", ROMX
+
+TilesetBattleTowerOutsideAttr:
+INCBIN "data/tilesets/battle_tower_outside_attributes.bin"
+

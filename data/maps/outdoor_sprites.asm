@@ -28,7 +28,7 @@ OutdoorSprites:
 	dw ViridianGroupSprites
 	dw NewBarkGroupSprites
 	dw SaffronGroupSprites
-	dw CherrygroveGroupSprites
+	dw SecundaGroupSprites
 
 
 ; Route1 and ViridianCity are connected
@@ -143,7 +143,7 @@ NewBarkGroupSprites:
 	db SPRITE_BLACK_BELT
 	db SPRITE_SHUPPET
 	db 0 ; end
-CherrygroveGroupSprites:
+SecundaGroupSprites:
 ; SecundaCity, SecundaCemetary
 	db SPRITE_OFFICER
 	db SPRITE_TEACHER

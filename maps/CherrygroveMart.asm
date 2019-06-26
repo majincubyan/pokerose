@@ -61,8 +61,8 @@ CherrygroveMart_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event  2,  7, CHERRYGROVE_CITY, 1
-	warp_event  3,  7, CHERRYGROVE_CITY, 1
+	warp_event  2,  7, SECUNDA_CITY, 1
+	warp_event  3,  7, SECUNDA_CITY, 1
 
 	db 0 ; coord events
 

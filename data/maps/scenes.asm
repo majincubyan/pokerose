@@ -28,9 +28,8 @@ MapScenes::
 	scene_var NEW_BARK_TOWN,                               wNewBarkTownSceneID
 	scene_var ELMS_LAB,                                    wElmsLabSceneID
 	scene_var PLAYERS_HOUSE_1F,                            wPlayersHouse1FSceneID
-	scene_var ROUTE_29,                                    wRoute29SceneID
-	scene_var CHERRYGROVE_CITY,                            wCherrygroveCitySceneID
-	scene_var MR_POKEMONS_HOUSE,                           wMrPokemonsHouseSceneID
+	scene_var ROUTE_101,                                   wRoute101SceneID
+	scene_var SECUNDA_CITY,                                wSecundaCitySceneID
 	scene_var ROUTE_32,                                    wRoute32SceneID
 	scene_var ROUTE_35_NATIONAL_PARK_GATE,                 wRoute35NationalParkGateSceneID
 	scene_var ROUTE_36,                                    wRoute36SceneID

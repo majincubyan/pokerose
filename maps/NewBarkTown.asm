@@ -44,7 +44,7 @@ MINUTTOWN_TeacherStopsYouScene1:
 	clearevent EVENT_NEL_IN_ELMS_LAB
 	special RestartMapMusic
 	setscene SCENE_FINISHED
-	setmapscene ROUTE_29, SCENE_ROUTE101_GUY
+	setmapscene ROUTE_101, SCENE_ROUTE101_GUY
 	end
 
 

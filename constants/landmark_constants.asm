@@ -4,10 +4,10 @@
 ; Johto landmarks
 	const SPECIAL_MAP       ; 00
 	const NEW_BARK_TOWN     ; 01
-	const ROUTE_29          ; 02
+	const ROUTE_101         ; 02
 	const SECUNDA_FOREST
-	const CHERRYGROVE_CITY  ; 03
-	const ROUTE_30          ; 04
+	const SECUNDA_CITY  ; 03
+	const ROUTE_102          ; 04
 	const ROUTE_31          ; 05
 	const VIOLET_CITY       ; 06
 	const SPROUT_TOWER      ; 07

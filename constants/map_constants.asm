@@ -148,10 +148,6 @@ ENDM
 	map_const VICTORY_ROAD,                                10, 36 ; 9
 	map_const SECUNDA_FOREST, 10, 18
 	map_const SECUNDA_RUINS_1F, 15, 12
-	;map_const EEVEE_HOUSE_LANDING, 5, 5
-	;map_const EEVEE_HOUSE_GARDEN, 10, 9
-	;map_const EEVEE_HOUSE_HALL, 15, 11
-	;map_const EEVEE_HOUSE_ROOM, 5, 4
 
 	newgroup                                                      ;  4
 
@@ -164,7 +160,12 @@ ENDM
 	map_const ECRUTEAK_GYM,                                 5,  9 ;  7
 	map_const ECRUTEAK_ITEMFINDER_HOUSE,                    4,  4 ;  8
 	map_const ECRUTEAK_CITY,                               20, 18 ;  9
+	map_const ROUTE_103, 								   16, 35
+	map_const MONITH_TOWN,								   19, 13
+	map_const ROUTE_104,								   27, 20
+	map_const ROUTE_104_LANDING,						   13, 20
 
+	
 	newgroup                                                      ;  5
 
 	map_const BLACKTHORN_GYM_1F,                            5,  9 ;  1
@@ -218,6 +219,11 @@ ENDM
 	map_const AZALEA_GYM,                                   5,  8 ;  5
 	map_const ROUTE_33,                                    10,  9 ;  6
 	map_const AZALEA_TOWN,                                 20,  9 ;  7
+	map_const ROUTE_102,								   31, 12
+	map_const URE_CITY, 								   18, 14
+	map_const ROUTE_102_FISHING_LAKE, 					   10,  9
+	map_const FISHING_LAKE_INTERIOR,					   10,  9
+	
 
 	newgroup                                                      ;  9
 
@@ -246,7 +252,11 @@ ENDM
 	map_const ROUTE_35_NATIONAL_PARK_GATE,                  4,  4 ; 15
 	map_const ROUTE_36_RUINS_OF_ALPH_GATE,                  5,  4 ; 16
 	map_const ROUTE_36_NATIONAL_PARK_GATE,                  5,  4 ; 17
-
+	map_const EEVEE_HOUSE_LANDING,						 	5,  5
+	map_const EEVEE_HOUSE_GARDEN,						   10,  9
+	map_const EEVEE_HOUSE_HALL,							   15, 11
+	;map_const EEVEE_HOUSE,								   10, 18
+	
 	newgroup                                                      ; 11
 
 	map_const ROUTE_34,                                    10, 27 ;  1
@@ -453,7 +463,7 @@ ENDM
 
 	map_const ROUTE_26,                                    10, 54 ;  1
 	map_const ROUTE_27,                                    40,  9 ;  2
-	map_const ROUTE_29,                                    10, 27 ;  3
+	map_const ROUTE_101,                                    10, 27 ;  3
 	map_const NEW_BARK_TOWN,                               10,  9 ;  4
 	map_const ELMS_LAB,                                     5,  6 ;  5
 	map_const PLAYERS_HOUSE_1F,                             7,  4 ;  6
@@ -488,17 +498,11 @@ ENDM
 	map_const ROUTE_5_CLEANSE_TAG_HOUSE,                    4,  4 ; 15
 
 	newgroup                                                      ; 26
-
-	map_const ROUTE_30,                                    10, 27 ;  1
-	map_const ROUTE_31,                                    20,  9 ;  2
-	map_const CHERRYGROVE_CITY,                            20,  9 ;  3
+	map_const SECUNDA_CITY,                                20,  9 ;  3
 	map_const CHERRYGROVE_MART,                             6,  4 ;  4
 	map_const CHERRYGROVE_POKECENTER_1F,                    5,  4 ;  5
 	map_const CHERRYGROVE_GYM_SPEECH_HOUSE,                 4,  4 ;  6
-	map_const GUIDE_GENTS_HOUSE,                            4,  4 ;  7
 	map_const CHERRYGROVE_EVOLUTION_SPEECH_HOUSE,           4,  4 ;  8
-	map_const ROUTE_30_BERRY_HOUSE,                         4,  4 ;  9
-	map_const MR_POKEMONS_HOUSE,                            4,  4 ; 10
 	map_const SECUNDA_FOREST_GATE2,                         5,  4 ; 11
 	map_const SECUNDA_CEMETARY, 10, 18
 	map_const SECUNDA_GYM,                                  5,  8 ;  7

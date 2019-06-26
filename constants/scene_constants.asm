@@ -43,12 +43,12 @@ SCENE_FINISHED EQU 1
 	const SCENE_ELMSLAB_AIDE_GIVES_POTION     ; 5
 	const SCENE_ELMSLAB_AIDE_GIVES_POKE_BALLS ; 6
 
-; wRoute29SceneID
+; wRoute101SceneID
 	const_def
 	const SCENE_ROUTE101_NOTHING        ; 0
 	const SCENE_ROUTE101_GUY ; 1
 
-; wCherrygroveCitySceneID
+; wSecundaCitySceneID
 	const_def
 	const SCENE_SECUNDACITY_NOTHING    ; 0
 	const SCENE_SECUNDACITY_MEET_RIVAL ; 1

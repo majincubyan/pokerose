@@ -425,8 +425,8 @@ SecundaGym_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event  4, 15, CHERRYGROVE_CITY, 5
-	warp_event  5, 15, CHERRYGROVE_CITY, 5
+	warp_event  4, 15, SECUNDA_CITY, 5
+	warp_event  5, 15, SECUNDA_CITY, 5
 
 	db 2 ; coord events
 	coord_event 4, 4, SCENE_SECUNDA_GYM_WHITNEY_STOPS_CRYING, WhitneyHoldOnScript1

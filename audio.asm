@@ -131,7 +131,7 @@ INCLUDE "audio/music/mobilecenter.asm"
 
 SECTION "Extra Songs 1", ROMX
 
-INCLUDE "audio/music/credits.asm"
+
 INCLUDE "audio/music/clair.asm"
 INCLUDE "audio/music/mobileadapter.asm"
 
@@ -162,3 +162,5 @@ SECTION "New Songs", ROMX
 
 INCLUDE "audio/music/newsongs/nelbattle.asm"
 INCLUDE "audio/music/titlescreen.asm"
+INCLUDE "audio/music/credits.asm"
+INCLUDE "audio/music/newsongs/AnvilleTown.asm"

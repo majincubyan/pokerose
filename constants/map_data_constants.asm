@@ -84,7 +84,7 @@ const_value = -1
 	const SPAWN_INDIGO
 ; johto
 	const SPAWN_NEW_BARK
-	const SPAWN_CHERRYGROVE
+	const SPAWN_SECUNDA
 	const SPAWN_VIOLET
 	const SPAWN_UNION_CAVE
 	const SPAWN_AZALEA

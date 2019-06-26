@@ -34,7 +34,7 @@ MomPhoneLandmark:
 MomPhonePalette1:
 	checkcode VAR_MAPGROUP
 	ifequal GROUP_NEW_BARK_TOWN, .newbark
-	ifequal GROUP_CHERRYGROVE_CITY, .cherrygrove
+	ifequal GROUP_SECUNDA_CITY, .cherrygrove
 	ifequal GROUP_VIOLET_CITY, .violet
 	ifequal GROUP_AZALEA_TOWN, .azalea
 	ifequal GROUP_GOLDENROD_CITY, .goldenrod
@@ -632,7 +632,7 @@ JoeyPhoneScript1:
 	farjump UnknownScript_0xa0930
 
 .WantsBattle:
-	landmarktotext ROUTE_30, MEM_BUFFER_2
+	landmarktotext ROUTE_20, MEM_BUFFER_2
 	farjump UnknownScript_0xa0a4b
 
 JoeyPhoneScript2:
@@ -653,7 +653,7 @@ JoeyMondayAfternoon:
 	setflag ENGINE_JOEY_MONDAY_AFTERNOON
 
 JoeyWantsBattle:
-	landmarktotext ROUTE_30, MEM_BUFFER_2
+	landmarktotext ROUTE_20, MEM_BUFFER_2
 	setflag ENGINE_JOEY
 	farjump PhoneScript_WantsToBattle_Male
 
@@ -690,11 +690,11 @@ WadePhoneScript1:
 	farjump PhoneScript_BugCatchingContest
 
 .WantsBattle:
-	landmarktotext ROUTE_31, MEM_BUFFER_2
+	landmarktotext ROUTE_20, MEM_BUFFER_2
 	farjump UnknownScript_0xa0a50
 
 .HasItem:
-	landmarktotext ROUTE_31, MEM_BUFFER_2
+	landmarktotext ROUTE_20, MEM_BUFFER_2
 	farjump UnknownScript_0xa0ab5
 
 WadePhoneScript2:
@@ -735,7 +735,7 @@ WadeTuesdayNight:
 	setflag ENGINE_WADE_TUESDAY_NIGHT
 
 WadeWantsBattle2:
-	landmarktotext ROUTE_31, MEM_BUFFER_2
+	landmarktotext ROUTE_20, MEM_BUFFER_2
 	setflag ENGINE_WADE
 	farjump PhoneScript_WantsToBattle_Male
 
@@ -744,7 +744,7 @@ WadeFoundRare:
 
 WadeHasItem2:
 	setflag ENGINE_WADE_HAS_ITEM
-	landmarktotext ROUTE_31, MEM_BUFFER_2
+	landmarktotext ROUTE_20, MEM_BUFFER_2
 	clearevent EVENT_WADE_HAS_BERRY
 	clearevent EVENT_WADE_HAS_PSNCUREBERRY
 	clearevent EVENT_WADE_HAS_PRZCUREBERRY

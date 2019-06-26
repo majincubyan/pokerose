@@ -110,18 +110,6 @@ JohtoWaterWildMons:
 	db 15, TENTACOOL
 	db 20, TENTACRUEL
 
-	map_id ROUTE_30
-	db 2 percent ; encounter rate
-	db 20, POLIWAG
-	db 15, POLIWAG
-	db 20, POLIWHIRL
-
-	map_id ROUTE_31
-	db 2 percent ; encounter rate
-	db 20, POLIWAG
-	db 15, POLIWAG
-	db 20, POLIWHIRL
-
 	map_id ROUTE_32
 	db 6 percent ; encounter rate
 	db 15, TENTACOOL
@@ -177,12 +165,6 @@ JohtoWaterWildMons:
 	db 5, MAGIKARP
 
 	map_id NEW_BARK_TOWN
-	db 6 percent ; encounter rate
-	db 20, TENTACOOL
-	db 15, TENTACOOL
-	db 20, TENTACRUEL
-
-	map_id CHERRYGROVE_CITY
 	db 6 percent ; encounter rate
 	db 20, TENTACOOL
 	db 15, TENTACOOL

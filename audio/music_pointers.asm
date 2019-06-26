@@ -107,3 +107,4 @@ Music:
 	dba Music_BattleTowerLobby
 	dba Music_MobileCenter
 	dba Music_NelBattle
+	dba Music_AnvilleTown

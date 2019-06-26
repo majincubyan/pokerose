@@ -169,7 +169,7 @@ EMOTE_MEM EQU -1
 ; fruittree arguments
 ; FruitTreeItems indexes (see data/items/fruit_trees.asm)
 	const_def 1
-	const FRUITTREE_ROUTE_29      ; 01
+	const FRUITTREE_ROUTE_101      ; 01
 	const FRUITTREE_LAB           ; 02
 	const FRUITTREE_ROUTE_38      ; 03
 	const FRUITTREE_ROUTE_46_1    ; 04

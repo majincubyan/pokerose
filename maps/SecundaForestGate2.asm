@@ -29,8 +29,8 @@ SecundaForestGate2_MapEvents:
 	db 0, 0 ; filler
 
 	db 4 ; warp events
-	warp_event  0,  4, CHERRYGROVE_CITY, 3
-	warp_event  0,  5, CHERRYGROVE_CITY, 4
+	warp_event  0,  4, SECUNDA_CITY, 3
+	warp_event  0,  5, SECUNDA_CITY, 4
 	warp_event  9,  4, SECUNDA_FOREST, 5
 	warp_event  9,  5, SECUNDA_FOREST, 6
 

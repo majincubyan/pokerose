@@ -8,10 +8,10 @@ Landmarks:
 ; entries correspond to constants/landmark_constants.asm
 	dbbw       0,   0, SpecialMapName
 	landmark 140,  28, NewBarkTownName
-	landmark 140,  40, Route29Name
+	landmark 140,  40, Route101Name
 	landmark 132,  44, SecundaForestName
-	landmark 124,  44, CherrygroveCityName
-	landmark 100,  80, Route30Name
+	landmark 124,  44, SecundaCityName
+	landmark 112,  44, Route102Name
 	landmark  96,  60, Route31Name
 	landmark  84,  60, VioletCityName
 	landmark  85,  58, SproutTowerName
@@ -105,7 +105,7 @@ Landmarks:
 	landmark 140, 116, FastShipName
 
 NewBarkTownName:     db "Minut¯Town@"
-CherrygroveCityName: db "Secunda¯City@"
+SecundaCityName:     db "Secunda¯City@"
 VioletCityName:      db "VIOLET CITY@"
 AzaleaTownName:      db "AZALEA TOWN@"
 GoldenrodCityName:   db "GOLDENROD¯CITY@"
@@ -178,8 +178,8 @@ Route25Name:         db "ROUTE 25@"
 Route26Name:         db "ROUTE 26@"
 Route27Name:         db "ROUTE 27@"
 Route28Name:         db "ROUTE 28@"
-Route29Name:         db "Route 101@"
-Route30Name:         db "ROUTE 30@"
+Route101Name:        db "Route 101@"
+Route102Name:        db "Route 102@"
 Route31Name:         db "ROUTE 31@"
 Route32Name:         db "ROUTE 32@"
 Route33Name:         db "ROUTE 33@"
