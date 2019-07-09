@@ -108,3 +108,4 @@ Music:
 	dba Music_MobileCenter
 	dba Music_NelBattle
 	dba Music_AnvilleTown
+	dba Music_WhiteTreehollow

@@ -1,4 +1,4 @@
-	const_def 2 ; object constants
+	const_def 0 ; object constants
 
 
 Route104Landing_MapScripts:
@@ -10,8 +10,9 @@ Route104Landing_MapScripts:
 Route104Landing_MapEvents:
 	db 0, 0 ; filler
 
-	db 0 ; warp events
-
+	db 1 ; warp events
+	warp_event 6, 18, ROUTE_104_WEST, 1
+	
 	db 0 ; coord events
 
 	db 0 ; bg events

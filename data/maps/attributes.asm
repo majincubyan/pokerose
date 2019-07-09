@@ -387,6 +387,16 @@ ENDM
 	
 	map_attributes Route104Landing, ROUTE_104_LANDING, $31, EAST
 	connection east, Route104, ROUTE_104, 0
+	
+	map_attributes CenturmCity, CENTURM_CITY, $03, EAST
+	connection east, Route104West, ROUTE_104_WEST, 6
+	
+	map_attributes Route104West, ROUTE_104_WEST, $03, SOUTH | WEST
+	connection south, EeveeHouse, EEVEE_HOUSE, 7
+	connection west, CenturmCity, CENTURM_CITY, -6
+	
+	map_attributes EeveeHouse, EEVEE_HOUSE, $05, NORTH
+	connection north, Route104West, ROUTE_104_WEST, -7
 
 	map_attributes Route23, ROUTE_23, $0f, 0
 	map_attributes SproutTower1F, SPROUT_TOWER_1F, $00, 0

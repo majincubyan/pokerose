@@ -943,3 +943,12 @@ EeveeHouseHall_Blocks:
 
 EeveeHouseGarden_Blocks:
 	INCBIN "maps/EeveeHouseGarden.ablk"
+	
+EeveeHouse_Blocks:
+	INCBIN "maps/EeveeHouse.ablk"
+	
+CenturmCity_Blocks:
+	INCBIN "maps/CenturmCity.ablk"
+	
+Route104West_Blocks:
+	INCBIN "maps/Route104West.ablk"

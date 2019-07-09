@@ -254,8 +254,8 @@ ENDM
 	map_const ROUTE_36_NATIONAL_PARK_GATE,                  5,  4 ; 17
 	map_const EEVEE_HOUSE_LANDING,						 	5,  5
 	map_const EEVEE_HOUSE_GARDEN,						   10,  9
-	map_const EEVEE_HOUSE_HALL,							   15, 11
-	;map_const EEVEE_HOUSE,								   10, 18
+	map_const EEVEE_HOUSE_HALL,							   10,  9
+	map_const EEVEE_HOUSE,								   10, 18
 	
 	newgroup                                                      ; 11
 
@@ -283,6 +283,8 @@ ENDM
 	map_const ILEX_FOREST_AZALEA_GATE,                      5,  4 ; 22
 	map_const ROUTE_34_ILEX_FOREST_GATE,                    5,  4 ; 23
 	map_const DAY_CARE,                                     5,  4 ; 24
+	map_const CENTURM_CITY, 20, 18
+	map_const ROUTE_104_WEST, 26, 9
 
 	newgroup                                                      ; 12
 
