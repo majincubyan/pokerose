@@ -1,0 +1,38 @@
+Route 102
+
+npcs 2
+
+guard - Oh, hey kid. Sorry to say, but this gate is closed. ...Why? ...I lost my keys. The boss is on the way, so it shouldn't be too long."
+pokefan m - "There is a small pond just down this road. They built indoor docks to fish in right on the water."
+
+
+
+Trainers 6
+
+Deliquent 
+party -
+text seen- "If I win, you gotta hand over all your cash!" win- "This was supposed to be an easy win!" after- "Get outta here, kid!"
+
+Schoolboy
+party -
+text seen- "I'm at the top of my class. I can't lose!" win- "I still have a lot to learn." after- "I'll hit the books even harder now."
+
+Lass
+party -
+text seen- "Do you have any cute Pokemon?" win- "They were cute and strong!" after- "My Pokemon is pretty cute too, right?"
+
+Schoolboy
+party -
+text seen- "My Pokemon are just like me; smart!" win- "I never said we were strong." after- "You sure know a lot about battling!"
+
+Youngster
+party
+text seen- When you wear shorts, the tall grass tickles your legs!" win- "Hahahaha!" after- I couldn't focus cause I was laughing!"
+
+Pkmn Coach F
+party
+talk- "You like a promising young trainer. If you can win against me, you'll get a nice reward. What do you say? Ready to battle?" no- "When you're ready, I'll be here." win- "Great job!" after- "You have real talent as a trainer. Take this and go all the way!" "It's a Poison Barb. Use it to increase the power of Poison type attacks." "Good luck!"
+
+
+Wild Pokemon
+

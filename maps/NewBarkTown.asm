@@ -226,7 +226,7 @@ NewBarkTown_MapEvents:
 	db 3 ; bg events
 	bg_event 11, 11, BGEVENT_READ, MINUTTOWNSign
 	bg_event 14,  6, BGEVENT_READ, MINUTTOWNPlayersHouseSign
-	bg_event  9, 13, BGEVENT_READ, MINUTTOWNElmsHouseSign
+	bg_event  2, 10, BGEVENT_READ, MINUTTOWNElmsHouseSign
 
 	db 4 ; object events
 	object_event  10,  8, SPRITE_TEACHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MINUTTOWNTeacherScript, -1

@@ -1,0 +1,107 @@
+ure city events and such
+
+key locations;
+
+Ure Colosseum
+Trainer's School (House with sign)
+Pokemon Trader House (big house)
+TM Gifter (small house by trees)
+
+NPCs on map; 5
+
+npc dialogue:
+
+Cooltrainer M- "Ure City's Trainer School is top notch at teaching rookies. I recommend you check it out too!"
+Grandma - "This was once a quiet town. After they built the colosseum, we have young trainers here all the time."
+kid - "I came to watch my brother in the tournaments. He's gonna be Champion someday!"
+kid - "I'm a straight A student!"
+deliquient "I'm enrolled at the Trainer School. But I'd rather cut class and rumble!"
+
+sign text
+
+1. "Trainer School"
+2. "Ure City - Where hours of learning becomes years of knowledge
+3. "Ure City Colosseum"
+
+-------------------------
+PokeCenter;
+
+npcs 3
+npc dialogue
+gentleman - "Team Eternal has been in the headlines more and more lately. Dreadful times."
+youngster - "My friend wants to trade, but I'm not sure if I want to. I love my Pokemon!"
+little girl - "My daddy said I'm too young to have my own Pokemon. I wish I was older!"
+
+newspaper - "The headline reads; Team Eternal Strikes Again! Priceless artifact stolen from Centurm Museum!" 
+
+-------------------------
+PokeMart;
+
+npcs 2
+
+pokefan f- "I use items like X Attack and Dire Hit to strengthen my Pokemon."
+lass- "Always have status healing items on hand. Things like sleep and paralysis can cripple even the best Pokemon.
+
+-------------------------
+Trainer School;
+npcs 6
+
+blackbelt - "Tsuji's Pokemon League is similar to those seen in Johto and Hoenn. However, not only must you collect 8 badges, you must all place first in a number of tournaments. These are held in colosseums, like the one here in Ure City.
+Teacher - "You can only challenge the Elite Four and Champion if you win at the Victory Tournament. This is held at Olympiad City in South Tsuji."
+teacher = "Each tournament consists of 4 rounds; Prelims, quarterfinals, semifinals and the finals. You cannot leave once you enter but your party is healed between battles."
+schoolboy - "It's important to consider the typing of your Pokemon and attacks when building your party. Knowing your strengths and weaknesses is the key to victory!"
+lass - "Thanks to Prof. Maple's research, we have the Evo Set. This can be used to evolve Pokemon when trade is not an option!"
+lass - "Pokemon evolve by leveling up, friendship or items. Trading and certain locations also can cause a Pokemon to evolve."
+-------------------------
+Trader House;
+
+1st floor
+npcs 2
+
+man - "My son is a fan of ghost Pokemon but he's frightened easily in the dark."
+lass- "I just got back from a journey in Sinnoh. Traveling with your Pokemon, camping out under the stars and making new friends... Oh, it's so magical!"
+
+2nd floor
+npcs 1
+
+trader- "Hey, I'm looking for a Gastly. Want to trade one for my Shroomish?" "I'm taking good care of Gastly."
+
+-------------------------
+TM Gifter House;
+npc 2
+
+Man - "I like fast Pokemon. So fast that I see double! Take this and your opponents will too!" after gift tm "It's Double Team! Pokemon will have a hard time landing attacks if you use this."
+Teacher - "The road to the Championship is a long one. Believe in your Pokemon and they will believe in you!"
+-------------------------
+Small House;
+npcs 2
+
+grandpa- "Ah, to be young again. enjoy this time, it's gone before you know it!"
+youngster- "I hang out with my grandpa and tell him about my adventures!"
+
+
+
+-------------------------
+Colosseum;
+
+npcs 5
+Cooltrainer M- "Man, that trainer, Rival, is good. But I think he puts too much pressure on his Pokemon to win."
+cooltrainer F- "I'm working on my line up for the next tournament. It's hard to cover weaknesses when you can only use three Pokemon and no items."
+youngster- "I'm not here to battle. Just to cheer everyone on and watch some awesome fights!"
+fisherman- "I've always wanted to challenge the Champion but I just can't win in any of the tournaments..." 
+Cooltrainer M- "This is my year! This is my victory! I'm going all the way!"
+
+
+Nel and Rival event
+
+Nel- "Wow, you're so good! My Pokemon and I didn't stand a chance.
+Rival- "Hmph, it might have been a challenge if you were taking this seriously.
+Nel- "Haha, come on, Rival. As long as you have fun, thats all that matters."
+Rival- "Winning and growing stronger is all that matters. Anything less is a waste."
+Nel- "Lighten up, even your Pokemon are tense.
+Nel- Hey, its Player!"
+Nel - How's it going? See you got your first badge! So are you here for the tournament?
+Rival- Nel and I just competed. I was the winner, though that was expected.
+Nel- Well, I'm gonna go fishing off Route 102! Good luck, Player!
+Rival- You lucked out that I already battled, otherwise you'd have no chance.
+Rival- I'm headed to Monith Town for my next gym badge. Good luck.
