@@ -283,7 +283,7 @@ AlakazamBackpic:     INCBIN "gfx/pokemon/alakazam/back.2bpp.lz"
 LucarioFrontpic:       INCBIN "gfx/pokemon/lucario/front.animated.2bpp.lz"
 AbraFrontpic:        INCBIN "gfx/pokemon/abra/front.animated.2bpp.lz"
 HitmontopBackpic:    INCBIN "gfx/pokemon/hitmontop/back.2bpp.lz"
-MiloticBackpic:      INCBIN "gfx/pokemon/Milotic/back.2bpp.lz"
+MiloticBackpic:      INCBIN "gfx/pokemon/milotic/back.2bpp.lz"
 PhantumpFrontpic:    INCBIN "gfx/pokemon/phantump/front.animated.2bpp.lz"
 UnownFBackpic:       INCBIN "gfx/pokemon/unown_f/back.2bpp.lz"
 
