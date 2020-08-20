@@ -2715,7 +2715,11 @@ wDailyFlags2:: db
 wSwarmFlags:: db
 	ds 2
 wTimerEventStartDay:: db
-	ds 3
+
+wOtherTrainerType:: db
+wTrainerGroupBank:: db
+
+	ds 1
 
 wFruitTreeFlags:: flag_array NUM_FRUIT_TREES ; dc27
 
