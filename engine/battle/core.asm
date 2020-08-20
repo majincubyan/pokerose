@@ -4977,6 +4977,8 @@ BattleMenu_Pack:
 	jr z, .tutorial
 	cp BATTLETYPE_CONTEST
 	jr z, .contest
+	cp BATTLETYPE_TOURNEY
+	jr z, .TourneyText
 
 	farcall BattlePack
 	ld a, [wBattlePlayerAction]
@@ -5014,6 +5016,11 @@ BattleMenu_Pack:
 
 .ItemsCantBeUsed:
 	ld hl, BattleText_ItemsCantBeUsedHere
+	call StdBattleTextBox
+	jp BattleMenu
+	
+.TourneyText:
+	ld hl, BattleText_TourneyNoItems
 	call StdBattleTextBox
 	jp BattleMenu
 

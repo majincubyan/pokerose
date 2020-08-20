@@ -1900,9 +1900,10 @@ ClockResetterScript:
 	end
 	
 .ChangeTime:
+	reloadmappart
 	special ClockResetter
 	special DSTChecks
-	closetext
+	reloadmappart
 	end
 	
 ClockText:

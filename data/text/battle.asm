@@ -1105,3 +1105,8 @@ BattleText_0x8188e:
 	text "There is no time"
 	line "left today!"
 	done
+	
+BattleText_TourneyNoItems:
+	text "Items are against"
+	line "regulations!"
+	prompt

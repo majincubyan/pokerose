@@ -19,7 +19,7 @@ Landmarks:
 	landmark  76,  76, RuinsOfAlphName
 	landmark  84, 124, UnionCaveName
 	landmark  82, 124, Route33Name
-	landmark  68, 124, AzaleaTownName
+	landmark 100,  44, AzaleaTownName
 	landmark  70, 122, SlowpokeWellName
 	landmark  52, 120, IlexForestName
 	landmark  52, 112, Route34Name
@@ -107,7 +107,7 @@ Landmarks:
 NewBarkTownName:     db "Minut¯Town@"
 SecundaCityName:     db "Secunda¯City@"
 VioletCityName:      db "VIOLET CITY@"
-AzaleaTownName:      db "AZALEA TOWN@"
+AzaleaTownName:      db "Ure City@"
 GoldenrodCityName:   db "GOLDENROD¯CITY@"
 EcruteakCityName:    db "ECRUTEAK¯CITY@"
 OlivineCityName:     db "OLIVINE¯CITY@"

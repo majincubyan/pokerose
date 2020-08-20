@@ -48,7 +48,7 @@ npcs 6
 
 blackbelt - "Tsuji's Pokemon League is similar to those seen in Johto and Hoenn. However, not only must you collect 8 badges, you must all place first in a number of tournaments. These are held in colosseums, like the one here in Ure City.
 Teacher - "You can only challenge the Elite Four and Champion if you win at the Victory Tournament. This is held at Olympiad City in South Tsuji."
-teacher = "Each tournament consists of 4 rounds; Prelims, quarterfinals, semifinals and the finals. You cannot leave once you enter but your party is healed between battles."
+teacher = "Each tournament consists of 4 rounds; Prelims, quarterfinals, semifinals and the finals. You cannot leave once you enter but your party is healed between battles. Items are also forbidden."
 schoolboy - "It's important to consider the typing of your Pokemon and attacks when building your party. Knowing your strengths and weaknesses is the key to victory!"
 lass - "Thanks to Prof. Maple's research, we have the Evo Set. This can be used to evolve Pokemon when trade is not an option!"
 lass - "Pokemon evolve by leveling up, friendship or items. Trading and certain locations also can cause a Pokemon to evolve."
@@ -105,3 +105,17 @@ Rival- Nel and I just competed. I was the winner, though that was expected.
 Nel- Well, I'm gonna go fishing off Route 102! Good luck, Player!
 Rival- You lucked out that I already battled, otherwise you'd have no chance.
 Rival- I'm headed to Monith Town for my next gym badge. Good luck.
+
+
+Tourney Girl-
+
+Hello! Welcome to the Ure City Colosseum! This is the last tournament to place in the Tsuji League. Are you interested in entering?
+
+No - There is still time to enter. We hope to see you soon.
+Yes - Wonderful! You will be our last enterant. Give me one moment to enter your information...
+
+if more than 1 pokemon:
+You can only enter with one Pokemon. I can hold on to your Pokemon until you are finished.
+
+No - Please come back once your are ready.
+yes - 

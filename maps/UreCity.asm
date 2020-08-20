@@ -8,6 +8,10 @@ UreCity_MapScripts:
 
 
 UreCity_MapEvents:
+
+
+	end
+	
 	db 0, 0 ; filler
 
 	db 0 ; warp events
